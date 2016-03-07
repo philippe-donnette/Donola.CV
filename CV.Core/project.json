@@ -1,0 +1,24 @@
+﻿{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "AutoMapper": "4.2.1",
+    "CV.DataAccessLayer": "1.0.0-*"
+  },
+  "description": "CV.Core Class Library",
+  "authors": [ "Philippe.Donnette" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "frameworks": {
+    "dnxcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-rc2-23513",
+        "System.Collections": "4.0.11-rc2-23513",
+        "System.Linq": "4.0.1-rc2-23513",
+        "System.Runtime": "4.0.21-rc2-23513",
+        "System.Threading": "4.0.11-rc2-23623"
+      }
+    }
+  }
+}
