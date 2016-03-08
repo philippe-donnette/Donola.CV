@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CV.Core.Mappings.Resolvers;
 using CV.Core.Models;
 using CV.DataAccessLayer.Entities;
 using System;
@@ -13,7 +14,8 @@ namespace CV.Core.Mappings
         protected override void Configure()
         {
             CreateMap<Skill, SkillModel>()
-                .ForMember(x => x.Versions, o => o.MapFrom(src => src.Versions.Select(x => x.Name).ToList()));
+                .ForMember(x => x.Versions, o => o.MapFrom(src => src.Versions.Select(x => x.Name).ToList()))
+                .ForMember(x => x.Weight, o => o.ResolveUsing<WeightResolver>());
         }
     }
 }

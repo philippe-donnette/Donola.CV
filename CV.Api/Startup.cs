@@ -17,6 +17,9 @@ using AutoMapper;
 using Microsoft.AspNet.Http;
 using System.Data.SqlClient;
 using CV.Api.Settings;
+using Microsoft.AspNet.Mvc;
+using Microsoft.AspNet.Mvc.Cors;
+using Newtonsoft.Json.Serialization;
 
 namespace CV.Api
 {
@@ -44,7 +47,21 @@ namespace CV.Api
         {
             services.AddLogging();
 
-            services.AddMvc();
+            services.AddCors(options => 
+            {
+                options.AddPolicy("AllowCvWeb", x => x.WithOrigins(Configuration["Data:CorsAllowedOrigins:CvWeb"]));
+            });
+
+            services.AddMvc().AddJsonOptions(options =>
+            {
+                options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
+
+            services.Configure<MvcOptions>(options =>
+            {
+                options.Filters.Add(new CorsAuthorizationFilterFactory("AllowCvWeb"));
+            });
+
             services.AddEntityFramework().AddSqlServer()
                 .AddDbContext<CvDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
@@ -96,6 +113,8 @@ namespace CV.Api
             app.UseIISPlatformHandler();
 
             app.UseStaticFiles();
+
+            app.UseCors("AllowCvWeb");
 
             app.UseMvc();
             
