@@ -17,6 +17,6 @@ namespace CV.DataAccessLayer.Entities
         [StringLength(1000)]
         public string Description { get; set; }
         
-        //public virtual ICollection<ProjectSkill> Skills { get; set; }
+        public virtual ICollection<ProjectSkill> Skills { get; set; }
     }
 }

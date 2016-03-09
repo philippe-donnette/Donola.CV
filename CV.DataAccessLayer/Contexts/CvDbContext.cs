@@ -14,5 +14,12 @@ namespace CV.DataAccessLayer.Contexts
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<SkillVersion> SkillVersions { get; set; }
+        public DbSet<ProjectSkill> ProjectSkills { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ProjectSkill>()
+                .HasKey(x => new { x.ProjectId, x.SkillId });
+        }
     }
 }
