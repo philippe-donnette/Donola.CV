@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CV.Core.Services
 {
-    public interface ISkillsService
+    public interface IProjectService
     {
-        Task<IEnumerable<SkillModel>> GetSkillsAsync();
+        Task<IEnumerable<ProjectModel>> GetProjectsAsync();
     }
 }

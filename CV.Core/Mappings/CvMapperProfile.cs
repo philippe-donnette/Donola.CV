@@ -16,6 +16,7 @@ namespace CV.Core.Mappings
             CreateMap<Skill, SkillModel>()
                 .ForMember(x => x.Versions, o => o.MapFrom(src => src.Versions.Select(x => x.Name).ToList()))
                 .ForMember(x => x.Weight, o => o.ResolveUsing<WeightResolver>());
+            CreateMap<Project, ProjectModel>();
         }
     }
 }

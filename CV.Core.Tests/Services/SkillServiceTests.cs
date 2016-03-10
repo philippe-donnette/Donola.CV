@@ -13,27 +13,27 @@ using Xunit;
 
 namespace CV.Core.Tests.Services
 {
-    public class SkillsServiceTests
+    public class SkillServiceTests
     {
-        private readonly Mock<ISkillsRepository> _skillsRepositoryMock;
-        private readonly ISkillsService _service;
-        private readonly Mock<ILogger<ISkillsService>> _loggerMock;
+        private readonly Mock<ISkillRepository> _skillRepositoryMock;
+        private readonly ISkillService _service;
+        private readonly Mock<ILogger<ISkillService>> _loggerMock;
 
-        public SkillsServiceTests()
+        public SkillServiceTests()
         {
             var mapperConfig = new MapperConfiguration(config =>
             {
                 config.AddProfile(new CvMapperProfile());
             });
-            _skillsRepositoryMock = new Mock<ISkillsRepository>();
-            _loggerMock = new Mock<ILogger<ISkillsService>>();
-            _service = new SkillsService(mapperConfig.CreateMapper(), _skillsRepositoryMock.Object, _loggerMock.Object);
+            _skillRepositoryMock = new Mock<ISkillRepository>();
+            _loggerMock = new Mock<ILogger<ISkillService>>();
+            _service = new SkillService(mapperConfig.CreateMapper(), _skillRepositoryMock.Object, _loggerMock.Object);
         }
 
         [Fact]
         public void GetSkillsAsync_ReturnListOfSkillModel()
         {
-            _skillsRepositoryMock.Setup(m => m.GetSkillsAsync())
+            _skillRepositoryMock.Setup(m => m.GetSkillsAsync())
                 .ReturnsAsync(new List<Skill>
                 {
                     new Skill
@@ -63,7 +63,7 @@ namespace CV.Core.Tests.Services
         [Fact]
         public void GetSkillsAsync_ReturnNull()
         {
-            _skillsRepositoryMock.Setup(m => m.GetSkillsAsync())
+            _skillRepositoryMock.Setup(m => m.GetSkillsAsync())
                 .ReturnsAsync(null);
             var result = _service.GetSkillsAsync();
             var skills = result.Result as List<SkillModel>;
@@ -73,7 +73,7 @@ namespace CV.Core.Tests.Services
         [Fact]
         public void GetSkillsAsync_ReturnNullWhenException()
         {
-            _skillsRepositoryMock.Setup(m => m.GetSkillsAsync())
+            _skillRepositoryMock.Setup(m => m.GetSkillsAsync())
                 .ThrowsAsync(new System.Exception());
             var result = _service.GetSkillsAsync();
             var skills = result.Result as List<SkillModel>;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CV.DataAccessLayer.Repositories
 {
-    public interface ISkillsRepository
+    public interface ISkillRepository
     {
         Task<IEnumerable<Skill>> GetSkillsAsync();
     }

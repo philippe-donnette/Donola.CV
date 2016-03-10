@@ -7,6 +7,7 @@ namespace CV.Core.Settings
 {
     public enum LoggingEvents
     {
-        LIST_SKILLS = 0
+        LIST_SKILLS = 0,
+        LIST_PROJECTS = 1
     }
 }

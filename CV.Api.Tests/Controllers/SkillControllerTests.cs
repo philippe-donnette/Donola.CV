@@ -14,24 +14,24 @@ using Xunit;
 
 namespace CV.Api.Tests.Controllers
 {
-    public class SkillsControllerTests
+    public class SkillControllerTests
     {
 
-        private readonly SkillsController _controller;
-        private readonly Mock<ISkillsService> _skillsServiceMock;
-        private readonly Mock<ILogger<SkillsController>> _loggerMock;
+        private readonly SkillController _controller;
+        private readonly Mock<ISkillService> _skillServiceMock;
+        private readonly Mock<ILogger<SkillController>> _loggerMock;
 
-        public SkillsControllerTests()
+        public SkillControllerTests()
         {
-            _skillsServiceMock = new Mock<ISkillsService>();
-            _loggerMock = new Mock<ILogger<SkillsController>>();
-            _controller = new SkillsController(_skillsServiceMock.Object, _loggerMock.Object);
+            _skillServiceMock = new Mock<ISkillService>();
+            _loggerMock = new Mock<ILogger<SkillController>>();
+            _controller = new SkillController(_skillServiceMock.Object, _loggerMock.Object);
         }
 
         [Fact]
         public void GetSkillsAsync_ReturnNotFoundStatusCode()
         {
-            _skillsServiceMock.Setup(m => m.GetSkillsAsync())
+            _skillServiceMock.Setup(m => m.GetSkillsAsync())
                 .ReturnsAsync(null);
             var result = _controller.GetSkillsAsync();
             var httpNotFoundResult = result.Result as HttpNotFoundResult;
@@ -42,7 +42,7 @@ namespace CV.Api.Tests.Controllers
         [Fact]
         public void GetSkillsAsync_ReturnOkStatusCode()
         {
-            _skillsServiceMock.Setup(m => m.GetSkillsAsync())
+            _skillServiceMock.Setup(m => m.GetSkillsAsync())
                 .ReturnsAsync(new List<SkillModel>
                 {
                     new SkillModel
@@ -67,7 +67,7 @@ namespace CV.Api.Tests.Controllers
         [Fact]
         public void GetSkillsAsync_ReturnBadRequestStatusCode()
         {
-            _skillsServiceMock.Setup(m => m.GetSkillsAsync())
+            _skillServiceMock.Setup(m => m.GetSkillsAsync())
                 .ThrowsAsync(new Exception());
             var result = _controller.GetSkillsAsync();
             var httpResult = result.Result as BadRequestResult;

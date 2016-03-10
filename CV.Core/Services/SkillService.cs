@@ -10,18 +10,18 @@ using System.Threading.Tasks;
 
 namespace CV.Core.Services
 {
-    public class SkillsService : ISkillsService
+    public class SkillService : ISkillService
     {
         private readonly IMapper _mapper;
-        private readonly ISkillsRepository _skillsRepository;
-        private readonly ILogger<ISkillsService> _logger; 
+        private readonly ISkillRepository _skillRepository;
+        private readonly ILogger<ISkillService> _logger; 
 
-        public SkillsService(IMapper mapper, 
-            ISkillsRepository skillsRepository,
-            ILogger<ISkillsService> logger)
+        public SkillService(IMapper mapper, 
+            ISkillRepository skillRepository,
+            ILogger<ISkillService> logger)
         {
             _mapper = mapper;
-            _skillsRepository = skillsRepository;
+            _skillRepository = skillRepository;
             _logger = logger;
         }
 
@@ -30,7 +30,7 @@ namespace CV.Core.Services
             _logger.LogInformation((int)LoggingEvents.LIST_SKILLS, "Listing all skills");
             try
             {
-                var skills = await _skillsRepository.GetSkillsAsync();
+                var skills = await _skillRepository.GetSkillsAsync();
                 return _mapper.Map<IEnumerable<SkillModel>>(skills);
             }
             catch (Exception ex)

@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace CV.DataAccessLayer.Repositories
 {
-    public class SkillsRepository : ISkillsRepository
+    public class SkillRepository : ISkillRepository
     {
         private readonly CvDbContext _context;
-        private readonly ILogger<ISkillsRepository> _logger;
+        private readonly ILogger<ISkillRepository> _logger;
 
-        public SkillsRepository(CvDbContext context, 
-            ILogger<ISkillsRepository> logger)
+        public SkillRepository(CvDbContext context, 
+            ILogger<ISkillRepository> logger)
         {
             _context = context;
             _logger = logger;

@@ -66,8 +66,10 @@ namespace CV.Api
                 .AddDbContext<CvDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
-            services.AddTransient<ISkillsService, SkillsService>();
-            services.AddTransient<ISkillsRepository, SkillsRepository>();
+            services.AddTransient<IProjectService, ProjectService>();
+            services.AddTransient<ISkillService, SkillService>();
+            services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<ISkillRepository, SkillRepository>();
 
             var mapperConfig = new MapperConfiguration(config =>
             {

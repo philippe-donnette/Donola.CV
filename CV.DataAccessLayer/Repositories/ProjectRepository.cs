@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace CV.DataAccessLayer.Repositories
 {
-    public class ProjectsRepository : IProjectsRepository
+    public class ProjectRepository : IProjectRepository
     {
         private readonly CvDbContext _context;
-        private readonly ILogger<IProjectsRepository> _logger;
+        private readonly ILogger<IProjectRepository> _logger;
 
 
-        public ProjectsRepository(CvDbContext context, 
-            ILogger<IProjectsRepository> logger)
+        public ProjectRepository(CvDbContext context, 
+            ILogger<IProjectRepository> logger)
         {
             _context = context;
             _logger = logger;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CV.DataAccessLayer.Repositories
 {
-    public interface IProjectsRepository
+    public interface IProjectRepository
     {
         Task<IEnumerable<Project>> GetProjectsAsync();
         Task<IEnumerable<ProjectSkill>> GetSkillsAsync(int projectId);
