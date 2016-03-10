@@ -12,6 +12,7 @@ namespace CV.DataAccessLayer.Initializers
         public static void EnsureSeedData(this CvDbContext context)
         {
             CreateSkills(context);
+            CreateProjects(context);
         }
 
         private static int CreateSkills(CvDbContext context)
@@ -58,6 +59,44 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Mapping library to convert entities to dtos",
                     IconClass = "fa fa-arrow",
                     IsVisible = true
+                });
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int CreateProjects(CvDbContext context)
+        {
+            
+            if (!context.Projects.Any())
+            {
+                var skills = new List<Skill>
+                {
+                    new Skill { Id = 1 }
+                };
+                context.Projects.Add(new Project
+                {
+                    Description = "My CV website and my details",
+                    Name = "MyCV",
+                    PrimaryImage = "project-icon-10.png",
+                    StartDate = new DateTime(2016, 3, 1),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill { SkillId = 1, UsageRating = 8 },
+                        new ProjectSkill { SkillId = 2, UsageRating = 7 },
+                        new ProjectSkill { SkillId = 3, UsageRating = 5 }
+                    }
+                });
+                context.Projects.Add(new Project
+                {
+                    Description = "Family photos driven by a tag engine",
+                    Name = "Donola Photos",
+                    PrimaryImage = "project-icon-7.png",
+                    StartDate = new DateTime(2015, 12, 7),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill { SkillId = 2, UsageRating = 7 }
+                    }
                 });
             }
 

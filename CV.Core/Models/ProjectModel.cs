@@ -9,7 +9,7 @@ namespace CV.Core.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public byte[] PrimaryImage { get; set; }
+        public string PrimaryImage { get; set; }
         public string Description { get; set; }
     }
 }

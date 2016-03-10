@@ -41,7 +41,7 @@ namespace CV.Api.Controllers
             }
             catch(Exception ex)
             {
-                _logger.LogError((int)LoggingEvents.LIST_SKILLS, "Listing all skills");
+                _logger.LogError((int)LoggingEvents.LIST_SKILLS, ex.StackTrace);
                 return HttpBadRequest();
             }
         }
