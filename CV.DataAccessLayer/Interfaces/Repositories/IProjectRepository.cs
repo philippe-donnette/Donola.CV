@@ -8,6 +8,7 @@ namespace CV.DataAccessLayer.Repositories
 {
     public interface IProjectRepository
     {
+        Task<Project> GetProjectAsync(int projectId);
         Task<IEnumerable<Project>> GetProjectsAsync();
         Task<IEnumerable<ProjectSkill>> GetSkillsAsync(int projectId);
     }

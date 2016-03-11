@@ -25,6 +25,21 @@ namespace CV.Core.Services
             _logger = logger;
         }
 
+        public async Task<ProjectModel> GetProjectAsync(int projectId)
+        {
+            _logger.LogInformation((int)LoggingEvents.GET_PROJECT, "Get project for projectId = " + projectId);
+            try
+            {
+                var project = await _projectRepository.GetProjectAsync(projectId);
+                return _mapper.Map<ProjectModel>(project);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.GET_PROJECT, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
+                return null;
+            }
+        }
+
         public async Task<IEnumerable<ProjectModel>> GetProjectsAsync()
         {
             _logger.LogInformation((int)LoggingEvents.LIST_PROJECTS, "Listing all projects");
@@ -39,6 +54,20 @@ namespace CV.Core.Services
                 return null;
             }
         }
-        
+
+        public async Task<IEnumerable<SkillModel>> GetSkillsAsync(int projectId)
+        {
+            _logger.LogInformation((int)LoggingEvents.LIST_PROJECT_SKILLS, "Listing all project skills");
+            try
+            {
+                var skills = await _projectRepository.GetSkillsAsync(projectId);
+                return _mapper.Map<IEnumerable<SkillModel>>(skills);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.LIST_PROJECT_SKILLS, ex.StackTrace);
+                return null;
+            }
+        }
     }
 }

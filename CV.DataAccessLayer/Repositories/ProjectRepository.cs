@@ -22,7 +22,21 @@ namespace CV.DataAccessLayer.Repositories
             _context = context;
             _logger = logger;
         }
-        
+
+        public async Task<Project> GetProjectAsync(int projectId)
+        {
+            _logger.LogInformation((int)LoggingEvents.GET_PROJECT, "Get project for projectId = " + projectId);
+            try
+            {
+                return await _context.Projects.SingleOrDefaultAsync(x => x.Id == projectId);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.GET_PROJECT, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
+                return null;
+            }
+        }
+
         public async Task<IEnumerable<Project>> GetProjectsAsync()
         {
             _logger.LogInformation((int)LoggingEvents.LIST_PROJECTS, "Listing all projects");
@@ -49,7 +63,7 @@ namespace CV.DataAccessLayer.Repositories
             }
             catch (Exception ex)
             {
-                _logger.LogError((int)LoggingEvents.LIST_PROJECT_SKILLS, ex.StackTrace);
+                _logger.LogError((int)LoggingEvents.LIST_PROJECT_SKILLS, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
                 return null;
             }
         }

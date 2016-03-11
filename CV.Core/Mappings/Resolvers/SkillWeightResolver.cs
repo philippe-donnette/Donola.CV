@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CV.Core.Mappings.Resolvers
 {
-    public class WeightResolver : ValueResolver<Skill, int>
+    public class SkillWeightResolver : ValueResolver<Skill, int>
     {
         protected override int ResolveCore(Skill skill)
         {

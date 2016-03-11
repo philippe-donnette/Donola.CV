@@ -11,6 +11,7 @@ namespace CV.DataAccessLayer.Settings
         GET_SKILL = 1,
         DB_ERROR = 2,
         LIST_PROJECTS = 3,
-        LIST_PROJECT_SKILLS = 4
+        LIST_PROJECT_SKILLS = 4,
+        GET_PROJECT = 5
     }
 }

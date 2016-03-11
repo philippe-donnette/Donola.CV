@@ -8,6 +8,8 @@ namespace CV.Core.Services
 {
     public interface IProjectService
     {
+        Task<ProjectModel> GetProjectAsync(int projectId);
         Task<IEnumerable<ProjectModel>> GetProjectsAsync();
+        Task<IEnumerable<SkillModel>> GetSkillsAsync(int projectId);
     }
 }
