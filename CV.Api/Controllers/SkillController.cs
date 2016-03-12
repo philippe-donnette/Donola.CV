@@ -25,7 +25,7 @@ namespace CV.Api.Controllers
             _logger = logger;
         }
 
-        // GET: api/skills/all
+        // GET: api/skill/all
         [HttpGet]
         [Route("all")]
         public async Task<IActionResult> GetSkillsAsync()

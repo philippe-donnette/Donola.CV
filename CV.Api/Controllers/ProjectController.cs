@@ -27,6 +27,7 @@ namespace CV.Api.Controllers
 
         // GET: api/project/[projectId]
         [HttpGet]
+        [Route("{projectId}")]
         public async Task<IActionResult> GetProjectAsync(int projectId)
         {
             _logger.LogInformation((int)LoggingEvents.GET_PROJECT, "Get project for projectId = " + projectId);
@@ -68,7 +69,7 @@ namespace CV.Api.Controllers
 
         // GET: api/project/1/skills
         [HttpGet]
-        [Route("[projectId]/skills")]
+        [Route("{projectId}/skills")]
         public async Task<IActionResult> GetSkillsAsync(int projectId)
         {
             _logger.LogInformation((int)LoggingEvents.LIST_PROJECT_SKILLS, "Listing all project skills");
