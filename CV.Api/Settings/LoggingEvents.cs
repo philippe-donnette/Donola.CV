@@ -9,6 +9,8 @@ namespace CV.Api.Settings
     {
         EfMigrations = 0,
         LIST_SKILLS = 1,
-        LIST_PROJECTS = 2
+        LIST_PROJECTS = 2,
+        GET_PROJECT = 3,
+        LIST_PROJECT_SKILLS = 4
     }
 }

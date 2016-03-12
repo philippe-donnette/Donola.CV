@@ -31,6 +31,7 @@ namespace CV.Core.Tests.Services
             _service = new ProjectService(mapperConfig.CreateMapper(), _projectRepositoryMock.Object, _loggerMock.Object);
         }
 
+        #region GetProjectAsync
         [Fact]
         public void GetProjectAsync_ReturnProjectModel()
         {
@@ -79,7 +80,9 @@ namespace CV.Core.Tests.Services
             Assert.Equal(model.Description, project.Description);
             Assert.Equal(model.PrimaryImage, project.PrimaryImage);
         }
+        #endregion
 
+        #region GetProjectsAsync
         [Fact]
         public void GetProjectsAsync_ReturnListOfProjectModel()
         {
@@ -125,7 +128,9 @@ namespace CV.Core.Tests.Services
             var projects = result.Result as IEnumerable<ProjectModel>;
             Assert.Equal(projects, null);
         }
+        #endregion
 
+        #region GetSkillsAsync
         [Fact]
         public void GetSkillsAsync_ReturnNull()
         {
@@ -212,5 +217,6 @@ namespace CV.Core.Tests.Services
             Assert.Equal(skill2.InterestRating, projectSkill2.Skill.InterestRating);
             Assert.Equal(skill2.UsageRating, projectSkill2.UsageRating);
         }
+        #endregion
     }
 }

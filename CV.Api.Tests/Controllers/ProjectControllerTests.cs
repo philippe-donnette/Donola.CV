@@ -28,6 +28,52 @@ namespace CV.Api.Tests.Controllers
             _controller = new ProjectController(_projectServiceMock.Object, _loggerMock.Object);
         }
 
+        #region GetProjectAsync
+        [Fact]
+        public void GetProjectAsync_ReturnNotFoundStatusCode()
+        {
+            int projectId = 1;
+            _projectServiceMock.Setup(x => x.GetProjectAsync(projectId))
+                .ReturnsAsync(null);
+            var result = _controller.GetProjectAsync(projectId);
+            var httpResult = result.Result as HttpNotFoundResult;
+            httpResult.Should().BeOfType<HttpNotFoundResult>();
+            Assert.Equal(httpResult.StatusCode, StatusCodes.Status404NotFound);
+        }
+
+        [Fact]
+        public void GetProjectAsync_ReturnOkStatusCode()
+        {
+            int projectId = 1;
+            var project = new ProjectModel { Id = 1, PrimaryImage = null, Description = null, Name = "CV.Web" };
+            _projectServiceMock.Setup(x => x.GetProjectAsync(projectId))
+                .ReturnsAsync(project);
+            var result = _controller.GetProjectAsync(projectId);
+            var httpResult = result.Result as HttpOkObjectResult;
+            httpResult.Should().BeOfType<HttpOkObjectResult>();
+            Assert.Equal(httpResult.StatusCode, StatusCodes.Status200OK);
+            var model = httpResult.Value as ProjectModel;
+            model.Should().BeOfType<ProjectModel>();
+            Assert.Equal(model.Description, project.Description);
+            Assert.Equal(model.Id, project.Id);
+            Assert.Equal(model.Name, project.Name);
+            Assert.Equal(model.PrimaryImage, project.PrimaryImage);
+        }
+
+        [Fact]
+        public void GetProjectAsync_ReturnBadRequestStatusCode()
+        {
+            int projectId = 1;
+            _projectServiceMock.Setup(x => x.GetProjectAsync(projectId))
+                .ThrowsAsync(new Exception());
+            var result = _controller.GetProjectAsync(projectId);
+            var httpResult = result.Result as BadRequestResult;
+            httpResult.Should().BeOfType<BadRequestResult>();
+            Assert.Equal(httpResult.StatusCode, StatusCodes.Status400BadRequest);
+        }
+        #endregion
+
+        #region GetProjectsAsync
         [Fact]
         public void GetProjectsAsync_ReturnNotFoundStatusCode()
         {
@@ -67,5 +113,53 @@ namespace CV.Api.Tests.Controllers
             httpResult.Should().BeOfType<BadRequestResult>();
             Assert.Equal(httpResult.StatusCode, StatusCodes.Status400BadRequest);
         }
+        #endregion
+
+        #region GetSkillsAsync
+        [Fact]
+        public void GetSkillsAsync_ReturnNotFoundStatusCode()
+        {
+            int projectId = 1;
+            _projectServiceMock.Setup(m => m.GetSkillsAsync(projectId))
+                .ReturnsAsync(null);
+            var result = _controller.GetSkillsAsync(projectId);
+            var httpNotFoundResult = result.Result as HttpNotFoundResult;
+            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
+            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+        }
+
+        [Fact]
+        public void GetSkillsAsync_ReturnOkStatusCode()
+        {
+            int projectId = 1;
+            var skills = new List<SkillModel>
+            {
+                new SkillModel { ExperienceRating = 10, Id = 1, InterestRating = 9, Name = "ASP.NET 5", UsageRating = 8, Weight = 9 },
+                new SkillModel { ExperienceRating = 4, Id = 2, InterestRating = 5, Name = "AngularJS", UsageRating = 6, Weight = 5 },
+                new SkillModel { ExperienceRating = 3, Id = 3, InterestRating = 2, Name = "Angular2", UsageRating = 1, Weight = 2 }
+            };
+            _projectServiceMock.Setup(m => m.GetSkillsAsync(projectId))
+                .ReturnsAsync(skills);
+            var result = _controller.GetSkillsAsync(projectId);
+            var httpOkResult = result.Result as HttpOkObjectResult;
+            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
+            Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
+            var model = httpOkResult.Value as List<SkillModel>;
+            model.Should().BeOfType<List<SkillModel>>();
+            Assert.Equal(model.Count, skills.Count);
+        }
+
+        [Fact]
+        public void GetSkillsAsync_ReturnBadRequestStatusCode()
+        {
+            int projectId = 1;
+            _projectServiceMock.Setup(m => m.GetSkillsAsync(projectId))
+                .ThrowsAsync(new Exception());
+            var result = _controller.GetSkillsAsync(projectId);
+            var httpResult = result.Result as BadRequestResult;
+            httpResult.Should().BeOfType<BadRequestResult>();
+            Assert.Equal(httpResult.StatusCode, StatusCodes.Status400BadRequest);
+        }
+        #endregion
     }
 }

@@ -25,7 +25,27 @@ namespace CV.Api.Controllers
             _logger = logger;
         }
 
-        // GET: api/projects/all
+        // GET: api/project/[projectId]
+        [HttpGet]
+        public async Task<IActionResult> GetProjectAsync(int projectId)
+        {
+            _logger.LogInformation((int)LoggingEvents.GET_PROJECT, "Get project for projectId = " + projectId);
+            try
+            {
+                var project = await _projectService.GetProjectAsync(projectId);
+                if (project != null)
+                    return Ok(project);
+                else
+                    return HttpNotFound();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.GET_PROJECT, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
+                return HttpBadRequest();
+            }
+        }
+
+        // GET: api/project/all
         [HttpGet]
         [Route("all")]
         public async Task<IActionResult> GetProjectsAsync()
@@ -46,6 +66,25 @@ namespace CV.Api.Controllers
             }
         }
 
-        
+        // GET: api/project/1/skills
+        [HttpGet]
+        [Route("[projectId]/skills")]
+        public async Task<IActionResult> GetSkillsAsync(int projectId)
+        {
+            _logger.LogInformation((int)LoggingEvents.LIST_PROJECT_SKILLS, "Listing all project skills");
+            try
+            {
+                var skills = await _projectService.GetSkillsAsync(projectId);
+                if (skills != null)
+                    return Ok(skills);
+                else
+                    return HttpNotFound();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.LIST_PROJECT_SKILLS, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
+                return HttpBadRequest();
+            }
+        }
     }
 }
