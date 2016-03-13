@@ -58,6 +58,8 @@ namespace CV.DataAccessLayer.Repositories
             {
                 return await _context.ProjectSkills
                     .Include(x => x.Skill)
+                    .Include(x => x.Versions)
+                    .ThenInclude(x => x.Version)
                     .Where(x => x.ProjectId == projectId)
                     .ToListAsync();
             }

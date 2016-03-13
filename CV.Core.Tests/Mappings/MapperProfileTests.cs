@@ -10,15 +10,22 @@ namespace CV.Core.Tests.Mappings
 {
     public class MapperProfileTests
     {
-        [Fact]
-        public void CvMapperProfile_IsValid()
+        private MapperConfiguration mapperConfig;
+
+        public MapperProfileTests()
         {
-            var mapperConfig = new MapperConfiguration(config =>
+            mapperConfig = new MapperConfiguration(config =>
             {
                 config.AddProfile(new CvMapperProfile());
             });
+        }
 
+        [Fact]
+        public void CvMapperProfile_IsValid()
+        {
             mapperConfig.AssertConfigurationIsValid();
         }
+
+        //New test here to test individual mappings
     }
 }

@@ -13,6 +13,8 @@ namespace CV.DataAccessLayer.Initializers
         {
             CreateSkills(context);
             CreateProjects(context);
+
+            AddProjectSkillVersions(context);
         }
 
         private static int CreateSkills(CvDbContext context)
@@ -97,6 +99,43 @@ namespace CV.DataAccessLayer.Initializers
                     {
                         new ProjectSkill { SkillId = 2, UsageRating = 7 }
                     }
+                });
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int AddProjectSkillVersions(CvDbContext context)
+        {
+
+            if (!context.ProjectSkillVersions.Any())
+            {
+                context.ProjectSkillVersions.Add(new ProjectSkillVersion
+                {
+                    ProjectId = 1,
+                    SkillId = 1,
+                    SkillVersionId = 1
+                });
+
+                context.ProjectSkillVersions.Add(new ProjectSkillVersion
+                {
+                    ProjectId = 1,
+                    SkillId = 2,
+                    SkillVersionId = 3
+                });
+
+                context.ProjectSkillVersions.Add(new ProjectSkillVersion
+                {
+                    ProjectId = 2,
+                    SkillId = 2,
+                    SkillVersionId = 3
+                });
+
+                context.ProjectSkillVersions.Add(new ProjectSkillVersion
+                {
+                    ProjectId = 2,
+                    SkillId = 2,
+                    SkillVersionId = 4
                 });
             }
 

@@ -22,8 +22,13 @@ namespace CV.Core.Mappings
                 .ForMember(x => x.IconClass, o => o.MapFrom(src => src.Skill.IconClass))
                 .ForMember(x => x.Id, o => o.MapFrom(src => src.SkillId))
                 .ForMember(x => x.Name, o => o.MapFrom(src => src.Skill.Name))
-                .ForMember(x => x.Versions, o => o.Ignore()) //Ignore at the moment but need to implement ProjectSkillVersion
-                .ForMember(x => x.Weight, o => o.ResolveUsing<ProjectSkillWeightResolver>())
+                .ForMember(x => x.Versions, o => o.MapFrom(src => src.Versions != null 
+                    ? 
+                    src.Versions.Select(x => x.Version != null ? x.Version.Name : null).ToList()
+                    : null)
+                )
+                //.ForMember(x => x.Weight, o => o.ResolveUsing<ProjectSkillWeightResolver>())
+                .ForMember(x => x.Weight, o => o.MapFrom(src => src.UsageRating))
                 .ForMember(x => x.UsageRating, o => o.MapFrom(src => src.UsageRating))
                 .ForMember(x => x.InterestRating, o => o.MapFrom(src => src.Skill.InterestRating))
                 .ForMember(x => x.ExperienceRating, o => o.MapFrom(src => src.Skill.ExperienceRating));

@@ -188,9 +188,9 @@ namespace CV.Core.Tests.Services
             var result = _service.GetSkillsAsync(projectId);
             var skills = result.Result;
             var skill1 = skills.FirstOrDefault(x => x.Id == 1);
-            Assert.Equal(skill1.Weight, Convert.ToDouble((skill1.ExperienceRating + skill1.InterestRating + skill1.UsageRating) / 3));
+            Assert.Equal(skill1.Weight, projectSkill1.UsageRating);
             var skill2 = skills.FirstOrDefault(x => x.Id == 2);
-            Assert.Equal(skill2.Weight, Convert.ToDouble((skill2.ExperienceRating + skill2.InterestRating + skill2.UsageRating) / 3));
+            Assert.Equal(skill2.Weight, projectSkill2.UsageRating);
         }
 
         [Fact]
