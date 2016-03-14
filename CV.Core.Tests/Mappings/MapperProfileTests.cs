@@ -76,6 +76,7 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(skill1.InterestRating, model1.InterestRating);
             Assert.Equal(skill1.Name, model1.Name);
             Assert.Equal(skill1.UsageRating, model1.UsageRating);
+            Assert.Equal(Convert.ToDouble((skill1.InterestRating + skill1.ExperienceRating + skill1.UsageRating) / 3), model1.Weight);
             Assert.Equal(skill1.Versions.Select(x => x.Name).ToList<string>(), model1.Versions);
 
             var model2 = model.FirstOrDefault(x => x.Id == skill2.Id);
@@ -86,6 +87,7 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(skill2.InterestRating, model2.InterestRating);
             Assert.Equal(skill2.Name, model2.Name);
             Assert.Equal(skill2.UsageRating, model2.UsageRating);
+            Assert.Equal(Convert.ToDouble((skill2.InterestRating + skill2.ExperienceRating + skill2.UsageRating) / 3), model2.Weight);
             Assert.Equal(model2.Versions.Count, 0);
         }
 
@@ -119,6 +121,53 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(project3.Name, model3.Name);
             Assert.Equal(project3.PrimaryImage, model3.PrimaryImage);
             Assert.Equal(project3.StartDate, model3.StartDate);
+        }
+
+        [Fact]
+        public void ProjectSkillToSkillModel()
+        {
+            var projectSkill1 = new ProjectSkill { ProjectId = 1, SkillId = 1,
+                Skill = new Skill { Id = 1, ExperienceRating = 10, InterestRating = 9, UsageRating = 8 },
+                UsageRating = 7,
+                Versions = new List<ProjectSkillVersion>
+                {
+                    new ProjectSkillVersion { ProjectId = 1, SkillId = 1, SkillVersionId = 1, Version = new SkillVersion { Name = "RC1", Id = 1, SkillId = 1 } },
+                    new ProjectSkillVersion { ProjectId = 1, SkillId = 1, SkillVersionId = 2, Version = new SkillVersion { Name = "RC2", Id = 2, SkillId = 1 } }
+                }
+            };
+            
+            var model1 = _mapper.Map<SkillModel>(projectSkill1);
+
+            Assert.Equal(projectSkill1.Skill.Description, model1.Description);
+            Assert.Equal(projectSkill1.Skill.ExperienceRating, model1.ExperienceRating);
+            Assert.Equal(projectSkill1.Skill.IconClass, model1.IconClass);
+            Assert.Equal(projectSkill1.Skill.Id, model1.Id);
+            Assert.Equal(projectSkill1.Skill.InterestRating, model1.InterestRating);
+            Assert.Equal(projectSkill1.Skill.Name, model1.Name);
+            Assert.Equal(projectSkill1.UsageRating, model1.UsageRating);
+            Assert.Equal(projectSkill1.UsageRating, model1.Weight);
+            Assert.Equal(projectSkill1.Versions.Select(x => x.Version.Name).ToList<string>(), model1.Versions);
+
+            var projectSkill2 = new ProjectSkill
+            {
+                ProjectId = 2,
+                SkillId = 2,
+                Skill = new Skill { Id = 2, ExperienceRating = 4, InterestRating = 5, UsageRating = 6 },
+                UsageRating = 8,
+                Versions = null
+            };
+
+            var model2 = _mapper.Map<SkillModel>(projectSkill2);
+
+            Assert.Equal(projectSkill2.Skill.Description, model2.Description);
+            Assert.Equal(projectSkill2.Skill.ExperienceRating, model2.ExperienceRating);
+            Assert.Equal(projectSkill2.Skill.IconClass, model2.IconClass);
+            Assert.Equal(projectSkill2.Skill.Id, model2.Id);
+            Assert.Equal(projectSkill2.Skill.InterestRating, model2.InterestRating);
+            Assert.Equal(projectSkill2.Skill.Name, model2.Name);
+            Assert.Equal(projectSkill2.UsageRating, model2.UsageRating);
+            Assert.Equal(projectSkill2.UsageRating, model2.Weight);
+            Assert.Equal(model2.Versions.Count, 0);
         }
     }
 }
