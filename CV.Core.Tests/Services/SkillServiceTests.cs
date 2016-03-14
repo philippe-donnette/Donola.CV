@@ -30,6 +30,7 @@ namespace CV.Core.Tests.Services
             _service = new SkillService(mapperConfig.CreateMapper(), _skillRepositoryMock.Object, _loggerMock.Object);
         }
 
+        #region GetSkills
         [Fact]
         public void GetSkillsAsync_ReturnListOfSkillModel()
         {
@@ -79,5 +80,6 @@ namespace CV.Core.Tests.Services
             var skills = result.Result as List<SkillModel>;
             Assert.Equal(skills, null);
         }
+        #endregion
     }
 }

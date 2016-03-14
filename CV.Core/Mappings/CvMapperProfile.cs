@@ -14,7 +14,10 @@ namespace CV.Core.Mappings
         protected override void Configure()
         {
             CreateMap<Skill, SkillModel>()
-                .ForMember(x => x.Versions, o => o.MapFrom(src => src.Versions.Select(x => x.Name).ToList()))
+                .ForMember(x => x.Versions, o => o.MapFrom(src => src.Versions != null 
+                    ? src.Versions.Select(x => x.Name).ToList()
+                    : null)
+                    )
                 .ForMember(x => x.Weight, o => o.ResolveUsing<SkillWeightResolver>());
             CreateMap<Project, ProjectModel>();
             CreateMap<ProjectSkill, SkillModel>()
@@ -23,10 +26,9 @@ namespace CV.Core.Mappings
                 .ForMember(x => x.Id, o => o.MapFrom(src => src.SkillId))
                 .ForMember(x => x.Name, o => o.MapFrom(src => src.Skill.Name))
                 .ForMember(x => x.Versions, o => o.MapFrom(src => src.Versions != null 
-                    ? 
-                    src.Versions.Select(x => x.Version != null ? x.Version.Name : null).ToList()
+                    ? src.Versions.Select(x => x.Version != null ? x.Version.Name : null).ToList()
                     : null)
-                )
+                    )
                 //.ForMember(x => x.Weight, o => o.ResolveUsing<ProjectSkillWeightResolver>())
                 .ForMember(x => x.Weight, o => o.MapFrom(src => src.UsageRating))
                 .ForMember(x => x.UsageRating, o => o.MapFrom(src => src.UsageRating))
