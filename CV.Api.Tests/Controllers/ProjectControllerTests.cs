@@ -28,6 +28,53 @@ namespace CV.Api.Tests.Controllers
             _controller = new ProjectController(_projectServiceMock.Object, _loggerMock.Object);
         }
 
+        #region GetImagesAsync
+        [Fact]
+        public void GetImagesAsync_ReturnNotFoundStatusCode()
+        {
+            int projectId = 1;
+            _projectServiceMock.Setup(m => m.GetImagesAsync(projectId))
+                .ReturnsAsync(null);
+            var result = _controller.GetImagesAsync(projectId);
+            var httpNotFoundResult = result.Result as HttpNotFoundResult;
+            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
+            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+        }
+
+        [Fact]
+        public void GetImagesAsync_ReturnOkStatusCode()
+        {
+            int projectId = 1;
+            var images = new List<ImageModel>
+            {
+                new ImageModel { Id = 1, Title = "Image number 1", Description = "Some description 1", ImageUrl = "/someimage1.png" },
+                new ImageModel { Id = 2, Title = "Image number 2", Description = "Some description 2", ImageUrl = "/someimage2.gif" },
+                new ImageModel { Id = 3, Title = "Image number 3", Description = "Some description 3", ImageUrl = "/someimage3.jpg" }
+            };
+            _projectServiceMock.Setup(m => m.GetImagesAsync(projectId))
+                .ReturnsAsync(images);
+            var result = _controller.GetImagesAsync(projectId);
+            var httpOkResult = result.Result as HttpOkObjectResult;
+            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
+            Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
+            var model = httpOkResult.Value as List<ImageModel>;
+            model.Should().BeOfType<List<ImageModel>>();
+            Assert.Equal(model.Count, images.Count);
+        }
+
+        [Fact]
+        public void GetImagesAsync_ReturnBadRequestStatusCode()
+        {
+            int projectId = 1;
+            _projectServiceMock.Setup(m => m.GetImagesAsync(projectId))
+                .ThrowsAsync(new Exception());
+            var result = _controller.GetImagesAsync(projectId);
+            var httpResult = result.Result as BadRequestResult;
+            httpResult.Should().BeOfType<BadRequestResult>();
+            Assert.Equal(httpResult.StatusCode, StatusCodes.Status400BadRequest);
+        }
+        #endregion
+
         #region GetProjectAsync
         [Fact]
         public void GetProjectAsync_ReturnNotFoundStatusCode()

@@ -25,6 +25,27 @@ namespace CV.Api.Controllers
             _logger = logger;
         }
 
+        // GET: api/project/1/images
+        [HttpGet]
+        [Route("{projectId}/images")]
+        public async Task<IActionResult> GetImagesAsync(int projectId)
+        {
+            _logger.LogInformation((int)LoggingEvents.LIST_PROJECT_IMAGES, "Listing all images for a project");
+            try
+            {
+                var images = await _projectService.GetImagesAsync(projectId);
+                if (images != null)
+                    return Ok(images);
+                else
+                    return HttpNotFound();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.LIST_PROJECT_IMAGES, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
+                return HttpBadRequest();
+            }
+        }
+
         // GET: api/project/[projectId]
         [HttpGet]
         [Route("{projectId}")]

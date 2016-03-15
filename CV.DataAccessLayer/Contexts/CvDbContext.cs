@@ -17,6 +17,7 @@ namespace CV.DataAccessLayer.Contexts
         public DbSet<SkillVersion> SkillVersions { get; set; }
         public DbSet<ProjectSkill> ProjectSkills { get; set; }
         public DbSet<ProjectSkillVersion> ProjectSkillVersions { get; set; }
+        public DbSet<ProjectImage> ProjectImages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

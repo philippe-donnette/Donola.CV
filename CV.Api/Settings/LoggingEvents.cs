@@ -11,6 +11,7 @@ namespace CV.Api.Settings
         LIST_SKILLS = 1,
         LIST_PROJECTS = 2,
         GET_PROJECT = 3,
-        LIST_PROJECT_SKILLS = 4
+        LIST_PROJECT_SKILLS = 4,
+        LIST_PROJECT_IMAGES = 5
     }
 }

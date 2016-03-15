@@ -55,6 +55,21 @@ namespace CV.Core.Services
             }
         }
 
+        public async Task<IEnumerable<ImageModel>> GetImagesAsync(int projectId)
+        {
+            _logger.LogInformation((int)LoggingEvents.LIST_PROJECT_IMAGES, "Listing all images for a project");
+            try
+            {
+                var images = await _projectRepository.GetImagesAsync(projectId);
+                return _mapper.Map<IEnumerable<ImageModel>>(images);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.LIST_PROJECT_IMAGES, ex.StackTrace);
+                return null;
+            }
+        }
+
         public async Task<IEnumerable<SkillModel>> GetSkillsAsync(int projectId)
         {
             _logger.LogInformation((int)LoggingEvents.LIST_PROJECT_SKILLS, "Listing all project skills");

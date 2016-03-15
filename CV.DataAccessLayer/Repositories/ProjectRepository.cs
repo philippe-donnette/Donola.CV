@@ -51,6 +51,22 @@ namespace CV.DataAccessLayer.Repositories
             }
         }
 
+        public async Task<IEnumerable<ProjectImage>> GetImagesAsync(int projectId)
+        {
+            _logger.LogInformation((int)LoggingEvents.LIST_PROJECT_IMAGES, "Listing all images for a project");
+            try
+            {
+                return await _context.ProjectImages
+                    .Where(x => x.ProjectId == projectId)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.LIST_PROJECT_IMAGES, ex.StackTrace);
+                return null;
+            }
+        }
+
         public async Task<IEnumerable<ProjectSkill>> GetSkillsAsync(int projectId)
         {
             _logger.LogInformation((int)LoggingEvents.LIST_PROJECT_SKILLS, "Listing all skills for projectId = " + projectId);

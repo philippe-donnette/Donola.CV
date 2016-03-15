@@ -10,6 +10,7 @@ namespace CV.DataAccessLayer.Repositories
     {
         Task<Project> GetProjectAsync(int projectId);
         Task<IEnumerable<Project>> GetProjectsAsync();
+        Task<IEnumerable<ProjectImage>> GetImagesAsync(int projectId);
         Task<IEnumerable<ProjectSkill>> GetSkillsAsync(int projectId);
     }
 }

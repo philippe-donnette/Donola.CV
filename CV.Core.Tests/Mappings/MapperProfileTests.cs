@@ -169,5 +169,34 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(projectSkill2.UsageRating, model2.Weight);
             Assert.Equal(model2.Versions.Count, 0);
         }
+
+        [Fact]
+        public void ProjectImageToProjectImageModel()
+        {
+            var projectImage1 = new ProjectImage { Id = 1, Title = "Project Image Number 1", Description = null, ImageUrl = null, ProjectId = 1 };
+            var projectImage2 = new ProjectImage { Id = 2, Title = "Project Image Number 2", Description = null, ImageUrl = null, ProjectId = 1 };
+            var projectImage3 = new ProjectImage { Id = 3, Title = "Project Image Number 3", Description = null, ImageUrl = null, ProjectId = 1 };
+            var projectImages = new List<ProjectImage> { projectImage1, projectImage2, projectImage3 };
+
+            var model = _mapper.Map<IEnumerable<ImageModel>>(projectImages);
+
+            var model1 = model.FirstOrDefault(x => x.Id == projectImage1.Id);
+            Assert.Equal(projectImage1.Description, model1.Description);
+            Assert.Equal(projectImage1.Id, model1.Id);
+            Assert.Equal(projectImage1.Title, model1.Title);
+            Assert.Equal(projectImage1.ImageUrl, model1.ImageUrl);
+
+            var model2 = model.FirstOrDefault(x => x.Id == projectImage2.Id);
+            Assert.Equal(projectImage2.Description, model2.Description);
+            Assert.Equal(projectImage2.Id, model2.Id);
+            Assert.Equal(projectImage2.Title, model2.Title);
+            Assert.Equal(projectImage2.ImageUrl, model2.ImageUrl);
+
+            var model3 = model.FirstOrDefault(x => x.Id == projectImage3.Id);
+            Assert.Equal(projectImage3.Description, model3.Description);
+            Assert.Equal(projectImage3.Id, model3.Id);
+            Assert.Equal(projectImage3.Title, model3.Title);
+            Assert.Equal(projectImage3.ImageUrl, model3.ImageUrl);
+        }
     }
 }

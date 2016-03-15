@@ -15,6 +15,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateProjects(context);
 
             AddProjectSkillVersions(context);
+            AddProjectImages(context);
         }
 
         private static int CreateSkills(CvDbContext context)
@@ -136,6 +137,39 @@ namespace CV.DataAccessLayer.Initializers
                     ProjectId = 2,
                     SkillId = 2,
                     SkillVersionId = 4
+                });
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int AddProjectImages(CvDbContext context)
+        {
+
+            if (!context.ProjectImages.Any())
+            {
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Some description image 1",
+                    ImageUrl = "img1.png",
+                    ProjectId = 1,
+                    Title = "Title Image 1"
+                });
+
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Some description image 2",
+                    ImageUrl = "img2.png",
+                    ProjectId = 1,
+                    Title = "Title Image 2"
+                });
+
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Some description image 3",
+                    ImageUrl = "thor.jpg",
+                    ProjectId = 2,
+                    Title = "Title Image 3"
                 });
             }
 

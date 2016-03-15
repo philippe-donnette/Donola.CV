@@ -118,16 +118,6 @@ namespace CV.Core.Tests.Services
             var projects = result.Result as IEnumerable<ProjectModel>;
             Assert.Equal(projects, null);
         }
-
-        [Fact]
-        public void GetProjectsAsync_ReturnNullWhenException()
-        {
-            _projectRepositoryMock.Setup(m => m.GetProjectsAsync())
-                .ThrowsAsync(new System.Exception());
-            var result = _service.GetProjectsAsync();
-            var projects = result.Result as IEnumerable<ProjectModel>;
-            Assert.Equal(projects, null);
-        }
         #endregion
 
         #region GetSkillsAsync
@@ -216,6 +206,46 @@ namespace CV.Core.Tests.Services
             Assert.Equal(skill2.ExperienceRating, projectSkill2.Skill.ExperienceRating);
             Assert.Equal(skill2.InterestRating, projectSkill2.Skill.InterestRating);
             Assert.Equal(skill2.UsageRating, projectSkill2.UsageRating);
+        }
+        #endregion
+
+        #region GetImagesAsync
+        [Fact]
+        public void GetImagesAsync_ReturnNull()
+        {
+            int projectId = 1;
+            _projectRepositoryMock.Setup(x => x.GetImagesAsync(projectId))
+                .ReturnsAsync(null);
+            var result = _service.GetImagesAsync(projectId);
+            var images = result.Result as IEnumerable<ImageModel>;
+            Assert.Equal(images, null);
+        }
+
+        [Fact]
+        public void GetImagesAsync_ReturnNullWhenExceptionThrown()
+        {
+            int projectId = 1;
+            _projectRepositoryMock.Setup(x => x.GetImagesAsync(projectId))
+                .ThrowsAsync(new Exception());
+            var result = _service.GetImagesAsync(projectId);
+            var images = result.Result as IEnumerable<ImageModel>;
+            Assert.Equal(images, null);
+        }
+
+        [Fact]
+        public void GetImagesAsync_ReturnListOfSkillModel()
+        {
+            int projectId = 1;
+            var projectImage1 = new ProjectImage { ProjectId = 1, Id = 1, Title = "Project Image 1", Description = "Description goes here 1", ImageUrl = "/someurl1.png" };
+            var projectImage2 = new ProjectImage { ProjectId = 1, Id = 2, Title = "Project Image 2", Description = "Description goes here 2", ImageUrl = "/someurl2.jpg" };
+            var projectImages = new List<ProjectImage> { projectImage1, projectImage2 };
+            
+            _projectRepositoryMock.Setup(x => x.GetImagesAsync(projectId))
+                .ReturnsAsync(projectImages);
+            var result = _service.GetImagesAsync(projectId);
+            var images = result.Result;
+            images.Should().BeOfType<List<ImageModel>>();
+            Assert.Equal(images.Count(), 2);
         }
         #endregion
     }

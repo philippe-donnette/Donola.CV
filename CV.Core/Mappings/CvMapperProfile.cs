@@ -34,6 +34,7 @@ namespace CV.Core.Mappings
                 .ForMember(x => x.UsageRating, o => o.MapFrom(src => src.UsageRating))
                 .ForMember(x => x.InterestRating, o => o.MapFrom(src => src.Skill.InterestRating))
                 .ForMember(x => x.ExperienceRating, o => o.MapFrom(src => src.Skill.ExperienceRating));
+            CreateMap<ProjectImage, ImageModel>();
         }
     }
 }
