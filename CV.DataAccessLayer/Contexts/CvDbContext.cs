@@ -18,6 +18,9 @@ namespace CV.DataAccessLayer.Contexts
         public DbSet<ProjectSkill> ProjectSkills { get; set; }
         public DbSet<ProjectSkillVersion> ProjectSkillVersions { get; set; }
         public DbSet<ProjectImage> ProjectImages { get; set; }
+        public DbSet<Experience> Experiences { get; set; }
+        public DbSet<ExperienceSkill> ExperienceSkills { get; set; }
+        public DbSet<ExperienceSkillVersion> ExperienceSkillVersions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,11 +28,20 @@ namespace CV.DataAccessLayer.Contexts
                 .HasKey(x => new { x.ProjectId, x.SkillId });
             modelBuilder.Entity<ProjectSkillVersion>()
                 .HasKey(x => new { x.ProjectId, x.SkillId, x.SkillVersionId });
-
             modelBuilder.Entity<ProjectSkillVersion>()
                 .HasOne(x => x.ProjectSkill)
                 .WithMany(x => x.Versions)
                 .HasForeignKey(x => new { x.ProjectId, x.SkillId })
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ExperienceSkill>()
+                .HasKey(x => new { x.ExperienceId, x.SkillId });
+            modelBuilder.Entity<ExperienceSkillVersion>()
+                .HasKey(x => new { x.ExperienceId, x.SkillId, x.SkillVersionId });
+            modelBuilder.Entity<ExperienceSkillVersion>()
+                .HasOne(x => x.ExperienceSkill)
+                .WithMany(x => x.Versions)
+                .HasForeignKey(x => new { x.ExperienceId, x.SkillId })
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

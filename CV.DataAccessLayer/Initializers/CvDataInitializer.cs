@@ -13,9 +13,11 @@ namespace CV.DataAccessLayer.Initializers
         {
             CreateSkills(context);
             CreateProjects(context);
+            CreateExperiences(context);
 
             AddProjectSkillVersions(context);
             AddProjectImages(context);
+            AddExperienceSkillVersions(context);
         }
 
         private static int CreateSkills(CvDbContext context)
@@ -73,10 +75,6 @@ namespace CV.DataAccessLayer.Initializers
             
             if (!context.Projects.Any())
             {
-                var skills = new List<Skill>
-                {
-                    new Skill { Id = 1 }
-                };
                 context.Projects.Add(new Project
                 {
                     Description = "My CV website and my details",
@@ -99,6 +97,68 @@ namespace CV.DataAccessLayer.Initializers
                     Skills = new List<ProjectSkill>
                     {
                         new ProjectSkill { SkillId = 2, UsageRating = 7 }
+                    }
+                });
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int CreateExperiences(CvDbContext context)
+        {
+
+            if (!context.Experiences.Any())
+            {
+                context.Experiences.Add(new Experience
+                {
+                    City = "London",
+                    CompanyName = "University of London",
+                    Country = "United Kingdom",
+                    EndDate = new DateTime(2016, 4, 30),
+                    ImageUrl = "uol-experience-icon.png",
+                    RoleTitle = "Senior Developer",
+                    WebsiteUrl = "http://www.london.ac.uk",
+                    Description = "<p>Some description about the role goes here, do not make it too long as this is not something people might be very interested to read</p><ul><li>bazinga</li><li>kaouabounga</li><li>yata</li></ul>",
+                    StartDate = new DateTime(2012, 4, 17),
+                    Skills = new List<ExperienceSkill>
+                    {
+                        new ExperienceSkill { SkillId = 1, UsageRating = 3 },
+                        new ExperienceSkill { SkillId = 2, UsageRating = 9 },
+                        new ExperienceSkill { SkillId = 3, UsageRating = 2 }
+                    }
+                });
+                context.Experiences.Add(new Experience
+                {
+                    City = "London",
+                    CompanyName = "DOCDATA",
+                    Country = "United Kingdom",
+                    EndDate = new DateTime(2012, 3, 30),
+                    ImageUrl = "docdata-experience-icon.png",
+                    RoleTitle = "Senior Developer",
+                    WebsiteUrl = "http://www.docdata.ac.uk",
+                    Description = "<p>Some description about the role goes here, do not make it too long as this is not something people might be very interested to read</p><ul><li>bazinga</li><li>kaouabounga</li><li>yata</li></ul>",
+                    StartDate = new DateTime(2011, 4, 1),
+                    Skills = new List<ExperienceSkill>
+                    {
+                        new ExperienceSkill { SkillId = 1, UsageRating = 9 },
+                        new ExperienceSkill { SkillId = 3, UsageRating = 7 }
+                    }
+                });
+                context.Experiences.Add(new Experience
+                {
+                    City = "London",
+                    CompanyName = "GroovyTrain",
+                    Country = "United Kingdom",
+                    EndDate = new DateTime(2011, 3, 20),
+                    ImageUrl = "groovytrain-experience-icon.png",
+                    RoleTitle = "Dotnet Developer",
+                    WebsiteUrl = null,
+                    Description = "<p>Some description about the role goes here, do not make it too long as this is not something people might be very interested to read</p><ul><li>bazinga</li><li>kaouabounga</li><li>yata</li></ul>",
+                    StartDate = new DateTime(2010, 9, 20),
+                    Skills = new List<ExperienceSkill>
+                    {
+                        new ExperienceSkill { SkillId = 2, UsageRating = 6 },
+                        new ExperienceSkill { SkillId = 3, UsageRating = 8 }
                     }
                 });
             }
@@ -170,6 +230,71 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "thor.jpg",
                     ProjectId = 2,
                     Title = "Title Image 3"
+                });
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int AddExperienceSkillVersions(CvDbContext context)
+        {
+
+            if (!context.ExperienceSkillVersions.Any())
+            {
+                context.ExperienceSkillVersions.Add(new ExperienceSkillVersion
+                {
+                    ExperienceId = 1,
+                    SkillId = 1,
+                    SkillVersionId = 2
+                });
+
+                context.ExperienceSkillVersions.Add(new ExperienceSkillVersion
+                {
+                    ExperienceId = 1,
+                    SkillId = 2,
+                    SkillVersionId = 4
+                });
+
+                context.ExperienceSkillVersions.Add(new ExperienceSkillVersion
+                {
+                    ExperienceId = 1,
+                    SkillId = 2,
+                    SkillVersionId = 5
+                });
+
+                context.ExperienceSkillVersions.Add(new ExperienceSkillVersion
+                {
+                    ExperienceId = 2,
+                    SkillId = 1,
+                    SkillVersionId = 1
+                });
+
+                context.ExperienceSkillVersions.Add(new ExperienceSkillVersion
+                {
+                    ExperienceId = 2,
+                    SkillId = 1,
+                    SkillVersionId = 2
+                });
+
+                context.ExperienceSkillVersions.Add(new ExperienceSkillVersion
+                {
+                    ExperienceId = 3,
+                    SkillId = 2,
+                    SkillVersionId = 3
+                });
+
+                context.ExperienceSkillVersions.Add(new ExperienceSkillVersion
+                {
+                    ExperienceId = 3,
+                    SkillId = 2,
+                    SkillVersionId = 4
+                });
+
+                context.ExperienceSkillVersions.Add(new ExperienceSkillVersion
+                {
+                    ExperienceId = 3,
+                    SkillId = 2,
+                    SkillVersionId = 5
                 });
             }
 

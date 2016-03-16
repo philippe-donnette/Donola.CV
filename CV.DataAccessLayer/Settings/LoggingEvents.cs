@@ -13,6 +13,9 @@ namespace CV.DataAccessLayer.Settings
         LIST_PROJECTS = 3,
         LIST_PROJECT_SKILLS = 4,
         GET_PROJECT = 5,
-        LIST_PROJECT_IMAGES = 6
+        LIST_PROJECT_IMAGES = 6,
+        GET_EXPERIENCE = 7,
+        LIST_EXPERIENCES = 8,
+        LIST_EXPERIENCE_SKILLS = 9
     }
 }

@@ -91,6 +91,7 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(model2.Versions.Count, 0);
         }
 
+        #region Project
         [Fact]
         public void ProjectToProjectModel()
         {
@@ -198,5 +199,55 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(projectImage3.Title, model3.Title);
             Assert.Equal(projectImage3.ImageUrl, model3.ImageUrl);
         }
+        #endregion
+
+        #region Experience
+        [Fact]
+        public void ExperienceToExperienceModel()
+        {
+            var exp1 = new Experience { Id = 1, CompanyName = "Company 1", City = "City 1", Country = "Country 1", WebsiteUrl = "Website 1", RoleTitle = "Role 1", Description = "Description 1", ImageUrl = "image1.png", EndDate = null, StartDate = new DateTime(2015, 12, 7), Skills = null };
+            var exp2 = new Experience { Id = 2, CompanyName = "Company 2", City = "City 2", Country = "Country 2", WebsiteUrl = "Website 2", RoleTitle = "Role 2", Description = "Description 2", ImageUrl = "image2.jpg", EndDate = new DateTime(2012, 8, 20), StartDate = DateTime.Now, Skills = null };
+            var exp3 = new Experience { Id = 3, CompanyName = "Company 3", City = "City 3", Country = "Country 3", WebsiteUrl = "Website 3", RoleTitle = "Role 3", Description = "Description 3", ImageUrl = "image3.gif", EndDate = null, StartDate = DateTime.Now, Skills = null };
+            var exps = new List<Experience> { exp1, exp2, exp3 };
+
+            var model = _mapper.Map<IEnumerable<ExperienceModel>>(exps);
+
+            var model1 = model.FirstOrDefault(x => x.Id == exp1.Id);
+            Assert.Equal(exp1.Description, model1.Description);
+            Assert.Equal(exp1.Id, model1.Id);
+            Assert.Equal(exp1.CompanyName, model1.CompanyName);
+            Assert.Equal(exp1.Country, model1.Country);
+            Assert.Equal(exp1.City, model1.City);
+            Assert.Equal(exp1.WebsiteUrl, model1.WebsiteUrl);
+            Assert.Equal(exp1.RoleTitle, model1.RoleTitle);
+            Assert.Equal(exp1.ImageUrl, model1.ImageUrl);
+            Assert.Equal(exp1.StartDate, model1.StartDate);
+            Assert.Equal(exp1.EndDate, model1.EndDate);
+
+            var model2 = model.FirstOrDefault(x => x.Id == exp2.Id);
+            Assert.Equal(exp2.Description, model2.Description);
+            Assert.Equal(exp2.Id, model2.Id);
+            Assert.Equal(exp2.CompanyName, model2.CompanyName);
+            Assert.Equal(exp2.Country, model2.Country);
+            Assert.Equal(exp2.City, model2.City);
+            Assert.Equal(exp2.WebsiteUrl, model2.WebsiteUrl);
+            Assert.Equal(exp2.RoleTitle, model2.RoleTitle);
+            Assert.Equal(exp2.ImageUrl, model2.ImageUrl);
+            Assert.Equal(exp2.StartDate, model2.StartDate);
+            Assert.Equal(exp2.EndDate, model2.EndDate);
+
+            var model3 = model.FirstOrDefault(x => x.Id == exp3.Id);
+            Assert.Equal(exp3.Description, model3.Description);
+            Assert.Equal(exp3.Id, model3.Id);
+            Assert.Equal(exp3.CompanyName, model3.CompanyName);
+            Assert.Equal(exp3.Country, model3.Country);
+            Assert.Equal(exp3.City, model3.City);
+            Assert.Equal(exp3.WebsiteUrl, model3.WebsiteUrl);
+            Assert.Equal(exp3.RoleTitle, model3.RoleTitle);
+            Assert.Equal(exp3.ImageUrl, model3.ImageUrl);
+            Assert.Equal(exp3.StartDate, model3.StartDate);
+            Assert.Equal(exp3.EndDate, model3.EndDate);
+        }
+        #endregion
     }
 }

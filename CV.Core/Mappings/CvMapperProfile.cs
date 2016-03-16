@@ -19,6 +19,7 @@ namespace CV.Core.Mappings
                     : null)
                     )
                 .ForMember(x => x.Weight, o => o.ResolveUsing<SkillWeightResolver>());
+            #region Project
             CreateMap<Project, ProjectModel>();
             CreateMap<ProjectSkill, SkillModel>()
                 .ForMember(x => x.Description, o => o.MapFrom(src => src.Skill.Description))
@@ -29,12 +30,28 @@ namespace CV.Core.Mappings
                     ? src.Versions.Select(x => x.Version != null ? x.Version.Name : null).ToList()
                     : null)
                     )
-                //.ForMember(x => x.Weight, o => o.ResolveUsing<ProjectSkillWeightResolver>())
                 .ForMember(x => x.Weight, o => o.MapFrom(src => src.UsageRating))
                 .ForMember(x => x.UsageRating, o => o.MapFrom(src => src.UsageRating))
                 .ForMember(x => x.InterestRating, o => o.MapFrom(src => src.Skill.InterestRating))
                 .ForMember(x => x.ExperienceRating, o => o.MapFrom(src => src.Skill.ExperienceRating));
             CreateMap<ProjectImage, ImageModel>();
+            #endregion
+            #region Experience
+            CreateMap<Experience, ExperienceModel>();
+            CreateMap<ExperienceSkill, SkillModel>()
+                .ForMember(x => x.Description, o => o.MapFrom(src => src.Skill.Description))
+                .ForMember(x => x.IconClass, o => o.MapFrom(src => src.Skill.IconClass))
+                .ForMember(x => x.Id, o => o.MapFrom(src => src.SkillId))
+                .ForMember(x => x.Name, o => o.MapFrom(src => src.Skill.Name))
+                .ForMember(x => x.Versions, o => o.MapFrom(src => src.Versions != null
+                    ? src.Versions.Select(x => x.Version != null ? x.Version.Name : null).ToList()
+                    : null)
+                    )
+                .ForMember(x => x.Weight, o => o.MapFrom(src => src.UsageRating))
+                .ForMember(x => x.UsageRating, o => o.MapFrom(src => src.UsageRating))
+                .ForMember(x => x.InterestRating, o => o.MapFrom(src => src.Skill.InterestRating))
+                .ForMember(x => x.ExperienceRating, o => o.MapFrom(src => src.Skill.ExperienceRating));
+            #endregion
         }
     }
 }
