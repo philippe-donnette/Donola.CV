@@ -70,8 +70,10 @@ namespace CV.Api
                 .AddDbContext<CvDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
+            services.AddTransient<IExperienceService, ExperienceService>();
             services.AddTransient<IProjectService, ProjectService>();
             services.AddTransient<ISkillService, SkillService>();
+            services.AddTransient<IExperienceRepository, ExperienceRepository>();
             services.AddTransient<IProjectRepository, ProjectRepository>();
             services.AddTransient<ISkillRepository, SkillRepository>();
 

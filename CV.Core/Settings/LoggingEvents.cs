@@ -11,6 +11,9 @@ namespace CV.Core.Settings
         LIST_PROJECTS = 1,
         LIST_PROJECT_SKILLS = 2,
         GET_PROJECT = 3,
-        LIST_PROJECT_IMAGES = 4
+        LIST_PROJECT_IMAGES = 4,
+        GET_EXPERIENCE = 5,
+        LIST_EXPERIENCES = 6,
+        LIST_EXPERIENCE_SKILLS = 7
     }
 }

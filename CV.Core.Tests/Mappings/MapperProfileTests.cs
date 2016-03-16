@@ -248,6 +248,56 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(exp3.StartDate, model3.StartDate);
             Assert.Equal(exp3.EndDate, model3.EndDate);
         }
+
+        [Fact]
+        public void ExperienceSkillToSkillModel()
+        {
+            var expSkill1 = new ExperienceSkill
+            {
+                ExperienceId = 1,
+                SkillId = 1,
+                Skill = new Skill { Id = 1, ExperienceRating = 10, InterestRating = 9, UsageRating = 8 },
+                UsageRating = 7,
+                Versions = new List<ExperienceSkillVersion>
+                {
+                    new ExperienceSkillVersion { ExperienceId = 1, SkillId = 1, SkillVersionId = 1, Version = new SkillVersion { Name = "RC1", Id = 1, SkillId = 1 } },
+                    new ExperienceSkillVersion { ExperienceId = 1, SkillId = 1, SkillVersionId = 2, Version = new SkillVersion { Name = "RC2", Id = 2, SkillId = 1 } }
+                }
+            };
+
+            var model1 = _mapper.Map<SkillModel>(expSkill1);
+
+            Assert.Equal(expSkill1.Skill.Description, model1.Description);
+            Assert.Equal(expSkill1.Skill.ExperienceRating, model1.ExperienceRating);
+            Assert.Equal(expSkill1.Skill.IconClass, model1.IconClass);
+            Assert.Equal(expSkill1.Skill.Id, model1.Id);
+            Assert.Equal(expSkill1.Skill.InterestRating, model1.InterestRating);
+            Assert.Equal(expSkill1.Skill.Name, model1.Name);
+            Assert.Equal(expSkill1.UsageRating, model1.UsageRating);
+            Assert.Equal(expSkill1.UsageRating, model1.Weight);
+            Assert.Equal(expSkill1.Versions.Select(x => x.Version.Name).ToList<string>(), model1.Versions);
+
+            var expSkill2 = new ExperienceSkill
+            {
+                ExperienceId = 2,
+                SkillId = 2,
+                Skill = new Skill { Id = 2, ExperienceRating = 4, InterestRating = 5, UsageRating = 6 },
+                UsageRating = 8,
+                Versions = null
+            };
+
+            var model2 = _mapper.Map<SkillModel>(expSkill2);
+
+            Assert.Equal(expSkill2.Skill.Description, model2.Description);
+            Assert.Equal(expSkill2.Skill.ExperienceRating, model2.ExperienceRating);
+            Assert.Equal(expSkill2.Skill.IconClass, model2.IconClass);
+            Assert.Equal(expSkill2.Skill.Id, model2.Id);
+            Assert.Equal(expSkill2.Skill.InterestRating, model2.InterestRating);
+            Assert.Equal(expSkill2.Skill.Name, model2.Name);
+            Assert.Equal(expSkill2.UsageRating, model2.UsageRating);
+            Assert.Equal(expSkill2.UsageRating, model2.Weight);
+            Assert.Equal(model2.Versions.Count, 0);
+        }
         #endregion
     }
 }
