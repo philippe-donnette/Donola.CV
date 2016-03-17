@@ -42,7 +42,11 @@ namespace CV.DataAccessLayer.Repositories
             _logger.LogInformation((int)LoggingEvents.LIST_EXPERIENCES, "Listing all experiences");
             try
             {
-                return await _context.Experiences.ToListAsync();
+                return await _context
+                    .Experiences
+                    .Include(x => x.Skills).ThenInclude(x => x.Versions).ThenInclude(x => x.Version)
+                    .Include(x => x.Skills).ThenInclude(x => x.Skill)
+                    .ToListAsync();
             }
             catch (Exception ex)
             {
