@@ -2,6 +2,7 @@
 using CV.Core.Mappings;
 using CV.Core.Models;
 using CV.DataAccessLayer.Entities;
+using FluentAssertions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -297,6 +298,74 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(expSkill2.UsageRating, model2.UsageRating);
             Assert.Equal(expSkill2.UsageRating, model2.Weight);
             Assert.Equal(model2.Versions.Count, 0);
+        }
+
+        [Fact]
+        public void ExperienceToExperienceModelWithSkillModel()
+        {
+            var experienceSkillVersion1 = new ExperienceSkillVersion { SkillId = 1, ExperienceId = 1, Version = new SkillVersion { Id = 1, Name = "RC1", SkillId = 1 }, SkillVersionId = 1, ExperienceSkill = new ExperienceSkill { Skill = new Skill { Id = 1, Name = "ASP.NET 5" } } };
+            var experienceSkillVersion2 = new ExperienceSkillVersion { SkillId = 1, ExperienceId = 1, Version = new SkillVersion { Id = 2, Name = "RC2", SkillId = 1 }, SkillVersionId = 2, ExperienceSkill = new ExperienceSkill { Skill = new Skill { Id = 1, Name = "ASP.NET 5" } } };
+            var experienceSkillVersion3 = new ExperienceSkillVersion { SkillId = 2, ExperienceId = 1, Version = new SkillVersion { Id = 3, Name = "1.3", SkillId = 2 }, SkillVersionId = 3, ExperienceSkill = new ExperienceSkill { Skill = new Skill { Id = 2, Name = "AngularJS" } } };
+            var experienceSkillVersion4 = new ExperienceSkillVersion { SkillId = 3, ExperienceId = 1, Version = null, SkillVersionId = 4, ExperienceSkill = new ExperienceSkill { Skill = new Skill { Id = 3, Name = "Automapper" } } };
+
+            var exp = new Experience
+            {
+                Id = 1,
+                CompanyName = "Company 1",
+                City = "City 1",
+                Country = "Country 1",
+                WebsiteUrl = "Website 1",
+                RoleTitle = "Role 1",
+                Description = "Description 1",
+                ImageUrl = "image1.png",
+                EndDate = null,
+                StartDate = new DateTime(2015, 12, 7),
+                Skills = new List<ExperienceSkill>
+                {
+                    new ExperienceSkill { SkillId = 1, Skill = new Skill { Id = 1, Name = "ASP.NET 5" }, Versions = new List<ExperienceSkillVersion> { experienceSkillVersion1, experienceSkillVersion2 } },
+                    new ExperienceSkill { SkillId = 2, Skill = new Skill { Id = 2, Name = "AngularJS" }, Versions = new List<ExperienceSkillVersion> { experienceSkillVersion3 } },
+                    new ExperienceSkill { SkillId = 3, Skill = new Skill { Id = 3, Name = "Automapper" }, Versions = new List<ExperienceSkillVersion> { experienceSkillVersion4 } }
+                }
+            };
+            
+            var model = _mapper.Map<ExperienceModel>(exp);
+            
+            Assert.Equal(exp.Description, model.Description);
+            Assert.Equal(exp.Id, model.Id);
+            Assert.Equal(exp.CompanyName, model.CompanyName);
+            Assert.Equal(exp.Country, model.Country);
+            Assert.Equal(exp.City, model.City);
+            Assert.Equal(exp.WebsiteUrl, model.WebsiteUrl);
+            Assert.Equal(exp.RoleTitle, model.RoleTitle);
+            Assert.Equal(exp.ImageUrl, model.ImageUrl);
+            Assert.Equal(exp.StartDate, model.StartDate);
+            Assert.Equal(exp.EndDate, model.EndDate);
+
+            Assert.Equal(model.Skills.Count, exp.Skills.Count);
+
+            var expected = exp.Skills.Select(x => new SkillModel
+            {
+                Description = x.Skill?.Description,
+                ExperienceRating = x.Skill == null ? 0 : x.Skill.ExperienceRating,
+                IconClass = x.Skill?.IconClass,
+                Id = x.Skill == null ? 0 : x.Skill.Id,
+                InterestRating = x.Skill == null ? 0 : x.Skill.InterestRating,
+                Name = x.Skill?.Name,
+                UsageRating = x.Skill == null ? 0 : x.Skill.UsageRating,
+                Versions = x.Versions.Select(y => y.Version?.Name).ToList<string>(),
+                Weight = x.UsageRating
+            });
+
+            model.Skills.Should()
+                .HaveCount(exp.Skills.Count)
+                .Equals(expected.ToList<SkillModel>());    
+
+            foreach (ExperienceSkill skill in exp.Skills)
+            {
+                model.Skills.First(x => x.Id == skill.SkillId).Versions.Should()
+                    .Equal(exp.Skills.First(x => x.SkillId == skill.SkillId).Versions.Select(x => x.Version?.Name))
+                    .And.HaveCount(exp.Skills.First(x => x.SkillId == skill.SkillId).Versions.Count);
+            }
         }
         #endregion
     }

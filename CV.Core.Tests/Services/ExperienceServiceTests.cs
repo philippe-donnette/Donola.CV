@@ -118,67 +118,6 @@ namespace CV.Core.Tests.Services
             var experiences = result.Result as IEnumerable<ExperienceModel>;
             Assert.Equal(experiences, null);
         }
-
-        [Fact]
-        public void GetExperiencesAsync_ReturnListOfExperienceModelWithSkillModel()
-        {
-            var experienceSkillVersion1 = new ExperienceSkillVersion { SkillId = 1, ExperienceId = 1, Version = new SkillVersion { Id = 1, Name = "RC1", SkillId = 1 }, SkillVersionId = 1 };
-            var experienceSkillVersion2 = new ExperienceSkillVersion { SkillId = 1, ExperienceId = 1, Version = new SkillVersion { Id = 2, Name = "RC2", SkillId = 1 }, SkillVersionId = 2 };
-            var experienceSkillVersion3 = new ExperienceSkillVersion { SkillId = 1, ExperienceId = 1, Version = null, SkillVersionId = 3 };
-
-            var experienceSkill1 = new ExperienceSkill
-            {
-                ExperienceId = 1,
-                SkillId = 1,
-                UsageRating = 8,
-                Skill = new Skill { Name = "ASP.NET 5", Id = 1, UsageRating = 6 },
-                Versions = new List<ExperienceSkillVersion>
-                                {
-                                    experienceSkillVersion1,
-                                    experienceSkillVersion2,
-                                    experienceSkillVersion3,
-                                    null
-                                }
-            };
-            var experienceSkill2 = new ExperienceSkill
-            {
-                ExperienceId = 1,
-                SkillId = 2,
-                UsageRating = 2,
-                Skill = null,
-                Versions = null
-            };
-
-            _experienceRepositoryMock.Setup(m => m.GetExperiencesAsync())
-                .ReturnsAsync(new List<Experience>
-                {
-                    new Experience
-                    {
-                        Id = 1, CompanyName = "Company Number 1",
-                        Description = null, ImageUrl = null, StartDate = DateTime.Now,
-                        Skills = new List<ExperienceSkill>
-                        {
-                            experienceSkill1,
-                            experienceSkill2,
-                            null
-                        }
-                    }
-                });
-            var result = _service.GetExperiencesAsync();
-            var experiences = result.Result as IEnumerable<ExperienceModel>;
-            experiences.Should().BeOfType<List<ExperienceModel>>();
-            Assert.Equal(experiences.Count(), 1);
-            var experience = experiences.FirstOrDefault();
-            var expSkill1 = experience.Skills.FirstOrDefault(x => x.Id == experienceSkill1.SkillId);
-            var expSkillVersion1 = expSkill1.Versions.FirstOrDefault(x => x == experienceSkillVersion1?.Version?.Name);
-            var expSkillVersion2 = expSkill1.Versions.FirstOrDefault(x => x == experienceSkillVersion2?.Version?.Name);
-            var expSkillVersion3 = expSkill1.Versions.FirstOrDefault(x => x == experienceSkillVersion3?.Version?.Name);
-            var expSkill2 = experience.Skills.FirstOrDefault(x => x.Id == experienceSkill2.SkillId);
-            experience.Skills.Count.Should().Be(3);
-            //expSkill1.Versions.Count.Should().Be(3);
-            expSkill2.Versions.Count.Should().Be(0);
-
-        }
         #endregion
 
         #region GetSkillsAsync
