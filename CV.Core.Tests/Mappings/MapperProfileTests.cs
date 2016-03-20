@@ -342,7 +342,7 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(exp.EndDate, model.EndDate);
 
             Assert.Equal(model.Skills.Count, exp.Skills.Count);
-
+            
             var expected = exp.Skills.Select(x => new SkillModel
             {
                 Description = x.Skill?.Description,
