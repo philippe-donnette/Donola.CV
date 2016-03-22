@@ -17,7 +17,7 @@ namespace CV.Core.Models
         public string AboutCaption { get; set; }
         public string AboutMotto { get; set; }
         public string Occupation { get; set; }
-        public string OccuptionMotto { get; set; }
+        public string OccupationMotto { get; set; }
         public string LinkedinUrl { get; set; }
         public string GitHubUrl { get; set; }
     }

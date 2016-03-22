@@ -169,24 +169,26 @@ namespace CV.DataAccessLayer.Initializers
 
         private static int CreatePerson(CvDbContext context)
         {
-            if (!context.Persons.Any())
-            {
-                context.Persons.Add(new Person
-                {
-                    AboutCaption = "Software & Web Developer",
-                    AboutMotto = "10 Years Experience in Software Development",
-                    AboutText = "<p>Some bla bla a bit bla bla every where</p>",
-                    AboutImage = "user.png",
-                    Firstname = "Philippe",
-                    Lastname = "Donnette",
-                    GitHubUrl = "https://github.com/philippe-donnette",
-                    HomeImage = "wordcloud-1.png",
-                    LinkedinUrl = "https://www.linkedin.com/in/philippe-donnette-2bb80b4",
-                    Occupation = "Software & Web Developer",
-                    OccuptionMotto = "10 Years Experience in Software Development",
-                    PrimaryImage = "user.png"                    
-                });
-            }
+            var deletePerson = context.Persons.SingleOrDefault();
+            if (deletePerson != null)
+                context.Persons.Remove(deletePerson);
+
+            var person = new Person();
+                
+            person.AboutCaption = "Software & Web Developer";
+            person.AboutMotto = "10 Years Experience in Software Development";
+            person.AboutText = "<p>Some bla bla a bit bla bla every where</p>";
+            person.AboutImage = "user.png";
+            person.Firstname = "Philippe";
+            person.Lastname = "Donnette";
+            person.GitHubUrl = "https://github.com/philippe-donnette";
+            person.HomeImage = "wordcloud-1.png";
+            person.LinkedinUrl = "https://www.linkedin.com/in/philippe-donnette-2bb80b4";
+            person.Occupation = "Software & Web Developer";
+            person.OccupationMotto = "10 Years Experience in Software Development";
+            person.PrimaryImage = "user.png";
+
+            context.Persons.Add(person);
 
             return context.SaveChanges();
         }

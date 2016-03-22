@@ -29,7 +29,7 @@ namespace CV.DataAccessLayer.Entities
         [StringLength(200)]
         public string Occupation { get; set; }
         [StringLength(400)]
-        public string OccuptionMotto { get; set; }
+        public string OccupationMotto { get; set; }
         [StringLength(400)]
         public string LinkedinUrl { get; set; }
         [StringLength(400)]
