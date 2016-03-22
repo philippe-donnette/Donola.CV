@@ -8,9 +8,10 @@ using CV.DataAccessLayer.Contexts;
 namespace CV.DataAccessLayer.Migrations
 {
     [DbContext(typeof(CvDbContext))]
-    partial class CvDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160321061136_Update_In_Person")]
+    partial class Update_In_Person
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")

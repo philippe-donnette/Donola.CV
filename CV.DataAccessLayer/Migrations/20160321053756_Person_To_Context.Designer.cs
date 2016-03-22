@@ -8,9 +8,10 @@ using CV.DataAccessLayer.Contexts;
 namespace CV.DataAccessLayer.Migrations
 {
     [DbContext(typeof(CvDbContext))]
-    partial class CvDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160321053756_Person_To_Context")]
+    partial class Person_To_Context
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -79,14 +80,14 @@ namespace CV.DataAccessLayer.Migrations
                     b.Property<string>("AboutCaption")
                         .HasAnnotation("MaxLength", 200);
 
-                    b.Property<string>("AboutImage")
-                        .HasAnnotation("MaxLength", 200);
-
                     b.Property<string>("AboutMotto")
                         .HasAnnotation("MaxLength", 400);
 
                     b.Property<string>("AboutText")
                         .HasAnnotation("MaxLength", 1000);
+
+                    b.Property<string>("ContactImage")
+                        .HasAnnotation("MaxLength", 200);
 
                     b.Property<string>("Firstname")
                         .HasAnnotation("MaxLength", 200);

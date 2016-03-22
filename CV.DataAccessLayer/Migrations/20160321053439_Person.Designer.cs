@@ -8,9 +8,10 @@ using CV.DataAccessLayer.Contexts;
 namespace CV.DataAccessLayer.Migrations
 {
     [DbContext(typeof(CvDbContext))]
-    partial class CvDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160321053439_Person")]
+    partial class Person
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
@@ -69,50 +70,6 @@ namespace CV.DataAccessLayer.Migrations
                     b.Property<int>("SkillVersionId");
 
                     b.HasKey("ExperienceId", "SkillId", "SkillVersionId");
-                });
-
-            modelBuilder.Entity("CV.DataAccessLayer.Entities.Person", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("AboutCaption")
-                        .HasAnnotation("MaxLength", 200);
-
-                    b.Property<string>("AboutImage")
-                        .HasAnnotation("MaxLength", 200);
-
-                    b.Property<string>("AboutMotto")
-                        .HasAnnotation("MaxLength", 400);
-
-                    b.Property<string>("AboutText")
-                        .HasAnnotation("MaxLength", 1000);
-
-                    b.Property<string>("Firstname")
-                        .HasAnnotation("MaxLength", 200);
-
-                    b.Property<string>("GitHubUrl")
-                        .HasAnnotation("MaxLength", 400);
-
-                    b.Property<string>("HomeImage")
-                        .HasAnnotation("MaxLength", 200);
-
-                    b.Property<string>("Lastname")
-                        .HasAnnotation("MaxLength", 200);
-
-                    b.Property<string>("LinkedinUrl")
-                        .HasAnnotation("MaxLength", 400);
-
-                    b.Property<string>("Occupation")
-                        .HasAnnotation("MaxLength", 200);
-
-                    b.Property<string>("OccuptionMotto")
-                        .HasAnnotation("MaxLength", 400);
-
-                    b.Property<string>("PrimaryImage")
-                        .HasAnnotation("MaxLength", 200);
-
-                    b.HasKey("Id");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Project", b =>

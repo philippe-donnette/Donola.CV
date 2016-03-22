@@ -368,5 +368,55 @@ namespace CV.Core.Tests.Mappings
             }
         }
         #endregion
+
+        #region Person
+        [Fact]
+        public void PersonToPersonModel()
+        {
+            var person = new Person
+            {
+                AboutCaption = "Software & Web Developer",
+                AboutMotto = "10 Years Experience in Software Development",
+                AboutText = "<p>Some bla bla a bit bla bla every where</p>",
+                AboutImage = "user.png",
+                Firstname = "Philippe",
+                Lastname = "Donnette",
+                GitHubUrl = "https://github.com/philippe-donnette",
+                HomeImage = "wordcloud-1.png",
+                LinkedinUrl = "https://www.linkedin.com/in/philippe-donnette-2bb80b4",
+                Occupation = "Software & Web Developer",
+                OccuptionMotto = "10 Years Experience in Software Development",
+                PrimaryImage = "user.png"
+            };
+
+            var model = _mapper.Map<PersonModel>(person);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Assert.Equal(model.AboutCaption, person.AboutCaption);
+            Assert.Equal(model.AboutMotto, person.AboutMotto);
+            Assert.Equal(model.AboutText, person.AboutText);
+            Assert.Equal(model.AboutImage, person.AboutImage);
+            Assert.Equal(model.Firstname, person.Firstname);
+            Assert.Equal(model.Lastname, person.Lastname);
+            Assert.Equal(model.GitHubUrl, person.GitHubUrl);
+            Assert.Equal(model.HomeImage, person.HomeImage);
+            Assert.Equal(model.LinkedinUrl, person.LinkedinUrl);
+            Assert.Equal(model.Occupation, person.Occupation);
+            Assert.Equal(model.OccuptionMotto, person.OccuptionMotto);
+            Assert.Equal(model.PrimaryImage, person.PrimaryImage);
+        }
+        #endregion
     }
 }

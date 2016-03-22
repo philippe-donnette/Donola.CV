@@ -14,6 +14,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateSkills(context);
             CreateProjects(context);
             CreateExperiences(context);
+            CreatePerson(context);
 
             AddProjectSkillVersions(context);
             AddProjectImages(context);
@@ -160,6 +161,30 @@ namespace CV.DataAccessLayer.Initializers
                         new ExperienceSkill { SkillId = 2, UsageRating = 6 },
                         new ExperienceSkill { SkillId = 3, UsageRating = 8 }
                     }
+                });
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int CreatePerson(CvDbContext context)
+        {
+            if (!context.Persons.Any())
+            {
+                context.Persons.Add(new Person
+                {
+                    AboutCaption = "Software & Web Developer",
+                    AboutMotto = "10 Years Experience in Software Development",
+                    AboutText = "<p>Some bla bla a bit bla bla every where</p>",
+                    AboutImage = "user.png",
+                    Firstname = "Philippe",
+                    Lastname = "Donnette",
+                    GitHubUrl = "https://github.com/philippe-donnette",
+                    HomeImage = "wordcloud-1.png",
+                    LinkedinUrl = "https://www.linkedin.com/in/philippe-donnette-2bb80b4",
+                    Occupation = "Software & Web Developer",
+                    OccuptionMotto = "10 Years Experience in Software Development",
+                    PrimaryImage = "user.png"                    
                 });
             }
 

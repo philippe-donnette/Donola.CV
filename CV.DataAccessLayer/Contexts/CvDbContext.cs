@@ -21,6 +21,7 @@ namespace CV.DataAccessLayer.Contexts
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<ExperienceSkill> ExperienceSkills { get; set; }
         public DbSet<ExperienceSkillVersion> ExperienceSkillVersions { get; set; }
+        public DbSet<Person> Persons { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

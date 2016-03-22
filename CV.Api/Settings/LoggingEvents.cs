@@ -15,6 +15,7 @@ namespace CV.Api.Settings
         LIST_PROJECT_IMAGES = 5,
         GET_EXPERIENCE = 6,
         LIST_EXPERIENCES = 7,
-        LIST_EXPERIENCE_SKILLS = 8
+        LIST_EXPERIENCE_SKILLS = 8,
+        GET_PERSON = 9
     }
 }

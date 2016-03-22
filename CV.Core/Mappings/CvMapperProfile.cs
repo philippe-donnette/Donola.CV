@@ -52,6 +52,9 @@ namespace CV.Core.Mappings
                 .ForMember(x => x.InterestRating, o => o.MapFrom(src => src.Skill.InterestRating))
                 .ForMember(x => x.ExperienceRating, o => o.MapFrom(src => src.Skill.ExperienceRating));
             #endregion
+            #region Person
+            CreateMap<Person, PersonModel>();
+            #endregion
         }
     }
 }
