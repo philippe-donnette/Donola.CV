@@ -405,5 +405,40 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(model.PrimaryImage, person.PrimaryImage);
         }
         #endregion
+
+        #region Qualification
+        [Fact]
+        public void QualificationToQualificationModel()
+        {
+            var qualification = new Qualification
+            {
+                Id = 1,
+                SchoolName = "Martin Luther King",
+                StartDate = new DateTime(1998, 9, 1),
+                EndDate = new DateTime(2000, 7, 31),
+                ImageUrl = null,
+                City = "Paris",
+                Country = "France",
+                Subject = "Terminal S technology",
+                Description = "<p>some blah blah, some blah blah, some blah blah, some blah blah</p>",
+                WebsiteUrl = "http://www.google.co.uk",
+                DegreeFile = "mlk.pdf"
+            };
+
+            var model = _mapper.Map<QualificationModel>(qualification);
+
+            Assert.Equal(model.Id, qualification.Id);
+            Assert.Equal(model.SchoolName, qualification.SchoolName);
+            Assert.Equal(model.StartDate, qualification.StartDate);
+            Assert.Equal(model.EndDate, qualification.EndDate);
+            Assert.Equal(model.ImageUrl, qualification.ImageUrl);
+            Assert.Equal(model.City, qualification.City);
+            Assert.Equal(model.Country, qualification.Country);
+            Assert.Equal(model.Subject, qualification.Subject);
+            Assert.Equal(model.Description, qualification.Description);
+            Assert.Equal(model.WebsiteUrl, qualification.WebsiteUrl);
+            Assert.Equal(model.DegreeFile, qualification.DegreeFile);
+        }
+        #endregion
     }
 }

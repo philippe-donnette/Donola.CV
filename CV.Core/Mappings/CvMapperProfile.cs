@@ -55,6 +55,9 @@ namespace CV.Core.Mappings
             #region Person
             CreateMap<Person, PersonModel>();
             #endregion
+            #region Qualification
+            CreateMap<Qualification, QualificationModel>();
+            #endregion
         }
     }
 }

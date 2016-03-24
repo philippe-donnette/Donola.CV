@@ -15,6 +15,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateProjects(context);
             CreateExperiences(context);
             CreatePerson(context);
+            CreateQualifications(context);
 
             AddProjectSkillVersions(context);
             AddProjectImages(context);
@@ -189,6 +190,43 @@ namespace CV.DataAccessLayer.Initializers
             person.PrimaryImage = "user.png";
 
             context.Persons.Add(person);
+
+            return context.SaveChanges();
+        }
+
+        private static int CreateQualifications(CvDbContext context)
+        {
+
+            if (!context.Qualifications.Any())
+            {
+                context.Qualifications.Add(new Qualification
+                {
+                    SchoolName = "Martin Luther King",
+                    StartDate = new DateTime(1998, 9, 1),
+                    EndDate = new DateTime(2000, 7, 31),
+                    ImageUrl = null,
+                    City = "Paris",
+                    Country = "France",
+                    Subject = "Terminal S technology",
+                    Description = "<p>some blah blah, some blah blah, some blah blah, some blah blah</p>",
+                    WebsiteUrl = "http://www.google.co.uk",
+                    DegreeFile = null
+                });
+                context.Qualifications.Add(new Qualification
+                {
+                    SchoolName = "H.E.I.G",
+                    StartDate = new DateTime(2003, 9, 1),
+                    EndDate = new DateTime(2005, 7, 31),
+                    ImageUrl = "heig.png",
+                    City = "Paris",
+                    Country = "France",
+                    Subject = "BTS informatique de gestion",
+                    Description = "<p>some blah blah, some blah blah, some blah blah, some blah blah</p>",
+                    WebsiteUrl = null,
+                    DegreeFile = "heig.pdf"
+                });
+                
+            }
 
             return context.SaveChanges();
         }
