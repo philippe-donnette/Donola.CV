@@ -16,6 +16,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateExperiences(context);
             CreatePerson(context);
             CreateQualifications(context);
+            CreateTrainings(context);
 
             AddProjectSkillVersions(context);
             AddProjectImages(context);
@@ -226,6 +227,35 @@ namespace CV.DataAccessLayer.Initializers
                     DegreeFile = "heig.pdf"
                 });
                 
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int CreateTrainings(CvDbContext context)
+        {
+
+            if (!context.Trainings.Any())
+            {
+                context.Trainings.Add(new Training
+                {
+                    CertificateFile = "scrum.pdf",
+                    Description = "Some details about that <b>scrum</b> training",
+                    ImageUrl = "scrum.png",
+                    Provider = "Scrum.org",
+                    Subject = "PSD I",
+                    WebsiteUrl = "http://www.scrum.org"
+                });
+                context.Trainings.Add(new Training
+                {
+                    CertificateFile = null,
+                    Description = "Some details about that <b>shibboleth</b> training",
+                    ImageUrl = null,
+                    Provider = "Jisc",
+                    Subject = "Shibboleth",
+                    WebsiteUrl = "http://www.jisc.ac.uk"
+                });
+
             }
 
             return context.SaveChanges();

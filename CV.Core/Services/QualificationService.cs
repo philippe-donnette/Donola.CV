@@ -27,7 +27,7 @@ namespace CV.Core.Services
         
         public async Task<IEnumerable<QualificationModel>> GetQualificationsAsync()
         {
-            _logger.LogInformation((int)LoggingEvents.LIST_EXPERIENCES, "Listing all qualifications");
+            _logger.LogInformation((int)LoggingEvents.LIST_QUALIFICATIONS, "Listing all qualifications");
             try
             {
                 var qualifications = await _qualificationRepository.GetQualificationsAsync();
@@ -35,7 +35,7 @@ namespace CV.Core.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError((int)LoggingEvents.LIST_EXPERIENCES, ex.StackTrace);
+                _logger.LogError((int)LoggingEvents.LIST_QUALIFICATIONS, ex.StackTrace);
                 return null;
             }
         }

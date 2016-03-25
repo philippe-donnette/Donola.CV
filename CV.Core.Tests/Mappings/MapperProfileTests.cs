@@ -440,5 +440,32 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(model.DegreeFile, qualification.DegreeFile);
         }
         #endregion
+
+        #region Training
+        [Fact]
+        public void TrainingToTrainingModel()
+        {
+            var training = new Training
+            {
+                Id = 1,
+                CertificateFile = "scrum.pdf",
+                Description = "Some details about that <b>scrum</b> training",
+                ImageUrl = "scrum.png",
+                Provider = "Scrum.org",
+                Subject = "PSD I",
+                WebsiteUrl = "http://www.scrum.org"
+            };
+
+            var model = _mapper.Map<TrainingModel>(training);
+
+            Assert.Equal(model.Id, training.Id);
+            Assert.Equal(model.Provider, training.Provider);
+            Assert.Equal(model.ImageUrl, training.ImageUrl);
+            Assert.Equal(model.Subject, training.Subject);
+            Assert.Equal(model.Description, training.Description);
+            Assert.Equal(model.WebsiteUrl, training.WebsiteUrl);
+            Assert.Equal(model.CertificateFile, training.CertificateFile);
+        }
+        #endregion
     }
 }

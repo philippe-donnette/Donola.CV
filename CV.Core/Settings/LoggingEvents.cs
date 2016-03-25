@@ -15,6 +15,8 @@ namespace CV.Core.Settings
         GET_EXPERIENCE = 5,
         LIST_EXPERIENCES = 6,
         LIST_EXPERIENCE_SKILLS = 7,
-        GET_PERSON = 8
+        GET_PERSON = 8,
+        LIST_QUALIFICATIONS = 9,
+        LIST_TRAININGS = 10
     }
 }
