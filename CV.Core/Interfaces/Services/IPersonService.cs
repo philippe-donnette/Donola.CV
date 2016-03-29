@@ -9,5 +9,6 @@ namespace CV.Core.Services
     public interface IPersonService
     {
         Task<PersonModel> GetPersonAsync();
+        Task<IEnumerable<CardModel>> GetCardsAsync();
     }
 }

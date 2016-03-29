@@ -36,5 +36,19 @@ namespace CV.DataAccessLayer.Repositories
                 return null;
             }
         }
+
+        public async Task<IEnumerable<Card>> GetCardsAsync()
+        {
+            _logger.LogInformation((int)LoggingEvents.LIST_CARDS, "Listing all cards");
+            try
+            {
+                return await _context.Cards.ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.LIST_CARDS, ex.StackTrace);
+                return null;
+            }
+        }
     }
 }

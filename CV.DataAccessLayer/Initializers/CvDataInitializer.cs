@@ -17,6 +17,7 @@ namespace CV.DataAccessLayer.Initializers
             CreatePerson(context);
             CreateQualifications(context);
             CreateTrainings(context);
+            CreateCards(context);
 
             AddProjectSkillVersions(context);
             AddProjectImages(context);
@@ -261,6 +262,56 @@ namespace CV.DataAccessLayer.Initializers
             return context.SaveChanges();
         }
 
+        private static int CreateCards(CvDbContext context)
+        {
+
+            if (!context.Cards.Any())
+            {
+                context.Cards.Add(new Card
+                {
+                    Rotate = "x",
+                    ImageFrontUrl = "card-contact.jpg",
+                    TextFront = null,
+                    Caption = "Family",
+                    CaptionIconClass = "fa fa-group",
+                    TextBack = "Happy father of two, one boy Matti and one girl Leila",
+                    ImageBackUrl = null
+                });
+                context.Cards.Add(new Card
+                {
+                    Rotate = "y",
+                    ImageFrontUrl = "card-contact.jpg",
+                    TextFront = null,
+                    Caption = "Location",
+                    CaptionIconClass = "fa fa-map-marker",
+                    TextBack = "London SE8<br />United Kingdom",
+                    ImageBackUrl = null
+                });
+                context.Cards.Add(new Card
+                {
+                    Rotate = "x",
+                    ImageFrontUrl = "card-contact.jpg",
+                    TextFront = null,
+                    Caption = "Contact",
+                    CaptionIconClass = "fa fa-envelope",
+                    TextBack = "LINKEDIN<br />GMAIL<br />(Phone)",
+                    ImageBackUrl = null
+                });
+                context.Cards.Add(new Card
+                {
+                    Rotate = "x",
+                    ImageFrontUrl = "card-contact.jpg",
+                    TextFront = null,
+                    Caption = "Football",
+                    CaptionIconClass = "fa fa-soccer-ball-o",
+                    TextBack = "I love playing football and I organise games in Deptford Park most Saturdays",
+                    ImageBackUrl = null
+                });
+            }
+
+            return context.SaveChanges();
+        }
+            
         private static int AddProjectSkillVersions(CvDbContext context)
         {
 

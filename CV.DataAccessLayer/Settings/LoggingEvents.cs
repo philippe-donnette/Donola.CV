@@ -19,6 +19,7 @@ namespace CV.DataAccessLayer.Settings
         LIST_EXPERIENCE_SKILLS = 9,
         GET_PERSON = 10,
         LIST_QUALIFICATIONS = 11,
-        LIST_TRAININGS = 12
+        LIST_TRAININGS = 12,
+        LIST_CARDS = 13
     }
 }

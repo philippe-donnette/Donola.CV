@@ -73,5 +73,47 @@ namespace CV.Api.Tests.Controllers
             Assert.Equal(httpResult.StatusCode, StatusCodes.Status400BadRequest);
         }
         #endregion
+
+        #region GetProjectsAsync
+        [Fact]
+        public void GetProjectsAsync_ReturnNotFoundStatusCode()
+        {
+            _personServiceMock.Setup(m => m.GetCardsAsync())
+                .ReturnsAsync(null);
+            var result = _controller.GetCardsAsync();
+            var httpNotFoundResult = result.Result as HttpNotFoundResult;
+            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
+            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+        }
+
+        [Fact]
+        public void GetCardsAsync_ReturnOkStatusCode()
+        {
+            _personServiceMock.Setup(m => m.GetCardsAsync())
+                .ReturnsAsync(new List<CardModel>
+                {
+                    new CardModel { Id = 1, ImageBackUrl = null, TextBack = null, Caption = "Family" },
+                    new CardModel { Id = 1, ImageBackUrl = null, TextBack = null, Caption = "Location" }
+                });
+            var result = _controller.GetCardsAsync();
+            var httpOkResult = result.Result as HttpOkObjectResult;
+            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
+            Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
+            var cards = httpOkResult.Value as List<CardModel>;
+            cards.Should().BeOfType<List<CardModel>>();
+            Assert.Equal(cards.Count, 2);
+        }
+
+        [Fact]
+        public void GetCardsAsync_ReturnBadRequestStatusCode()
+        {
+            _personServiceMock.Setup(m => m.GetCardsAsync())
+                .ThrowsAsync(new Exception());
+            var result = _controller.GetCardsAsync();
+            var httpResult = result.Result as BadRequestResult;
+            httpResult.Should().BeOfType<BadRequestResult>();
+            Assert.Equal(httpResult.StatusCode, StatusCodes.Status400BadRequest);
+        }
+        #endregion
     }
 }

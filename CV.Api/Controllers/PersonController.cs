@@ -45,5 +45,26 @@ namespace CV.Api.Controllers
                 return HttpBadRequest();
             }
         }
+
+        // GET: api/person/card/all
+        [HttpGet]
+        [Route("card/all")]
+        public async Task<IActionResult> GetCardsAsync()
+        {
+            _logger.LogInformation((int)LoggingEvents.LIST_CARDS, "Listing all cards");
+            try
+            {
+                var cards = await _personService.GetCardsAsync();
+                if (cards != null)
+                    return Ok(cards);
+                else
+                    return HttpNotFound();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.LIST_CARDS, ex.StackTrace);
+                return HttpBadRequest();
+            }
+        }
     }
 }

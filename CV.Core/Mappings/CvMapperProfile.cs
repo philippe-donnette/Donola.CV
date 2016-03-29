@@ -61,6 +61,9 @@ namespace CV.Core.Mappings
             #region Training
             CreateMap<Training, TrainingModel>();
             #endregion
+            #region Card
+            CreateMap<Card, CardModel>();
+            #endregion
         }
     }
 }

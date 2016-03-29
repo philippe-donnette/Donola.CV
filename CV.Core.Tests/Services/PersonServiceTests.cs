@@ -86,5 +86,44 @@ namespace CV.Core.Tests.Services
             Assert.Equal(model.Firstname, person.Firstname);
         }
         #endregion
+
+        #region GetCardsAsync
+        [Fact]
+        public void GetCardsAsync_ReturnListOfCardModel()
+        {
+            _personRepositoryMock.Setup(m => m.GetCardsAsync())
+                .ReturnsAsync(new List<Card>
+                {
+                    new Card { Rotate = "x", ImageFrontUrl = "card-contact.jpg", TextFront = null, Caption = "Family", CaptionIconClass = "fa fa-group", TextBack = "Happy father of two, one boy Matti and one girl Leila", ImageBackUrl = null },
+                    new Card { Rotate = "y", ImageFrontUrl = "card-contact.jpg", TextFront = null, Caption = "Location", CaptionIconClass = "fa fa-map-marker", TextBack = "London SE8<br />United Kingdom", ImageBackUrl = null },
+                    new Card { Rotate = "x", ImageFrontUrl = "card-contact.jpg", TextFront = null, Caption = "Contact", CaptionIconClass = "fa fa-envelope", TextBack = "LINKEDIN<br />GMAIL<br />(Phone)", ImageBackUrl = null },
+                    new Card { Rotate = "x", ImageFrontUrl = "card-contact.jpg", TextFront = null, Caption = "Football", CaptionIconClass = "fa fa-soccer-ball-o", TextBack = "I love playing football and I organise games in Deptford Park most Saturdays", ImageBackUrl = null }
+                });
+            var result = _service.GetCardsAsync();
+            var cards = result.Result as IEnumerable<CardModel>;
+            cards.Should().BeOfType<List<CardModel>>();
+            Assert.Equal(cards.Count(), 4);
+        }
+
+        [Fact]
+        public void GetCardsAsync_ReturnNull()
+        {
+            _personRepositoryMock.Setup(m => m.GetCardsAsync())
+                .ReturnsAsync(null);
+            var result = _service.GetCardsAsync();
+            var cards = result.Result as IEnumerable<CardModel>;
+            Assert.Equal(cards, null);
+        }
+
+        [Fact]
+        public void GetCardsAsync_ReturnNullWhenExeptionThrown()
+        {
+            _personRepositoryMock.Setup(m => m.GetCardsAsync())
+                .ThrowsAsync(new Exception());
+            var result = _service.GetCardsAsync();
+            var cards = result.Result as IEnumerable<CardModel>;
+            Assert.Equal(cards, null);
+        }
+        #endregion
     }
 }

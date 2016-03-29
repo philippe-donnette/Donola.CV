@@ -24,6 +24,7 @@ namespace CV.DataAccessLayer.Contexts
         public DbSet<Person> Persons { get; set; }
         public DbSet<Qualification> Qualifications { get; set; }
         public DbSet<Training> Trainings { get; set; }
+        public DbSet<Card> Cards { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

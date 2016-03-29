@@ -18,6 +18,7 @@ namespace CV.Api.Settings
         LIST_EXPERIENCE_SKILLS = 8,
         GET_PERSON = 9,
         LIST_QUALIFICATIONS = 10,
-        LIST_TRAININGS = 11
+        LIST_TRAININGS = 11,
+        LIST_CARDS = 12
     }
 }

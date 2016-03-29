@@ -9,5 +9,6 @@ namespace CV.DataAccessLayer.Repositories
     public interface IPersonRepository
     {
         Task<Person> GetPersonAsync();
+        Task<IEnumerable<Card>> GetCardsAsync();
     }
 }

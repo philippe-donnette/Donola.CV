@@ -39,5 +39,20 @@ namespace CV.Core.Services
                 return null;
             }
         }
+
+        public async Task<IEnumerable<CardModel>> GetCardsAsync()
+        {
+            _logger.LogInformation((int)LoggingEvents.LIST_CARDS, "Listing all cards");
+            try
+            {
+                var cards = await _personRepository.GetCardsAsync();
+                return _mapper.Map<IEnumerable<CardModel>>(cards);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError((int)LoggingEvents.LIST_CARDS, ex.StackTrace);
+                return null;
+            }
+        }
     }
 }

@@ -467,5 +467,34 @@ namespace CV.Core.Tests.Mappings
             Assert.Equal(model.CertificateFile, training.CertificateFile);
         }
         #endregion
+
+        #region Card
+        [Fact]
+        public void CardToCardModel()
+        {
+            var card = new Card
+            {
+                Id = 1,
+                Rotate = "x",
+                ImageFrontUrl = "card-contact.jpg",
+                TextFront = null,
+                Caption = "Family",
+                CaptionIconClass = "fa fa-group",
+                TextBack = "Happy father of two, one boy Matti and one girl Leila",
+                ImageBackUrl = null
+            };
+
+            var model = _mapper.Map<CardModel>(card);
+
+            Assert.Equal(model.Id, card.Id);
+            Assert.Equal(model.Rotate, card.Rotate);
+            Assert.Equal(model.ImageFrontUrl, card.ImageFrontUrl);
+            Assert.Equal(model.TextFront, card.TextFront);
+            Assert.Equal(model.ImageBackUrl, card.ImageBackUrl);
+            Assert.Equal(model.TextBack, card.TextBack);
+            Assert.Equal(model.Caption, card.Caption);
+            Assert.Equal(model.CaptionIconClass, card.CaptionIconClass);
+        }
+        #endregion
     }
 }
