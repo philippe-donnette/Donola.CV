@@ -23,6 +23,8 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill visual_studio { get; set; }
         private static Skill csharp { get; set; }
         private static Skill dotnet { get; set; }
+        private static Skill oracle { get; set; }
+        private static Skill windows { get; set; }
         #endregion
 
         #region SkillVersions
@@ -34,6 +36,9 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion visual_studio_2003 { get; set; }
         private static SkillVersion csharp_1_2 { get; set; }
         private static SkillVersion dotnet_1_1 { get; set; }
+        private static SkillVersion oracle_8 { get; set; }
+        private static SkillVersion windows_xp { get; set; }
+        private static SkillVersion windows_server_2003 { get; set; }
         #endregion
 
         private static int CreateSkills(CvDbContext context)
@@ -136,6 +141,30 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 9
                 };
                 #endregion
+                #region oracle
+                oracle = new Skill
+                {
+                    Description = "Oracle Database (commonly referred to as Oracle RDBMS or simply as Oracle) is an object-relational database management system produced and marketed by Oracle Corporation.",
+                    ExperienceRating = 2,
+                    InterestRating = 5,
+                    IconClass = "mfizz mfizz-oracle",
+                    IsVisible = true,
+                    Name = "Oracle",
+                    UsageRating = 1
+                };
+                #endregion
+                #region windows
+                windows = new Skill
+                {
+                    Description = "Microsoft Windows (or simply Windows) is a metafamily of graphical operating systems developed, marketed, and sold by Microsoft.",
+                    ExperienceRating = 9,
+                    InterestRating = 9,
+                    IconClass = "devicons devicons-windows",
+                    IsVisible = true,
+                    Name = "Microsoft Windows",
+                    UsageRating = 9
+                };
+                #endregion
             }
             return context.SaveChanges();
         }
@@ -200,6 +229,27 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = dotnet.Id
                 };
                 #endregion
+                #region oracle 8
+                oracle_8 = new SkillVersion
+                {
+                    Name = "Oracle8",
+                    SkillId = oracle.Id
+                };
+                #endregion
+                #region windows xp
+                windows_xp = new SkillVersion
+                {
+                    Name = "Windows XP",
+                    SkillId = windows.Id
+                };
+                #endregion
+                #region windows server 2003
+                windows_server_2003 = new SkillVersion
+                {
+                    Name = "Windows Server 2003",
+                    SkillId = windows.Id
+                };
+                #endregion
             }
 
             return context.SaveChanges();
@@ -241,8 +291,17 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_4_0_6.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 10,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id }
+                            }
                         }
-                        //Windows XP, easyPHP
+                        //easyPHP
                     }
                 });
                 #endregion
@@ -313,8 +372,35 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_1_1.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = oracle.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = oracle.Id, SkillVersionId = oracle_8.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 10,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 1,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2003.Id }
+                            }
                         }
-                        //ORACLE, Windows XP, IIS, TOAD, VSS
+                        //IIS, TOAD, VSS
                     }
                 });
                 #endregion
