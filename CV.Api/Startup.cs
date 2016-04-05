@@ -115,6 +115,7 @@ namespace CV.Api
                     {
                         serviceScope.ServiceProvider.GetService<CvDbContext>().Database.Migrate();
                         serviceScope.ServiceProvider.GetService<CvDbContext>().EnsureSeedData();
+                        //serviceScope.ServiceProvider.GetService<CvDbContext>().EnsureSeedRealData();
                     }
                     catch(SqlException ex)
                     {
