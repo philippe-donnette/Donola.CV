@@ -30,6 +30,7 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill easyphp { get; set; }
         private static Skill phpmyadmin { get; set; }
         private static Skill apache { get; set; }
+        private static Skill html { get; set; }
         #endregion
 
         #region SkillVersions
@@ -44,6 +45,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion oracle_8 { get; set; }
         private static SkillVersion windows_xp { get; set; }
         private static SkillVersion windows_server_2003 { get; set; }
+        private static SkillVersion html_4_0 { get; set; }
         #endregion
 
         #region Experiences
@@ -211,6 +213,18 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 3
                 };
                 #endregion
+                #region html
+                html = new Skill
+                {
+                    Description = "HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages.",
+                    ExperienceRating = 9,
+                    InterestRating = 10,
+                    IconClass = "mfizz mfizz-html",
+                    IsVisible = true,
+                    Name = "HTML",
+                    UsageRating = 10
+                };
+                #endregion
 
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
@@ -225,6 +239,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(easyphp);
                 context.Skills.Add(phpmyadmin);
                 context.Skills.Add(apache);
+                context.Skills.Add(html);
             }
             return context.SaveChanges();
         }
@@ -310,6 +325,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = windows.Id
                 };
                 #endregion
+                #region html 4.0
+                html_4_0 = new SkillVersion
+                {
+                    Name = "HTML 4.0",
+                    SkillId = html.Id
+                };
+                #endregion
 
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
@@ -322,6 +344,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(oracle_8);
                 context.SkillVersions.Add(windows_xp);
                 context.SkillVersions.Add(windows_server_2003);
+                context.SkillVersions.Add(html_4_0);
             }
 
             return context.SaveChanges();
@@ -387,6 +410,15 @@ namespace CV.DataAccessLayer.Initializers
                         {
                             SkillId = apache.Id,
                             UsageRating = 10
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
                         }
                         //HTML, CSS, Flash
                     }
@@ -478,8 +510,17 @@ namespace CV.DataAccessLayer.Initializers
                                 new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id },
                                 new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2003.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
                         }
-                        //IIS 6.0, VSS 6.0, HTML, CSS
+                        //IIS 6.0, VSS 6.0, CSS
                     }
                 };
                 #endregion
