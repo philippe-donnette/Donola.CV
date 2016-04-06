@@ -11,6 +11,8 @@ namespace CV.DataAccessLayer.Initializers
     {
         public static void EnsureSeedRealData(this CvDbContext context)
         {
+            CreateSkills(context);
+            CreateSkillVersions(context);
             CreateExperiences(context);
         }
 
@@ -25,6 +27,9 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill dotnet { get; set; }
         private static Skill oracle { get; set; }
         private static Skill windows { get; set; }
+        private static Skill easyphp { get; set; }
+        private static Skill phpmyadmin { get; set; }
+        private static Skill apache { get; set; }
         #endregion
 
         #region SkillVersions
@@ -39,6 +44,11 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion oracle_8 { get; set; }
         private static SkillVersion windows_xp { get; set; }
         private static SkillVersion windows_server_2003 { get; set; }
+        #endregion
+
+        #region Experiences
+        private static Experience tomato { get; set; }
+        private static Experience intellimind { get; set; }
         #endregion
 
         private static int CreateSkills(CvDbContext context)
@@ -75,19 +85,19 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Active Server Pages (ASP), later known as Classic ASP or ASP Classic, is Microsoft's first server-side script engine for dynamically generated web pages.",
                     ExperienceRating = 5,
                     InterestRating = 1,
-                    IconClass = null,
+                    IconClass = null,//"devicons devicons-code",
                     IsVisible = true,
                     Name = "ASP",
                     UsageRating = 1
                 };
                 #endregion
                 #region asp.net
-                asp = new Skill
+                asp_net = new Skill
                 {
                     Description = "ASP.NET is a server-side web application framework designed for web development to produce dynamic web pages. It was developed by Microsoft to allow programmers to build dynamic web sites, web applications and web services.",
                     ExperienceRating = 9,
                     InterestRating = 10,
-                    IconClass = "devicons devicons-dot-net",
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "ASP.NET",
                     UsageRating = 9
@@ -165,6 +175,56 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 9
                 };
                 #endregion
+                #region easyphp
+                easyphp = new Skill
+                {
+                    Description = "EasyPHP was the first package WAMP to emerge (1999).",
+                    ExperienceRating = 2,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "EasyPHP",
+                    UsageRating = 1
+                };
+                #endregion
+                #region phpmyadmin
+                phpmyadmin = new Skill
+                {
+                    Description = "phpMyAdmin is a free and open source tool written in PHP intended to handle the administration of MySQL or MariaDB with the use of a web browser.",
+                    ExperienceRating = 3,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "phpMyAdmin",
+                    UsageRating = 3
+                };
+                #endregion
+                #region apache
+                apache = new Skill
+                {
+                    Description = "The Apache HTTP Server, colloquially called Apache, is the world's most used web server software.",
+                    ExperienceRating = 4,
+                    InterestRating = 5,
+                    IconClass = "mfizz mfizz-apache",
+                    IsVisible = true,
+                    Name = "Apache",
+                    UsageRating = 3
+                };
+                #endregion
+
+                context.Skills.Add(php);
+                context.Skills.Add(mysql);
+                context.Skills.Add(asp);
+                context.Skills.Add(asp_net);
+                context.Skills.Add(sqlserver);
+                context.Skills.Add(visual_studio);
+                context.Skills.Add(csharp);
+                context.Skills.Add(dotnet);
+                context.Skills.Add(oracle);
+                context.Skills.Add(windows);
+                context.Skills.Add(easyphp);
+                context.Skills.Add(phpmyadmin);
+                context.Skills.Add(apache);
             }
             return context.SaveChanges();
         }
@@ -250,6 +310,18 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = windows.Id
                 };
                 #endregion
+
+                context.SkillVersions.Add(php_4_3);
+                context.SkillVersions.Add(mysql_4_0_6);
+                context.SkillVersions.Add(asp_3_0);
+                context.SkillVersions.Add(asp_net_2_0);
+                context.SkillVersions.Add(sqlserver_2000);
+                context.SkillVersions.Add(visual_studio_2003);
+                context.SkillVersions.Add(csharp_1_2);
+                context.SkillVersions.Add(dotnet_1_1);
+                context.SkillVersions.Add(oracle_8);
+                context.SkillVersions.Add(windows_xp);
+                context.SkillVersions.Add(windows_server_2003);
             }
 
             return context.SaveChanges();
@@ -261,7 +333,7 @@ namespace CV.DataAccessLayer.Initializers
             if (!context.Experiences.Any())
             {
                 #region T2S
-                context.Experiences.Add(new Experience
+                tomato = new Experience
                 {
                     City = "Noisy-Le-Grand",
                     CompanyName = "T2S",
@@ -300,13 +372,28 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = easyphp.Id,
+                            UsageRating = 10
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = phpmyadmin.Id,
+                            UsageRating = 7
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = apache.Id,
+                            UsageRating = 10
                         }
-                        //easyPHP
+                        //HTML, CSS, Flash
                     }
-                });
+                };
                 #endregion
                 #region Intellimind
-                context.Experiences.Add(new Experience
+                intellimind = new Experience
                 {
                     City = "Paris",
                     CompanyName = "Intellimind",
@@ -385,25 +472,20 @@ namespace CV.DataAccessLayer.Initializers
                         new ExperienceSkill
                         {
                             SkillId = windows.Id,
-                            UsageRating = 10,
+                            UsageRating = 6,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id }
-                            }
-                        },
-                        new ExperienceSkill
-                        {
-                            SkillId = windows.Id,
-                            UsageRating = 1,
-                            Versions = new List<ExperienceSkillVersion>
-                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id },
                                 new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2003.Id }
                             }
                         }
-                        //IIS, TOAD, VSS
+                        //IIS 6.0, VSS 6.0, HTML, CSS
                     }
-                });
+                };
                 #endregion
+
+                context.Experiences.Add(tomato);
+                context.Experiences.Add(intellimind);
 
                 /*
                 context.Experiences.Add(new Experience
