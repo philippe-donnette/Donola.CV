@@ -35,6 +35,10 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill flash { get; set; }
         private static Skill actionscript { get; set; }
         private static Skill photoshop { get; set; }
+        private static Skill iis { get; set; }
+        private static Skill vss { get; set; }
+        private static Skill toad { get; set; }
+        private static Skill ssms { get; set; }
         #endregion
 
         #region SkillVersions
@@ -54,6 +58,10 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion flash_2004 { get; set; }
         private static SkillVersion actionscript_2_0 { get; set; }
         private static SkillVersion photoshop_elements_7_0 { get; set; }
+        private static SkillVersion iis_6_0 { get; set; }
+        private static SkillVersion vss_6_0 { get; set; }
+        private static SkillVersion toad_9_0 { get; set; }
+        private static SkillVersion ssms_enterprise_manager { get; set; }
         #endregion
 
         #region Experiences
@@ -281,6 +289,54 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 3
                 };
                 #endregion
+                #region iis
+                iis = new Skill
+                {
+                    Description = "Internet Information Services (IIS, formerly Internet Information Server) is an extensible web server created by Microsoft for use with Windows NT family.",
+                    ExperienceRating = 7,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "IIS",
+                    UsageRating = 6
+                };
+                #endregion
+                #region vss
+                vss = new Skill
+                {
+                    Description = "Microsoft Visual SourceSafe (VSS) is a discontinued source control program, oriented towards small software development projects.",
+                    ExperienceRating = 3,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Microsoft Visual SourceSafe",
+                    UsageRating = 2
+                };
+                #endregion
+                #region toad
+                toad = new Skill
+                {
+                    Description = "Toad is application software from Dell Software that database developers, database administrators and data analysts use to manage both relational and non-relational databases using SQL.",
+                    ExperienceRating = 2,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Toad",
+                    UsageRating = 2
+                };
+                #endregion
+                #region sql server management studio
+                ssms = new Skill
+                {
+                    Description = "SQL Server Management Studio (SSMS) is a software application first launched with the Microsoft SQL Server 2005 that is used for configuring, managing, and administering all components within Microsoft SQL Server.",
+                    ExperienceRating = 7,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "SQL Server Management Studio",
+                    UsageRating = 7
+                };
+                #endregion
 
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
@@ -300,6 +356,10 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(flash);
                 context.Skills.Add(actionscript);
                 context.Skills.Add(photoshop);
+                context.Skills.Add(iis);
+                context.Skills.Add(vss);
+                context.Skills.Add(toad);
+                context.Skills.Add(ssms);
             }
             return context.SaveChanges();
         }
@@ -420,6 +480,34 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = photoshop.Id
                 };
                 #endregion
+                #region iis 6.0
+                iis_6_0 = new SkillVersion
+                {
+                    Name = "IIS 6.0",
+                    SkillId = iis.Id
+                };
+                #endregion
+                #region vss 6.0
+                vss_6_0 = new SkillVersion
+                {
+                    Name = "Microsoft Visual SourceSafe 6.0",
+                    SkillId = iis.Id
+                };
+                #endregion
+                #region toad 9.0
+                toad_9_0 = new SkillVersion
+                {
+                    Name = "Toad 9.0",
+                    SkillId = toad.Id
+                };
+                #endregion
+                #region sql server management studio enterprise manager
+                ssms_enterprise_manager = new SkillVersion
+                {
+                    Name = "Enterprise Manager",
+                    SkillId = ssms_enterprise_manager.Id
+                };
+                #endregion
 
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
@@ -437,6 +525,10 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(flash_2004);
                 context.SkillVersions.Add(actionscript_2_0);
                 context.SkillVersions.Add(photoshop_elements_7_0);
+                context.SkillVersions.Add(iis_6_0);
+                context.SkillVersions.Add(vss_6_0);
+                context.SkillVersions.Add(toad_9_0);
+                context.SkillVersions.Add(ssms_enterprise_manager);
             }
 
             return context.SaveChanges();
@@ -655,8 +747,44 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = iis.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = iis.Id, SkillVersionId = iis_6_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = vss.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = vss.Id, SkillVersionId = vss_6_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = toad.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = toad.Id, SkillVersionId = toad_9_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ssms.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_enterprise_manager.Id }
+                            }
                         }
-                        //IIS 6.0, VSS 6.0
+                        //Enterprise Library 1.0
                     }
                 };
                 #endregion
