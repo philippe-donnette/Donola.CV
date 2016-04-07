@@ -31,6 +31,10 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill phpmyadmin { get; set; }
         private static Skill apache { get; set; }
         private static Skill html { get; set; }
+        private static Skill css { get; set; }
+        private static Skill flash { get; set; }
+        private static Skill actionscript { get; set; }
+        private static Skill photoshop { get; set; }
         #endregion
 
         #region SkillVersions
@@ -46,6 +50,10 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion windows_xp { get; set; }
         private static SkillVersion windows_server_2003 { get; set; }
         private static SkillVersion html_4_0 { get; set; }
+        private static SkillVersion css_2_0 { get; set; }
+        private static SkillVersion flash_2004 { get; set; }
+        private static SkillVersion actionscript_2_0 { get; set; }
+        private static SkillVersion photoshop_elements_7_0 { get; set; }
         #endregion
 
         #region Experiences
@@ -225,6 +233,54 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 10
                 };
                 #endregion
+                #region css
+                css = new Skill
+                {
+                    Description = "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.",
+                    ExperienceRating = 7,
+                    InterestRating = 6,
+                    IconClass = "mfizz mfizz-css",
+                    IsVisible = true,
+                    Name = "CSS",
+                    UsageRating = 10
+                };
+                #endregion
+                #region flash
+                flash = new Skill
+                {
+                    Description = "Adobe Flash (formerly called Macromedia Flash and Shockwave Flash) is a multimedia and software platform used for creating vector graphics, animation, browser games, rich Internet applications, desktop applications, mobile applications and mobile games.",
+                    ExperienceRating = 1,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Macromedia Flash MX",
+                    UsageRating = 2
+                };
+                #endregion
+                #region actionscript
+                actionscript = new Skill
+                {
+                    Description = "ActionScript is an object-oriented programming language originally developed by Macromedia Inc. (since merged into Adobe Systems).",
+                    ExperienceRating = 1,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "ActionScript",
+                    UsageRating = 2
+                };
+                #endregion
+                #region photoshop
+                photoshop = new Skill
+                {
+                    Description = "Adobe Photoshop is a raster graphics editor developed and published by Adobe Systems for Windows and OS X.",
+                    ExperienceRating = 4,
+                    InterestRating = 2,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Adobe Photoshop",
+                    UsageRating = 3
+                };
+                #endregion
 
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
@@ -240,6 +296,10 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(phpmyadmin);
                 context.Skills.Add(apache);
                 context.Skills.Add(html);
+                context.Skills.Add(css);
+                context.Skills.Add(flash);
+                context.Skills.Add(actionscript);
+                context.Skills.Add(photoshop);
             }
             return context.SaveChanges();
         }
@@ -332,6 +392,34 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = html.Id
                 };
                 #endregion
+                #region css 2.0
+                css_2_0 = new SkillVersion
+                {
+                    Name = "CSS 2.0",
+                    SkillId = css.Id
+                };
+                #endregion
+                #region flash 2004
+                flash_2004 = new SkillVersion
+                {
+                    Name = "Macromedia Flash MX 2004",
+                    SkillId = flash.Id
+                };
+                #endregion
+                #region actionscript 2.0
+                actionscript_2_0 = new SkillVersion
+                {
+                    Name = "ActionScript 2.0",
+                    SkillId = actionscript.Id
+                };
+                #endregion
+                #region photoshop elements 7.0
+                photoshop_elements_7_0 = new SkillVersion
+                {
+                    Name = "Adobe Photoshop Elements 7.0",
+                    SkillId = photoshop.Id
+                };
+                #endregion
 
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
@@ -345,6 +433,10 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(windows_xp);
                 context.SkillVersions.Add(windows_server_2003);
                 context.SkillVersions.Add(html_4_0);
+                context.SkillVersions.Add(css_2_0);
+                context.SkillVersions.Add(flash_2004);
+                context.SkillVersions.Add(actionscript_2_0);
+                context.SkillVersions.Add(photoshop_elements_7_0);
             }
 
             return context.SaveChanges();
@@ -419,8 +511,43 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = flash.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = flash.Id, SkillVersionId = flash_2004.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = actionscript.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = actionscript.Id, SkillVersionId = actionscript_2_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = photoshop.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = photoshop.Id, SkillVersionId = photoshop_elements_7_0.Id }
+                            }
                         }
-                        //HTML, CSS, Flash
                     }
                 };
                 #endregion
@@ -519,8 +646,17 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
+                            }
                         }
-                        //IIS 6.0, VSS 6.0, CSS
+                        //IIS 6.0, VSS 6.0
                     }
                 };
                 #endregion
