@@ -39,6 +39,9 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill vss { get; set; }
         private static Skill toad { get; set; }
         private static Skill ssms { get; set; }
+        private static Skill javascript { get; set; }
+        private static Skill xml { get; set; }
+        private static Skill xslt { get; set; }
         #endregion
 
         #region SkillVersions
@@ -62,11 +65,15 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion vss_6_0 { get; set; }
         private static SkillVersion toad_9_0 { get; set; }
         private static SkillVersion ssms_enterprise_manager { get; set; }
+        private static SkillVersion javascript_ecmascript_3 { get; set; }
+        private static SkillVersion xslt_1_0 { get; set; }
+        private static SkillVersion xml_1_1 { get; set; }
         #endregion
 
         #region Experiences
         private static Experience tomato { get; set; }
         private static Experience intellimind { get; set; }
+        private static Experience concileo { get; set; }
         #endregion
 
         private static int CreateSkills(CvDbContext context)
@@ -337,6 +344,41 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 7
                 };
                 #endregion
+                #region javascript
+                javascript = new Skill
+                {
+                    Description = "JavaScript is a high-level, dynamic, untyped, and interpreted programming language.",
+                    ExperienceRating = 7,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "JavaScript",
+                    UsageRating = 7
+                };
+                #region xml
+                xml = new Skill
+                {
+                    Description = "Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format which is both human-readable and machine-readable.",
+                    ExperienceRating = 5,
+                    InterestRating = 5,
+                    IconClass = "devicons devicons-javascript",
+                    IsVisible = true,
+                    Name = "XML",
+                    UsageRating = 5
+                };
+                #region xslt
+                xslt = new Skill
+                {
+                    Description = "XSLT (Extensible Stylesheet Language Transformations) is a language for transforming XML documents into other XML documents, or other formats such as HTML for web pages, plain text or into XSL Formatting Objects, which may subsequently be converted to other formats, such as PDF, PostScript and PNG.",
+                    ExperienceRating = 2,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "XSLT",
+                    UsageRating = 2
+                };
+                #endregion
+
 
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
@@ -360,6 +402,9 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(vss);
                 context.Skills.Add(toad);
                 context.Skills.Add(ssms);
+                context.Skills.Add(xslt);
+                context.Skills.Add(xml);
+                context.Skills.Add(javascript);
             }
             return context.SaveChanges();
         }
@@ -508,6 +553,27 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = ssms_enterprise_manager.Id
                 };
                 #endregion
+                #region xml 1.1
+                xml_1_1 = new SkillVersion
+                {
+                    Name = "XML 1.1",
+                    SkillId = xml.Id
+                };
+                #endregion
+                #region xslt 1.0
+                xslt_1_0 = new SkillVersion
+                {
+                    Name = "XSLT 1.0",
+                    SkillId = xslt.Id
+                };
+                #endregion
+                #region javascript ecmascript 3
+                javascript_ecmascript_3 = new SkillVersion
+                {
+                    Name = "ECMAScript 3",
+                    SkillId = javascript.Id
+                };
+                #endregion
 
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
@@ -529,6 +595,9 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(vss_6_0);
                 context.SkillVersions.Add(toad_9_0);
                 context.SkillVersions.Add(ssms_enterprise_manager);
+                context.SkillVersions.Add(xslt_1_0);
+                context.SkillVersions.Add(javascript_ecmascript_3);
+                context.SkillVersions.Add(xml_1_1);
             }
 
             return context.SaveChanges();
@@ -783,14 +852,159 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_enterprise_manager.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = xslt.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = xslt.Id, SkillVersionId = xslt_1_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = xml.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = xml.Id, SkillVersionId = xml_1_1.Id }
+                            }
                         }
-                        //Enterprise Library 1.0
+                    }
+                };
+                #endregion
+                #region Concileo
+                concileo = new Experience
+                {
+                    City = "Paris",
+                    CompanyName = "Concileo",
+                    Country = "France",
+                    EndDate = new DateTime(2007, 12, 31),
+                    ImageUrl = "concileo-experience-icon.png",
+                    RoleTitle = "Project manager and developer",
+                    WebsiteUrl = "http://www.concileo.com",
+                    Description = "Analysis and development of web community platforms (blog, forum, photo, video, social networking application) using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER) and Web technologies.",
+                    StartDate = new DateTime(2006, 10, 1),
+                    Skills = new List<ExperienceSkill>
+                    {
+                        new ExperienceSkill
+                        {
+                            SkillId = asp.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = asp.Id, SkillVersionId = asp_3_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = asp_net.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_2_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sqlserver.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2000.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = visual_studio.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2003.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = csharp.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_1_2.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = dotnet.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_1_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id },
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2003.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = iis.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = iis.Id, SkillVersionId = iis_6_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ssms.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_enterprise_manager.Id }
+                            }
+                        }
+                        //SVN, Photoshop, AJAX, JAVASCRIPT, XML 
                     }
                 };
                 #endregion
 
                 context.Experiences.Add(tomato);
                 context.Experiences.Add(intellimind);
+                context.Experiences.Add(concileo);
 
                 /*
                 context.Experiences.Add(new Experience
