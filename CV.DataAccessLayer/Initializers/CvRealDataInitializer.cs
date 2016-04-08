@@ -49,12 +49,18 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion mysql_4_0_6 { get; set; }
         private static SkillVersion asp_3_0 { get; set; }
         private static SkillVersion asp_net_2_0 { get; set; }
+        private static SkillVersion asp_net_3_0 { get; set; }
         private static SkillVersion sqlserver_2000 { get; set; }
+        private static SkillVersion sqlserver_2005 { get; set; }
         private static SkillVersion visual_studio_2003 { get; set; }
+        private static SkillVersion visual_studio_2005 { get; set; }
         private static SkillVersion csharp_1_2 { get; set; }
+        private static SkillVersion csharp_2_0 { get; set; }
         private static SkillVersion dotnet_1_1 { get; set; }
+        private static SkillVersion dotnet_2_0 { get; set; }
         private static SkillVersion oracle_8 { get; set; }
         private static SkillVersion windows_xp { get; set; }
+        private static SkillVersion windows_vista { get; set; }
         private static SkillVersion windows_server_2003 { get; set; }
         private static SkillVersion html_4_0 { get; set; }
         private static SkillVersion css_2_0 { get; set; }
@@ -355,6 +361,7 @@ namespace CV.DataAccessLayer.Initializers
                     Name = "JavaScript",
                     UsageRating = 7
                 };
+                #endregion
                 #region xml
                 xml = new Skill
                 {
@@ -366,6 +373,7 @@ namespace CV.DataAccessLayer.Initializers
                     Name = "XML",
                     UsageRating = 5
                 };
+                #endregion
                 #region xslt
                 xslt = new Skill
                 {
@@ -455,6 +463,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = visual_studio.Id
                 };
                 #endregion
+                #region visual studio 2005
+                visual_studio_2005 = new SkillVersion
+                {
+                    Name = "Visual Studio 2005",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
                 #region csharp 1.2
                 csharp_1_2 = new SkillVersion
                 {
@@ -462,10 +477,24 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = csharp.Id
                 };
                 #endregion
+                #region csharp 2.0
+                csharp_2_0 = new SkillVersion
+                {
+                    Name = "C# 2.0",
+                    SkillId = csharp.Id
+                };
+                #endregion
                 #region .net framework 1.1
                 dotnet_1_1 = new SkillVersion
                 {
                     Name = ".NET Framework 1.1",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 2.0
+                dotnet_2_0 = new SkillVersion
+                {
+                    Name = ".NET Framework 2.0",
                     SkillId = dotnet.Id
                 };
                 #endregion
@@ -480,6 +509,13 @@ namespace CV.DataAccessLayer.Initializers
                 windows_xp = new SkillVersion
                 {
                     Name = "Windows XP",
+                    SkillId = windows.Id
+                };
+                #endregion
+                #region windows vista
+                windows_vista = new SkillVersion
+                {
+                    Name = "Windows Vista",
                     SkillId = windows.Id
                 };
                 #endregion
@@ -574,6 +610,20 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = javascript.Id
                 };
                 #endregion
+                #region asp.net 3.0
+                asp_net_3_0 = new SkillVersion
+                {
+                    Name = "ASP.NET 3.0",
+                    SkillId = asp_net.Id
+                };
+                #endregion
+                #region sql server 2005
+                sqlserver_2005 = new SkillVersion
+                {
+                    Name = "SQL Server 2005",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
 
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
@@ -581,10 +631,14 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(asp_net_2_0);
                 context.SkillVersions.Add(sqlserver_2000);
                 context.SkillVersions.Add(visual_studio_2003);
+                context.SkillVersions.Add(visual_studio_2005);
                 context.SkillVersions.Add(csharp_1_2);
+                context.SkillVersions.Add(csharp_2_0);
                 context.SkillVersions.Add(dotnet_1_1);
+                context.SkillVersions.Add(dotnet_2_0);
                 context.SkillVersions.Add(oracle_8);
                 context.SkillVersions.Add(windows_xp);
+                context.SkillVersions.Add(windows_vista);
                 context.SkillVersions.Add(windows_server_2003);
                 context.SkillVersions.Add(html_4_0);
                 context.SkillVersions.Add(css_2_0);
@@ -598,6 +652,9 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(xslt_1_0);
                 context.SkillVersions.Add(javascript_ecmascript_3);
                 context.SkillVersions.Add(xml_1_1);
+                context.SkillVersions.Add(asp_net_3_0);
+                context.SkillVersions.Add(sqlserver_2005);
+
             }
 
             return context.SaveChanges();
@@ -894,13 +951,13 @@ namespace CV.DataAccessLayer.Initializers
                     RoleTitle = "Project manager and developer",
                     WebsiteUrl = "http://www.concileo.com",
                     Description = "Analysis and development of web community platforms (blog, forum, photo, video, social networking application) using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER) and Web technologies.",
-                    StartDate = new DateTime(2006, 10, 1),
+                    StartDate = new DateTime(2006, 5, 1),
                     Skills = new List<ExperienceSkill>
                     {
                         new ExperienceSkill
                         {
                             SkillId = asp.Id,
-                            UsageRating = 9,
+                            UsageRating = 5,
                             Versions = new List<ExperienceSkillVersion>
                             {
                                 new ExperienceSkillVersion { SkillId = asp.Id, SkillVersionId = asp_3_0.Id }
@@ -909,52 +966,54 @@ namespace CV.DataAccessLayer.Initializers
                         new ExperienceSkill
                         {
                             SkillId = asp_net.Id,
-                            UsageRating = 3,
+                            UsageRating = 8,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_2_0.Id }
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_3_0.Id }
                             }
                         },
                         new ExperienceSkill
                         {
                             SkillId = sqlserver.Id,
-                            UsageRating = 6,
+                            UsageRating = 7,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2000.Id }
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2000.Id },
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2005.Id }
+
                             }
                         },
                         new ExperienceSkill
                         {
                             SkillId = visual_studio.Id,
-                            UsageRating = 6,
+                            UsageRating = 9,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2003.Id }
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2005.Id }
                             }
                         },
                         new ExperienceSkill
                         {
                             SkillId = csharp.Id,
-                            UsageRating = 5,
+                            UsageRating = 8,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_1_2.Id }
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_2_0.Id }
                             }
                         },
                         new ExperienceSkill
                         {
                             SkillId = dotnet.Id,
-                            UsageRating = 5,
+                            UsageRating = 8,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_1_1.Id }
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_2_0.Id }
                             }
                         },
                         new ExperienceSkill
                         {
                             SkillId = windows.Id,
-                            UsageRating = 6,
+                            UsageRating = 7,
                             Versions = new List<ExperienceSkillVersion>
                             {
                                 new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id },
@@ -978,7 +1037,7 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
                             }
-                        },
+                        },//#
                         new ExperienceSkill
                         {
                             SkillId = iis.Id,
@@ -997,7 +1056,7 @@ namespace CV.DataAccessLayer.Initializers
                                 new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_enterprise_manager.Id }
                             }
                         }
-                        //SVN, Photoshop, AJAX, JAVASCRIPT, XML 
+                        //SVN, Photoshop, AJAX, JAVASCRIPT, XML, Web Service, Google API,  
                     }
                 };
                 #endregion
