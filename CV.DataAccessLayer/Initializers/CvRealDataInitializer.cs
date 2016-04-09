@@ -42,6 +42,7 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill javascript { get; set; }
         private static Skill xml { get; set; }
         private static Skill xslt { get; set; }
+        private static Skill svn { get; set; }
         #endregion
 
         #region SkillVersions
@@ -67,6 +68,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion flash_2004 { get; set; }
         private static SkillVersion actionscript_2_0 { get; set; }
         private static SkillVersion photoshop_elements_7_0 { get; set; }
+        private static SkillVersion photoshop_cs_2 { get; set; }
         private static SkillVersion iis_6_0 { get; set; }
         private static SkillVersion vss_6_0 { get; set; }
         private static SkillVersion toad_9_0 { get; set; }
@@ -74,12 +76,18 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion javascript_ecmascript_3 { get; set; }
         private static SkillVersion xslt_1_0 { get; set; }
         private static SkillVersion xml_1_1 { get; set; }
+        private static SkillVersion svn_1_3 { get; set; }
         #endregion
 
         #region Experiences
         private static Experience tomato { get; set; }
         private static Experience intellimind { get; set; }
         private static Experience concileo { get; set; }
+        private static Experience dataarchive { get; set; }
+        private static Experience hrteam { get; set; }
+        private static Experience groovytrain { get; set; }
+        private static Experience docdata { get; set; }
+        private static Experience uol { get; set; }
         #endregion
 
         private static int CreateSkills(CvDbContext context)
@@ -386,7 +394,18 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 2
                 };
                 #endregion
-
+                #region svn
+                svn = new Skill
+                {
+                    Description = "Apache Subversion (often abbreviated SVN, after the command name svn) is a software versioning and revision control system distributed as free software under the Apache License.",
+                    ExperienceRating = 7,
+                    InterestRating = 2,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Apache Subversion",
+                    UsageRating = 7
+                };
+                #endregion
 
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
@@ -413,6 +432,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(xslt);
                 context.Skills.Add(xml);
                 context.Skills.Add(javascript);
+                context.Skills.Add(svn);
             }
             return context.SaveChanges();
         }
@@ -561,6 +581,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = photoshop.Id
                 };
                 #endregion
+                #region photoshop cs2
+                photoshop_cs_2 = new SkillVersion
+                {
+                    Name = "Adobe Photoshop CS2",
+                    SkillId = photoshop.Id
+                };
+                #endregion
                 #region iis 6.0
                 iis_6_0 = new SkillVersion
                 {
@@ -624,6 +651,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = sqlserver.Id
                 };
                 #endregion
+                #region svn 1.3
+                svn_1_3 = new SkillVersion
+                {
+                    Name = "SVN 1.3",
+                    SkillId = svn.Id
+                };
+                #endregion
 
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
@@ -654,7 +688,8 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(xml_1_1);
                 context.SkillVersions.Add(asp_net_3_0);
                 context.SkillVersions.Add(sqlserver_2005);
-
+                context.SkillVersions.Add(svn_1_3);
+                context.SkillVersions.Add(photoshop_cs_2);
             }
 
             return context.SaveChanges();
@@ -1037,7 +1072,7 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
                             }
-                        },//#
+                        },
                         new ExperienceSkill
                         {
                             SkillId = iis.Id,
@@ -1055,8 +1090,89 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_enterprise_manager.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = svn.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = svn.Id, SkillVersionId = svn_1_3.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = photoshop.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = photoshop.Id, SkillVersionId = photoshop_cs_2.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id }
+                            }
                         }
-                        //SVN, Photoshop, AJAX, JAVASCRIPT, XML, Web Service, Google API,  
+                        //ASP.NET AJAX, AJAX, XML, Web Service, Google API,  
+                    }
+                };
+                #endregion
+                #region The Data Archive
+                dataarchive = new Experience
+                {
+                    City = "London",
+                    CompanyName = "The Data Archive",
+                    Country = "United Kingdom",
+                    EndDate = new DateTime(2009, 4, 30),
+                    ImageUrl = "tda-experience-icon.png",
+                    RoleTitle = "Developer",
+                    WebsiteUrl = "http://www.thedataarchive.com",
+                    Description = "Analysis and development of image libraries web solutions including e-commerce and online download using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER) and Web technologies.",
+                    StartDate = new DateTime(2008, 5, 1),
+                    Skills = new List<ExperienceSkill>
+                    {
+                        
+                    }
+                };
+                #endregion
+                #region HR TEAM
+                hrteam = new Experience
+                {
+                    City = "Paris",
+                    CompanyName = "H.R team",
+                    Country = "France",
+                    EndDate = new DateTime(2010, 8, 31),
+                    ImageUrl = "hrteam-experience-icon.png",
+                    RoleTitle = "Developer",
+                    WebsiteUrl = "http://www.hr-team.net/",
+                    Description = "6 months contract with ITELIOS to develop and maintain e-commerce web solutions using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER, COMMERCE SERVER) and Web technologies.",
+                    StartDate = new DateTime(2010, 2, 1),
+                    Skills = new List<ExperienceSkill>
+                    {
+
+                    }
+                };
+                #endregion
+                #region Groovy Train
+                groovytrain = new Experience
+                {
+                    City = "London",
+                    CompanyName = "Groovy Train",
+                    Country = "United Kingdom",
+                    EndDate = new DateTime(2011, 3, 31),
+                    ImageUrl = "groovytrain-experience-icon.png",
+                    RoleTitle = "Developer",
+                    WebsiteUrl = null,
+                    Description = "Analysis and development of an application to integrate data between an e-commerce platform and a data warehouse (DOTNET, C#, SQL SERVER, ORACLE).",
+                    StartDate = new DateTime(2010, 9, 1),
+                    Skills = new List<ExperienceSkill>
+                    {
+
                     }
                 };
                 #endregion
@@ -1064,6 +1180,9 @@ namespace CV.DataAccessLayer.Initializers
                 context.Experiences.Add(tomato);
                 context.Experiences.Add(intellimind);
                 context.Experiences.Add(concileo);
+                context.Experiences.Add(dataarchive);
+                context.Experiences.Add(hrteam);
+                context.Experiences.Add(groovytrain);
 
                 /*
                 context.Experiences.Add(new Experience
