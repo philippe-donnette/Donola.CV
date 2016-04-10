@@ -613,7 +613,7 @@ namespace CV.DataAccessLayer.Initializers
                 ssms_enterprise_manager = new SkillVersion
                 {
                     Name = "Enterprise Manager",
-                    SkillId = ssms_enterprise_manager.Id
+                    SkillId = ssms.Id
                 };
                 #endregion
                 #region xml 1.1
@@ -972,6 +972,7 @@ namespace CV.DataAccessLayer.Initializers
                                 new ExperienceSkillVersion { SkillId = xml.Id, SkillVersionId = xml_1_1.Id }
                             }
                         }
+                        //windows form, ado.net , tsql, microsoft enterprise library
                     }
                 };
                 #endregion
@@ -1118,7 +1119,7 @@ namespace CV.DataAccessLayer.Initializers
                                 new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id }
                             }
                         }
-                        //ASP.NET AJAX, AJAX, XML, Web Service, Google API,  
+                        //ASP.NET AJAX, AJAX, XML, Web Service, Google API, windows form, windows console application, tsql, ado.net 
                     }
                 };
                 #endregion
@@ -1138,6 +1139,7 @@ namespace CV.DataAccessLayer.Initializers
                     {
                         
                     }
+                    //ASP.NET AJAX, AJAX, asp.net, c#, sqlserver, svn, ssms, visual studio, dotnet, windows, javascript, html, css, tsql, typed dataset (xsd)
                 };
                 #endregion
                 #region HR TEAM
@@ -1156,6 +1158,8 @@ namespace CV.DataAccessLayer.Initializers
                     {
 
                     }
+                    //ASP.NET AJAX, AJAX, asp.net, c#, commerce server, tfs (vss?), visual studio, dotnet, windows, javascript, html, css
+                    //scrum
                 };
                 #endregion
                 #region Groovy Train
@@ -1174,6 +1178,54 @@ namespace CV.DataAccessLayer.Initializers
                     {
 
                     }
+                    //c#, prologic cims, (oracle), web service, visual studio, dotnet, windows, windows form, windows console application
+                };
+                #endregion
+                #region docdata
+                docdata = new Experience
+                {
+                    City = "London",
+                    CompanyName = "docdata",
+                    Country = "United Kingdom",
+                    EndDate = new DateTime(2012, 3, 31),
+                    ImageUrl = "docdata-experience-icon.png",
+                    RoleTitle = "Developer",
+                    WebsiteUrl = "http://docdata.co.uk",
+                    Description = "Analysis and development of new functionalities in an e-commerce platform and maintenance on existing clients’ ecommerce websites (ASP.NET, ASP.NET MVC 2.0, C#, SQL SERVER).",
+                    StartDate = new DateTime(2011, 4, 1),
+                    Skills = new List<ExperienceSkill>
+                    {
+
+                    }
+                    //JQuery, Google API, javascript, html, css, windows, windows server, svn, c#, asp.net, mvc, dotnet, sql server, ssms, tsql
+                    //dependency injection, structure map, ado.net
+                };
+                #endregion
+                #region University of London
+                uol = new Experience
+                {
+                    City = "London",
+                    CompanyName = "University of London",
+                    Country = "United Kingdom",
+                    EndDate = new DateTime(2016, 4, 30),
+                    ImageUrl = "uol-experience-icon.png",
+                    RoleTitle = "Senior Developer",
+                    WebsiteUrl = "http://docdata.co.uk",
+                    Description = "Project lead and developer of new services. Support and maintenance on existing services (ASP.NET, ASP.NET MVC 4.0, C#, SQL SERVER, JQUERY, Bootstrap).",
+                    StartDate = new DateTime(2012, 4, 1),
+                    Skills = new List<ExperienceSkill>
+                    {
+
+                    }
+                    //windows form, windows console application, google api, web services
+                    //tsql, sql server, ssms, mysql, mysql workbench
+                    //shibboleth, saml, xml, jenkins, visual studio, visual studio code
+                    //javascript, jquery, knockout, angularjs, lync
+                    //dotnet, asp.net, mvc, c#, ssl, windows, windows server, rhel7, fedora core 23
+                    //pivotal tracker, scrum, axosoft, structure map, entity framework,
+                    //unity, moq, rhino mock, automapper, dependency injection, unit testing
+                    //linq, agile, ado.net
+                    //umbraco, wordpress, mediawiki, silverlight, html5, html, css, bootstrap
                 };
                 #endregion
 
@@ -1183,61 +1235,8 @@ namespace CV.DataAccessLayer.Initializers
                 context.Experiences.Add(dataarchive);
                 context.Experiences.Add(hrteam);
                 context.Experiences.Add(groovytrain);
-
-                /*
-                context.Experiences.Add(new Experience
-                {
-                    City = "London",
-                    CompanyName = "University of London",
-                    Country = "United Kingdom",
-                    EndDate = new DateTime(2016, 4, 30),
-                    ImageUrl = "uol-experience-icon.png",
-                    RoleTitle = "Senior Developer",
-                    WebsiteUrl = "http://www.london.ac.uk",
-                    Description = "<p>Some description about the role goes here, do not make it too long as this is not something people might be very interested to read</p><ul><li>bazinga</li><li>kaouabounga</li><li>yata</li></ul>",
-                    StartDate = new DateTime(2012, 4, 17),
-                    Skills = new List<ExperienceSkill>
-                    {
-                        new ExperienceSkill { SkillId = 1, UsageRating = 3 },
-                        new ExperienceSkill { SkillId = 2, UsageRating = 9 },
-                        new ExperienceSkill { SkillId = 3, UsageRating = 2 }
-                    }
-                });
-                context.Experiences.Add(new Experience
-                {
-                    City = "London",
-                    CompanyName = "DOCDATA",
-                    Country = "United Kingdom",
-                    EndDate = new DateTime(2012, 3, 30),
-                    ImageUrl = "docdata-experience-icon.png",
-                    RoleTitle = "Senior Developer",
-                    WebsiteUrl = "http://www.docdata.ac.uk",
-                    Description = "<p>Some description about the role goes here, do not make it too long as this is not something people might be very interested to read</p><ul><li>bazinga</li><li>kaouabounga</li><li>yata</li></ul>",
-                    StartDate = new DateTime(2011, 4, 1),
-                    Skills = new List<ExperienceSkill>
-                    {
-                        new ExperienceSkill { SkillId = 1, UsageRating = 9 },
-                        new ExperienceSkill { SkillId = 3, UsageRating = 7 }
-                    }
-                });
-                context.Experiences.Add(new Experience
-                {
-                    City = "London",
-                    CompanyName = "GroovyTrain",
-                    Country = "United Kingdom",
-                    EndDate = new DateTime(2011, 3, 20),
-                    ImageUrl = "groovytrain-experience-icon.png",
-                    RoleTitle = "Dotnet Developer",
-                    WebsiteUrl = null,
-                    Description = "<p>Some description about the role goes here, do not make it too long as this is not something people might be very interested to read</p><ul><li>bazinga</li><li>kaouabounga</li><li>yata</li></ul>",
-                    StartDate = new DateTime(2010, 9, 20),
-                    Skills = new List<ExperienceSkill>
-                    {
-                        new ExperienceSkill { SkillId = 2, UsageRating = 6 },
-                        new ExperienceSkill { SkillId = 3, UsageRating = 8 }
-                    }
-                });
-                */
+                context.Experiences.Add(docdata);
+                context.Experiences.Add(uol);
             }
 
             return context.SaveChanges();
