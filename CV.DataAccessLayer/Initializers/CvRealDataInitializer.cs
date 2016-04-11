@@ -43,6 +43,11 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill xml { get; set; }
         private static Skill xslt { get; set; }
         private static Skill svn { get; set; }
+        private static Skill winform { get; set; }
+        private static Skill ado_net { get; set; }
+        private static Skill sql { get; set; }
+        private static Skill asp_net_ajax { get; set; }
+        private static Skill ajax { get; set; }
         #endregion
 
         #region SkillVersions
@@ -406,6 +411,66 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 7
                 };
                 #endregion
+                #region windows forms
+                winform = new Skill
+                {
+                    Description = "Windows Forms (WinForms) is a graphical (GUI) class library included as a part of Microsoft .NET Framework, providing a platform to write rich client applications for desktop, laptop, and tablet PCs.",
+                    ExperienceRating = 4,
+                    InterestRating = 6,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Windows Forms",
+                    UsageRating = 3
+                };
+                #endregion
+                #region sql
+                sql = new Skill
+                {
+                    Description = "SQL (Structured Query Language) is a special-purpose programming language designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS).",
+                    ExperienceRating = 8,
+                    InterestRating = 8,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "SQL",
+                    UsageRating = 8
+                };
+                #endregion
+                #region ADO.NET
+                ado_net = new Skill
+                {
+                    Description = "ADO.NET is a set of computer software components that programmers can use to access data and data services from the database. It is a part of the base class library that is included with the Microsoft .NET Framework.",
+                    ExperienceRating = 7,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "ADO.NET",
+                    UsageRating = 7
+                };
+                #endregion
+                #region AJAX
+                ajax = new Skill
+                {
+                    Description = "Ajax short for asynchronous JavaScript and XML, is a set of web development techniques using many web technologies on the client-side to create asynchronous Web applications.",
+                    ExperienceRating = 8,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Ajax",
+                    UsageRating = 8
+                };
+                #endregion
+                #region aspnet ajax
+                asp_net_ajax = new Skill
+                {
+                    Description = "ASP.NET AJAX is a set of extensions to ASP.NET developed by Microsoft for implementing Ajax functionality.",
+                    ExperienceRating = 5,
+                    InterestRating = 4,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "ASP.NET AJAX",
+                    UsageRating = 5
+                };
+                #endregion
 
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
@@ -433,6 +498,11 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(xml);
                 context.Skills.Add(javascript);
                 context.Skills.Add(svn);
+                context.Skills.Add(winform);
+                context.Skills.Add(sql);
+                context.Skills.Add(ado_net);
+                context.Skills.Add(ajax);
+                context.Skills.Add(asp_net_ajax);
             }
             return context.SaveChanges();
         }
@@ -971,8 +1041,22 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = xml.Id, SkillVersionId = xml_1_1.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = winform.Id,
+                            UsageRating = 5
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ado_net.Id,
+                            UsageRating = 6
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sql.Id,
+                            UsageRating = 7
                         }
-                        //windows form, ado.net , tsql, microsoft enterprise library
                     }
                 };
                 #endregion
@@ -1118,8 +1202,18 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = asp_net_ajax.Id,
+                            UsageRating = 4
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ajax.Id,
+                            UsageRating = 4
                         }
-                        //ASP.NET AJAX, AJAX, XML, Web Service, Google API, windows form, windows console application, tsql, ado.net 
+                        //XML, Web Service, Google API, windows form, windows console application, tsql, ado.net 
                     }
                 };
                 #endregion
@@ -1198,7 +1292,7 @@ namespace CV.DataAccessLayer.Initializers
 
                     }
                     //JQuery, Google API, javascript, html, css, windows, windows server, svn, c#, asp.net, mvc, dotnet, sql server, ssms, tsql
-                    //dependency injection, structure map, ado.net
+                    //dependency injection, structure map, ado.net, telerik mvc controls, telerik sitefinity
                 };
                 #endregion
                 #region University of London
@@ -1225,7 +1319,7 @@ namespace CV.DataAccessLayer.Initializers
                     //pivotal tracker, scrum, axosoft, structure map, entity framework,
                     //unity, moq, rhino mock, automapper, dependency injection, unit testing
                     //linq, agile, ado.net
-                    //umbraco, wordpress, mediawiki, silverlight, html5, html, css, bootstrap
+                    //umbraco, wordpress, mediawiki, silverlight, html5, html, css, bootstrap, wcf, wpf
                 };
                 #endregion
 
