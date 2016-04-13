@@ -48,6 +48,10 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill sql { get; set; }
         private static Skill asp_net_ajax { get; set; }
         private static Skill ajax { get; set; }
+        private static Skill web_service { get; set; }
+        private static Skill google_api { get; set; }
+        private static Skill console_app { get; set; }
+        private static Skill soap { get; set; }
         #endregion
 
         #region SkillVersions
@@ -56,6 +60,12 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion asp_3_0 { get; set; }
         private static SkillVersion asp_net_2_0 { get; set; }
         private static SkillVersion asp_net_3_0 { get; set; }
+        private static SkillVersion asp_net_3_5 { get; set; }
+        private static SkillVersion asp_net_4_0 { get; set; }
+        private static SkillVersion asp_net_4_5 { get; set; }
+        private static SkillVersion asp_net_4_5_1 { get; set; }
+        private static SkillVersion asp_net_4_5_2 { get; set; }
+        private static SkillVersion asp_net_4_6 { get; set; }
         private static SkillVersion sqlserver_2000 { get; set; }
         private static SkillVersion sqlserver_2005 { get; set; }
         private static SkillVersion visual_studio_2003 { get; set; }
@@ -471,6 +481,54 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 5
                 };
                 #endregion
+                #region web service
+                web_service = new Skill
+                {
+                    Description = "A Web service is a service offered by an electronic device to another electronic device, communicating with each other via the World wide web.",
+                    ExperienceRating = 6,
+                    InterestRating = 5,
+                    IconClass = "fa fa-globe",
+                    IsVisible = true,
+                    Name = "Web Service",
+                    UsageRating = 2
+                };
+                #endregion
+                #region google api
+                google_api = new Skill
+                {
+                    Description = "Google APIs is a set of application programming interfaces (APIs) developed by Google which allow communication with Google Services and their integration to other services.",
+                    ExperienceRating = 5,
+                    InterestRating = 8,
+                    IconClass = "fa fa-google",
+                    IsVisible = true,
+                    Name = "Google APIs",
+                    UsageRating = 4
+                };
+                #endregion
+                #region console application
+                console_app = new Skill
+                {
+                    Description = "A console application is a computer program designed to be used via a text-only computer interface, such as a text terminal, the command line interface of some operating systems (Unix, DOS, etc.) or the text-based interface included with most Graphical User Interface (GUI) operating systems, such as the Win32 console in Microsoft Windows, the Terminal in Mac OS X, and xterm in Unix.",
+                    ExperienceRating = 7,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Console application",
+                    UsageRating = 7
+                };
+                #endregion
+                #region soap
+                soap = new Skill
+                {
+                    Description = "SOAP, originally an acronym for Simple Object Access Protocol, is a protocol specification for exchanging structured information in the implementation of web services in computer networks.",
+                    ExperienceRating = 4,
+                    InterestRating = 3,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "SOAP",
+                    UsageRating = 3
+                };
+                #endregion
 
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
@@ -503,6 +561,10 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(ado_net);
                 context.Skills.Add(ajax);
                 context.Skills.Add(asp_net_ajax);
+                context.Skills.Add(web_service);
+                context.Skills.Add(google_api);
+                context.Skills.Add(console_app);
+                context.Skills.Add(soap);
             }
             return context.SaveChanges();
         }
@@ -536,6 +598,55 @@ namespace CV.DataAccessLayer.Initializers
                 asp_net_2_0 = new SkillVersion
                 {
                     Name = "ASP.NET 2.0",
+                    SkillId = asp_net.Id
+                };
+                #endregion
+                #region asp.net 3.0
+                asp_net_3_0 = new SkillVersion
+                {
+                    Name = "ASP.NET 3.0",
+                    SkillId = asp_net.Id
+                };
+                #endregion
+                #region asp.net 3.5
+                asp_net_3_5 = new SkillVersion
+                {
+                    Name = "ASP.NET 3.5",
+                    SkillId = asp_net.Id
+                };
+                #endregion
+                #region asp.net 4.0
+                asp_net_4_0 = new SkillVersion
+                {
+                    Name = "ASP.NET 4.0",
+                    SkillId = asp_net.Id
+                };
+                #endregion
+                #region asp.net 4.5
+                asp_net_4_5 = new SkillVersion
+                {
+                    Name = "ASP.NET 4.5",
+                    SkillId = asp_net.Id
+                };
+                #endregion
+                #region asp.net 4.5.1
+                asp_net_4_5_1 = new SkillVersion
+                {
+                    Name = "ASP.NET 4.5.1",
+                    SkillId = asp_net.Id
+                };
+                #endregion
+                #region asp.net 4.5.2
+                asp_net_4_5_2 = new SkillVersion
+                {
+                    Name = "ASP.NET 4.5.2",
+                    SkillId = asp_net.Id
+                };
+                #endregion
+                #region asp.net 4.6
+                asp_net_4_6 = new SkillVersion
+                {
+                    Name = "ASP.NET 4.6",
                     SkillId = asp_net.Id
                 };
                 #endregion
@@ -707,13 +818,6 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = javascript.Id
                 };
                 #endregion
-                #region asp.net 3.0
-                asp_net_3_0 = new SkillVersion
-                {
-                    Name = "ASP.NET 3.0",
-                    SkillId = asp_net.Id
-                };
-                #endregion
                 #region sql server 2005
                 sqlserver_2005 = new SkillVersion
                 {
@@ -760,6 +864,12 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(sqlserver_2005);
                 context.SkillVersions.Add(svn_1_3);
                 context.SkillVersions.Add(photoshop_cs_2);
+                context.SkillVersions.Add(asp_net_3_5);
+                context.SkillVersions.Add(asp_net_4_0);
+                context.SkillVersions.Add(asp_net_4_5);
+                context.SkillVersions.Add(asp_net_4_5_1);
+                context.SkillVersions.Add(asp_net_4_5_2);
+                context.SkillVersions.Add(asp_net_4_6);
             }
 
             return context.SaveChanges();
