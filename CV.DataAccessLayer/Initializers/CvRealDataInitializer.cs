@@ -154,6 +154,13 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion jquery_ui_1_9 { get; set; }
         private static SkillVersion jquery_ui_1_10 { get; set; }
         private static SkillVersion jquery_ui_1_11 { get; set; }
+        private static SkillVersion mvc_2 { get; set; }
+        private static SkillVersion mvc_3 { get; set; }
+        private static SkillVersion mvc_4 { get; set; }
+        private static SkillVersion mvc_5 { get; set; }
+        private static SkillVersion structuremap_2_6_4_1 { get; set; }
+        private static SkillVersion structuremap_2_6_3 { get; set; }
+        private static SkillVersion sitefinity_4_0 { get; set; }
         #endregion
 
         #region Experiences
@@ -1374,42 +1381,91 @@ namespace CV.DataAccessLayer.Initializers
                 jquery_ui_1_6 = new SkillVersion
                 {
                     Name = "jQuery UI 1.6",
-                    SkillId = jquery.Id
+                    SkillId = jquery_ui.Id
                 };
                 #endregion
                 #region jQuery UI 1.7
                 jquery_ui_1_7 = new SkillVersion
                 {
                     Name = "jQuery UI 1.7",
-                    SkillId = jquery.Id
+                    SkillId = jquery_ui.Id
                 };
                 #endregion
                 #region jQuery UI 1.8
                 jquery_ui_1_8 = new SkillVersion
                 {
                     Name = "jQuery UI 1.8",
-                    SkillId = jquery.Id
+                    SkillId = jquery_ui.Id
                 };
                 #endregion
                 #region jQuery UI 1.9
                 jquery_ui_1_9 = new SkillVersion
                 {
                     Name = "jQuery UI 1.9",
-                    SkillId = jquery.Id
+                    SkillId = jquery_ui.Id
                 };
                 #endregion
                 #region jQuery UI 1.10
                 jquery_ui_1_10 = new SkillVersion
                 {
                     Name = "jQuery UI 1.10",
-                    SkillId = jquery.Id
+                    SkillId = jquery_ui.Id
                 };
                 #endregion
                 #region jQuery UI 1.11
                 jquery_ui_1_11 = new SkillVersion
                 {
                     Name = "jQuery UI 1.11",
-                    SkillId = jquery.Id
+                    SkillId = jquery_ui.Id
+                };
+                #endregion
+                #region ASP.NET MVC 2
+                mvc_2 = new SkillVersion
+                {
+                    Name = "MVC 2",
+                    SkillId = mvc.Id
+                };
+                #endregion
+                #region ASP.NET MVC 3
+                mvc_3 = new SkillVersion
+                {
+                    Name = "MVC 3",
+                    SkillId = mvc.Id
+                };
+                #endregion
+                #region ASP.NET MVC 4
+                mvc_4 = new SkillVersion
+                {
+                    Name = "MVC 4",
+                    SkillId = mvc.Id
+                };
+                #endregion
+                #region ASP.NET MVC 5
+                mvc_5 = new SkillVersion
+                {
+                    Name = "MVC 5",
+                    SkillId = mvc.Id
+                };
+                #endregion
+                #region StructureMap 2.6.3
+                structuremap_2_6_3 = new SkillVersion
+                {
+                    Name = "StructureMap 2.6.3",
+                    SkillId = structuremap.Id
+                };
+                #endregion
+                #region StructureMap 2.6.4.1
+                structuremap_2_6_4_1= new SkillVersion
+                {
+                    Name = "StructureMap 2.6.4.1",
+                    SkillId = structuremap.Id
+                };
+                #endregion
+                #region Sitefinity 4.0
+                sitefinity_4_0 = new SkillVersion
+                {
+                    Name = "Sitefinity 4.0",
+                    SkillId = sitefinity.Id
                 };
                 #endregion
 
@@ -1498,6 +1554,13 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(jquery_ui_1_9);
                 context.SkillVersions.Add(jquery_ui_1_10);
                 context.SkillVersions.Add(jquery_ui_1_11);
+                context.SkillVersions.Add(mvc_2);
+                context.SkillVersions.Add(mvc_3);
+                context.SkillVersions.Add(mvc_4);
+                context.SkillVersions.Add(mvc_5);
+                context.SkillVersions.Add(structuremap_2_6_3);
+                context.SkillVersions.Add(structuremap_2_6_4_1);
+                context.SkillVersions.Add(sitefinity_4_0);
             }
 
             return context.SaveChanges();
