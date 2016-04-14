@@ -52,6 +52,20 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill google_api { get; set; }
         private static Skill console_app { get; set; }
         private static Skill soap { get; set; }
+        private static Skill tfs { get; set; }
+        private static Skill xsd { get; set; }
+        private static Skill commerce_server { get; set; }
+        private static Skill scrum { get; set; }
+        private static Skill jquery { get; set; }
+        private static Skill jquery_ui { get; set; }
+        private static Skill agile { get; set; }
+        private static Skill cims { get; set; }
+        private static Skill di { get; set; }
+        private static Skill razor { get; set; }
+        private static Skill telerik_mvc { get; set; }
+        private static Skill mvc { get; set; }
+        private static Skill sitefinity { get; set; }
+        private static Skill structuremap { get; set; }
         #endregion
 
         #region SkillVersions
@@ -68,18 +82,44 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion asp_net_4_6 { get; set; }
         private static SkillVersion sqlserver_2000 { get; set; }
         private static SkillVersion sqlserver_2005 { get; set; }
-        private static SkillVersion visual_studio_2003 { get; set; }
-        private static SkillVersion visual_studio_2005 { get; set; }
+        private static SkillVersion sqlserver_2008 { get; set; }
+        private static SkillVersion sqlserver_2008_R2 { get; set; }
+        private static SkillVersion sqlserver_2012 { get; set; }
+        private static SkillVersion visual_studio_2003_pro { get; set; }
+        private static SkillVersion visual_studio_2005_pro { get; set; }
+        private static SkillVersion visual_studio_2008_pro { get; set; }
+        private static SkillVersion visual_studio_2010_pro { get; set; }
+        private static SkillVersion visual_studio_2012_pro { get; set; }
+        private static SkillVersion visual_studio_2013_pro { get; set; }
+        private static SkillVersion visual_studio_2015_pro { get; set; }
         private static SkillVersion csharp_1_2 { get; set; }
         private static SkillVersion csharp_2_0 { get; set; }
+        private static SkillVersion csharp_3_0 { get; set; }
+        private static SkillVersion csharp_4_0 { get; set; }
+        private static SkillVersion csharp_5_0 { get; set; }
         private static SkillVersion dotnet_1_1 { get; set; }
         private static SkillVersion dotnet_2_0 { get; set; }
+        private static SkillVersion dotnet_3_0 { get; set; }
+        private static SkillVersion dotnet_3_5 { get; set; }
+        private static SkillVersion dotnet_4_0 { get; set; }
+        private static SkillVersion dotnet_4_5 { get; set; }
+        private static SkillVersion dotnet_4_5_1 { get; set; }
+        private static SkillVersion dotnet_4_5_2 { get; set; }
+        private static SkillVersion dotnet_4_6 { get; set; }
+        private static SkillVersion dotnet_4_6_1 { get; set; }
         private static SkillVersion oracle_8 { get; set; }
         private static SkillVersion windows_xp { get; set; }
         private static SkillVersion windows_vista { get; set; }
+        private static SkillVersion windows_7 { get; set; }
         private static SkillVersion windows_server_2003 { get; set; }
+        private static SkillVersion windows_server_2008 { get; set; }
+        private static SkillVersion windows_server_2008_R2 { get; set; }
+        private static SkillVersion windows_server_2012_R2 { get; set; }
         private static SkillVersion html_4_0 { get; set; }
+        private static SkillVersion html_5_0 { get; set; }
         private static SkillVersion css_2_0 { get; set; }
+        private static SkillVersion css_2_1 { get; set; }
+        private static SkillVersion css_3_0 { get; set; }
         private static SkillVersion flash_2004 { get; set; }
         private static SkillVersion actionscript_2_0 { get; set; }
         private static SkillVersion photoshop_elements_7_0 { get; set; }
@@ -88,10 +128,32 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion vss_6_0 { get; set; }
         private static SkillVersion toad_9_0 { get; set; }
         private static SkillVersion ssms_enterprise_manager { get; set; }
+        private static SkillVersion ssms_2005 { get; set; }
+        private static SkillVersion ssms_2008 { get; set; }
+        private static SkillVersion ssms_2012 { get; set; }
+        private static SkillVersion ssms_2014 { get; set; }
         private static SkillVersion javascript_ecmascript_3 { get; set; }
+        private static SkillVersion javascript_ecmascript_5 { get; set; }
         private static SkillVersion xslt_1_0 { get; set; }
         private static SkillVersion xml_1_1 { get; set; }
         private static SkillVersion svn_1_3 { get; set; }
+        private static SkillVersion tfs_2005 { get; set; }
+        private static SkillVersion tfs_2008 { get; set; }
+        private static SkillVersion commerce_server_2009 { get; set; }
+        private static SkillVersion jquery_1_4 { get; set; }
+        private static SkillVersion jquery_1_5 { get; set; }
+        private static SkillVersion jquery_1_8 { get; set; }
+        private static SkillVersion jquery_1_9 { get; set; }
+        private static SkillVersion jquery_1_10 { get; set; }
+        private static SkillVersion jquery_1_11 { get; set; }
+        private static SkillVersion jquery_2_0 { get; set; }
+        private static SkillVersion jquery_2_1 { get; set; }
+        private static SkillVersion jquery_ui_1_6 { get; set; }
+        private static SkillVersion jquery_ui_1_7 { get; set; }
+        private static SkillVersion jquery_ui_1_8 { get; set; }
+        private static SkillVersion jquery_ui_1_9 { get; set; }
+        private static SkillVersion jquery_ui_1_10 { get; set; }
+        private static SkillVersion jquery_ui_1_11 { get; set; }
         #endregion
 
         #region Experiences
@@ -529,6 +591,174 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 3
                 };
                 #endregion
+                #region TFS
+                tfs = new Skill
+                {
+                    Description = "Team Foundation Server (commonly abbreviated to TFS) is a Microsoft product that provides source code management (either via Team Foundation Version Control or Git), reporting, requirements management, project management (for both agile software development and waterfall teams), automated builds, lab management, testing and release management capabilities.",
+                    ExperienceRating = 2,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-visualstudio",
+                    IsVisible = true,
+                    Name = "TFS",
+                    UsageRating = 3
+                };
+                #endregion
+                #region XSD
+                xsd = new Skill
+                {
+                    Description = "A typed DataSet is a class that derives from a DataSet. As such, it inherits all the methods, events, and properties of a DataSet. Additionally, a typed DataSet provides strongly typed methods, events, and properties. This means you can access tables and columns by name, instead of using collection-based methods.",
+                    ExperienceRating = 3,
+                    InterestRating = 2,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Strongly Typed DataSet",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Commerce Server
+                commerce_server = new Skill
+                {
+                    Description = "Microsoft Commerce Server is a Microsoft product for building e-commerce systems using Microsoft .NET technology.",
+                    ExperienceRating = 3,
+                    InterestRating = 2,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Microsoft Commerce Server",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Scrum
+                scrum = new Skill
+                {
+                    Description = "Scrum is an iterative and incremental agile software development framework for managing product development.",
+                    ExperienceRating = 3,
+                    InterestRating = 9,
+                    IconClass = "devicons devicons-scrum",
+                    IsVisible = true,
+                    Name = "Scrum",
+                    UsageRating = 2
+                };
+                #endregion
+                #region Agile
+                agile = new Skill
+                {
+                    Description = "Agile software development is a set of principles for software development in which requirements and solutions evolve through collaboration between self-organizing, cross-functional teams.",
+                    ExperienceRating = 3,
+                    InterestRating = 9,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Agile",
+                    UsageRating = 2
+                };
+                #endregion
+                #region jQuery
+                jquery = new Skill
+                {
+                    Description = "jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML.",
+                    ExperienceRating = 8,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-jquery",
+                    IsVisible = true,
+                    Name = "jQuery",
+                    UsageRating = 8
+                };
+                #endregion
+                #region jQuery UI
+                jquery_ui = new Skill
+                {
+                    Description = "jQuery UI is a collection of GUI widgets, animated visual effects, and themes implemented with jQuery (a JavaScript library), Cascading Style Sheets, and HTML.",
+                    ExperienceRating = 8,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-jquery_ui",
+                    IsVisible = true,
+                    Name = "jQuery UI",
+                    UsageRating = 8
+                };
+                #endregion
+                #region CIMS
+                cims = new Skill
+                {
+                    Description = "CIMS is a specialist multi-channel business system developed exclusively to meet the special demands of the fashion & lifestyle sector.",
+                    ExperienceRating = 2,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Prologic - CIMS Software",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Dependency Injection
+                di = new Skill
+                {
+                    Description = "In software engineering, dependency injection is a software design pattern that implements inversion of control for resolving dependencies.",
+                    ExperienceRating = 5,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Dependency Injection",
+                    UsageRating = 8
+                };
+                #endregion
+                #region Telerik MVC controls
+                telerik_mvc = new Skill
+                {
+                    Description = "ASP.NET MVC controls for navigation and layout, data management and visualization, editing, interactivity and more.",
+                    ExperienceRating = 2,
+                    InterestRating = 6,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Telerik MVC Controls",
+                    UsageRating = 1
+                };
+                #endregion
+                #region ASP.NET razor
+                razor = new Skill
+                {
+                    Description = "Razor is an ASP.NET programming syntax used to create dynamic web pages with the C# or Visual Basic .NET programming languages.",
+                    ExperienceRating = 8,
+                    InterestRating = 6,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "ASP.NET Razor",
+                    UsageRating = 7
+                };
+                #endregion
+                #region StructureMap
+                razor = new Skill
+                {
+                    Description = "StructureMap is the oldest, continuously used IoC/DI container for .Net dating back to its first public release and production usage all the way back in June 2004 on .Net 1.1.",
+                    ExperienceRating = 3,
+                    InterestRating = 8,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "StructureMap",
+                    UsageRating = 6
+                };
+                #endregion
+                #region Sitefinity
+                razor = new Skill
+                {
+                    Description = "A web content management system (CMS), used to create and manage websites accessed via desktop or mobile devices.",
+                    ExperienceRating = 2,
+                    InterestRating = 3,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Telerik Sitefinity",
+                    UsageRating = 1
+                };
+                #endregion
+                #region ASP.NET MVC
+                razor = new Skill
+                {
+                    Description = "The ASP.NET MVC is a web application framework developed by Microsoft, which implements the model–view–controller (MVC) pattern.",
+                    ExperienceRating = 8,
+                    InterestRating = 10,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "ASP.NET MVC",
+                    UsageRating = 7
+                };
+                #endregion
 
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
@@ -565,6 +795,20 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(google_api);
                 context.Skills.Add(console_app);
                 context.Skills.Add(soap);
+                context.Skills.Add(tfs);
+                context.Skills.Add(xsd);
+                context.Skills.Add(commerce_server);
+                context.Skills.Add(scrum);
+                context.Skills.Add(agile);
+                context.Skills.Add(jquery);
+                context.Skills.Add(jquery_ui);
+                context.Skills.Add(cims);
+                context.Skills.Add(telerik_mvc);
+                context.Skills.Add(razor);
+                context.Skills.Add(di);
+                context.Skills.Add(mvc);
+                context.Skills.Add(sitefinity);
+                context.Skills.Add(structuremap);
             }
             return context.SaveChanges();
         }
@@ -657,17 +901,80 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = sqlserver.Id
                 };
                 #endregion
-                #region visual studio 2003
-                visual_studio_2003 = new SkillVersion
+                #region sql server 2005
+                sqlserver_2005 = new SkillVersion
                 {
-                    Name = "Visual Studio .NET 2003",
+                    Name = "SQL Server 2005",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
+                #region sql server 2008
+                sqlserver_2008 = new SkillVersion
+                {
+                    Name = "SQL Server 2008",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
+                #region sql server 2008 R2
+                sqlserver_2008_R2 = new SkillVersion
+                {
+                    Name = "SQL Server 2008 R2",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
+                #region sql server 2012
+                sqlserver_2012 = new SkillVersion
+                {
+                    Name = "SQL Server 2012",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
+                #region visual studio 2003 Professional
+                visual_studio_2003_pro = new SkillVersion
+                {
+                    Name = "Visual Studio .NET 2003 Professional",
                     SkillId = visual_studio.Id
                 };
                 #endregion
-                #region visual studio 2005
-                visual_studio_2005 = new SkillVersion
+                #region visual studio 2005 Professional
+                visual_studio_2005_pro = new SkillVersion
                 {
-                    Name = "Visual Studio 2005",
+                    Name = "Visual Studio 2005 Professional",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
+                #region visual studio 2008 Professional
+                visual_studio_2008_pro = new SkillVersion
+                {
+                    Name = "Visual Studio 2008 Professional",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
+                #region visual studio 2010 Professional
+                visual_studio_2010_pro = new SkillVersion
+                {
+                    Name = "Visual Studio 2010 Professional",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
+                #region visual studio 2012 Professional
+                visual_studio_2012_pro = new SkillVersion
+                {
+                    Name = "Visual Studio 2012 Professional",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
+                #region visual studio 2013 Professional
+                visual_studio_2013_pro = new SkillVersion
+                {
+                    Name = "Visual Studio 2013 Professional",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
+                #region visual studio 2015 Professional
+                visual_studio_2015_pro = new SkillVersion
+                {
+                    Name = "Visual Studio 2015 Professional",
                     SkillId = visual_studio.Id
                 };
                 #endregion
@@ -685,6 +992,27 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = csharp.Id
                 };
                 #endregion
+                #region csharp 3.0
+                csharp_3_0 = new SkillVersion
+                {
+                    Name = "C# 3.0",
+                    SkillId = csharp.Id
+                };
+                #endregion
+                #region csharp 4.0
+                csharp_4_0 = new SkillVersion
+                {
+                    Name = "C# 4.0",
+                    SkillId = csharp.Id
+                };
+                #endregion
+                #region csharp 5.0
+                csharp_5_0 = new SkillVersion
+                {
+                    Name = "C# 5.0",
+                    SkillId = csharp.Id
+                };
+                #endregion
                 #region .net framework 1.1
                 dotnet_1_1 = new SkillVersion
                 {
@@ -696,6 +1024,62 @@ namespace CV.DataAccessLayer.Initializers
                 dotnet_2_0 = new SkillVersion
                 {
                     Name = ".NET Framework 2.0",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 3.0
+                dotnet_3_0 = new SkillVersion
+                {
+                    Name = ".NET Framework 3.0",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 3.5
+                dotnet_3_5 = new SkillVersion
+                {
+                    Name = ".NET Framework 3.5",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 4.0
+                dotnet_4_0 = new SkillVersion
+                {
+                    Name = ".NET Framework 4.0",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 4.5
+                dotnet_4_5 = new SkillVersion
+                {
+                    Name = ".NET Framework 4.5",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 4.5.1
+                dotnet_4_5_1 = new SkillVersion
+                {
+                    Name = ".NET Framework 4.5.1",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 4.5.2
+                dotnet_4_5_2 = new SkillVersion
+                {
+                    Name = ".NET Framework 4.5.2",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 4.6
+                dotnet_4_6 = new SkillVersion
+                {
+                    Name = ".NET Framework 4.6",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework 4.6.1
+                dotnet_4_6_1 = new SkillVersion
+                {
+                    Name = ".NET Framework 4.6.1",
                     SkillId = dotnet.Id
                 };
                 #endregion
@@ -720,10 +1104,38 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = windows.Id
                 };
                 #endregion
+                #region windows 7
+                windows_7 = new SkillVersion
+                {
+                    Name = "Windows 7",
+                    SkillId = windows.Id
+                };
+                #endregion
                 #region windows server 2003
                 windows_server_2003 = new SkillVersion
                 {
                     Name = "Windows Server 2003",
+                    SkillId = windows.Id
+                };
+                #endregion
+                #region windows server 2008
+                windows_server_2008 = new SkillVersion
+                {
+                    Name = "Windows Server 2008",
+                    SkillId = windows.Id
+                };
+                #endregion
+                #region windows server 2008 R2
+                windows_server_2008_R2 = new SkillVersion
+                {
+                    Name = "Windows Server 2008 R2",
+                    SkillId = windows.Id
+                };
+                #endregion
+                #region windows server 2012 R2
+                windows_server_2012_R2 = new SkillVersion
+                {
+                    Name = "Windows Server 2012 R2",
                     SkillId = windows.Id
                 };
                 #endregion
@@ -734,10 +1146,31 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = html.Id
                 };
                 #endregion
-                #region css 2.0
+                #region html5
+                html_5_0 = new SkillVersion
+                {
+                    Name = "HTML5",
+                    SkillId = html.Id
+                };
+                #endregion
+                #region css 2
                 css_2_0 = new SkillVersion
                 {
-                    Name = "CSS 2.0",
+                    Name = "CSS 2",
+                    SkillId = css.Id
+                };
+                #endregion
+                #region css 2.1
+                css_2_1 = new SkillVersion
+                {
+                    Name = "CSS 2.1",
+                    SkillId = css.Id
+                };
+                #endregion
+                #region css 3
+                css_3_0 = new SkillVersion
+                {
+                    Name = "CSS 3",
                     SkillId = css.Id
                 };
                 #endregion
@@ -797,6 +1230,34 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = ssms.Id
                 };
                 #endregion
+                #region sql server management studio 2005
+                ssms_2005 = new SkillVersion
+                {
+                    Name = "SSMS 2005",
+                    SkillId = ssms.Id
+                };
+                #endregion
+                #region sql server management studio 2008
+                ssms_2008 = new SkillVersion
+                {
+                    Name = "SSMS 2008",
+                    SkillId = ssms.Id
+                };
+                #endregion
+                #region sql server management studio 2012
+                ssms_2012 = new SkillVersion
+                {
+                    Name = "SSMS 2012",
+                    SkillId = ssms.Id
+                };
+                #endregion
+                #region sql server management studio 2014
+                ssms_2014= new SkillVersion
+                {
+                    Name = "SSMS 2014",
+                    SkillId = ssms.Id
+                };
+                #endregion
                 #region xml 1.1
                 xml_1_1 = new SkillVersion
                 {
@@ -818,11 +1279,11 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = javascript.Id
                 };
                 #endregion
-                #region sql server 2005
-                sqlserver_2005 = new SkillVersion
+                #region javascript ecmascript 5
+                javascript_ecmascript_5 = new SkillVersion
                 {
-                    Name = "SQL Server 2005",
-                    SkillId = sqlserver.Id
+                    Name = "ECMAScript 5",
+                    SkillId = javascript.Id
                 };
                 #endregion
                 #region svn 1.3
@@ -832,24 +1293,166 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = svn.Id
                 };
                 #endregion
+                #region tfs 2005
+                tfs_2005 = new SkillVersion
+                {
+                    Name = "TFS 2005",
+                    SkillId = tfs.Id
+                };
+                #endregion
+                #region tfs 2008
+                tfs_2008 = new SkillVersion
+                {
+                    Name = "TFS 2008",
+                    SkillId = tfs.Id
+                };
+                #endregion
+                #region Commerce Server 2009
+                commerce_server_2009 = new SkillVersion
+                {
+                    Name = "Commerce Server 2009",
+                    SkillId = commerce_server.Id
+                };
+                #endregion
+                #region jQuery 1.4
+                jquery_1_4 = new SkillVersion
+                {
+                    Name = "jQuery 1.4",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery 1.5
+                jquery_1_5 = new SkillVersion
+                {
+                    Name = "jQuery 1.5",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery 1.8
+                jquery_1_8 = new SkillVersion
+                {
+                    Name = "jQuery 1.8",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery 1.9
+                jquery_1_9 = new SkillVersion
+                {
+                    Name = "jQuery 1.9",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery 2.0
+                jquery_2_0 = new SkillVersion
+                {
+                    Name = "jQuery 2.0",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery 2.1
+                jquery_2_1 = new SkillVersion
+                {
+                    Name = "jQuery 2.1",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery 1.10
+                jquery_1_10 = new SkillVersion
+                {
+                    Name = "jQuery 1.10",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery 1.11
+                jquery_1_11 = new SkillVersion
+                {
+                    Name = "jQuery 1.11",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery UI 1.6
+                jquery_ui_1_6 = new SkillVersion
+                {
+                    Name = "jQuery UI 1.6",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery UI 1.7
+                jquery_ui_1_7 = new SkillVersion
+                {
+                    Name = "jQuery UI 1.7",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery UI 1.8
+                jquery_ui_1_8 = new SkillVersion
+                {
+                    Name = "jQuery UI 1.8",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery UI 1.9
+                jquery_ui_1_9 = new SkillVersion
+                {
+                    Name = "jQuery UI 1.9",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery UI 1.10
+                jquery_ui_1_10 = new SkillVersion
+                {
+                    Name = "jQuery UI 1.10",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery UI 1.11
+                jquery_ui_1_11 = new SkillVersion
+                {
+                    Name = "jQuery UI 1.11",
+                    SkillId = jquery.Id
+                };
+                #endregion
 
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
                 context.SkillVersions.Add(asp_3_0);
                 context.SkillVersions.Add(asp_net_2_0);
                 context.SkillVersions.Add(sqlserver_2000);
-                context.SkillVersions.Add(visual_studio_2003);
-                context.SkillVersions.Add(visual_studio_2005);
+                context.SkillVersions.Add(visual_studio_2003_pro);
+                context.SkillVersions.Add(visual_studio_2005_pro);
+                context.SkillVersions.Add(visual_studio_2008_pro);
+                context.SkillVersions.Add(visual_studio_2010_pro);
+                context.SkillVersions.Add(visual_studio_2012_pro);
+                context.SkillVersions.Add(visual_studio_2013_pro);
+                context.SkillVersions.Add(visual_studio_2015_pro);
                 context.SkillVersions.Add(csharp_1_2);
                 context.SkillVersions.Add(csharp_2_0);
+                context.SkillVersions.Add(csharp_3_0);
+                context.SkillVersions.Add(csharp_4_0);
+                context.SkillVersions.Add(csharp_5_0);
                 context.SkillVersions.Add(dotnet_1_1);
                 context.SkillVersions.Add(dotnet_2_0);
+                context.SkillVersions.Add(dotnet_3_0);
+                context.SkillVersions.Add(dotnet_3_5);
+                context.SkillVersions.Add(dotnet_4_0);
+                context.SkillVersions.Add(dotnet_4_5);
+                context.SkillVersions.Add(dotnet_4_5_1);
+                context.SkillVersions.Add(dotnet_4_5_2);
+                context.SkillVersions.Add(dotnet_4_6);
+                context.SkillVersions.Add(dotnet_4_6_1);
                 context.SkillVersions.Add(oracle_8);
                 context.SkillVersions.Add(windows_xp);
                 context.SkillVersions.Add(windows_vista);
+                context.SkillVersions.Add(windows_7);
                 context.SkillVersions.Add(windows_server_2003);
+                context.SkillVersions.Add(windows_server_2008);
+                context.SkillVersions.Add(windows_server_2008_R2);
+                context.SkillVersions.Add(windows_server_2012_R2);
                 context.SkillVersions.Add(html_4_0);
+                context.SkillVersions.Add(html_5_0);
                 context.SkillVersions.Add(css_2_0);
+                context.SkillVersions.Add(css_2_1);
+                context.SkillVersions.Add(css_3_0);
                 context.SkillVersions.Add(flash_2004);
                 context.SkillVersions.Add(actionscript_2_0);
                 context.SkillVersions.Add(photoshop_elements_7_0);
@@ -857,11 +1460,19 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(vss_6_0);
                 context.SkillVersions.Add(toad_9_0);
                 context.SkillVersions.Add(ssms_enterprise_manager);
+                context.SkillVersions.Add(ssms_2005);
+                context.SkillVersions.Add(ssms_2008);
+                context.SkillVersions.Add(ssms_2012);
+                context.SkillVersions.Add(ssms_2014);
                 context.SkillVersions.Add(xslt_1_0);
                 context.SkillVersions.Add(javascript_ecmascript_3);
+                context.SkillVersions.Add(javascript_ecmascript_5);
                 context.SkillVersions.Add(xml_1_1);
                 context.SkillVersions.Add(asp_net_3_0);
                 context.SkillVersions.Add(sqlserver_2005);
+                context.SkillVersions.Add(sqlserver_2008);
+                context.SkillVersions.Add(sqlserver_2008_R2);
+                context.SkillVersions.Add(sqlserver_2012);
                 context.SkillVersions.Add(svn_1_3);
                 context.SkillVersions.Add(photoshop_cs_2);
                 context.SkillVersions.Add(asp_net_3_5);
@@ -870,6 +1481,23 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(asp_net_4_5_1);
                 context.SkillVersions.Add(asp_net_4_5_2);
                 context.SkillVersions.Add(asp_net_4_6);
+                context.SkillVersions.Add(tfs_2005);
+                context.SkillVersions.Add(tfs_2008);
+                context.SkillVersions.Add(commerce_server_2009);
+                context.SkillVersions.Add(jquery_1_4);
+                context.SkillVersions.Add(jquery_1_5);
+                context.SkillVersions.Add(jquery_1_8);
+                context.SkillVersions.Add(jquery_1_9);
+                context.SkillVersions.Add(jquery_1_10);
+                context.SkillVersions.Add(jquery_1_11);
+                context.SkillVersions.Add(jquery_2_0);
+                context.SkillVersions.Add(jquery_2_1);
+                context.SkillVersions.Add(jquery_ui_1_6);
+                context.SkillVersions.Add(jquery_ui_1_7);
+                context.SkillVersions.Add(jquery_ui_1_8);
+                context.SkillVersions.Add(jquery_ui_1_9);
+                context.SkillVersions.Add(jquery_ui_1_10);
+                context.SkillVersions.Add(jquery_ui_1_11);
             }
 
             return context.SaveChanges();
@@ -1031,7 +1659,7 @@ namespace CV.DataAccessLayer.Initializers
                             UsageRating = 6,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2003.Id }
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2003_pro.Id }
                             }
                         },
                         new ExperienceSkill
@@ -1219,7 +1847,7 @@ namespace CV.DataAccessLayer.Initializers
                             UsageRating = 9,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2005.Id }
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2005_pro.Id }
                             }
                         },
                         new ExperienceSkill
