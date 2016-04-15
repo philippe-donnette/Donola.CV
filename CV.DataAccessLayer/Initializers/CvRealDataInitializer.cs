@@ -66,11 +66,25 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill mvc { get; set; }
         private static Skill sitefinity { get; set; }
         private static Skill structuremap { get; set; }
+        private static Skill mysql_workbench { get; set; }
+        private static Skill shibboleth { get; set; }
+        private static Skill saml { get; set; }
+        private static Skill jenkins { get; set; }
+        private static Skill knockout { get; set; }
+        private static Skill angularjs { get; set; }
+        private static Skill lync_sdk { get; set; }
+        private static Skill rhel { get; set; }
+        private static Skill fedora_core { get; set; }
+        private static Skill pivotal_tracker { get; set; }
+        private static Skill axosoft { get; set; }
+        private static Skill ssl { get; set; }
         #endregion
 
         #region SkillVersions
         private static SkillVersion php_4_3 { get; set; }
         private static SkillVersion mysql_4_0_6 { get; set; }
+        private static SkillVersion mysql_5_0_96 { get; set; }
+        private static SkillVersion mysql_5_1_73 { get; set; }
         private static SkillVersion asp_3_0 { get; set; }
         private static SkillVersion asp_net_2_0 { get; set; }
         private static SkillVersion asp_net_3_0 { get; set; }
@@ -92,6 +106,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion visual_studio_2012_pro { get; set; }
         private static SkillVersion visual_studio_2013_pro { get; set; }
         private static SkillVersion visual_studio_2015_pro { get; set; }
+        private static SkillVersion visual_studio_code { get; set; }
         private static SkillVersion csharp_1_2 { get; set; }
         private static SkillVersion csharp_2_0 { get; set; }
         private static SkillVersion csharp_3_0 { get; set; }
@@ -161,6 +176,16 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion structuremap_2_6_4_1 { get; set; }
         private static SkillVersion structuremap_2_6_3 { get; set; }
         private static SkillVersion sitefinity_4_0 { get; set; }
+        private static SkillVersion mysql_workbench_5_2 { get; set; }
+        private static SkillVersion mysql_workbench_6_3 { get; set; }
+        private static SkillVersion shibboleth_2_0 { get; set; }
+        private static SkillVersion saml_2_0 { get; set; }
+        private static SkillVersion jenkins_1_6 { get; set; }
+        private static SkillVersion knockout_2_2_1 { get; set; }
+        private static SkillVersion angularjs_1_4 { get; set; }
+        private static SkillVersion lync_sdk_2013 { get; set; }
+        private static SkillVersion rhel_7 { get; set; }
+        private static SkillVersion fedora_core_23 { get; set; }
         #endregion
 
         #region Experiences
@@ -448,7 +473,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "JavaScript is a high-level, dynamic, untyped, and interpreted programming language.",
                     ExperienceRating = 7,
                     InterestRating = 10,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "JavaScript",
                     UsageRating = 7
@@ -731,7 +756,7 @@ namespace CV.DataAccessLayer.Initializers
                 };
                 #endregion
                 #region StructureMap
-                razor = new Skill
+                structuremap = new Skill
                 {
                     Description = "StructureMap is the oldest, continuously used IoC/DI container for .Net dating back to its first public release and production usage all the way back in June 2004 on .Net 1.1.",
                     ExperienceRating = 3,
@@ -743,7 +768,7 @@ namespace CV.DataAccessLayer.Initializers
                 };
                 #endregion
                 #region Sitefinity
-                razor = new Skill
+                sitefinity = new Skill
                 {
                     Description = "A web content management system (CMS), used to create and manage websites accessed via desktop or mobile devices.",
                     ExperienceRating = 2,
@@ -755,7 +780,7 @@ namespace CV.DataAccessLayer.Initializers
                 };
                 #endregion
                 #region ASP.NET MVC
-                razor = new Skill
+                mvc = new Skill
                 {
                     Description = "The ASP.NET MVC is a web application framework developed by Microsoft, which implements the model–view–controller (MVC) pattern.",
                     ExperienceRating = 8,
@@ -764,6 +789,150 @@ namespace CV.DataAccessLayer.Initializers
                     IsVisible = true,
                     Name = "ASP.NET MVC",
                     UsageRating = 7
+                };
+                #endregion
+                #region MySQL Workbench
+                mysql_workbench = new Skill
+                {
+                    Description = "MySQL Workbench is a visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single integrated development environment for the MySQL database system.",
+                    ExperienceRating = 2,
+                    InterestRating = 2,
+                    IconClass = "devicons devicons-mysql",
+                    IsVisible = true,
+                    Name = "MySQL Workbench",
+                    UsageRating = 3
+                };
+                #endregion
+                #region Shibboleth
+                shibboleth = new Skill
+                {
+                    Description = "Shibboleth is a single sign-on (log-in) system for computer networks and the Internet. It allows people to sign in using just one identity to various systems run by federations of different organizations or institutions.",
+                    ExperienceRating = 2,
+                    InterestRating = 2,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Shibboleth (Internet2)",
+                    UsageRating = 1
+                };
+                #endregion
+                #region saml
+                saml = new Skill
+                {
+                    Description = "Security Assertion Markup Language (SAML, pronounced sam-el[1]) is an XML-based, open-standard data format for exchanging authentication and authorization data between parties, in particular, between an identity provider and a service provider.",
+                    ExperienceRating = 2,
+                    InterestRating = 3,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "SAML",
+                    UsageRating = 1
+                };
+                #endregion
+                #region jenkins
+                jenkins = new Skill
+                {
+                    Description = "Jenkins is an open source continuous integration tool written in Java.",
+                    ExperienceRating = 3,
+                    InterestRating = 9,
+                    IconClass = "devicons devicons-jenkins",
+                    IsVisible = true,
+                    Name = "Jenkins",
+                    UsageRating = 4
+                };
+                #endregion
+                #region Knockout
+                knockout = new Skill
+                {
+                    Description = "Knockout is a standalone JavaScript implementation of the Model-View-ViewModel pattern with templates.",
+                    ExperienceRating = 1,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-javascript_shield",
+                    IsVisible = true,
+                    Name = "Knockout",
+                    UsageRating = 1
+                };
+                #endregion
+                #region AngularJS
+                angularjs = new Skill
+                {
+                    Description = "AngularJS (commonly referred to as \"Angular\" or \"Angular.js\") is an open-source web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.",
+                    ExperienceRating = 2,
+                    InterestRating = 10,
+                    IconClass = "devicons devicons-angular",
+                    IsVisible = true,
+                    Name = "AngularJS",
+                    UsageRating = 7
+                };
+                #endregion
+                #region Lync SDK
+                lync_sdk = new Skill
+                {
+                    Description = "Microsoft Lync SDK is the client-side API set that enables the integration and extension of Lync experiences.",
+                    ExperienceRating = 2,
+                    InterestRating = 3,
+                    IconClass = "fa fa-skype",
+                    IsVisible = true,
+                    Name = "Microsoft Lync SDK",
+                    UsageRating = 4
+                };
+                #endregion
+                #region SSL
+                ssl = new Skill
+                {
+                    Description = "Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), both of which are frequently referred to as 'SSL', are cryptographic protocols that provide communications security over a computer network.",
+                    ExperienceRating = 4,
+                    InterestRating = 5,
+                    IconClass = "fa fa-skype",
+                    IsVisible = true,
+                    Name = "SSL",
+                    UsageRating = 4
+                };
+                #endregion
+                #region RHEL
+                rhel = new Skill
+                {
+                    Description = "Red Hat Enterprise Linux (RHEL) is a Linux distribution developed by Red Hat and targeted toward the commercial market.",
+                    ExperienceRating = 2,
+                    InterestRating = 6,
+                    IconClass = "mfizz mfizz-redhat",
+                    IsVisible = true,
+                    Name = "RHEL",
+                    UsageRating = 2
+                };
+                #endregion
+                #region Fedora Core
+                fedora_core = new Skill
+                {
+                    Description = "Fedora (formerly Fedora Core) is an operating system based on the Linux kernel, developed by the community-supported Fedora Project and sponsored by Red Hat.",
+                    ExperienceRating = 2,
+                    InterestRating = 6,
+                    IconClass = "mfizz mfizz-fedora",
+                    IsVisible = true,
+                    Name = "Fedora Core",
+                    UsageRating = 5
+                };
+                #endregion
+                #region Pivotal Tracker
+                pivotal_tracker = new Skill
+                {
+                    Description = "Pivotal Tracker is Pivotal Labs' software as a service product for agile project management and collaboration.",
+                    ExperienceRating = 2,
+                    InterestRating = 6,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Pivotal Tracker",
+                    UsageRating = 6
+                };
+                #endregion
+                #region Axosoft
+                axosoft = new Skill
+                {
+                    Description = "Axosoft (formerly OnTime) is a proprietary project management and bug tracking system, available as hosted or on-premises software.",
+                    ExperienceRating = 2,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Axosoft",
+                    UsageRating = 4
                 };
                 #endregion
 
@@ -816,6 +985,19 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(mvc);
                 context.Skills.Add(sitefinity);
                 context.Skills.Add(structuremap);
+                context.Skills.Add(mysql_workbench);
+                context.Skills.Add(shibboleth);
+                context.Skills.Add(saml);
+                context.Skills.Add(jenkins);
+                context.Skills.Add(lync_sdk);
+                context.Skills.Add(ssl);
+                context.Skills.Add(rhel);
+                context.Skills.Add(fedora_core);
+                context.Skills.Add(pivotal_tracker);
+                context.Skills.Add(axosoft);
+                context.Skills.Add(knockout);
+                context.Skills.Add(angularjs);
+
             }
             return context.SaveChanges();
         }
@@ -835,6 +1017,20 @@ namespace CV.DataAccessLayer.Initializers
                 mysql_4_0_6 = new SkillVersion
                 {
                     Name = "MySQL 4.0.6",
+                    SkillId = mysql.Id
+                };
+                #endregion
+                #region mysql 5.0.96
+                mysql_5_0_96 = new SkillVersion
+                {
+                    Name = "MySQL 5.0.96",
+                    SkillId = mysql.Id
+                };
+                #endregion
+                #region mysql 5.1.73
+                mysql_5_1_73 = new SkillVersion
+                {
+                    Name = "MySQL 5.1.73",
                     SkillId = mysql.Id
                 };
                 #endregion
@@ -1468,9 +1664,88 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = sitefinity.Id
                 };
                 #endregion
+                #region MySQL Workbench 5.2
+                mysql_workbench_5_2 = new SkillVersion
+                {
+                    Name = "MySQL Workbench 5.2",
+                    SkillId = mysql_workbench.Id
+                };
+                #endregion
+                #region MySQL Workbench 6.3
+                mysql_workbench_6_3 = new SkillVersion
+                {
+                    Name = "MySQL Workbench 6.3",
+                    SkillId = mysql_workbench.Id
+                };
+                #endregion
+                #region Shibboleth 2.0
+                shibboleth_2_0 = new SkillVersion
+                {
+                    Name = "Shibboleth 2.0",
+                    SkillId = shibboleth.Id
+                };
+                #endregion
+                #region SAML 2.0
+                saml_2_0 = new SkillVersion
+                {
+                    Name = "SAML 2.0",
+                    SkillId = saml.Id
+                };
+                #endregion
+                #region Jenkins 1.6
+                jenkins_1_6 = new SkillVersion
+                {
+                    Name = "Jenkins 1.6",
+                    SkillId = jenkins.Id
+                };
+                #endregion
+                #region Visual Studio Code
+                visual_studio_code = new SkillVersion
+                {
+                    Name = "Visual Studio Code",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
+                #region Knockout 2.2.1
+                knockout_2_2_1 = new SkillVersion
+                {
+                    Name = "Knockout 2.2.1",
+                    SkillId = knockout.Id
+                };
+                #endregion
+                #region AngularJS 1.4
+                angularjs_1_4 = new SkillVersion
+                {
+                    Name = "AngularJS 1.4",
+                    SkillId = angularjs.Id
+                };
+                #endregion
+                #region RHEL7
+                rhel_7 = new SkillVersion
+                {
+                    Name = "RHEL 7",
+                    SkillId = rhel.Id
+                };
+                #endregion
+                #region Fedora Core 23
+                fedora_core_23 = new SkillVersion
+                {
+                    Name = "Fedora Core 23",
+                    SkillId = fedora_core.Id
+                };
+                #endregion
+                #region Lync SDK 2013
+                lync_sdk_2013 = new SkillVersion
+                {
+                    Name = "Lync SDK 2013",
+                    SkillId = lync_sdk.Id
+                };
+                #endregion
 
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
+                context.SkillVersions.Add(mysql_5_0_96);
+                context.SkillVersions.Add(mysql_5_1_73);
                 context.SkillVersions.Add(asp_3_0);
                 context.SkillVersions.Add(asp_net_2_0);
                 context.SkillVersions.Add(sqlserver_2000);
@@ -1561,6 +1836,17 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(structuremap_2_6_3);
                 context.SkillVersions.Add(structuremap_2_6_4_1);
                 context.SkillVersions.Add(sitefinity_4_0);
+                context.SkillVersions.Add(mysql_workbench_5_2);
+                context.SkillVersions.Add(mysql_workbench_6_3);
+                context.SkillVersions.Add(shibboleth_2_0);
+                context.SkillVersions.Add(saml_2_0);
+                context.SkillVersions.Add(jenkins_1_6);
+                context.SkillVersions.Add(knockout_2_2_1);
+                context.SkillVersions.Add(angularjs_1_4);
+                context.SkillVersions.Add(rhel_7);
+                context.SkillVersions.Add(fedora_core_23);
+                context.SkillVersions.Add(lync_sdk_2013);
+                context.SkillVersions.Add(visual_studio_code);
             }
 
             return context.SaveChanges();
