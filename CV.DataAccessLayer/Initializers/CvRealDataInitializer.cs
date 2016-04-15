@@ -95,6 +95,9 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill nunit { get; set; }
         private static Skill mstest { get; set; }
         private static Skill linux { get; set; }
+        private static Skill aspnet_webapi { get; set; }
+        private static Skill bash_shell { get; set; }
+        private static Skill python { get; set; }
         #endregion
 
         #region SkillVersions
@@ -218,6 +221,8 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion mediawiki_1_22 { get; set; }
         private static SkillVersion silverlight_sdk_5 { get; set; }
         private static SkillVersion silverlight_toolkit_5 { get; set; }
+        private static SkillVersion aspnet_webapi_1 { get; set; }
+        private static SkillVersion python_2_0 { get; set; }
         #endregion
 
         #region Experiences
@@ -1171,7 +1176,46 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 1
                 };
                 #endregion
+                #region ASP.NET Web API
+                aspnet_webapi = new Skill
+                {
+                    Description = "ASP.NET Web API is a framework that makes it easy to build HTTP services that reach a broad range of clients, including browsers and mobile devices. ASP.NET Web API is an ideal platform for building RESTful applications on the .NET Framework.",
+                    ExperienceRating = 3,
+                    InterestRating = 10,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "ASP.NET Web API",
+                    UsageRating = 6
+                };
+                #endregion
+                #region Python 
+                python = new Skill
+                {
+                    Description = "Python is a widely used high-level, general-purpose, interpreted, dynamic programming language.",
+                    ExperienceRating = 3,
+                    InterestRating = 4,
+                    IconClass = "devicons devicons-python",
+                    IsVisible = true,
+                    Name = "Python",
+                    UsageRating = 3
+                };
+                #endregion
+                #region Bash
+                bash_shell = new Skill
+                {
+                    Description = "Python is a widely used high-level, general-purpose, interpreted, dynamic programming language.",
+                    ExperienceRating = 3,
+                    InterestRating = 5,
+                    IconClass = "mfizz mfizz-shell",
+                    IsVisible = true,
+                    Name = "Bash",
+                    UsageRating = 5
+                };
+                #endregion
 
+                context.Skills.Add(aspnet_webapi);
+                context.Skills.Add(python);
+                context.Skills.Add(bash_shell);
                 context.Skills.Add(nunit);
                 context.Skills.Add(mstest);
                 context.Skills.Add(linux);
@@ -2098,7 +2142,23 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = nunit.Id
                 };
                 #endregion
+                #region ASP.NET Web API 1
+                aspnet_webapi_1 = new SkillVersion
+                {
+                    Name = "ASP.NET Web API 1",
+                    SkillId = aspnet_webapi.Id
+                };
+                #endregion
+                #region Python 2.0
+                python_2_0 = new SkillVersion
+                {
+                    Name = "Python 2.0",
+                    SkillId = python.Id
+                };
+                #endregion
 
+                context.SkillVersions.Add(aspnet_webapi_1);
+                context.SkillVersions.Add(python_2_0);
                 context.SkillVersions.Add(bootstrap_3);
                 context.SkillVersions.Add(nunit_2_6_2);
                 context.SkillVersions.Add(svn_1_8);
@@ -2329,6 +2389,11 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = photoshop.Id, SkillVersionId = photoshop_elements_7_0.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = linux.Id,
+                            UsageRating = 1
                         }
                     }
                 };
@@ -2671,8 +2736,51 @@ namespace CV.DataAccessLayer.Initializers
                         {
                             SkillId = ajax.Id,
                             UsageRating = 4
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = xml.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = xml.Id, SkillVersionId = xml_1_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = web_service.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = google_api.Id,
+                            UsageRating = 4
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = winform.Id,
+                            UsageRating = 1
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = console_app.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sql.Id,
+                            UsageRating = 8
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ado_net.Id,
+                            UsageRating = 8
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = soap.Id,
+                            UsageRating = 1
                         }
-                        //XML, Web Service, Google API, windows form, windows console application, tsql, ado.net 
                     }
                 };
                 #endregion
@@ -2690,9 +2798,126 @@ namespace CV.DataAccessLayer.Initializers
                     StartDate = new DateTime(2008, 5, 1),
                     Skills = new List<ExperienceSkill>
                     {
-                        
+                        new ExperienceSkill
+                        {
+                            SkillId = asp_net.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_3_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = asp_net_ajax.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ajax.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = csharp.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_3_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sqlserver.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2005.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = tfs.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = tfs.Id, SkillVersionId = tfs_2005.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ssms.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_2005.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = visual_studio.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2008_pro.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = dotnet.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_3_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_vista.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sql.Id,
+                            UsageRating = 8
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = xsd.Id,
+                            UsageRating = 8
+                        }
                     }
-                    //ASP.NET AJAX, AJAX, asp.net, c#, sqlserver, svn, ssms, visual studio, dotnet, windows, javascript, html, css, tsql, typed dataset (xsd)
                 };
                 #endregion
                 #region HR TEAM
@@ -2709,10 +2934,71 @@ namespace CV.DataAccessLayer.Initializers
                     StartDate = new DateTime(2010, 2, 1),
                     Skills = new List<ExperienceSkill>
                     {
-
+                        new ExperienceSkill
+                        {
+                            SkillId = asp_net_ajax.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ajax.Id,
+                            UsageRating = 4
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = asp_net.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_3_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = csharp.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_3_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = commerce_server.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = commerce_server.Id, SkillVersionId = commerce_server_2009.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = tfs.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = tfs.Id, SkillVersionId = tfs_2008.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = visual_studio.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2008_pro.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = dotnet.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_3_5.Id }
+                            }
+                        }
                     }
-                    //ASP.NET AJAX, AJAX, asp.net, c#, commerce server, tfs (vss?), visual studio, dotnet, windows, javascript, html, css
-                    //scrum
                 };
                 #endregion
                 #region Groovy Train
