@@ -78,6 +78,23 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill pivotal_tracker { get; set; }
         private static Skill axosoft { get; set; }
         private static Skill ssl { get; set; }
+        private static Skill entity_framework { get; set; }
+        private static Skill unity { get; set; }
+        private static Skill moq { get; set; }
+        private static Skill rhino_mock { get; set; }
+        private static Skill automapper { get; set; }
+        private static Skill unit_testing { get; set; }
+        private static Skill linq { get; set; }
+        private static Skill umbraco { get; set; }
+        private static Skill mediawiki { get; set; }
+        private static Skill silverlight_sdk { get; set; }
+        private static Skill silverlight_toolkit { get; set; }
+        private static Skill bootstrap { get; set; }
+        private static Skill wcf { get; set; }
+        private static Skill wpf { get; set; }
+        private static Skill nunit { get; set; }
+        private static Skill mstest { get; set; }
+        private static Skill linux { get; set; }
         #endregion
 
         #region SkillVersions
@@ -152,6 +169,9 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion xslt_1_0 { get; set; }
         private static SkillVersion xml_1_1 { get; set; }
         private static SkillVersion svn_1_3 { get; set; }
+        private static SkillVersion svn_1_8 { get; set; }
+        private static SkillVersion bootstrap_3 { get; set; }
+        private static SkillVersion nunit_2_6_2 { get; set; }
         private static SkillVersion tfs_2005 { get; set; }
         private static SkillVersion tfs_2008 { get; set; }
         private static SkillVersion commerce_server_2009 { get; set; }
@@ -186,6 +206,18 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion lync_sdk_2013 { get; set; }
         private static SkillVersion rhel_7 { get; set; }
         private static SkillVersion fedora_core_23 { get; set; }
+        private static SkillVersion entity_framework_4_1 { get; set; }
+        private static SkillVersion entity_framework_5_0 { get; set; }
+        private static SkillVersion entity_framework_6_0 { get; set; }
+        private static SkillVersion unity_3_0 { get; set; }
+        private static SkillVersion automapper_2_2_0 { get; set; }
+        private static SkillVersion umbraco_4 { get; set; }
+        private static SkillVersion umbraco_6 { get; set; }
+        private static SkillVersion umbraco_7 { get; set; }
+        private static SkillVersion mediawiki_1_26 { get; set; }
+        private static SkillVersion mediawiki_1_22 { get; set; }
+        private static SkillVersion silverlight_sdk_5 { get; set; }
+        private static SkillVersion silverlight_toolkit_5 { get; set; }
         #endregion
 
         #region Experiences
@@ -935,7 +967,227 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 4
                 };
                 #endregion
+                #region Entity Framework
+                entity_framework = new Skill
+                {
+                    Description = "Entity Framework (EF) is an open source[1] object-relational mapping (ORM) framework for ADO.NET, was a part of .NET Framework, but from Entity framework version 6 it is separated from .NET framework.",
+                    ExperienceRating = 3,
+                    InterestRating = 10,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "Entity Framework",
+                    UsageRating = 8
+                };
+                #endregion
+                #region Unity
+                unity = new Skill
+                {
+                    Description = "Unity is a lightweight, extensible dependency injection container with support for instance and type interception.",
+                    ExperienceRating = 3,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "Unity",
+                    UsageRating = 8
+                };
+                #endregion
+                #region moq
+                moq = new Skill
+                {
+                    Description = "Moq (pronounced \"Mock-you\" or just \"Mock\") is a mocking library for .NET developed from scratch to take full advantage of .NET 3.5 (i.e. Linq expression trees) and C# 3.0 features (i.e. lambda expressions) that make it the most productive, type-safe and refactoring-friendly mocking library available.",
+                    ExperienceRating = 2,
+                    InterestRating = 9,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "Moq",
+                    UsageRating = 6
+                };
+                #endregion
+                #region Rhino Mock
+                rhino_mock = new Skill
+                {
+                    Description = "Rhino Mocks is a dynamic mock object framework for the .Net platform. Its purpose is to ease testing by allowing the developer to create mock implementations of custom objects and verify the interactions using unit testing.",
+                    ExperienceRating = 2,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "Rhino Mocks",
+                    UsageRating = 2
+                };
+                #endregion
+                #region Automapper
+                automapper = new Skill
+                {
+                    Description = "A convention-based object-object mapper.",
+                    ExperienceRating = 3,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "AutoMapper",
+                    UsageRating = 6
+                };
+                #endregion
+                #region Unit Testing
+                unit_testing = new Skill
+                {
+                    Description = "Unit testing is a software testing method by which individual units of source code, sets of one or more computer program modules together with associated control data, usage procedures, and operating procedures, are tested to determine whether they are fit for use.",
+                    ExperienceRating = 3,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Unit Testing",
+                    UsageRating = 5
+                };
+                #endregion
+                #region linq
+                linq = new Skill
+                {
+                    Description = "Language Integrated Query (LINQ, pronounced \"link\") is a Microsoft .NET Framework component that adds native data querying capabilities to .NET languages.",
+                    ExperienceRating = 7,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "LINQ",
+                    UsageRating = 9
+                };
+                #endregion
+                #region umbraco
+                umbraco = new Skill
+                {
+                    Description = "Umbraco is an open source content management system (CMS) platform for publishing content on the World Wide Web and intranets.",
+                    ExperienceRating = 2,
+                    InterestRating = 3,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Umbraco",
+                    UsageRating = 1
+                };
+                #endregion
+                #region MediaWiki
+                mediawiki = new Skill
+                {
+                    Description = "MediaWiki is a free and open-source wiki application. It was originally developed by the Wikimedia Foundation and runs on many websites, including Wikipedia, Wiktionary and Wikimedia Commons.",
+                    ExperienceRating = 2,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "MediaWiki",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Silverlight SDK
+                silverlight_sdk = new Skill
+                {
+                    Description = "The Microsoft Silverlight SDK provides libraries and tools for developing Silverlight applications.",
+                    ExperienceRating = 2,
+                    InterestRating = 1,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "Silverlight SDK",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Silverlight ToolKit
+                silverlight_toolkit = new Skill
+                {
+                    Description = "The Microsoft Silverlight Toolkit provides the developer community with new components, functionality, and an efficient way to help shape product development.",
+                    ExperienceRating = 2,
+                    InterestRating = 1,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "Silverlight Toolkit",
+                    UsageRating = 1
+                };
+                #endregion
+                #region bootstrap
+                bootstrap = new Skill
+                {
+                    Description = "Bootstrap is a free and open-source front-end library for creating websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.",
+                    ExperienceRating = 3,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-bootstrap",
+                    IsVisible = true,
+                    Name = "Bootstrap",
+                    UsageRating = 9
+                };
+                #endregion
+                #region wcf
+                wcf = new Skill
+                {
+                    Description = "The Windows Communication Foundation (or WCF), previously known as \"Indigo\", is a runtime and a set of APIs in the .NET Framework for building connected, service-oriented applications.",
+                    ExperienceRating = 2,
+                    InterestRating = 6,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "WCF",
+                    UsageRating = 2
+                };
+                #endregion
+                #region wpf
+                wpf = new Skill
+                {
+                    Description = "Windows Presentation Foundation (or WPF) is a graphical subsystem for rendering user interfaces in Windows-based applications by Microsoft. WPF, previously known as \"Avalon\", was initially released as part of .NET Framework 3.0.",
+                    ExperienceRating = 2,
+                    InterestRating = 3,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "WPF",
+                    UsageRating = 1
+                };
+                #endregion
+                #region nunit
+                nunit = new Skill
+                {
+                    Description = "NUnit is an open source unit testing framework for Microsoft .NET.",
+                    ExperienceRating = 2,
+                    InterestRating = 6,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "NUnit",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Visual Studio Unit Testing Framework
+                mstest = new Skill
+                {
+                    Description = "The Visual Studio Unit Testing Framework describes Microsoft's suite of unit testing tools as integrated into some versions of Visual Studio 2005 and later.",
+                    ExperienceRating = 2,
+                    InterestRating = 6,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "Visual Studio Unit Testing Framework",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Linux
+                linux = new Skill
+                {
+                    Description = "Linux is a Unix-like and mostly POSIX-compliant computer operating system (OS) assembled under the model of free and open-source software development and distribution.",
+                    ExperienceRating = 3,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-linux",
+                    IsVisible = true,
+                    Name = "Linux",
+                    UsageRating = 1
+                };
+                #endregion
 
+                context.Skills.Add(nunit);
+                context.Skills.Add(mstest);
+                context.Skills.Add(linux);
+                context.Skills.Add(wcf);
+                context.Skills.Add(wpf);
+                context.Skills.Add(bootstrap);
+                context.Skills.Add(silverlight_sdk);
+                context.Skills.Add(silverlight_toolkit);
+                context.Skills.Add(mediawiki);
+                context.Skills.Add(umbraco);
+                context.Skills.Add(linq);
+                context.Skills.Add(unit_testing);
+                context.Skills.Add(automapper);
+                context.Skills.Add(rhino_mock);
+                context.Skills.Add(unity);
+                context.Skills.Add(moq);
                 context.Skills.Add(php);
                 context.Skills.Add(mysql);
                 context.Skills.Add(asp);
@@ -997,7 +1249,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(axosoft);
                 context.Skills.Add(knockout);
                 context.Skills.Add(angularjs);
-
+                context.Skills.Add(entity_framework);
             }
             return context.SaveChanges();
         }
@@ -1496,6 +1748,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = svn.Id
                 };
                 #endregion
+                #region svn 1.8
+                svn_1_8 = new SkillVersion
+                {
+                    Name = "SVN 1.8",
+                    SkillId = svn.Id
+                };
+                #endregion
                 #region tfs 2005
                 tfs_2005 = new SkillVersion
                 {
@@ -1741,7 +2000,120 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = lync_sdk.Id
                 };
                 #endregion
+                #region Entity Framework 4.1
+                entity_framework_4_1 = new SkillVersion
+                {
+                    Name = "EF 4.1",
+                    SkillId = entity_framework.Id
+                };
+                #endregion
+                #region Entity Framework 5.0
+                entity_framework_5_0 = new SkillVersion
+                {
+                    Name = "EF 5.0",
+                    SkillId = entity_framework.Id
+                };
+                #endregion
+                #region Entity Framework 6_0
+                entity_framework_6_0 = new SkillVersion
+                {
+                    Name = "EF 6.0",
+                    SkillId = entity_framework.Id
+                };
+                #endregion
+                #region AutoMapper 2.2.0
+                automapper_2_2_0 = new SkillVersion
+                {
+                    Name = "AutoMapper 2.2.0",
+                    SkillId = automapper.Id
+                };
+                #endregion
+                #region Unity 3.0
+                unity_3_0 = new SkillVersion
+                {
+                    Name = "Unity 3.0",
+                    SkillId = unity.Id
+                };
+                #endregion
+                #region Umbraco 4
+                umbraco_4 = new SkillVersion
+                {
+                    Name = "Umbraco 4",
+                    SkillId = umbraco.Id
+                };
+                #endregion
+                #region Umbraco 6
+                umbraco_6 = new SkillVersion
+                {
+                    Name = "Umbraco 6",
+                    SkillId = umbraco.Id
+                };
+                #endregion
+                #region Umbraco 7
+                umbraco_7 = new SkillVersion
+                {
+                    Name = "Umbraco 7",
+                    SkillId = umbraco.Id
+                };
+                #endregion
+                #region MediaWiki 1.26
+                mediawiki_1_26 = new SkillVersion
+                {
+                    Name = "MediaWiki 1.26",
+                    SkillId = mediawiki.Id
+                };
+                #endregion
+                #region MediaWiki 1.22
+                mediawiki_1_22 = new SkillVersion
+                {
+                    Name = "MediaWiki 1.22",
+                    SkillId = mediawiki.Id
+                };
+                #endregion
+                #region Silverlight SDK 5
+                silverlight_sdk_5 = new SkillVersion
+                {
+                    Name = "Silverlight SDK 5",
+                    SkillId = silverlight_sdk.Id
+                };
+                #endregion
+                #region Silverlight Toolkit 5
+                silverlight_toolkit_5 = new SkillVersion
+                {
+                    Name = "Silverlight Toolkit 5",
+                    SkillId = silverlight_toolkit.Id
+                };
+                #endregion
+                #region bootstrap 3
+                bootstrap_3 = new SkillVersion
+                {
+                    Name = "Bootstrap 3",
+                    SkillId = bootstrap.Id
+                };
+                #endregion
+                #region nunit 2.6.2
+                nunit_2_6_2 = new SkillVersion
+                {
+                    Name = "NUnit 2.6.2",
+                    SkillId = nunit.Id
+                };
+                #endregion
 
+                context.SkillVersions.Add(bootstrap_3);
+                context.SkillVersions.Add(nunit_2_6_2);
+                context.SkillVersions.Add(svn_1_8);
+                context.SkillVersions.Add(silverlight_sdk_5);
+                context.SkillVersions.Add(silverlight_toolkit_5);
+                context.SkillVersions.Add(mediawiki_1_26);
+                context.SkillVersions.Add(mediawiki_1_22);
+                context.SkillVersions.Add(umbraco_4);
+                context.SkillVersions.Add(umbraco_6);
+                context.SkillVersions.Add(umbraco_7);
+                context.SkillVersions.Add(automapper_2_2_0);
+                context.SkillVersions.Add(unity_3_0);
+                context.SkillVersions.Add(entity_framework_4_1);
+                context.SkillVersions.Add(entity_framework_5_0);
+                context.SkillVersions.Add(entity_framework_6_0);
                 context.SkillVersions.Add(php_4_3);
                 context.SkillVersions.Add(mysql_4_0_6);
                 context.SkillVersions.Add(mysql_5_0_96);
