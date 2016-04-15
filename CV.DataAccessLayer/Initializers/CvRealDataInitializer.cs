@@ -172,6 +172,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion xslt_1_0 { get; set; }
         private static SkillVersion xml_1_1 { get; set; }
         private static SkillVersion svn_1_3 { get; set; }
+        private static SkillVersion svn_1_6 { get; set; }
         private static SkillVersion svn_1_8 { get; set; }
         private static SkillVersion bootstrap_3 { get; set; }
         private static SkillVersion nunit_2_6_2 { get; set; }
@@ -1792,6 +1793,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = svn.Id
                 };
                 #endregion
+                #region svn 1.6
+                svn_1_6 = new SkillVersion
+                {
+                    Name = "SVN 1.6",
+                    SkillId = svn.Id
+                };
+                #endregion
                 #region svn 1.8
                 svn_1_8 = new SkillVersion
                 {
@@ -2997,6 +3005,71 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_3_5.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_7.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id },
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = scrum.Id,
+                            UsageRating = 2
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = jquery.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_1_4.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = jquery_ui.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = jquery_ui.Id, SkillVersionId = jquery_ui_1_7.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = agile.Id,
+                            UsageRating = 2
                         }
                     }
                 };
@@ -3015,9 +3088,78 @@ namespace CV.DataAccessLayer.Initializers
                     StartDate = new DateTime(2010, 9, 1),
                     Skills = new List<ExperienceSkill>
                     {
-
+                        new ExperienceSkill
+                        {
+                            SkillId = csharp.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = csharp.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = cims.Id,
+                            UsageRating = 8
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = web_service.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = visual_studio.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2010_pro.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = dotnet.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_7.Id },
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2008_R2.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = winform.Id,
+                            UsageRating = 5
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = console_app.Id,
+                            UsageRating = 7
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = linq.Id,
+                            UsageRating = 7
+                        }
                     }
-                    //c#, prologic cims, (oracle), web service, visual studio, dotnet, windows, windows form, windows console application
                 };
                 #endregion
                 #region docdata
@@ -3034,10 +3176,203 @@ namespace CV.DataAccessLayer.Initializers
                     StartDate = new DateTime(2011, 4, 1),
                     Skills = new List<ExperienceSkill>
                     {
-
+                        new ExperienceSkill
+                        {
+                            SkillId = jquery.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_1_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = google_api.Id,
+                            UsageRating = 2
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id },
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_7.Id },
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2003.Id },
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2008_R2.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = svn.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = svn.Id, SkillVersionId = svn_1_6.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = csharp.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_2_0.Id },
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_3_0.Id },
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = asp_net.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_2_0.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_3_0.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_3_5.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = mvc.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = mvc.Id, SkillVersionId = mvc_2.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = dotnet.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_2_0.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_3_0.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_3_5.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sqlserver.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2005.Id },
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2008.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ssms_2008.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_2008.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sql.Id,
+                            UsageRating = 7
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = di.Id,
+                            UsageRating = 6
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = structuremap.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = structuremap.Id, SkillVersionId = structuremap_2_6_3.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ado_net.Id,
+                            UsageRating = 7
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = telerik_mvc.Id,
+                            UsageRating = 5
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sitefinity.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = sitefinity.Id, SkillVersionId = sitefinity_4_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = razor.Id,
+                            UsageRating = 8
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = visual_studio.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2010_pro.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ajax.Id,
+                            UsageRating = 5
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = jquery_ui.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = jquery_ui.Id, SkillVersionId = jquery_1_8.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = linq.Id,
+                            UsageRating = 6
+                        }
                     }
-                    //JQuery, Google API, javascript, html, css, windows, windows server, svn, c#, asp.net, mvc, dotnet, sql server, ssms, tsql
-                    //dependency injection, structure map, ado.net, telerik mvc controls, telerik sitefinity
                 };
                 #endregion
                 #region University of London
@@ -3054,7 +3389,17 @@ namespace CV.DataAccessLayer.Initializers
                     StartDate = new DateTime(2012, 4, 1),
                     Skills = new List<ExperienceSkill>
                     {
-
+                        /*
+                        new ExperienceSkill
+                        {
+                            SkillId = jquery_ui.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = jquery_ui.Id, SkillVersionId = jquery_1_8.Id }
+                            }
+                        }
+                        */
                     }
                     //windows form, windows console application, google api, web services
                     //tsql, sql server, ssms, mysql, mysql workbench
