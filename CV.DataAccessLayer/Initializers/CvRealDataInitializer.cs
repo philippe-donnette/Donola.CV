@@ -3389,17 +3389,444 @@ namespace CV.DataAccessLayer.Initializers
                     StartDate = new DateTime(2012, 4, 1),
                     Skills = new List<ExperienceSkill>
                     {
-                        /*
                         new ExperienceSkill
                         {
-                            SkillId = jquery_ui.Id,
-                            UsageRating = 5,
+                            SkillId = winform.Id,
+                            UsageRating = 2
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = console_app.Id,
+                            UsageRating = 4
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = google_api.Id,
+                            UsageRating = 4
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = web_service.Id,
+                            UsageRating = 5
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sql.Id,
+                            UsageRating = 7
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = winform.Id,
+                            UsageRating = 2,
                             Versions = new List<ExperienceSkillVersion>
                             {
                                 new ExperienceSkillVersion { SkillId = jquery_ui.Id, SkillVersionId = jquery_1_8.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sqlserver.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2005.Id },
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2008_R2.Id },
+                                new ExperienceSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2012.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ssms.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_2008.Id },
+                                new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_2012.Id },
+                                new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_2014.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = mysql.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_5_0_96.Id },
+                                new ExperienceSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_5_1_73.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = mysql_workbench.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = mysql_workbench.Id, SkillVersionId = mysql_workbench_5_2.Id },
+                                new ExperienceSkillVersion { SkillId = mysql_workbench.Id, SkillVersionId = mysql_workbench_6_3.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = shibboleth.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = shibboleth.Id, SkillVersionId = shibboleth_2_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = saml.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = saml.Id, SkillVersionId = saml_2_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = xml.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = xml.Id, SkillVersionId = xml_1_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = jenkins.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = jenkins.Id, SkillVersionId = jenkins_1_6.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = visual_studio.Id,
+                            UsageRating = 9,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2008_pro.Id },
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2010_pro.Id },
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2012_pro.Id },
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2013_pro.Id },
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2015_pro.Id },
+                                new ExperienceSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_code.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id },
+                                new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = jquery.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_1_8.Id },
+                                new ExperienceSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_1_9.Id },
+                                new ExperienceSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_1_10.Id },
+                                new ExperienceSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_1_11.Id },
+                                new ExperienceSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_2_0.Id },
+                                new ExperienceSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_2_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = knockout.Id,
+                            UsageRating = 1,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = knockout.Id, SkillVersionId = knockout_2_2_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = angularjs.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = angularjs.Id, SkillVersionId = angularjs_1_4.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = lync_sdk.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = lync_sdk.Id, SkillVersionId = lync_sdk_2013.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = dotnet.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_2_0.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_3_0.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_3_5.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_0.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_5.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_5_1.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_5_2.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_6.Id },
+                                new ExperienceSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_6_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = asp_net.Id,
+                            UsageRating = 5,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_2_0.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_3_0.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_3_5.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_0.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_5.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_5_1.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_5_2.Id },
+                                new ExperienceSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_6.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = mvc.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = mvc.Id, SkillVersionId = mvc_3.Id },
+                                new ExperienceSkillVersion { SkillId = mvc.Id, SkillVersionId = mvc_4.Id },
+                                new ExperienceSkillVersion { SkillId = mvc.Id, SkillVersionId = mvc_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = csharp.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_2_0.Id },
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_3_0.Id },
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_4_0.Id },
+                                new ExperienceSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_5_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ssl.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_7.Id },
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2003.Id },
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2008_R2.Id },
+                                new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2012_R2.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = rhel.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = rhel.Id, SkillVersionId = rhel_7.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = fedora_core.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = fedora_core.Id, SkillVersionId = fedora_core_23.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = pivotal_tracker.Id,
+                            UsageRating = 5
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = scrum.Id,
+                            UsageRating = 4
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = axosoft.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = structuremap.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = structuremap.Id, SkillVersionId = structuremap_2_6_4_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = entity_framework.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = entity_framework.Id, SkillVersionId = entity_framework_4_1.Id },
+                                new ExperienceSkillVersion { SkillId = entity_framework.Id, SkillVersionId = entity_framework_5_0.Id },
+                                new ExperienceSkillVersion { SkillId = entity_framework.Id, SkillVersionId = entity_framework_6_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = unity.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = unity.Id, SkillVersionId = unity_3_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = moq.Id,
+                            UsageRating = 1
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = rhino_mock.Id,
+                            UsageRating = 1
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = automapper.Id,
+                            UsageRating = 4,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = automapper.Id, SkillVersionId = automapper_2_2_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = di.Id,
+                            UsageRating = 7
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = unit_testing.Id,
+                            UsageRating = 1
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = linq.Id,
+                            UsageRating = 8
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ado_net.Id,
+                            UsageRating = 6
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = umbraco.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = umbraco.Id, SkillVersionId = umbraco_4.Id },
+                                new ExperienceSkillVersion { SkillId = umbraco.Id, SkillVersionId = umbraco_6.Id },
+                                new ExperienceSkillVersion { SkillId = umbraco.Id, SkillVersionId = umbraco_7.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = mediawiki.Id,
+                            UsageRating = 1,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = mediawiki.Id, SkillVersionId = mediawiki_1_22.Id },
+                                new ExperienceSkillVersion { SkillId = mediawiki.Id, SkillVersionId = mediawiki_1_26.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = silverlight_sdk.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = silverlight_sdk.Id, SkillVersionId = silverlight_sdk_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = silverlight_toolkit.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = silverlight_toolkit.Id, SkillVersionId = silverlight_toolkit_5.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 8,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id },
+                                new ExperienceSkillVersion { SkillId = html.Id, SkillVersionId = html_5_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id },
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_3_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = bootstrap.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = bootstrap.Id, SkillVersionId = bootstrap_3.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = wcf.Id,
+                            UsageRating = 2
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = wpf.Id,
+                            UsageRating = 1
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = nunit.Id,
+                            UsageRating = 1,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = nunit.Id, SkillVersionId = nunit_2_6_2.Id }
+                            }
                         }
-                        */
                     }
                     //windows form, windows console application, google api, web services
                     //tsql, sql server, ssms, mysql, mysql workbench
