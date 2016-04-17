@@ -2197,6 +2197,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(python_2_0);
                 context.SkillVersions.Add(bootstrap_3);
                 context.SkillVersions.Add(nunit_2_6_2);
+                context.SkillVersions.Add(svn_1_6);
                 context.SkillVersions.Add(svn_1_8);
                 context.SkillVersions.Add(silverlight_sdk_5);
                 context.SkillVersions.Add(silverlight_toolkit_5);
@@ -3262,7 +3263,7 @@ namespace CV.DataAccessLayer.Initializers
                                 new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2003.Id },
                                 new ExperienceSkillVersion { SkillId = windows.Id, SkillVersionId = windows_server_2008_R2.Id }
                             }
-                        },/*
+                        },
                         new ExperienceSkill
                         {
                             SkillId = svn.Id,
@@ -3328,13 +3329,13 @@ namespace CV.DataAccessLayer.Initializers
                         },
                         new ExperienceSkill
                         {
-                            SkillId = ssms_2008.Id,
+                            SkillId = ssms.Id,
                             UsageRating = 6,
                             Versions = new List<ExperienceSkillVersion>
                             {
                                 new ExperienceSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_2008.Id }
                             }
-                        },*/
+                        },
                         new ExperienceSkill
                         {
                             SkillId = sql.Id,
