@@ -1741,7 +1741,7 @@ namespace CV.DataAccessLayer.Initializers
                 vss_6_0 = new SkillVersion
                 {
                     Name = "Microsoft Visual SourceSafe 6.0",
-                    SkillId = iis.Id
+                    SkillId = vss.Id
                 };
                 #endregion
                 #region toad 9.0
