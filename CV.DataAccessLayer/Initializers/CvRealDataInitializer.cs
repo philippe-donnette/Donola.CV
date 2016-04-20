@@ -162,6 +162,10 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion photoshop_elements_7_0 { get; set; }
         private static SkillVersion photoshop_cs_2 { get; set; }
         private static SkillVersion iis_6_0 { get; set; }
+        private static SkillVersion iis_7_0 { get; set; }
+        private static SkillVersion iis_8_0 { get; set; }
+        private static SkillVersion iis_7_0_express { get; set; }
+        private static SkillVersion iis_8_0_express { get; set; }
         private static SkillVersion vss_6_0 { get; set; }
         private static SkillVersion toad_9_0 { get; set; }
         private static SkillVersion ssms_enterprise_manager { get; set; }
@@ -1737,6 +1741,34 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = iis.Id
                 };
                 #endregion
+                #region iis 7.0
+                iis_7_0 = new SkillVersion
+                {
+                    Name = "IIS 7.0",
+                    SkillId = iis.Id
+                };
+                #endregion
+                #region iis 8.0
+                iis_8_0 = new SkillVersion
+                {
+                    Name = "IIS 8.0",
+                    SkillId = iis.Id
+                };
+                #endregion
+                #region iis express 7.0
+                iis_7_0_express = new SkillVersion
+                {
+                    Name = "IIS Express 7.0",
+                    SkillId = iis.Id
+                };
+                #endregion
+                #region iis express 8.0
+                iis_8_0_express = new SkillVersion
+                {
+                    Name = "IIS Express 8.0",
+                    SkillId = iis.Id
+                };
+                #endregion
                 #region vss 6.0
                 vss_6_0 = new SkillVersion
                 {
@@ -2257,6 +2289,10 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(actionscript_2_0);
                 context.SkillVersions.Add(photoshop_elements_7_0);
                 context.SkillVersions.Add(iis_6_0);
+                context.SkillVersions.Add(iis_7_0);
+                context.SkillVersions.Add(iis_8_0);
+                context.SkillVersions.Add(iis_7_0_express);
+                context.SkillVersions.Add(iis_8_0_express);
                 context.SkillVersions.Add(vss_6_0);
                 context.SkillVersions.Add(toad_9_0);
                 context.SkillVersions.Add(ssms_enterprise_manager);
@@ -3250,7 +3286,17 @@ namespace CV.DataAccessLayer.Initializers
                             UsageRating = 5,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id }
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id },
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_3_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = iis.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = iis.Id, SkillVersionId = iis_7_0.Id }
                             }
                         },
                         new ExperienceSkill
