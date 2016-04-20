@@ -17,6 +17,12 @@ namespace CV.DataAccessLayer.Initializers
         }
 
         #region Skills
+        private static Skill bower { get; set; }
+        private static Skill npm { get; set; }
+        private static Skill sass { get; set; }
+        private static Skill gulp { get; set; }
+        private static Skill karma { get; set; }
+        private static Skill jasmine { get; set; }
         private static Skill php { get; set; }
         private static Skill mysql { get; set; }
         private static Skill asp { get; set; }
@@ -100,14 +106,34 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill python { get; set; }
         private static Skill winservice { get; set; }
         private static Skill mantis { get; set; }
+        private static Skill mariadb { get; set; }
+        private static Skill github { get; set; }
+        private static Skill git { get; set; }
+        private static Skill bitbucket { get; set; }
+        private static Skill nuget { get; set; }
+        private static Skill rest { get; set; }
+        private static Skill json { get; set; }
+        private static Skill ci { get; set; }
+        private static Skill oauth { get; set; }
+        private static Skill ravendb { get; set; }
+        private static Skill mongodb { get; set; }
+        private static Skill mongodb_csharp { get; set; }
+        private static Skill less { get; set; }
+        private static Skill wamp { get; set; }
+        private static Skill xunit { get; set; }
         #endregion
 
         #region SkillVersions
+        private static SkillVersion oauth_2_0 { get; set; }
         private static SkillVersion php_4_3 { get; set; }
+        private static SkillVersion php_4_4 { get; set; }
         private static SkillVersion mysql_4_0_6 { get; set; }
+        private static SkillVersion mysql_4_1_4 { get; set; }
         private static SkillVersion mysql_5_0_96 { get; set; }
+        private static SkillVersion mysql_5_1_22 { get; set; }
         private static SkillVersion mysql_5_1_73 { get; set; }
         private static SkillVersion asp_3_0 { get; set; }
+        private static SkillVersion asp_net_core_1_0 { get; set; }
         private static SkillVersion asp_net_2_0 { get; set; }
         private static SkillVersion asp_net_3_0 { get; set; }
         private static SkillVersion asp_net_3_5 { get; set; }
@@ -121,6 +147,8 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion sqlserver_2008 { get; set; }
         private static SkillVersion sqlserver_2008_R2 { get; set; }
         private static SkillVersion sqlserver_2012 { get; set; }
+        private static SkillVersion sqlserver_2008_express { get; set; }
+        private static SkillVersion sqlserver_2012_express { get; set; }
         private static SkillVersion visual_studio_2003_pro { get; set; }
         private static SkillVersion visual_studio_2005_pro { get; set; }
         private static SkillVersion visual_studio_2008_pro { get; set; }
@@ -128,12 +156,17 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion visual_studio_2012_pro { get; set; }
         private static SkillVersion visual_studio_2013_pro { get; set; }
         private static SkillVersion visual_studio_2015_pro { get; set; }
+        private static SkillVersion visual_studio_2010_express { get; set; }
+        private static SkillVersion visual_studio_2013_web_developer_express { get; set; }
+        private static SkillVersion visual_studio_2015_community { get; set; }
         private static SkillVersion visual_studio_code { get; set; }
         private static SkillVersion csharp_1_2 { get; set; }
         private static SkillVersion csharp_2_0 { get; set; }
         private static SkillVersion csharp_3_0 { get; set; }
         private static SkillVersion csharp_4_0 { get; set; }
         private static SkillVersion csharp_5_0 { get; set; }
+        private static SkillVersion csharp_6_0 { get; set; }
+        private static SkillVersion dotnet_core_1_0 { get; set; }
         private static SkillVersion dotnet_1_1 { get; set; }
         private static SkillVersion dotnet_2_0 { get; set; }
         private static SkillVersion dotnet_3_0 { get; set; }
@@ -160,7 +193,11 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion flash_2004 { get; set; }
         private static SkillVersion actionscript_2_0 { get; set; }
         private static SkillVersion photoshop_elements_7_0 { get; set; }
+        private static SkillVersion photoshop_elements_9_0 { get; set; }
+        private static SkillVersion photoshop_elements_14_0 { get; set; }
         private static SkillVersion photoshop_cs_2 { get; set; }
+        private static SkillVersion photoshop_cs_3 { get; set; }
+        private static SkillVersion photoshop_cs_6 { get; set; }
         private static SkillVersion iis_6_0 { get; set; }
         private static SkillVersion iis_7_0 { get; set; }
         private static SkillVersion iis_8_0 { get; set; }
@@ -184,9 +221,12 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion nunit_2_6_2 { get; set; }
         private static SkillVersion tfs_2005 { get; set; }
         private static SkillVersion tfs_2008 { get; set; }
+        private static SkillVersion tfs_2013_express { get; set; }
         private static SkillVersion commerce_server_2009 { get; set; }
+        private static SkillVersion jquery_1_3 { get; set; }
         private static SkillVersion jquery_1_4 { get; set; }
         private static SkillVersion jquery_1_5 { get; set; }
+        private static SkillVersion jquery_1_7 { get; set; }
         private static SkillVersion jquery_1_8 { get; set; }
         private static SkillVersion jquery_1_9 { get; set; }
         private static SkillVersion jquery_1_10 { get; set; }
@@ -204,6 +244,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion mvc_4 { get; set; }
         private static SkillVersion mvc_5 { get; set; }
         private static SkillVersion structuremap_2_6_4_1 { get; set; }
+        private static SkillVersion structuremap_3_0_2_0 { get; set; }
         private static SkillVersion structuremap_2_6_3 { get; set; }
         private static SkillVersion sitefinity_4_0 { get; set; }
         private static SkillVersion mysql_workbench_5_2 { get; set; }
@@ -212,14 +253,17 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion saml_2_0 { get; set; }
         private static SkillVersion jenkins_1_6 { get; set; }
         private static SkillVersion knockout_2_2_1 { get; set; }
+        private static SkillVersion angularjs_1_3 { get; set; }
         private static SkillVersion angularjs_1_4 { get; set; }
         private static SkillVersion lync_sdk_2013 { get; set; }
         private static SkillVersion rhel_7 { get; set; }
         private static SkillVersion fedora_core_23 { get; set; }
+        private static SkillVersion entity_framework_core_1_0 { get; set; }
         private static SkillVersion entity_framework_4_1 { get; set; }
         private static SkillVersion entity_framework_5_0 { get; set; }
         private static SkillVersion entity_framework_6_0 { get; set; }
         private static SkillVersion unity_3_0 { get; set; }
+        private static SkillVersion unity_3_5 { get; set; }
         private static SkillVersion automapper_2_2_0 { get; set; }
         private static SkillVersion umbraco_4 { get; set; }
         private static SkillVersion umbraco_6 { get; set; }
@@ -229,7 +273,14 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion silverlight_sdk_5 { get; set; }
         private static SkillVersion silverlight_toolkit_5 { get; set; }
         private static SkillVersion aspnet_webapi_1 { get; set; }
+        private static SkillVersion aspnet_webapi_2 { get; set; }
+        private static SkillVersion aspnet_webapi_core_1_0 { get; set; }
         private static SkillVersion python_2_0 { get; set; }
+        private static SkillVersion git_2_5_0 { get; set; }
+        private static SkillVersion git_1_9_5 { get; set; }
+        private static SkillVersion ravendb_3_0 { get; set; }
+        private static SkillVersion mongodb_3_0{ get; set; }
+        private static SkillVersion mongodb_csharp_2_1_1{ get; set; }
         #endregion
 
         #region Experiences
@@ -247,6 +298,162 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.Skills.Any())
             {
+                #region Less
+                less = new Skill
+                {
+                    Description = "Less (sometimes stylized as LESS) is a dynamic style sheet language that can be compiled into Cascading Style Sheets (CSS) and run on the client side or server side.",
+                    ExperienceRating = 2,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-less",
+                    IsVisible = true,
+                    Name = "Less",
+                    UsageRating = 3
+                };
+                #endregion
+                #region wamp server
+                wamp = new Skill
+                {
+                    Description = "WampServer refers to a software stack for the Microsoft Windows operating system, created by Romain Bourdon and consisting of the Apache web server, OpenSSL for SSL support, MySQL database and PHP programming language.",
+                    ExperienceRating = 1,
+                    InterestRating = 1,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "WampServer",
+                    UsageRating = 1
+                };
+                #endregion
+                #region xunit
+                xunit = new Skill
+                {
+                    Description = "xUnit.net is an open source unit testing tool for the .NET framework, written by the original author of NUnit.",
+                    ExperienceRating = 2,
+                    InterestRating = 9,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "xUnit.net",
+                    UsageRating = 2
+                };
+                #endregion
+                #region bower
+                bower = new Skill
+                {
+                    Description = "Bower is a package management system for client-side programming on the World Wide Web.",
+                    ExperienceRating = 2,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-bower",
+                    IsVisible = true,
+                    Name = "Bower",
+                    UsageRating = 4
+                };
+                #endregion
+                #region npm
+                npm = new Skill
+                {
+                    Description = "npm runs through the command line and manages dependencies for an application. It also allows users to install Node.js applications that are available on the npm registry.",
+                    ExperienceRating = 2,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-npm",
+                    IsVisible = true,
+                    Name = "npm",
+                    UsageRating = 4
+                };
+                #endregion
+                #region sass
+                sass = new Skill
+                {
+                    Description = "Sass (Syntactically Awesome Stylesheets) is a style sheet language initially designed by Hampton Catlin and developed by Natalie Weizenbaum.",
+                    ExperienceRating = 1,
+                    InterestRating = 5,
+                    IconClass = "devicons devicons-sass",
+                    IsVisible = true,
+                    Name = "Sass",
+                    UsageRating = 1
+                };
+                #endregion
+                #region gulp
+                gulp = new Skill
+                {
+                    Description = "gulp is a toolkit that helps you automate painful or time-consuming tasks in your development workflow.",
+                    ExperienceRating = 1,
+                    InterestRating = 6,
+                    IconClass = "devicons devicons-gulp",
+                    IsVisible = true,
+                    Name = "Gulp",
+                    UsageRating = 3
+                };
+                #endregion
+                #region karma
+                karma = new Skill
+                {
+                    Description = "Test Runner for JavaScript",
+                    ExperienceRating = 1,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Karma",
+                    UsageRating = 3
+                };
+                #endregion
+                #region jasmine
+                jasmine = new Skill
+                {
+                    Description = "Jasmine is an open source testing framework for JavaScript. It aims to run on any JavaScript-enabled platform, to not intrude on the application nor the IDE, and to have easy-to-read syntax.",
+                    ExperienceRating = 1,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Jasmine",
+                    UsageRating = 3
+                };
+                #endregion
+                #region RavenDB
+                ravendb = new Skill
+                {
+                    Description = "2nd generation document database, JSON format with replication and sharding.",
+                    ExperienceRating = 1,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "RavenDB",
+                    UsageRating = 2
+                };
+                #endregion
+                #region MongoDB
+                mongodb = new Skill
+                {
+                    Description = "MongoDB (from humongous) is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster.",
+                    ExperienceRating = 1,
+                    InterestRating = 6,
+                    IconClass = "devicons devicons-mongodb",
+                    IsVisible = true,
+                    Name = "MongoDB",
+                    UsageRating = 2
+                };
+                #endregion
+                #region MongoDB c# Driver
+                mongodb_csharp = new Skill
+                {
+                    Description = "The official MongoDB .NET Driver provides asynchronous interaction with MongoDB. Powering the drivers is a Core library and a BSON library.",
+                    ExperienceRating = 1,
+                    InterestRating = 6,
+                    IconClass = "devicons devicons-mongodb",
+                    IsVisible = true,
+                    Name = "MongoDB .NET Driver",
+                    UsageRating = 2
+                };
+                #endregion
+                #region oauth
+                oauth = new Skill
+                {
+                    Description = "OAuth is an open standard for authorization, commonly used as a way for Internet users to log into third party websites using their Microsoft, Google, Facebook, Twitter, One Network etc. accounts without exposing their password.",
+                    ExperienceRating = 1,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "OAuth",
+                    UsageRating = 3
+                };
+                #endregion
                 #region php
                 php = new Skill
                 {
@@ -1243,7 +1450,110 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 2
                 };
                 #endregion
+                #region MariaDB
+                mariadb = new Skill
+                {
+                    Description = "MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL.",
+                    ExperienceRating = 1,
+                    InterestRating = 5,
+                    IconClass = "mfizz mfizz-mariadb",
+                    IsVisible = true,
+                    Name = "MariaDB",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Github
+                github = new Skill
+                {
+                    Description = "GitHub is a web-based Git repository hosting service. It offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.",
+                    ExperienceRating = 3,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-github",
+                    IsVisible = true,
+                    Name = "GitHub",
+                    UsageRating = 4
+                };
+                #endregion
+                #region git
+                git = new Skill
+                {
+                    Description = "Git is a widely used source code management system for software development.",
+                    ExperienceRating = 3,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-git",
+                    IsVisible = true,
+                    Name = "Git",
+                    UsageRating = 4
+                };
+                #endregion
+                #region Bitbucket
+                bitbucket = new Skill
+                {
+                    Description = "Bitbucket is a web-based hosting service for projects that use either the Mercurial (since launch) or Git (since October 2011) revision control systems.",
+                    ExperienceRating = 2,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-bitbucket",
+                    IsVisible = true,
+                    Name = "Bitbucket",
+                    UsageRating = 3
+                };
+                #endregion
+                #region NuGet
+                nuget = new Skill
+                {
+                    Description = "NuGet is a free and open-source package manager designed for the Microsoft development platform (formerly known as NuPack).",
+                    ExperienceRating = 5,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "NuGet",
+                    UsageRating = 8
+                };
+                #endregion
+                #region rest
+                rest = new Skill
+                {
+                    Description = "In computing, representational state transfer (REST) is the software architectural style of the World Wide Web.",
+                    ExperienceRating = 2,
+                    InterestRating = 8,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Representational state transfer",
+                    UsageRating = 6
+                };
+                #endregion
+                #region JSON
+                json = new Skill
+                {
+                    Description = "JSON (JavaScript Object Notation) is an open-standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs.",
+                    ExperienceRating = 4,
+                    InterestRating = 8,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "JSON",
+                    UsageRating = 8
+                };
+                #endregion
+                #region Continuous Integration
+                ci = new Skill
+                {
+                    Description = "Continuous integration (CI) is the practice, in software engineering, of merging all developer working copies to a shared mainline several times a day.",
+                    ExperienceRating = 2,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Continuous integration",
+                    UsageRating = 3
+                };
+                #endregion
 
+                context.Skills.Add(less);
+                context.Skills.Add(bower);
+                context.Skills.Add(npm);
+                context.Skills.Add(gulp);
+                context.Skills.Add(karma);
+                context.Skills.Add(jasmine);
+                context.Skills.Add(oauth);
                 context.Skills.Add(mantis);
                 context.Skills.Add(winservice);
                 context.Skills.Add(aspnet_webapi);
@@ -1327,6 +1637,19 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(knockout);
                 context.Skills.Add(angularjs);
                 context.Skills.Add(entity_framework);
+                context.Skills.Add(mariadb);
+                context.Skills.Add(github);
+                context.Skills.Add(bitbucket);
+                context.Skills.Add(git);
+                context.Skills.Add(nuget);
+                context.Skills.Add(rest);
+                context.Skills.Add(json);
+                context.Skills.Add(ci);
+                context.Skills.Add(ravendb);
+                context.Skills.Add(mongodb);
+                context.Skills.Add(mongodb_csharp);
+                context.Skills.Add(xunit);
+                context.Skills.Add(wamp);
             }
             return context.SaveChanges();
         }
@@ -1335,11 +1658,46 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.SkillVersions.Any())
             {
+                #region MongoDB .NET Driver 2.1.1
+                mongodb_csharp_2_1_1 = new SkillVersion
+                {
+                    Name = "MongoDB .NET Driver 2.1.1",
+                    SkillId = mongodb_csharp.Id
+                };
+                #endregion
+                #region MongoDB 3.0
+                mongodb_3_0 = new SkillVersion
+                {
+                    Name = "MongoDB 3.0",
+                    SkillId = mongodb.Id
+                };
+                #endregion
+                #region RavenDB 3.0
+                ravendb_3_0 = new SkillVersion
+                {
+                    Name = "RavenDB 3.0",
+                    SkillId = ravendb.Id
+                };
+                #endregion
+                #region oauth 2.0
+                oauth_2_0 = new SkillVersion
+                {
+                    Name = "OAuth 2.0",
+                    SkillId = oauth.Id
+                };
+                #endregion
                 #region php 4.3
                 php_4_3 = new SkillVersion
                 {
                     Name = "php 4.3",
                     SkillId = php.Id                      
+                };
+                #endregion
+                #region php 4.4
+                php_4_4 = new SkillVersion
+                {
+                    Name = "php 4.4",
+                    SkillId = php.Id
                 };
                 #endregion
                 #region mysql 4.0.6
@@ -1349,10 +1707,24 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = mysql.Id
                 };
                 #endregion
+                #region mysql 4.1.4
+                mysql_4_1_4 = new SkillVersion
+                {
+                    Name = "MySQL 4.1.4",
+                    SkillId = mysql.Id
+                };
+                #endregion
                 #region mysql 5.0.96
                 mysql_5_0_96 = new SkillVersion
                 {
                     Name = "MySQL 5.0.96",
+                    SkillId = mysql.Id
+                };
+                #endregion
+                #region mysql 5.1.22
+                mysql_5_1_22 = new SkillVersion
+                {
+                    Name = "MySQL 5.1.22",
                     SkillId = mysql.Id
                 };
                 #endregion
@@ -1368,6 +1740,13 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Name = "ASP 3.0",
                     SkillId = asp.Id
+                };
+                #endregion
+                #region asp.net core 1.0
+                asp_net_core_1_0 = new SkillVersion
+                {
+                    Name = "ASP.NET Core 1.0",
+                    SkillId = asp_net.Id
                 };
                 #endregion
                 #region asp.net 2.0
@@ -1461,6 +1840,20 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = sqlserver.Id
                 };
                 #endregion
+                #region sql server express 2008
+                sqlserver_2008_express = new SkillVersion
+                {
+                    Name = "SQL Server Express 2008",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
+                #region sql server express 2012
+                sqlserver_2012_express = new SkillVersion
+                {
+                    Name = "SQL Server Express 2012",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
                 #region visual studio 2003 Professional
                 visual_studio_2003_pro = new SkillVersion
                 {
@@ -1510,6 +1903,27 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = visual_studio.Id
                 };
                 #endregion
+                #region visual studio 2010 Express
+                visual_studio_2010_express = new SkillVersion
+                {
+                    Name = "Visual Studio 2010 Express",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
+                #region visual web developer express 2013
+                visual_studio_2013_web_developer_express = new SkillVersion
+                {
+                    Name = "Visual Web Developer Express 2013",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
+                #region visual studio 2015 Community
+                visual_studio_2015_community = new SkillVersion
+                {
+                    Name = "Visual Studio Community 2015",
+                    SkillId = visual_studio.Id
+                };
+                #endregion
                 #region csharp 1.2
                 csharp_1_2 = new SkillVersion
                 {
@@ -1543,6 +1957,20 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Name = "C# 5.0",
                     SkillId = csharp.Id
+                };
+                #endregion
+                #region csharp 6.0
+                csharp_6_0 = new SkillVersion
+                {
+                    Name = "C# 6.0",
+                    SkillId = csharp.Id
+                };
+                #endregion
+                #region .net framework core 1.0
+                dotnet_core_1_0 = new SkillVersion
+                {
+                    Name = ".NET Core 1.0",
+                    SkillId = dotnet.Id
                 };
                 #endregion
                 #region .net framework 1.1
@@ -1727,10 +2155,38 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = photoshop.Id
                 };
                 #endregion
+                #region photoshop elements 9.0
+                photoshop_elements_9_0 = new SkillVersion
+                {
+                    Name = "Adobe Photoshop Elements 9.0",
+                    SkillId = photoshop.Id
+                };
+                #endregion
+                #region photoshop elements 14.0
+                photoshop_elements_14_0 = new SkillVersion
+                {
+                    Name = "Adobe Photoshop Elements 14.0",
+                    SkillId = photoshop.Id
+                };
+                #endregion
                 #region photoshop cs2
                 photoshop_cs_2 = new SkillVersion
                 {
                     Name = "Adobe Photoshop CS2",
+                    SkillId = photoshop.Id
+                };
+                #endregion
+                #region photoshop cs3
+                photoshop_cs_3 = new SkillVersion
+                {
+                    Name = "Adobe Photoshop CS3",
+                    SkillId = photoshop.Id
+                };
+                #endregion
+                #region photoshop cs6
+                photoshop_cs_6 = new SkillVersion
+                {
+                    Name = "Adobe Photoshop CS6",
                     SkillId = photoshop.Id
                 };
                 #endregion
@@ -1881,11 +2337,25 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = tfs.Id
                 };
                 #endregion
+                #region tfs 2013 express
+                tfs_2013_express = new SkillVersion
+                {
+                    Name = "TFS 2013 Express",
+                    SkillId = tfs.Id
+                };
+                #endregion
                 #region Commerce Server 2009
                 commerce_server_2009 = new SkillVersion
                 {
                     Name = "Commerce Server 2009",
                     SkillId = commerce_server.Id
+                };
+                #endregion
+                #region jQuery 1.3
+                jquery_1_3 = new SkillVersion
+                {
+                    Name = "jQuery 1.3",
+                    SkillId = jquery.Id
                 };
                 #endregion
                 #region jQuery 1.4
@@ -1899,6 +2369,13 @@ namespace CV.DataAccessLayer.Initializers
                 jquery_1_5 = new SkillVersion
                 {
                     Name = "jQuery 1.5",
+                    SkillId = jquery.Id
+                };
+                #endregion
+                #region jQuery 1.7
+                jquery_1_7 = new SkillVersion
+                {
+                    Name = "jQuery 1.7",
                     SkillId = jquery.Id
                 };
                 #endregion
@@ -2028,6 +2505,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = structuremap.Id
                 };
                 #endregion
+                #region StructureMap 3.0.2.0
+                structuremap_3_0_2_0 = new SkillVersion
+                {
+                    Name = "StructureMap 3.0.2.0",
+                    SkillId = structuremap.Id
+                };
+                #endregion
                 #region Sitefinity 4.0
                 sitefinity_4_0 = new SkillVersion
                 {
@@ -2091,6 +2575,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = angularjs.Id
                 };
                 #endregion
+                #region AngularJS 1.3
+                angularjs_1_3 = new SkillVersion
+                {
+                    Name = "AngularJS 1.3",
+                    SkillId = angularjs.Id
+                };
+                #endregion
                 #region RHEL7
                 rhel_7 = new SkillVersion
                 {
@@ -2110,6 +2601,13 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Name = "Lync SDK 2013",
                     SkillId = lync_sdk.Id
+                };
+                #endregion
+                #region Entity Framework Core 1.0
+                entity_framework_core_1_0 = new SkillVersion
+                {
+                    Name = "EF Core 1.0",
+                    SkillId = entity_framework.Id
                 };
                 #endregion
                 #region Entity Framework 4.1
@@ -2144,6 +2642,13 @@ namespace CV.DataAccessLayer.Initializers
                 unity_3_0 = new SkillVersion
                 {
                     Name = "Unity 3.0",
+                    SkillId = unity.Id
+                };
+                #endregion
+                #region Unity 3.5
+                unity_3_5 = new SkillVersion
+                {
+                    Name = "Unity 3.5",
                     SkillId = unity.Id
                 };
                 #endregion
@@ -2217,6 +2722,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = aspnet_webapi.Id
                 };
                 #endregion
+                #region ASP.NET Web API 2
+                aspnet_webapi_2 = new SkillVersion
+                {
+                    Name = "ASP.NET Web API 2",
+                    SkillId = aspnet_webapi.Id
+                };
+                #endregion
                 #region Python 2.0
                 python_2_0 = new SkillVersion
                 {
@@ -2224,7 +2736,25 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = python.Id
                 };
                 #endregion
+                #region Git 2.5.0
+                git_2_5_0 = new SkillVersion
+                {
+                    Name = "Git 2.5.0",
+                    SkillId = git.Id
+                };
+                #endregion
+                #region Git 1.9.5
+                git_1_9_5 = new SkillVersion
+                {
+                    Name = "Git 1.9.5",
+                    SkillId = git.Id
+                };
+                #endregion
 
+                context.SkillVersions.Add(mongodb_3_0);
+                context.SkillVersions.Add(mongodb_csharp_2_1_1);
+                context.SkillVersions.Add(ravendb_3_0);
+                context.SkillVersions.Add(aspnet_webapi_2);
                 context.SkillVersions.Add(aspnet_webapi_1);
                 context.SkillVersions.Add(python_2_0);
                 context.SkillVersions.Add(bootstrap_3);
@@ -2240,15 +2770,21 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(umbraco_7);
                 context.SkillVersions.Add(automapper_2_2_0);
                 context.SkillVersions.Add(unity_3_0);
+                context.SkillVersions.Add(unity_3_5);
+                context.SkillVersions.Add(entity_framework_core_1_0);
                 context.SkillVersions.Add(entity_framework_4_1);
                 context.SkillVersions.Add(entity_framework_5_0);
                 context.SkillVersions.Add(entity_framework_6_0);
                 context.SkillVersions.Add(php_4_3);
+                context.SkillVersions.Add(php_4_4);
                 context.SkillVersions.Add(mysql_4_0_6);
+                context.SkillVersions.Add(mysql_4_1_4);
                 context.SkillVersions.Add(mysql_5_0_96);
+                context.SkillVersions.Add(mysql_5_1_22);
                 context.SkillVersions.Add(mysql_5_1_73);
                 context.SkillVersions.Add(asp_3_0);
                 context.SkillVersions.Add(asp_net_2_0);
+                context.SkillVersions.Add(asp_net_core_1_0);
                 context.SkillVersions.Add(sqlserver_2000);
                 context.SkillVersions.Add(visual_studio_2003_pro);
                 context.SkillVersions.Add(visual_studio_2005_pro);
@@ -2257,11 +2793,16 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(visual_studio_2012_pro);
                 context.SkillVersions.Add(visual_studio_2013_pro);
                 context.SkillVersions.Add(visual_studio_2015_pro);
+                context.SkillVersions.Add(visual_studio_2010_express);
+                context.SkillVersions.Add(visual_studio_2013_web_developer_express);
+                context.SkillVersions.Add(visual_studio_2015_community);
                 context.SkillVersions.Add(csharp_1_2);
                 context.SkillVersions.Add(csharp_2_0);
                 context.SkillVersions.Add(csharp_3_0);
                 context.SkillVersions.Add(csharp_4_0);
                 context.SkillVersions.Add(csharp_5_0);
+                context.SkillVersions.Add(csharp_6_0);
+                context.SkillVersions.Add(dotnet_core_1_0);
                 context.SkillVersions.Add(dotnet_1_1);
                 context.SkillVersions.Add(dotnet_2_0);
                 context.SkillVersions.Add(dotnet_3_0);
@@ -2287,7 +2828,6 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(css_3_0);
                 context.SkillVersions.Add(flash_2004);
                 context.SkillVersions.Add(actionscript_2_0);
-                context.SkillVersions.Add(photoshop_elements_7_0);
                 context.SkillVersions.Add(iis_6_0);
                 context.SkillVersions.Add(iis_7_0);
                 context.SkillVersions.Add(iis_8_0);
@@ -2307,10 +2847,17 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(asp_net_3_0);
                 context.SkillVersions.Add(sqlserver_2005);
                 context.SkillVersions.Add(sqlserver_2008);
+                context.SkillVersions.Add(sqlserver_2008_express);
+                context.SkillVersions.Add(sqlserver_2012_express);
                 context.SkillVersions.Add(sqlserver_2008_R2);
                 context.SkillVersions.Add(sqlserver_2012);
                 context.SkillVersions.Add(svn_1_3);
+                context.SkillVersions.Add(photoshop_elements_7_0);
+                context.SkillVersions.Add(photoshop_elements_9_0);
+                context.SkillVersions.Add(photoshop_elements_14_0);
                 context.SkillVersions.Add(photoshop_cs_2);
+                context.SkillVersions.Add(photoshop_cs_3);
+                context.SkillVersions.Add(photoshop_cs_6);
                 context.SkillVersions.Add(asp_net_3_5);
                 context.SkillVersions.Add(asp_net_4_0);
                 context.SkillVersions.Add(asp_net_4_5);
@@ -2319,9 +2866,12 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(asp_net_4_6);
                 context.SkillVersions.Add(tfs_2005);
                 context.SkillVersions.Add(tfs_2008);
+                context.SkillVersions.Add(tfs_2013_express);
                 context.SkillVersions.Add(commerce_server_2009);
+                context.SkillVersions.Add(jquery_1_3);
                 context.SkillVersions.Add(jquery_1_4);
                 context.SkillVersions.Add(jquery_1_5);
+                context.SkillVersions.Add(jquery_1_7);
                 context.SkillVersions.Add(jquery_1_8);
                 context.SkillVersions.Add(jquery_1_9);
                 context.SkillVersions.Add(jquery_1_10);
@@ -2340,6 +2890,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(mvc_5);
                 context.SkillVersions.Add(structuremap_2_6_3);
                 context.SkillVersions.Add(structuremap_2_6_4_1);
+                context.SkillVersions.Add(structuremap_3_0_2_0);
                 context.SkillVersions.Add(sitefinity_4_0);
                 context.SkillVersions.Add(mysql_workbench_5_2);
                 context.SkillVersions.Add(mysql_workbench_6_3);
@@ -2347,11 +2898,14 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(saml_2_0);
                 context.SkillVersions.Add(jenkins_1_6);
                 context.SkillVersions.Add(knockout_2_2_1);
+                context.SkillVersions.Add(angularjs_1_3);
                 context.SkillVersions.Add(angularjs_1_4);
                 context.SkillVersions.Add(rhel_7);
                 context.SkillVersions.Add(fedora_core_23);
                 context.SkillVersions.Add(lync_sdk_2013);
                 context.SkillVersions.Add(visual_studio_code);
+                context.SkillVersions.Add(git_1_9_5);
+                context.SkillVersions.Add(git_2_5_0);
             }
 
             return context.SaveChanges();
@@ -2359,7 +2913,6 @@ namespace CV.DataAccessLayer.Initializers
 
         private static int CreateExperiences(CvDbContext context)
         {
-
             if (!context.Experiences.Any())
             {
                 #region T2S
@@ -2994,6 +3547,15 @@ namespace CV.DataAccessLayer.Initializers
                         {
                             SkillId = xsd.Id,
                             UsageRating = 8
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = iis.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = iis.Id, SkillVersionId = iis_7_0.Id }
+                            }
                         }
                     }
                 };
@@ -3110,7 +3672,8 @@ namespace CV.DataAccessLayer.Initializers
                             UsageRating = 3,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id }
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id },
+                                new ExperienceSkillVersion { SkillId = css.Id, SkillVersionId = css_3_0.Id }
                             }
                         },
                         new ExperienceSkill
@@ -3145,6 +3708,15 @@ namespace CV.DataAccessLayer.Initializers
                         {
                             SkillId = mantis.Id,
                             UsageRating = 5
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = iis.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = iis.Id, SkillVersionId = iis_7_0.Id }
+                            }
                         }
                     }
                 };
@@ -3985,6 +4557,74 @@ namespace CV.DataAccessLayer.Initializers
                         {
                             SkillId = winservice.Id,
                             UsageRating = 2
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = apache.Id,
+                            UsageRating = 1
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = github.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = git.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = git.Id, SkillVersionId = git_2_5_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = bitbucket.Id,
+                            UsageRating = 2
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = mariadb.Id,
+                            UsageRating = 1
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = iis.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = iis.Id, SkillVersionId = iis_7_0.Id },
+                                new ExperienceSkillVersion { SkillId = iis.Id, SkillVersionId = iis_8_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = nuget.Id,
+                            UsageRating = 6
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = rest.Id,
+                            UsageRating = 1
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = json.Id,
+                            UsageRating = 8
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ci.Id,
+                            UsageRating = 2
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = photoshop.Id,
+                            UsageRating = 3,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = photoshop.Id, SkillVersionId = photoshop_cs_6.Id }
+                            }
                         }
                     }
                 };
@@ -4001,6 +4641,7 @@ namespace CV.DataAccessLayer.Initializers
             }
 
             return context.SaveChanges();
+            
         }
     }
 }
