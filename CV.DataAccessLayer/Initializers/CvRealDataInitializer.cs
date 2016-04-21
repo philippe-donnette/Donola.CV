@@ -5082,7 +5082,7 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "Website with listings of sports events shown on TV. The search facility allows users to view details of venues showing each sports event.",
                     Name = "toomanyplaces",
-                    PrimaryImage = null,
+                    PrimaryImage = "tmp-main.png",
                     StartDate = new DateTime(2009, 8, 1),
                     Skills = new List<ProjectSkill>
                     {
@@ -5207,6 +5207,155 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ProjectSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_0.Id }
                             }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = csharp.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = csharp.Id, SkillVersionId = csharp_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = google_api.Id,
+                            UsageRating = 4
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = sqlserver.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = sqlserver.Id, SkillVersionId = sqlserver_2008_express.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = ssms.Id,
+                            UsageRating = 7,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = ssms.Id, SkillVersionId = ssms_2008.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = sql.Id,
+                            UsageRating = 8
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = ajax.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = asp_net_ajax.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = jquery_ui.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = jquery_ui.Id, SkillVersionId = jquery_ui_1_8.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = jquery.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_1_7.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 4,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id },
+                                new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_5.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 7,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id },
+                                new ProjectSkillVersion { SkillId = css.Id, SkillVersionId = css_3_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = photoshop.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = photoshop.Id, SkillVersionId = photoshop_elements_9_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = visual_studio.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = visual_studio.Id, SkillVersionId = visual_studio_2010_express.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = dotnet.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = dotnet.Id, SkillVersionId = dotnet_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = iis.Id,
+                            UsageRating = 3,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = iis.Id, SkillVersionId = iis_7_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = ado_net.Id,
+                            UsageRating = 9
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = iis.Id, SkillVersionId = windows_xp.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = razor.Id,
+                            UsageRating = 7
                         }
                     }
                 };
