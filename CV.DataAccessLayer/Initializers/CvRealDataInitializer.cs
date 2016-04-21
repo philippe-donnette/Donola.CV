@@ -14,6 +14,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateSkills(context);
             CreateSkillVersions(context);
             CreateExperiences(context);
+            CreateProjects(context);
         }
 
         #region Skills
@@ -292,6 +293,20 @@ namespace CV.DataAccessLayer.Initializers
         private static Experience groovytrain { get; set; }
         private static Experience docdata { get; set; }
         private static Experience uol { get; set; }
+        #endregion
+
+        #region Projects
+        private static Project othodo { get; set; }
+        private static Project louise13 { get; set; }
+        private static Project cnlaps { get; set; }
+        private static Project makabou { get; set; }
+        private static Project pharmatoo { get; set; }
+        private static Project toomanyplaces { get; set; }
+        private static Project pubrush { get; set; }
+        private static Project moi { get; set; }
+        private static Project dpf { get; set; }
+        private static Project babybook { get; set; }
+        private static Project cv { get; set; }
         #endregion
 
         private static int CreateSkills(CvDbContext context)
@@ -4642,6 +4657,571 @@ namespace CV.DataAccessLayer.Initializers
 
             return context.SaveChanges();
             
+        }
+
+        private static int CreateProjects(CvDbContext context)
+        {
+            if (!context.Projects.Any())
+            {
+                #region Othodo
+                othodo = new Project
+                {
+                    Description = "Development of a car rental booking website.",
+                    Name = "Othodo",
+                    PrimaryImage = "",
+                    StartDate = new DateTime(2003, 06, 1),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill
+                        {
+                            SkillId = php.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = php.Id, SkillVersionId = php_4_3.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = mysql.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_4_0_6.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = easyphp.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = phpmyadmin.Id,
+                            UsageRating = 4
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = apache.Id,
+                            UsageRating = 2
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 4,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 7,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id }
+                            }
+                        }
+                    }
+                };
+                #endregion
+                #region Louise13
+                louise13 = new Project
+                {
+                    Description = "Website for a street art association the Louise-Weiss street (a notable place of contemporary art) to promote its art galleries.",
+                    Name = "Louise13",
+                    PrimaryImage = "louise13-main.jpg",
+                    StartDate = new DateTime(2004, 04, 1),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill
+                        {
+                            SkillId = php.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = php.Id, SkillVersionId = php_4_3.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = mysql.Id,
+                            UsageRating = 6,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_4_1_4.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = easyphp.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = phpmyadmin.Id,
+                            UsageRating = 5
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = apache.Id,
+                            UsageRating = 2
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 1,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 1,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = flash.Id,
+                            UsageRating = 7,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = flash.Id, SkillVersionId = flash_2004.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = actionscript.Id,
+                            UsageRating = 7,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = actionscript.Id, SkillVersionId = actionscript_2_0.Id }
+                            }
+                        }
+                    }
+                };
+                #endregion
+                #region CNLAPS
+                cnlaps = new Project
+                {
+                    Description = "Website for a french association CNLAPS.",
+                    Name = "CNLAPS",
+                    PrimaryImage = "cnlaps-main.png",
+                    StartDate = new DateTime(2005, 04, 1),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill
+                        {
+                            SkillId = php.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = php.Id, SkillVersionId = php_4_3.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = mysql.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_4_1_4.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = easyphp.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = phpmyadmin.Id,
+                            UsageRating = 7
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = apache.Id,
+                            UsageRating = 2
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 1,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = css.Id, SkillVersionId = css_2_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 1,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id }
+                            }
+                        }
+                    }
+                };
+                #endregion
+                #region Makabou
+                makabou = new Project
+                {
+                    Description = "Makabou is an online classifieds ads website for the african community.",
+                    Name = "Makabou",
+                    PrimaryImage = "makabou-main.gif",
+                    StartDate = new DateTime(2008, 8, 1),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill
+                        {
+                            SkillId = php.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = php.Id, SkillVersionId = php_4_4.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = mysql.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_5_1_22.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = easyphp.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = phpmyadmin.Id,
+                            UsageRating = 8
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = apache.Id,
+                            UsageRating = 2
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = windows.Id, SkillVersionId = windows_vista.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 2,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = photoshop.Id,
+                            UsageRating = 4,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = photoshop.Id, SkillVersionId = photoshop_cs_3.Id }
+                            }
+                        }
+                    }
+                };
+                #endregion
+                #region Pharmatoo
+                pharmatoo = new Project
+                {
+                    Description = "Pharmatoo is website community for pharmacist.",
+                    Name = "Pharmatoo",
+                    PrimaryImage = "pharmatoo-main.jpg",
+                    StartDate = new DateTime(2009, 4, 1),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill
+                        {
+                            SkillId = php.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = php.Id, SkillVersionId = php_4_4.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = mysql.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_5_1_22.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = easyphp.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = phpmyadmin.Id,
+                            UsageRating = 8
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = apache.Id,
+                            UsageRating = 2
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 6,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = windows.Id, SkillVersionId = windows_vista.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 2,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = photoshop.Id,
+                            UsageRating = 4,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = photoshop.Id, SkillVersionId = photoshop_cs_3.Id }
+                            }
+                        }
+                    }
+                };
+                #endregion
+                #region toomanyplaces
+                toomanyplaces = new Project
+                {
+                    Description = "Website with listings of sports events shown on TV. The search facility allows users to view details of venues showing each sports event.",
+                    Name = "toomanyplaces",
+                    PrimaryImage = null,
+                    StartDate = new DateTime(2009, 8, 1),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill
+                        {
+                            SkillId = php.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = php.Id, SkillVersionId = php_4_4.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = mysql.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = mysql.Id, SkillVersionId = mysql_5_1_22.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = easyphp.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = phpmyadmin.Id,
+                            UsageRating = 8
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = apache.Id,
+                            UsageRating = 2
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = css.Id,
+                            UsageRating = 7,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = css.Id, SkillVersionId = css_2_1.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = html.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = html.Id, SkillVersionId = html_4_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = windows.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = windows.Id, SkillVersionId = windows_xp.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = javascript.Id,
+                            UsageRating = 3,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = photoshop.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = photoshop.Id, SkillVersionId = photoshop_cs_3.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = google_api.Id,
+                            UsageRating = 3
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = jquery.Id,
+                            UsageRating = 2,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_1_3.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = jquery_ui.Id,
+                            UsageRating = 2,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = jquery_ui.Id, SkillVersionId = jquery_ui_1_7.Id }
+                            }
+                        }
+                    }
+                };
+                #endregion
+                #region pubrush
+                pubrush = new Project
+                {
+                    Description = "Website with listings of sports events shown on TV. The search facility allows users to view details of venues showing each sports event.",
+                    Name = "Pubrush",
+                    PrimaryImage = "pubrush-main.jpg",
+                    StartDate = new DateTime(2012, 4, 1),
+                    Skills = new List<ProjectSkill>
+                    {
+                        new ProjectSkill
+                        {
+                            SkillId = asp_net.Id,
+                            UsageRating = 9,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_0.Id }
+                            }
+                        }
+                    }
+                };
+                #endregion
+                context.Projects.Add(othodo);
+                context.Projects.Add(louise13);
+                context.Projects.Add(cnlaps);
+                context.Projects.Add(makabou);
+                context.Projects.Add(pharmatoo);
+                context.Projects.Add(toomanyplaces);
+                context.Projects.Add(pubrush);
+            }
+
+            return context.SaveChanges();
+
         }
     }
 }
