@@ -18,6 +18,7 @@ namespace CV.DataAccessLayer.Initializers
         }
 
         #region Skills
+        private static Skill azure { get; set; }
         private static Skill bower { get; set; }
         private static Skill npm { get; set; }
         private static Skill sass { get; set; }
@@ -282,6 +283,8 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion ravendb_3_0 { get; set; }
         private static SkillVersion mongodb_3_0{ get; set; }
         private static SkillVersion mongodb_csharp_2_1_1{ get; set; }
+        private static SkillVersion azure_web_sites { get; set; }
+        private static SkillVersion azure_webjobs { get; set; }
         #endregion
 
         #region Experiences
@@ -313,6 +316,18 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.Skills.Any())
             {
+                #region Microsoft Azure
+                azure = new Skill
+                {
+                    Description = "Microsoft Azure is a cloud computing platform and infrastructure created by Microsoft for building, deploying, and managing applications and services through a global network of Microsoft-managed datacenters.",
+                    ExperienceRating = 2,
+                    InterestRating = 10,
+                    IconClass = "devicons devicons-windows",
+                    IsVisible = true,
+                    Name = "Microsoft Azure",
+                    UsageRating = 2
+                };
+                #endregion
                 #region Less
                 less = new Skill
                 {
@@ -1665,6 +1680,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.Skills.Add(mongodb_csharp);
                 context.Skills.Add(xunit);
                 context.Skills.Add(wamp);
+                context.Skills.Add(azure);
             }
             return context.SaveChanges();
         }
@@ -1673,6 +1689,20 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.SkillVersions.Any())
             {
+                #region Azure WebJobs
+                azure_webjobs = new SkillVersion
+                {
+                    Name = "Azure WebJobs",
+                    SkillId = azure.Id
+                };
+                #endregion
+                #region Azure WebSites
+                azure_web_sites = new SkillVersion
+                {
+                    Name = "Azure Web Sites",
+                    SkillId = azure.Id
+                };
+                #endregion
                 #region MongoDB .NET Driver 2.1.1
                 mongodb_csharp_2_1_1 = new SkillVersion
                 {
@@ -2766,6 +2796,8 @@ namespace CV.DataAccessLayer.Initializers
                 };
                 #endregion
 
+                context.SkillVersions.Add(azure_webjobs);
+                context.SkillVersions.Add(azure_web_sites);
                 context.SkillVersions.Add(mongodb_3_0);
                 context.SkillVersions.Add(mongodb_csharp_2_1_1);
                 context.SkillVersions.Add(ravendb_3_0);
@@ -2921,6 +2953,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(visual_studio_code);
                 context.SkillVersions.Add(git_1_9_5);
                 context.SkillVersions.Add(git_2_5_0);
+                context.SkillVersions.Add(oauth_2_0);
             }
 
             return context.SaveChanges();
@@ -5675,7 +5708,7 @@ namespace CV.DataAccessLayer.Initializers
                             UsageRating = 5,
                             Versions = new List<ProjectSkillVersion>
                             {
-                                new ProjectSkillVersion { SkillId = iis.Id, SkillVersionId = windows_7.Id }
+                                new ProjectSkillVersion { SkillId = windows.Id, SkillVersionId = windows_7.Id }
                             }
                         },
                         new ProjectSkill
@@ -5693,7 +5726,7 @@ namespace CV.DataAccessLayer.Initializers
                             UsageRating = 8,
                             Versions = new List<ProjectSkillVersion>
                             {
-                                new ProjectSkillVersion { SkillId = entity_framework.Id, SkillVersionId = entity_framework_6_0.Id }
+                                new ProjectSkillVersion { SkillId = asp_net.Id, SkillVersionId = asp_net_4_5.Id }
                             }
                         },
                         new ProjectSkill
@@ -5766,8 +5799,8 @@ namespace CV.DataAccessLayer.Initializers
                             UsageRating = 4,
                             Versions = new List<ProjectSkillVersion>
                             {
-                                new ProjectSkillVersion { SkillId = azure.Id, SkillVersionId = azure_websites.Id },
-                                new ProjectSkillVersion { SkillId = azure.Id, SkillVersionId = azure_webjob.Id }
+                                new ProjectSkillVersion { SkillId = azure.Id, SkillVersionId = azure_web_sites.Id },
+                                new ProjectSkillVersion { SkillId = azure.Id, SkillVersionId = azure_webjobs.Id }
                             }
                         }
                     }
