@@ -4719,7 +4719,7 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "Development of a car rental booking website.",
                     Name = "Othodo",
-                    PrimaryImage = null,
+                    PrimaryImage = "no-main.png",
                     StartDate = new DateTime(2003, 06, 1),
                     Skills = new List<ProjectSkill>
                     {
@@ -4791,7 +4791,7 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "Website for a street art association the Louise-Weiss street (a notable place of contemporary art) to promote its art galleries.",
                     Name = "Louise13",
-                    PrimaryImage = null,
+                    PrimaryImage = "no-main.png",
                     StartDate = new DateTime(2004, 04, 1),
                     Skills = new List<ProjectSkill>
                     {
