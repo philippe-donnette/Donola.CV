@@ -15,6 +15,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateSkillVersions(context);
             CreateExperiences(context);
             CreateProjects(context);
+            CreateCards(context);
         }
 
         #region Skills
@@ -311,6 +312,10 @@ namespace CV.DataAccessLayer.Initializers
         private static Project dpf { get; set; }
         private static Project babybook { get; set; }
         private static Project cv { get; set; }
+        #endregion
+
+        #region Cards
+        private static Card location { get; set; }
         #endregion
 
         private static int CreateSkills(CvDbContext context)
@@ -6382,6 +6387,30 @@ namespace CV.DataAccessLayer.Initializers
                 context.Projects.Add(dpf);
                 context.Projects.Add(babybook);
                 context.Projects.Add(cv);
+            }
+
+            return context.SaveChanges();
+
+        }
+
+        private static int CreateCards(CvDbContext context)
+        {
+            if (!context.Cards.Any())
+            {
+                #region Location
+                location = new Card
+                {
+                    ImageBackUrl = null,
+                    Rotate = "y",
+                    TextBack = "<br /><i class=\"fa fa-3x fa-map-marker\"></i><br />London SE8<br />United Kingdom",
+                    Caption = "Location",
+                    CaptionIconClass = "fa fa-map-marker",
+                    TextFront = null,
+                    ImageFrontUrl = "maps-location.png",
+                };
+                #endregion
+                
+                context.Cards.Add(location);
             }
 
             return context.SaveChanges();
