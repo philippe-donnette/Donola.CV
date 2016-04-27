@@ -16,6 +16,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateExperiences(context);
             CreateProjects(context);
             CreateCards(context);
+            CreateProjectImages(context);
         }
 
         #region Skills
@@ -6415,6 +6416,202 @@ namespace CV.DataAccessLayer.Initializers
 
             return context.SaveChanges();
 
+        }
+
+        private static int CreateProjectImages(CvDbContext context)
+        {
+            if (!context.ProjectImages.Any())
+            {
+                #region babybook
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Filtered list of photos",
+                    ImageUrl = "babybook-1.png",
+                    ProjectId = babybook.Id,
+                    Title = "Desktop View - Photo List"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Upload screen to add photos and videos",
+                    ImageUrl = "babybook-2.png",
+                    ProjectId = babybook.Id,
+                    Title = "Desktop View - Upload"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Upload screen to add photos and videos",
+                    ImageUrl = "babybook-3.png",
+                    ProjectId = babybook.Id,
+                    Title = "Mobile View - Upload"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "List of photos for publishing",
+                    ImageUrl = "babybook-4.png",
+                    ProjectId = babybook.Id,
+                    Title = "Mobile View - Publish Screen"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Detail view of a photo with tagging funcionality",
+                    ImageUrl = "babybook-5.png",
+                    ProjectId = babybook.Id,
+                    Title = "Mobile View - Admin Photo Detail"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Advanced search with facets",
+                    ImageUrl = "babybook-6.png",
+                    ProjectId = babybook.Id,
+                    Title = "Desktop View - Faceted Search"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Detail view of a photo with tagging funcionality",
+                    ImageUrl = "babybook-7.png",
+                    ProjectId = babybook.Id,
+                    Title = "Desktop View - Admin Photo Detail"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Login screen with social login capabilities with Facebook and Google",
+                    ImageUrl = "babybook-8.png",
+                    ProjectId = babybook.Id,
+                    Title = "Mobile View - Login Screen"
+                });
+                #endregion
+                #region deptford park football
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Login screen with social login capabilities with Facebook and Google",
+                    ImageUrl = "dpf-1.png",
+                    ProjectId = dpf.Id,
+                    Title = "Desktop View - Login Screen"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Admin screen to post a new game",
+                    ImageUrl = "dpf-2.png",
+                    ProjectId = dpf.Id,
+                    Title = "Desktop View - Add Game"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Screen of a posted game with all details",
+                    ImageUrl = "dpf-3.png",
+                    ProjectId = dpf.Id,
+                    Title = "Mobile View - Game Details"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Screen of a posted game with all details and attendance",
+                    ImageUrl = "dpf-4.png",
+                    ProjectId = dpf.Id,
+                    Title = "Desktop View - Game Details"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Screen of a posted game with attendance details",
+                    ImageUrl = "dpf-5.png",
+                    ProjectId = dpf.Id,
+                    Title = "Mobile View - Attendance Details"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Screen of an email notification to join a newly added game",
+                    ImageUrl = "dpf-6.png",
+                    ProjectId = dpf.Id,
+                    Title = "Desktop View - Email Notification"
+                });
+                #endregion
+                #region makabou
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Screen showing list of adverts for a category",
+                    ImageUrl = "makabou-1.png",
+                    ProjectId = makabou.Id,
+                    Title = "Desktop View - Advert List"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Screen to post a new advert",
+                    ImageUrl = "makabou-2.png",
+                    ProjectId = makabou.Id,
+                    Title = "Desktop View - Post Advert"
+                });
+                #endregion
+                #region moi
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "List of photos and videos for the selected age category",
+                    ImageUrl = "moi-1.png",
+                    ProjectId = moi.Id,
+                    Title = "Desktop View - Media List"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Zoom view of a photo",
+                    ImageUrl = "moi-2.png",
+                    ProjectId = moi.Id,
+                    Title = "Desktop View - Zoom View"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Upload screen to post new photos and videos",
+                    ImageUrl = "moi-3.png",
+                    ProjectId = moi.Id,
+                    Title = "Desktop View - Upload"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "User account screen details with editable fields and list of permissions",
+                    ImageUrl = "moi-4.png",
+                    ProjectId = moi.Id,
+                    Title = "Desktop View - User Account"
+                });
+                #endregion
+                #region pharmatoo
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Home page with recently added pharmacies and pharmacist suppliers",
+                    ImageUrl = "pharmatoo-1.png",
+                    ProjectId = pharmatoo.Id,
+                    Title = "Desktop View - Home Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Screen of a pharmacy with all details",
+                    ImageUrl = "pharmatoo-2.png",
+                    ProjectId = pharmatoo.Id,
+                    Title = "Desktop View - Pharmacy Details"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Page listing of all medicine drugs available in pharmatoo registered stores with search and filter by keywords and/or category",
+                    ImageUrl = "pharmatoo-3.png",
+                    ProjectId = pharmatoo.Id,
+                    Title = "Desktop View - Medicine Drugs List"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Registration form to subscribe and promote a pharmacy on pharmatoo website",
+                    ImageUrl = "pharmatoo-4.png",
+                    ProjectId = pharmatoo.Id,
+                    Title = "Desktop View - Registration Form"
+                });
+                #endregion
+                #region toomanyplaces
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Marketing business card to promote toomanyplaces websites",
+                    ImageUrl = "tmp-1.png",
+                    ProjectId = toomanyplaces.Id,
+                    Title = "Marketing Business Card"
+                });
+                #endregion
+            }
+
+            return context.SaveChanges();
         }
     }
 }
