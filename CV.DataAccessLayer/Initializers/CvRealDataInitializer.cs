@@ -18,6 +18,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateCards(context);
             CreateProjectImages(context);
             CreateQualifications(context);
+            CreateTrainings(context);
         }
 
         #region Skills
@@ -6668,6 +6669,33 @@ namespace CV.DataAccessLayer.Initializers
                     DegreeFile = "bts.pdf"
                 });
 
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int CreateTrainings(CvDbContext context)
+        {
+            if (!context.Trainings.Any())
+            {
+                context.Trainings.Add(new Training
+                {
+                    CertificateFile = "scrum.pdf",
+                    Description = "3-day course that teaches how to create great software using the Scrum framework.",
+                    ImageUrl = "scrum.png",
+                    Provider = "Scrum.org",
+                    Subject = "Professional Scrum Developer I (PSD I)",
+                    WebsiteUrl = "http://www.scrum.org"
+                });
+                context.Trainings.Add(new Training
+                {
+                    CertificateFile = null,
+                    Description = "Two days course centre around the installation and configuration of a Shibboleth 2 service provider and identity provider.",
+                    ImageUrl = "jisc.png",
+                    Provider = "Jisc",
+                    Subject = "Implementing a Shibboleth identity provider and service provider",
+                    WebsiteUrl = "http://www.jisc.ac.uk"
+                });
             }
 
             return context.SaveChanges();
