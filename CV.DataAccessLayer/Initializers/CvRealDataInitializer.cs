@@ -17,6 +17,7 @@ namespace CV.DataAccessLayer.Initializers
             CreateProjects(context);
             CreateCards(context);
             CreateProjectImages(context);
+            CreateQualifications(context);
         }
 
         #region Skills
@@ -6373,6 +6374,15 @@ namespace CV.DataAccessLayer.Initializers
                         {
                             SkillId = jasmine.Id,
                             UsageRating = 6
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = jquery.Id,
+                            UsageRating = 1,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_2_1.Id }
+                            }
                         }
                     }
                 };
@@ -6609,6 +6619,55 @@ namespace CV.DataAccessLayer.Initializers
                     Title = "Marketing Business Card"
                 });
                 #endregion
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int CreateQualifications(CvDbContext context)
+        {
+            if (!context.Qualifications.Any())
+            {
+                context.Qualifications.Add(new Qualification
+                {
+                    SchoolName = "Martin Luther King",
+                    StartDate = new DateTime(1998, 9, 1),
+                    EndDate = new DateTime(2001, 7, 31),
+                    ImageUrl = null,
+                    City = "Bussy-Saint-Georges",
+                    Country = "France",
+                    Subject = "General Scientific Baccalaureate",
+                    Description = "<p>Baccalaureate is France's national secondary-school diploma, much like the British A-level.</p><p>During my second and third year, I chose to study the scientific stream and to specialised in engineering.</p>",
+                    WebsiteUrl = null,
+                    DegreeFile = "bac.pdf"
+                });
+                context.Qualifications.Add(new Qualification
+                {
+                    SchoolName = "University Paris-Est Marne-la-Vallée",
+                    StartDate = new DateTime(1998, 9, 1),
+                    EndDate = new DateTime(2001, 7, 31),
+                    ImageUrl = "mlv-uni.png",
+                    City = "Champs-sur-Marne",
+                    Country = "France",
+                    Subject = "DEUG MIAS",
+                    Description = "<p>The Diplôme d'études universitaires générales (French for General Academic Studies Degree), abbreviated DEUG, was a French national degree.</p><p>I chose to specialised in mathematics and computer science but did not fully completed my cursus.</p>",
+                    WebsiteUrl = "http://www.u-pem.fr/",
+                    DegreeFile = null
+                });
+                context.Qualifications.Add(new Qualification
+                {
+                    SchoolName = "H.E.I.G",
+                    StartDate = new DateTime(2003, 9, 1),
+                    EndDate = new DateTime(2005, 7, 31),
+                    ImageUrl = "heig.png",
+                    City = "Lognes",
+                    Country = "France",
+                    Subject = "Brevet de Technicien Supérieur (BTS)",
+                    Description = "<p>The Brevet de Technicien Supérieur (BTS) technician certificate is a national diploma of higher education in France.</p><p>I decided to specialised in software applications and complete my formation in a sandwich course working a minimum of 3 days a week for T2S during two years.</p>",
+                    WebsiteUrl = null,
+                    DegreeFile = "bts.pdf"
+                });
+
             }
 
             return context.SaveChanges();
