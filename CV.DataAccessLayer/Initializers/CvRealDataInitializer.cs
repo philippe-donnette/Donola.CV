@@ -319,6 +319,7 @@ namespace CV.DataAccessLayer.Initializers
 
         #region Cards
         private static Card location { get; set; }
+        private static Card contact { get; set; }
         #endregion
 
         private static int CreateSkills(CvDbContext context)
@@ -6421,8 +6422,21 @@ namespace CV.DataAccessLayer.Initializers
                     ImageFrontUrl = "maps-location.png",
                 };
                 #endregion
-                
+                #region Contact
+                contact = new Card
+                {
+                    ImageBackUrl = null,
+                    Rotate = "y",
+                    TextBack = "<br /><i class=\"fa fa-3x fa-envelope\"></i><br />philippe.donnette@gmail.com",
+                    Caption = "Contact",
+                    CaptionIconClass = "fa fa-envelope",
+                    TextFront = null,
+                    ImageFrontUrl = "contact.png",
+                };
+                #endregion
+
                 context.Cards.Add(location);
+                context.Cards.Add(contact);
             }
 
             return context.SaveChanges();
