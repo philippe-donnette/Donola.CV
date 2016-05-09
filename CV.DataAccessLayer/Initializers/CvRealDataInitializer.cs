@@ -3000,7 +3000,15 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "tomato-experience-icon.png",
                     RoleTitle = "Webmaster Developer",
                     WebsiteUrl = null,
-                    Description = "Analysis and development of an E-commerce website for skateboarding equipment using Web technologies (PHP, MYSQL).",
+                    Description = @"<p>As part of a sandwich course at HEIG MLV school in France I was working at T2S, a skateshop, to develop and launch their E-commerce website. The website went on to become the main revenue stream for the business and eventually replaced the retail outlet.</p>
+                                    <p>
+                                    The website was built using php and MySQL. Functionalities of the website included:
+                                    <ul>
+                                    <li>Shopping cart</li>
+                                    <li>Stock import from the retail outlet software directly to the website</li>
+                                    <li>Online payment</li>
+                                    </ul>
+                                    </p>",
                     StartDate = new DateTime(2003, 9, 1),
                     Skills = new List<ExperienceSkill>
                     {
@@ -3109,7 +3117,21 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "intellimind-experience-icon.png",
                     RoleTitle = "Developer",
                     WebsiteUrl = "http://www.intellimind.fr/",
-                    Description = "Development of a financial software called “Credit Voyager” using Microsoft technologies (ASP.NET, ASP, C#), Web technologies and multi database (ORACLE, SQL SERVER). This software allows banks and companies to evaluate their customers credential risks.",
+                    Description = "<p>Working within a team of 12 people, I was involved in the development of a 'Credit Voyager' product. The key feature of this product is the possibility to manage credit distribution with full control of risk analysis.</p>"
+                        + "<p>This web based solution was mainly built using Microsoft technologies (ASP, ASP.NET, c#) and was developped to work either on ORACLE and MSSQL database.</p>"
+                        + "<p>Responsibilities included:</p>"
+                        + "<ul>"
+                        + "<li>Maintenance and Bug fixing</li>"
+                        + "<li>Building a database migration tool to migrate a full MSSQL database to an ORACLE database</li>"
+                        + "<li>Integration of a third party service (BIL) to obtain financial information for the purposes of carrying out credit checks</li>"
+                        + "</ul>"
+                        + "<p>Clients included:</p>"
+                        + "<ul class='list-inline'>"
+                        + "<li><img src='./images/experience/clients/logo_iveco.png' alt='IVECO Finance France' /></li>"
+                        + "<li><img src='./images/experience/clients/logo_total.png' alt='Total' /></li>"
+                        + "<li><img src='./images/experience/clients/logo_sfr.png' alt='SFR' /></li>"
+                        + "<li><img src='./images/experience/clients/logo_neopost.png' alt='neopost FRANCE' /></li>"
+                        + "</ul>",
                     StartDate = new DateTime(2005, 10, 1),
                     Skills = new List<ExperienceSkill>
                     {
@@ -3300,7 +3322,22 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "concileo-experience-icon.png",
                     RoleTitle = "Project manager and developer",
                     WebsiteUrl = "http://www.concileo.com",
-                    Description = "Analysis and development of web community platforms (blog, forum, photo, video, social networking application) using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER) and Web technologies.",
+                    Description = "<p>Project lead and lead developer using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER) and other Web technologies to deliver large web community platforms.</p>"
+                        + "<p>Responsibilities included:</p>"
+                        + "<ul>"
+                        + "<li>Migration of existing applications from ASP to ASP.NET</li>"
+                        + "<li>Development of various web community modules (blog, forum, photo album, video, shared link) with extensive social networking functionalities (profile, rating, messaging, connections...)</li>"
+                        + "<li>Recruitment, training and management of a team of 5 developers based in India</li>"
+                        + "<li>Supporting staff with transition to new technologies</li> "
+                        + "<li>Integrating moderation solutions for clients with pre-existing platforms</li>"
+                        + "</ul>"
+                        + "<p>Clients included:</p>"
+                        + "<ul class='list-inline'>"
+                        + "<li><img src='./images/experience/clients/logo_fhm.png' alt='FHM' /></li>"
+                        + "<li><img src='./images/experience/clients/logo_samsung.png' alt='Samsung Mobile France' /></li>"
+                        + "<li><img src='./images/experience/clients/logo_femmeactuelle.png' alt='Femme Actuelle' /></li>"
+                        + "<li><img src='./images/experience/clients/logo_letudiant.png' alt='Letudiant' /></li>"
+                        + "</ul>",
                     StartDate = new DateTime(2006, 5, 1),
                     Skills = new List<ExperienceSkill>
                     {

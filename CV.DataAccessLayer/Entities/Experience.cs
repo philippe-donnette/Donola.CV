@@ -20,7 +20,7 @@ namespace CV.DataAccessLayer.Entities
         public string Country { get; set; }
         [StringLength(200)]
         public string RoleTitle { get; set; }
-        [StringLength(1000)]
+        [StringLength(2000)]
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }

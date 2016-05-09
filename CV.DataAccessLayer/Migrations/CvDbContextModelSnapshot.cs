@@ -60,7 +60,7 @@ namespace CV.DataAccessLayer.Migrations
                         .HasAnnotation("MaxLength", 100);
 
                     b.Property<string>("Description")
-                        .HasAnnotation("MaxLength", 1000);
+                        .HasAnnotation("MaxLength", 2000);
 
                     b.Property<DateTime?>("EndDate");
 
