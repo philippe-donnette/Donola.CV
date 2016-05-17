@@ -3126,11 +3126,11 @@ namespace CV.DataAccessLayer.Initializers
                         + "<li>Integration of a third party service (BIL) to obtain financial information for the purposes of carrying out credit checks</li>"
                         + "</ul>"
                         + "<p>Clients included:</p>"
-                        + "<ul class='list-inline'>"
-                        + "<li><img src='./images/experience/clients/logo_iveco.png' alt='IVECO Finance France' /></li>"
-                        + "<li><img src='./images/experience/clients/logo_total.png' alt='Total' /></li>"
-                        + "<li><img src='./images/experience/clients/logo_sfr.png' alt='SFR' /></li>"
-                        + "<li><img src='./images/experience/clients/logo_neopost.png' alt='neopost FRANCE' /></li>"
+                        + "<ul class='list-inline dn-experience-client'>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_iveco.png' alt='IVECO Finance France' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_total.png' alt='Total' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_sfr.png' alt='SFR' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_neopost.png' alt='neopost FRANCE' /></li>"
                         + "</ul>",
                     StartDate = new DateTime(2005, 10, 1),
                     Skills = new List<ExperienceSkill>
@@ -3332,11 +3332,13 @@ namespace CV.DataAccessLayer.Initializers
                         + "<li>Integrating moderation solutions for clients with pre-existing platforms</li>"
                         + "</ul>"
                         + "<p>Clients included:</p>"
-                        + "<ul class='list-inline'>"
-                        + "<li><img src='./images/experience/clients/logo_fhm.png' alt='FHM' /></li>"
-                        + "<li><img src='./images/experience/clients/logo_samsung.png' alt='Samsung Mobile France' /></li>"
-                        + "<li><img src='./images/experience/clients/logo_femmeactuelle.png' alt='Femme Actuelle' /></li>"
-                        + "<li><img src='./images/experience/clients/logo_letudiant.png' alt='Letudiant' /></li>"
+                        + "<ul class='list-inline dn-experience-client'>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_fhm.png' alt='FHM' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_samsung.png' alt='Samsung Mobile France' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_femmeactuelle.png' alt='Femme Actuelle' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_letudiant.png' alt='Letudiant' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_sport24.png' alt='Sport24' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_canalj.png' alt='Canal J' /></li>"
                         + "</ul>",
                     StartDate = new DateTime(2006, 5, 1),
                     Skills = new List<ExperienceSkill>
@@ -3537,7 +3539,23 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "tda-experience-icon.png",
                     RoleTitle = "Developer",
                     WebsiteUrl = "http://www.thedataarchive.com",
-                    Description = "Analysis and development of image libraries web solutions including e-commerce and online download using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER) and Web technologies.",
+                    Description = "<p>Working within a small team of 3 developers using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER) and other Web technologies to deliver stock images e - commerce platforms and tooling for post photo shoot sessions.</p>"
+                        + "<p>Responsibilities included:</p>"
+                        + "<ul>"
+                        + "<li>Maintenance and bug fixing</li>"
+                        + "<li>Development of a tool for post photo shoot sessions to assist client in their photo selection process</li>"
+                        + "<li>Implementation of an online print room feature to buy prints/canvas with 3D visualisation and price matrix</li>"
+                        + "<li>Documenting the stock images e-commerce platform solution</li> "
+                        + "<li>Styling and setup of stock images platform for new clients</li>"
+                        + "</ul>"
+                        + "<p>Clients included:</p>"
+                        + "<ul class='list-inline dn-experience-client'>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_constructionphotography.png' alt='Construction Photography' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_murphy.png' alt='Murphy' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_essex.png' alt='Essex County Council' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_railphotolibrary.png' alt='Rail Photo Library' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_cephas.png' alt='Cephas' /></li>"
+                        + "</ul>",
                     StartDate = new DateTime(2008, 5, 1),
                     Skills = new List<ExperienceSkill>
                     {
@@ -3682,7 +3700,28 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "hrteam-experience-icon.png",
                     RoleTitle = "Developer",
                     WebsiteUrl = "http://www.hr-team.net/",
-                    Description = "6 months contract with ITELIOS to develop and maintain e-commerce web solutions using Microsoft technologies (ASP.NET, ASP, C#, SQL SERVER, COMMERCE SERVER) and Web technologies.",
+                    Description = "<p>Employed within a recruitment agency, I was working a 6 month contract with a digital agency Itelios to develop and maintain e - commerce web solutions for 10 different brands using mainly Microsoft technologies (ASP.NET, C#, COMMERCE SERVER).</p>"
+                        + "<p>Responsibilities included:</p>"
+                        + "<ul>"
+                        + "<li>Maintenance and bug fixing</li>"
+                        + "<li>Implementing URL Rewriting on the solution</li>"
+                        + "<li>Developement of a functionality to redeem points and benefits with a loyalty card (program)</li>"
+                        + "<li>Documenting any new features developped</li> "
+                        + "<li>Brief exposure to scrum practices</li>"
+                        + "</ul>"
+                        + "<p>Clients included:</p>"
+                        + "<ul class='list-inline dn-experience-client'>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_celio.png' alt='celio' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_letanneur.png' alt='le tanneur' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_kookai.png' alt='Kookai' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_lcdp.png' alt='La Compagnie des petits' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_hom.png' alt='HOM' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_newman.png' alt='Newman' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_figaret.png' alt='Alain Figaret' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_aigle.png' alt='AIGLE' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_soco.png' alt='SOCO' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_ripcurl.png' alt='RIP CURL' /></li>"
+                        + "</ul>",
                     StartDate = new DateTime(2010, 2, 1),
                     Skills = new List<ExperienceSkill>
                     {
@@ -3843,7 +3882,18 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "groovytrain-experience-icon.png",
                     RoleTitle = "Developer",
                     WebsiteUrl = null,
-                    Description = "Analysis and development of an application to integrate data between an e-commerce platform and a data warehouse (DOTNET, C#, SQL SERVER, ORACLE).",
+                    Description = "<p>Development of a windows service task scheduler to integrate and synchronise data between an e-commerce platform and a distribution retail management system using dotnet technologies.</p>"
+                        + "<p>Responsibilities included:</p>"
+                        + "<ul>"
+                        + "<li>Automating update of products data and stock on the e-commerce platform directly from the product management system</li>"
+                        + "<li>Automating order fulfillment process</li>"
+                        + "<li>Ensure sync between the e-commerce platform and the distribution retail management system</li>"
+                        + "<li>Documenting the solution</li> "
+                        + "</ul>"
+                        + "<p>Clients included:</p>"
+                        + "<ul class='list-inline dn-experience-client'>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_east.png' alt='East Clothing' /></li>"
+                        + "</ul>",
                     StartDate = new DateTime(2010, 9, 1),
                     Skills = new List<ExperienceSkill>
                     {
@@ -3927,7 +3977,23 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "docdata-experience-icon.png",
                     RoleTitle = "Developer",
                     WebsiteUrl = "http://docdata.co.uk",
-                    Description = "Analysis and development of new functionalities in an e-commerce platform and maintenance on existing clients’ ecommerce websites (ASP.NET, ASP.NET MVC 2.0, C#, SQL SERVER).",
+                    Description = "<p>Working in a small team of 4 in the development and maintenance of several e-commerce solutions using mainly Microsoft technologies(ASP.NET, ASP.NET MVC 2.0, C#, SQL SERVER) and other web technologies.</p>"
+                        + "<p>Responsibilities included:</p>"
+                        + "<ul>"
+                        + "<li>Maintenance and bug fixing</li>"
+                        + "<li>Rebuild of the back end interface using the MVC Telerik controls</li>"
+                        + "<li>Implementation of a store locator solution</li>"
+                        + "<li>Integration of new features on the e-commerce platform such as multi-currency and multi-lingual functionalities</li>"
+                        + "</ul>"
+                        + "<p>Clients included:</p>"
+                        + "<ul class='list-inline dn-experience-client'>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_pearlspopcorn.png' alt='Pearls and Popcorn' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_anatomic.png' alt='Anatomic Shoes' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_loake.png' alt='Loake' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_lulu.png' alt='Lulu Guinness' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_tbw.png' alt='The Barcode Warehouse' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_scalabio.png' alt='Scala Bio Fir' /></li>"
+                        + "</ul>",
                     StartDate = new DateTime(2011, 4, 1),
                     Skills = new List<ExperienceSkill>
                     {
