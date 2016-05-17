@@ -4216,7 +4216,33 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "uol-experience-icon.png",
                     RoleTitle = "Senior Developer",
                     WebsiteUrl = "http://docdata.co.uk",
-                    Description = "Project lead and developer of new services. Support and maintenance on existing services (ASP.NET, ASP.NET MVC 4.0, C#, SQL SERVER, JQUERY, Bootstrap).",
+                    Description = "<p>Working at the University of London, for the career services department called The Careers Group providing and maintaining solutions for students in their early careers.</p>"
+                        + "<p>Responsibilities included:</p>"
+                        + "<ul>"
+                        + "<li>Bug fixing and maintenance of existing system</li>"
+                        + "<li>Support for mid-level and junior developers</li>"
+                        + "<li>Developer lead in the implementation of a call centre application</li>"
+                        + "<li>Development of a Careers Management system including a CRM and a placement management module</li> "
+                        + "<li>Implementation of a continuous integration and test automation solution for Moodle</li>"
+                        + "<li>Doumentation Writing</li>"
+                        + "<li>Client support</li>"
+                        + "</ul>"
+                        + "<p>Clients included:</p>"
+                        + "<ul class='list-inline dn-experience-client'>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_lmu.png' alt='London Metropolitan University' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_bbk.png' alt='Birkbeck' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_goldsmiths.png' alt='Goldsmiths' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_kcl.png' alt='Kings College London' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_kingston.png' alt='Kingston University' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_qmul.png' alt='Queen Mary University of London' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_rhul.png' alt='Royal Holloway' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_soas.png' alt='SOAS' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_stmarys.png' alt='St Marys University' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_ucl.png' alt='University College London' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_greenwich.png' alt='University of Greenwich' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_roehampton.png' alt='University of Roehampton' /></li>"
+                        + "<li><img class='img-responsive' src='./images/experience/clients/logo_westminster.png' alt='University of Westminster' /></li>"
+                        + "</ul>",
                     StartDate = new DateTime(2012, 4, 1),
                     Skills = new List<ExperienceSkill>
                     {
