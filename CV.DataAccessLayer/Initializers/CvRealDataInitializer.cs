@@ -4855,7 +4855,11 @@ namespace CV.DataAccessLayer.Initializers
                 #region Othodo
                 othodo = new Project
                 {
-                    Description = "Development of a car rental booking website.",
+                    Description = "<p>Helping in the development of a car rental booking website as a first training using PHP and MySQL.</p>"
+                        + "<ul>"
+                        + "<li>Fixing booking system</li>"
+                        + "<li>CSS Styling</li>"
+                        + "</ul>",
                     Name = "Othodo",
                     PrimaryImage = "no-main.png",
                     StartDate = new DateTime(2003, 06, 1),
@@ -4927,7 +4931,11 @@ namespace CV.DataAccessLayer.Initializers
                 #region Louise13
                 louise13 = new Project
                 {
-                    Description = "Website for a street art association the Louise-Weiss street (a notable place of contemporary art) to promote its art galleries.",
+                    Description = "<p>Helping a web designer friend in a school project to deliver a website promoting art galleries for a street art association the Louise-Weiss street (a notable place of contemporary art).</p>"
+                        + "<ul>"
+                        + "<li>Implementing dynamic content into a Flash ActionScript application</li>"
+                        + "<li>Development of a back-end interface for management of dynamic content</li>"
+                        + "</ul>",
                     Name = "Louise13",
                     PrimaryImage = "no-main.png",
                     StartDate = new DateTime(2004, 04, 1),
@@ -5017,7 +5025,12 @@ namespace CV.DataAccessLayer.Initializers
                 #region CNLAPS
                 cnlaps = new Project
                 {
-                    Description = "Website for a french association CNLAPS.",
+                    Description = "<p>Assisting a web designer friend to deliver a web application for a french association CNLAPS.</p>"
+                        + "<ul>"
+                        + "<li>Document upload</li>"
+                        + "<li>Document sharing</li>"
+                        + "<li>User roles and permissions</li>"
+                        + "</ul>",
                     Name = "CNLAPS",
                     PrimaryImage = "cnlaps-main.png",
                     StartDate = new DateTime(2005, 04, 1),
@@ -5089,7 +5102,15 @@ namespace CV.DataAccessLayer.Initializers
                 #region Makabou
                 makabou = new Project
                 {
-                    Description = "Makabou is an online classifieds ads website for the african community.",
+                    Description = "<p>Helping a friend building an online classifieds ads website for the african community we developped Makabou website.</p>"
+                        + "<ul>"
+                        + "<li>File upload</li>"
+                        + "<li>User registration</li>"
+                        + "<li>Private message</li>"
+                        + "<li>Moderation system</li>"
+                        + "<li>Search Filter</li>"
+                        + "<li>Ads classified by categories, sub-categories and locations</li>"
+                        + "</ul>",
                     Name = "Makabou",
                     PrimaryImage = "makabou-main.gif",
                     StartDate = new DateTime(2008, 8, 1),
@@ -5179,7 +5200,12 @@ namespace CV.DataAccessLayer.Initializers
                 #region Pharmatoo
                 pharmatoo = new Project
                 {
-                    Description = "Pharmatoo is website community for pharmacist.",
+                    Description = "<p>Helping a friend building Pharmatoo, a website community for pharmacist.</p>"
+                        + "<ul>"
+                        + "<li>User and business registration</li>"
+                        + "<li>Pharmacy and medicine drug listings</li>"
+                        + "<li>Moderation System</li>"
+                        + "</ul>",
                     Name = "Pharmatoo",
                     PrimaryImage = "pharmatoo-main.jpg",
                     StartDate = new DateTime(2009, 4, 1),
@@ -5269,7 +5295,14 @@ namespace CV.DataAccessLayer.Initializers
                 #region toomanyplaces
                 toomanyplaces = new Project
                 {
-                    Description = "Website with listings of sports events shown on TV. The search facility allows users to view details of venues showing each sports event.",
+                    Description = "<p>Development of a website with listings of bars and pubs for watching live sports on TV.</p>"
+                        + "<ul>"
+                        + "<li>Business registration</li>"
+                        + "<li>Listing of registered places (bars and pubs)</li>"
+                        + "<li>Listing of live sport events on TV</li>"
+                        + "<li>Search by event, location and map</li>"
+                        + "<li>Online payment using paypal</li>"
+                        + "</ul>",
                     Name = "toomanyplaces",
                     PrimaryImage = "tmp-main.png",
                     StartDate = new DateTime(2009, 8, 1),
@@ -5382,7 +5415,13 @@ namespace CV.DataAccessLayer.Initializers
                 #region pubrush
                 pubrush = new Project
                 {
-                    Description = "Website with listings of sports events shown on TV. The search facility allows users to view details of venues showing each sports event.",
+                    Description = "<p>Development of a website with listings of events (pub quiz, music...) and meal deal in bars, pubs and restaurants.</p>"
+                        + "<ul>"
+                        + "<li>Business registration</li>"
+                        + "<li>Listing of registered places (bars, pubs and restaurants)</li>"
+                        + "<li>Listing of events and meal deal offers</li>"
+                        + "<li>Search by event, location and map</li>"
+                        + "</ul>",
                     Name = "Pubrush",
                     PrimaryImage = "pubrush-main.jpg",
                     StartDate = new DateTime(2012, 4, 1),
@@ -5552,7 +5591,11 @@ namespace CV.DataAccessLayer.Initializers
                 #region moi
                 moi = new Project
                 {
-                    Description = "Website gallery of my son.",
+                    Description = "<p>Version 1.0 of family photos and videos album website.</p>"
+                        + "<ul>"
+                        + "<li>User permissions and roles</li>"
+                        + "<li>Photo and video upload</li>"
+                        + "</ul>",
                     Name = "MOI",
                     PrimaryImage = "moi-main.png",
                     StartDate = new DateTime(2014, 3, 1),
