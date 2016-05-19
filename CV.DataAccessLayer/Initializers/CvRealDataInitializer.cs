@@ -5595,6 +5595,10 @@ namespace CV.DataAccessLayer.Initializers
                         + "<ul>"
                         + "<li>User permissions and roles</li>"
                         + "<li>Photo and video upload</li>"
+                        + "<li>Media processing and conversion</li>"
+                        + "<li>Back-end admin</li>"
+                        + "<li>LDAP authentication</li>"
+                        + "<li>Email notifications</li>"
                         + "</ul>",
                     Name = "MOI",
                     PrimaryImage = "moi-main.png",
@@ -5778,7 +5782,14 @@ namespace CV.DataAccessLayer.Initializers
                 #region deptford park football
                 dpf = new Project
                 {
-                    Description = "Football web community to organise and manage games in deptford park",
+                    Description = "<p>Football web community to organise and manage games in deptford park.</p>"
+                        + "<ul>"
+                        + "<li>User registration</li>"
+                        + "<li>Email notifications</li>"
+                        + "<li>User roles</li>"
+                        + "<li>Responsive design</li>"
+                        + "<li>Facebook and Google authentication</li>"
+                        + "</ul>",
                     Name = "Deptford Park Football",
                     PrimaryImage = "dpf-main.png",
                     StartDate = new DateTime(2015, 5, 1),
@@ -6018,7 +6029,16 @@ namespace CV.DataAccessLayer.Initializers
                 #region babybook
                 babybook = new Project
                 {
-                    Description = "Website Gallery of my family photos.",
+                    Description = "<p>Version 2.0 of family photos and videos album website with faceted search and tagging.</p>"
+                        + "<ul>"
+                        + "<li>User permissions and roles</li>"
+                        + "<li>Photo and video upload</li>"
+                        + "<li>Media processing and conversion</li>"
+                        + "<li>Back-end admin</li>"
+                        + "<li>Faceted search</li>"
+                        + "<li>Responsive design</li>"
+                        + "<li>Facebook and Google authentication</li>"
+                        + "</ul>",
                     Name = "Family Donola",
                     PrimaryImage = "babybook-main.png",
                     StartDate = new DateTime(2015, 12, 1),
@@ -6315,7 +6335,10 @@ namespace CV.DataAccessLayer.Initializers
                 #region cv
                 cv = new Project
                 {
-                    Description = "Website CV with details of my skills, qualifications, experience and personal projects.",
+                    Description = "<p>Website CV with details of my skills, qualifications, experience and personal projects.</p>"
+                        + "<ul>"
+                        + "<li>Responsive design</li>"
+                        + "</ul>",
                     Name = "CV",
                     PrimaryImage = "cv-main.png",
                     StartDate = new DateTime(2016, 5, 1),
@@ -6619,6 +6642,7 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.ProjectImages.Any())
             {
+
                 #region babybook
                 context.ProjectImages.Add(new ProjectImage
                 {
@@ -6804,6 +6828,120 @@ namespace CV.DataAccessLayer.Initializers
                     ImageUrl = "tmp-1.png",
                     ProjectId = toomanyplaces.Id,
                     Title = "Marketing Business Card"
+                });
+                #endregion
+                #region cv
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Homepage",
+                    ImageUrl = "cv-1.png",
+                    ProjectId = cv.Id,
+                    Title = "Desktop View - Homepage"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "List of all skills",
+                    ImageUrl = "cv-2.png",
+                    ProjectId = cv.Id,
+                    Title = "Desktop View - Skills Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Details of a skills with rating from the skills page",
+                    ImageUrl = "cv-3.png",
+                    ProjectId = cv.Id,
+                    Title = "Desktop View - Skills Details"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "List of all qualifications and trainings",
+                    ImageUrl = "cv-4.png",
+                    ProjectId = cv.Id,
+                    Title = "Desktop View - Qualifications Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Detail view of a job experience",
+                    ImageUrl = "cv-5.png",
+                    ProjectId = cv.Id,
+                    Title = "Desktop View - Job Experience Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "List of all projects",
+                    ImageUrl = "cv-6.png",
+                    ProjectId = cv.Id,
+                    Title = "Desktop View - Projects Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Detail view of a project",
+                    ImageUrl = "cv-7.png",
+                    ProjectId = cv.Id,
+                    Title = "Desktop View - Project Details Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Zoom popup of a screenshot from project details page",
+                    ImageUrl = "cv-8.png",
+                    ProjectId = cv.Id,
+                    Title = "Desktop View - Zoom Popup"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Homepage",
+                    ImageUrl = "cv-9.png",
+                    ProjectId = cv.Id,
+                    Title = "Mobile View - Homepage"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "List of all skills",
+                    ImageUrl = "cv-10.png",
+                    ProjectId = cv.Id,
+                    Title = "Mobile View - Skills Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Details of a skills with rating from the skills page",
+                    ImageUrl = "cv-11.png",
+                    ProjectId = cv.Id,
+                    Title = "Mobile View - Skills Details"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "List of all qualifications and trainings",
+                    ImageUrl = "cv-12.png",
+                    ProjectId = cv.Id,
+                    Title = "Mobile View - Qualifications Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Detail view of a job experience",
+                    ImageUrl = "cv-13.png",
+                    ProjectId = cv.Id,
+                    Title = "Mobile View - Job Experience Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "List of all projects",
+                    ImageUrl = "cv-14.png",
+                    ProjectId = cv.Id,
+                    Title = "Mobile View - Projects Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Detail view of a project",
+                    ImageUrl = "cv-15.png",
+                    ProjectId = cv.Id,
+                    Title = "Mobile View - Project Details Page"
+                });
+                context.ProjectImages.Add(new ProjectImage
+                {
+                    Description = "Zoom popup of a screenshot from project details page",
+                    ImageUrl = "cv-16.png",
+                    ProjectId = cv.Id,
+                    Title = "Mobile View - Zoom Popup"
                 });
                 #endregion
             }
