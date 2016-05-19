@@ -11,6 +11,7 @@ namespace CV.DataAccessLayer.Initializers
     {
         public static void EnsureSeedRealData(this CvDbContext context)
         {
+            CreatePerson(context);
             CreateSkills(context);
             CreateSkillVersions(context);
             CreateExperiences(context);
@@ -7019,6 +7020,38 @@ namespace CV.DataAccessLayer.Initializers
                     Provider = "Jisc",
                     Subject = "Implementing a Shibboleth identity provider and service provider",
                     WebsiteUrl = "http://www.jisc.ac.uk"
+                });
+            }
+
+            return context.SaveChanges();
+        }
+
+        private static int CreatePerson(CvDbContext context)
+        {
+            if (!context.Persons.Any())
+            {
+                context.Persons.Add(new Person
+                {
+                    AboutCaption = "Software & Web Developer",
+                    AboutImage = "user.png",
+                    AboutMotto = "10 Years Experience in Software Development",
+                    AboutText = "<p>My name is Philippe Donnette and I have been developing software for about ten yers now.</p>"
+                        + "<p>"
+                        + "I am passionate about software development and I am specialized in working with "
+                        + "Web Technologies using dotnet framework. I am finding myself with a growing interest towards "
+                        + "javascript front-end librairies and framework."
+                        + "</p>"
+                        + "<p>"
+                        + "Lucky father of two, I have another great passion in life which is playing football."
+                        + "</p>",
+                    Firstname = "Philippe",
+                    GitHubUrl = "https://github.com/philippe-donnette",
+                    HomeImage = "wordcloud-1.png",
+                    Lastname = "Donnette",
+                    LinkedinUrl = "https://www.linkedin.com/in/philippe-donnette-2bb80b4",
+                    Occupation = "Software & Web Developer",
+                    OccupationMotto = "10 Years Experience in Software Development",
+                    PrimaryImage = "user.png"
                 });
             }
 
