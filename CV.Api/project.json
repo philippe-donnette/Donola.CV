@@ -14,16 +14,10 @@
     "CV.DataAccessLayer": "1.0.0-*",
     "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
-    /*"Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",*/
-    /*"Microsoft.AspNet.Mvc": "6.0.0-rc1-final",*/
-    /*"Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",*/
-    /*"Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",*/
-    /*"Microsoft.Extensions.Configuration.FileProviderExtensions": "1.0.0-rc1-final",*/
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
-    /*"Microsoft.AspNet.Mvc.WebApiCompatShim": "6.0.0-rc1-final",*/
     "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc2-final",
     "Microsoft.NETCore.App": {
       "type": "platform",
@@ -43,16 +37,7 @@
       "version": "1.0.0-preview1-final"
     }
   },
-  /*
-  "tools": {
-    "web": "Microsoft.AspNet.Server.Kestrel",
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-*",
-      "imports": "portable-net452+win81"
-    }
-  },
-  */
-
+  
   "commands": {
     "web": "Microsoft.AspNet.Server.Kestrel"
   },
@@ -72,14 +57,6 @@
       "imports": "portable-net452+win81"
     }
   },
-  /*
-  "compile": {
-    "exclude": [
-      "wwwroot",
-      "node_modules"
-    ]
-  },
-  ,*/
   "publishOptions": {
     "exclude": [
       "**.user",
