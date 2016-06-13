@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
 using CV.Core.Services;
-using CV.Core.Models;
-using System.Net.Http;
 using Microsoft.Extensions.Logging;
-using System.Net;
 using CV.Api.Settings;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CV.Api.Controllers
 {
@@ -37,12 +32,12 @@ namespace CV.Api.Controllers
                 if (experience != null)
                     return Ok(experience);
                 else
-                    return HttpNotFound();
+                    return NotFound();
             }
             catch (Exception ex)
             {
                 _logger.LogError((int)LoggingEvents.GET_EXPERIENCE, "Data:\nexperienceId = " + experienceId + "\n\n" + ex.StackTrace);
-                return HttpBadRequest();
+                return BadRequest();
             }
         }
 
@@ -58,12 +53,12 @@ namespace CV.Api.Controllers
                 if (experiences != null)
                     return Ok(experiences);
                 else
-                    return HttpNotFound();
+                    return NotFound();
             }
             catch(Exception ex)
             {
                 _logger.LogError((int)LoggingEvents.LIST_EXPERIENCES, ex.StackTrace);
-                return HttpBadRequest();
+                return BadRequest();
             }
         }
 
@@ -79,12 +74,12 @@ namespace CV.Api.Controllers
                 if (skills != null)
                     return Ok(skills);
                 else
-                    return HttpNotFound();
+                    return NotFound();
             }
             catch (Exception ex)
             {
                 _logger.LogError((int)LoggingEvents.LIST_EXPERIENCE_SKILLS, "Data:\nexperienceId = " + experienceId + "\n\n" + ex.StackTrace);
-                return HttpBadRequest();
+                return BadRequest();
             }
         }
     }

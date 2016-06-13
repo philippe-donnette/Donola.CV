@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using CV.DataAccessLayer.Contexts;
-using Microsoft.Data.Entity;
 using CV.DataAccessLayer.Initializers;
 using CV.DataAccessLayer.Repositories;
 using CV.Core.Services;
 using CV.Core.Mappings;
 using AutoMapper;
-using Microsoft.AspNet.Http;
 using System.Data.SqlClient;
 using CV.Api.Settings;
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Cors;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Cors.Internal;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace CV.Api
 {
@@ -66,9 +63,9 @@ namespace CV.Api
                 options.Filters.Add(new CorsAuthorizationFilterFactory("AllowCvWeb"));
             });
 
-            services.AddEntityFramework().AddSqlServer()
-                .AddDbContext<CvDbContext>(options =>
-                    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+            services.AddDbContext<CvDbContext>(options =>
+                    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"], 
+                    b => b.MigrationsAssembly("CV.Api")));
 
             services.AddTransient<ITrainingService, TrainingService>();
             services.AddTransient<IQualificationService, QualificationService>();
@@ -95,13 +92,11 @@ namespace CV.Api
         {
             if (env.IsDevelopment())
             {
-                loggerFactory.MinimumLevel = LogLevel.Debug;
                 loggerFactory.AddConsole(Configuration.GetSection("Logging"));
                 loggerFactory.AddDebug(LogLevel.Debug);
             }
             else
             {
-                loggerFactory.MinimumLevel = LogLevel.Information;
                 loggerFactory.AddConsole(LogLevel.Information);
                 loggerFactory.AddDebug(LogLevel.Information);
             }
@@ -125,7 +120,7 @@ namespace CV.Api
                 }
             }
 
-            app.UseIISPlatformHandler();
+            //app.UseIISPlatformHandler();
 
             app.UseStaticFiles();
 
@@ -136,6 +131,15 @@ namespace CV.Api
         }
 
         // Entry point for the application.
-        public static void Main(string[] args) => WebApplication.Run<Startup>(args);
+        public static void Main(string[] args)// => WebApplication.Run<Startup>(args);
+        {
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .Build();
+            host.Run();
+        }
     }
 }

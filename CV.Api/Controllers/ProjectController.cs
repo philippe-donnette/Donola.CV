@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
 using CV.Core.Services;
-using CV.Core.Models;
-using System.Net.Http;
 using Microsoft.Extensions.Logging;
-using System.Net;
 using CV.Api.Settings;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CV.Api.Controllers
 {
@@ -37,12 +32,12 @@ namespace CV.Api.Controllers
                 if (images != null)
                     return Ok(images);
                 else
-                    return HttpNotFound();
+                    return NotFound();
             }
             catch (Exception ex)
             {
                 _logger.LogError((int)LoggingEvents.LIST_PROJECT_IMAGES, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
-                return HttpBadRequest();
+                return BadRequest();
             }
         }
 
@@ -58,12 +53,12 @@ namespace CV.Api.Controllers
                 if (project != null)
                     return Ok(project);
                 else
-                    return HttpNotFound();
+                    return NotFound();
             }
             catch (Exception ex)
             {
                 _logger.LogError((int)LoggingEvents.GET_PROJECT, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
-                return HttpBadRequest();
+                return BadRequest();
             }
         }
 
@@ -79,12 +74,12 @@ namespace CV.Api.Controllers
                 if (projects != null)
                     return Ok(projects);
                 else
-                    return HttpNotFound();
+                    return NotFound();
             }
             catch(Exception ex)
             {
                 _logger.LogError((int)LoggingEvents.LIST_PROJECTS, ex.StackTrace);
-                return HttpBadRequest();
+                return BadRequest();
             }
         }
 
@@ -100,12 +95,12 @@ namespace CV.Api.Controllers
                 if (skills != null)
                     return Ok(skills);
                 else
-                    return HttpNotFound();
+                    return NotFound();
             }
             catch (Exception ex)
             {
                 _logger.LogError((int)LoggingEvents.LIST_PROJECT_SKILLS, "Data:\nprojectId = " + projectId + "\n\n" + ex.StackTrace);
-                return HttpBadRequest();
+                return BadRequest();
             }
         }
     }
