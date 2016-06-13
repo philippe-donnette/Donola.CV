@@ -1,7 +1,7 @@
 ﻿using CV.DataAccessLayer.Contexts;
 using CV.DataAccessLayer.Entities;
 using CV.DataAccessLayer.Settings;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.Entity;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

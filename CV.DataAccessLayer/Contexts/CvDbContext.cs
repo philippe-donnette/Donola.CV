@@ -1,20 +1,15 @@
-﻿using CV.DataAccessLayer.Entities;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.Data.Entity;
+using CV.DataAccessLayer.Entities;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Data.Entity.Metadata;
 
 namespace CV.DataAccessLayer.Contexts
 {
     public class CvDbContext : DbContext
     {
-        /*
         public CvDbContext()
         {
             //Database.EnsureCreated();
-        }
-        */
-
-        public CvDbContext(DbContextOptions options) : base(options)
-        {
         }
 
         public DbSet<Skill> Skills { get; set; }

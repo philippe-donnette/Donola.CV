@@ -2,12 +2,14 @@
 using CV.Core.Models;
 using CV.Core.Services;
 using FluentAssertions;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNet.Http;
+using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace CV.Api.Tests.Controllers
@@ -34,9 +36,9 @@ namespace CV.Api.Tests.Controllers
             _projectServiceMock.Setup(m => m.GetImagesAsync(projectId))
                 .ReturnsAsync(null);
             var result = _controller.GetImagesAsync(projectId);
-            var NotFoundResult = result.Result as NotFoundResult;
-            NotFoundResult.Should().BeOfType<NotFoundResult>();
-            Assert.Equal(NotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+            var httpNotFoundResult = result.Result as HttpNotFoundResult;
+            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
+            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
         [Fact]
@@ -52,8 +54,8 @@ namespace CV.Api.Tests.Controllers
             _projectServiceMock.Setup(m => m.GetImagesAsync(projectId))
                 .ReturnsAsync(images);
             var result = _controller.GetImagesAsync(projectId);
-            var httpOkResult = result.Result as OkObjectResult;
-            httpOkResult.Should().BeOfType<OkObjectResult>();
+            var httpOkResult = result.Result as HttpOkObjectResult;
+            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
             Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
             var model = httpOkResult.Value as List<ImageModel>;
             model.Should().BeOfType<List<ImageModel>>();
@@ -81,8 +83,8 @@ namespace CV.Api.Tests.Controllers
             _projectServiceMock.Setup(x => x.GetProjectAsync(projectId))
                 .ReturnsAsync(null);
             var result = _controller.GetProjectAsync(projectId);
-            var httpResult = result.Result as NotFoundResult;
-            httpResult.Should().BeOfType<NotFoundResult>();
+            var httpResult = result.Result as HttpNotFoundResult;
+            httpResult.Should().BeOfType<HttpNotFoundResult>();
             Assert.Equal(httpResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
@@ -94,8 +96,8 @@ namespace CV.Api.Tests.Controllers
             _projectServiceMock.Setup(x => x.GetProjectAsync(projectId))
                 .ReturnsAsync(project);
             var result = _controller.GetProjectAsync(projectId);
-            var httpResult = result.Result as OkObjectResult;
-            httpResult.Should().BeOfType<OkObjectResult>();
+            var httpResult = result.Result as HttpOkObjectResult;
+            httpResult.Should().BeOfType<HttpOkObjectResult>();
             Assert.Equal(httpResult.StatusCode, StatusCodes.Status200OK);
             var model = httpResult.Value as ProjectModel;
             model.Should().BeOfType<ProjectModel>();
@@ -125,9 +127,9 @@ namespace CV.Api.Tests.Controllers
             _projectServiceMock.Setup(m => m.GetProjectsAsync())
                 .ReturnsAsync(null);
             var result = _controller.GetProjectsAsync();
-            var NotFoundResult = result.Result as NotFoundResult;
-            NotFoundResult.Should().BeOfType<NotFoundResult>();
-            Assert.Equal(NotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+            var httpNotFoundResult = result.Result as HttpNotFoundResult;
+            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
+            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
         [Fact]
@@ -140,8 +142,8 @@ namespace CV.Api.Tests.Controllers
                     new ProjectModel { Id = 1, PrimaryImage = null, Description = null, Name = "CV.Web" }
                 });
             var result = _controller.GetProjectsAsync();
-            var httpOkResult = result.Result as OkObjectResult;
-            httpOkResult.Should().BeOfType<OkObjectResult>();
+            var httpOkResult = result.Result as HttpOkObjectResult;
+            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
             Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
             var projects = httpOkResult.Value as List<ProjectModel>;
             projects.Should().BeOfType<List<ProjectModel>>();
@@ -168,9 +170,9 @@ namespace CV.Api.Tests.Controllers
             _projectServiceMock.Setup(m => m.GetSkillsAsync(projectId))
                 .ReturnsAsync(null);
             var result = _controller.GetSkillsAsync(projectId);
-            var NotFoundResult = result.Result as NotFoundResult;
-            NotFoundResult.Should().BeOfType<NotFoundResult>();
-            Assert.Equal(NotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+            var httpNotFoundResult = result.Result as HttpNotFoundResult;
+            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
+            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
         [Fact]
@@ -186,8 +188,8 @@ namespace CV.Api.Tests.Controllers
             _projectServiceMock.Setup(m => m.GetSkillsAsync(projectId))
                 .ReturnsAsync(skills);
             var result = _controller.GetSkillsAsync(projectId);
-            var httpOkResult = result.Result as OkObjectResult;
-            httpOkResult.Should().BeOfType<OkObjectResult>();
+            var httpOkResult = result.Result as HttpOkObjectResult;
+            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
             Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
             var model = httpOkResult.Value as List<SkillModel>;
             model.Should().BeOfType<List<SkillModel>>();

@@ -2,40 +2,34 @@
   "userSecretsId": "cvapp-7202223-81012-12157883",
   "authors": [ "Philippe.Donnette" ],
   "dependencies": {
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
-    "System.ComponentModel.Annotations": "4.1.0-rc2-24027",
-    "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc2-final"/*,
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "type": "build",
-      "version": "1.0.0-preview1-final"
-    }*/
+    "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+    "EntityFramework.Commands": "7.0.0-rc1-final",
+    "System.ComponentModel.Annotations": "4.1.0-rc2-23614",
+    "EntityFramework.Core": "7.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc1-final"
   },
   "description": "CV.DataAccessLayer Class Library",
   "frameworks": {
-    "netstandard1.5": {
-      "imports": [
-        "portable-net452+win81"
-      ],
+    "dnxcore50": {
       "dependencies": {
-        "Microsoft.CSharp": "4.0.1-rc2-24027",
-        "System.Collections": "4.0.11-rc2-24027",
-        "System.Linq": "4.1.0-rc2-24027",
-        "System.Runtime": "4.1.0-rc2-24027",
-        "System.Threading": "4.0.11-rc2-24027"
+        "Microsoft.CSharp": "4.0.1-rc2-23513",
+        "System.Collections": "4.0.11-rc2-23513",
+        "System.Linq": "4.0.1-rc2-23513",
+        "System.Runtime": "4.0.21-rc2-23513",
+        "System.Threading": "4.0.11-rc2-23623"
       }
     }
   },
-  /*
-  "tools": {
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "imports": [ "portable-net451+win8" ],
-      "version": "1.0.0-preview1-final"
-    }
+
+  "commands": {
+    "ef": "EntityFramework.Commands"
   },
-  */
+
+  "licenseUrl": "",
+  "projectUrl": "",
+  "tags": [ "" ],
   "version": "1.0.0-*"
 }

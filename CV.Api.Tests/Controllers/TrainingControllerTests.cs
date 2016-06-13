@@ -2,12 +2,14 @@
 using CV.Core.Models;
 using CV.Core.Services;
 using FluentAssertions;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNet.Http;
+using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace CV.Api.Tests.Controllers
@@ -33,9 +35,9 @@ namespace CV.Api.Tests.Controllers
             _trainingServiceMock.Setup(m => m.GetTrainingsAsync())
                 .ReturnsAsync(null);
             var result = _controller.GetTrainingsAsync();
-            var NotFoundResult = result.Result as NotFoundResult;
-            NotFoundResult.Should().BeOfType<NotFoundResult>();
-            Assert.Equal(NotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+            var httpNotFoundResult = result.Result as HttpNotFoundResult;
+            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
+            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
         [Fact]
@@ -48,8 +50,8 @@ namespace CV.Api.Tests.Controllers
                     new TrainingModel { Id = 1, ImageUrl = null, Description = null, Provider = "Some Provider 2" }
                 });
             var result = _controller.GetTrainingsAsync();
-            var httpOkResult = result.Result as OkObjectResult;
-            httpOkResult.Should().BeOfType<OkObjectResult>();
+            var httpOkResult = result.Result as HttpOkObjectResult;
+            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
             Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
             var trainings = httpOkResult.Value as List<TrainingModel>;
             trainings.Should().BeOfType<List<TrainingModel>>();
