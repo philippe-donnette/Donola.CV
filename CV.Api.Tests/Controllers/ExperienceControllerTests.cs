@@ -2,14 +2,12 @@
 using CV.Core.Models;
 using CV.Core.Services;
 using FluentAssertions;
-using Microsoft.AspNet.Http;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace CV.Api.Tests.Controllers
@@ -36,8 +34,8 @@ namespace CV.Api.Tests.Controllers
             _experienceServiceMock.Setup(x => x.GetExperienceAsync(experienceId))
                 .ReturnsAsync(null);
             var result = _controller.GetExperienceAsync(experienceId);
-            var httpResult = result.Result as HttpNotFoundResult;
-            httpResult.Should().BeOfType<HttpNotFoundResult>();
+            var httpResult = result.Result as NotFoundResult;
+            httpResult.Should().BeOfType<NotFoundResult>();
             Assert.Equal(httpResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
@@ -49,8 +47,8 @@ namespace CV.Api.Tests.Controllers
             _experienceServiceMock.Setup(x => x.GetExperienceAsync(experienceId))
                 .ReturnsAsync(experience);
             var result = _controller.GetExperienceAsync(experienceId);
-            var httpResult = result.Result as HttpOkObjectResult;
-            httpResult.Should().BeOfType<HttpOkObjectResult>();
+            var httpResult = result.Result as OkObjectResult;
+            httpResult.Should().BeOfType<OkObjectResult>();
             Assert.Equal(httpResult.StatusCode, StatusCodes.Status200OK);
             var model = httpResult.Value as ExperienceModel;
             model.Should().BeOfType<ExperienceModel>();
@@ -80,9 +78,9 @@ namespace CV.Api.Tests.Controllers
             _experienceServiceMock.Setup(m => m.GetExperiencesAsync())
                 .ReturnsAsync(null);
             var result = _controller.GetExperiencesAsync();
-            var httpNotFoundResult = result.Result as HttpNotFoundResult;
-            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
-            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+            var NotFoundResult = result.Result as NotFoundResult;
+            NotFoundResult.Should().BeOfType<NotFoundResult>();
+            Assert.Equal(NotFoundResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
         [Fact]
@@ -95,8 +93,8 @@ namespace CV.Api.Tests.Controllers
                     new ExperienceModel { Id = 1, ImageUrl = null, Description = null, CompanyName = "Some Company 2" }
                 });
             var result = _controller.GetExperiencesAsync();
-            var httpOkResult = result.Result as HttpOkObjectResult;
-            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
+            var httpOkResult = result.Result as OkObjectResult;
+            httpOkResult.Should().BeOfType<OkObjectResult>();
             Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
             var experiences = httpOkResult.Value as List<ExperienceModel>;
             experiences.Should().BeOfType<List<ExperienceModel>>();
@@ -123,9 +121,9 @@ namespace CV.Api.Tests.Controllers
             _experienceServiceMock.Setup(m => m.GetSkillsAsync(experienceId))
                 .ReturnsAsync(null);
             var result = _controller.GetSkillsAsync(experienceId);
-            var httpNotFoundResult = result.Result as HttpNotFoundResult;
-            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
-            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+            var NotFoundResult = result.Result as NotFoundResult;
+            NotFoundResult.Should().BeOfType<NotFoundResult>();
+            Assert.Equal(NotFoundResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
         [Fact]
@@ -141,8 +139,8 @@ namespace CV.Api.Tests.Controllers
             _experienceServiceMock.Setup(m => m.GetSkillsAsync(experienceId))
                 .ReturnsAsync(skills);
             var result = _controller.GetSkillsAsync(experienceId);
-            var httpOkResult = result.Result as HttpOkObjectResult;
-            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
+            var httpOkResult = result.Result as OkObjectResult;
+            httpOkResult.Should().BeOfType<OkObjectResult>();
             Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
             var model = httpOkResult.Value as List<SkillModel>;
             model.Should().BeOfType<List<SkillModel>>();

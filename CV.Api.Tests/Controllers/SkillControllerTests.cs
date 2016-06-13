@@ -2,14 +2,13 @@
 using CV.Core.Models;
 using CV.Core.Services;
 using FluentAssertions;
-using Microsoft.AspNet.Http;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace CV.Api.Tests.Controllers
@@ -34,9 +33,9 @@ namespace CV.Api.Tests.Controllers
             _skillServiceMock.Setup(m => m.GetSkillsAsync())
                 .ReturnsAsync(null);
             var result = _controller.GetSkillsAsync();
-            var httpNotFoundResult = result.Result as HttpNotFoundResult;
-            httpNotFoundResult.Should().BeOfType<HttpNotFoundResult>();
-            Assert.Equal(httpNotFoundResult.StatusCode, StatusCodes.Status404NotFound);
+            var notFoundResult = result.Result as NotFoundResult;
+            notFoundResult.Should().BeOfType<NotFoundResult>();
+            Assert.Equal(notFoundResult.StatusCode, StatusCodes.Status404NotFound);
         }
 
         [Fact]
@@ -54,8 +53,8 @@ namespace CV.Api.Tests.Controllers
                     new SkillModel { Id = 2, ExperienceRating = 5, InterestRating = 6, Name = "AngularJS", UsageRating = 7 }
                 });
             var result = _controller.GetSkillsAsync();
-            var httpOkResult = result.Result as HttpOkObjectResult;
-            httpOkResult.Should().BeOfType<HttpOkObjectResult>();
+            var httpOkResult = result.Result as OkObjectResult;
+            httpOkResult.Should().BeOfType<OkObjectResult>();
             Assert.Equal(httpOkResult.StatusCode, StatusCodes.Status200OK);
             var skills = httpOkResult.Value as List<SkillModel>;
             skills.Should().BeOfType<List<SkillModel>>();
