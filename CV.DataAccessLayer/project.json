@@ -2,13 +2,14 @@
   "userSecretsId": "cvapp-7202223-81012-12157883",
   "authors": [ "Philippe.Donnette" ],
   "dependencies": {
+    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0-rc2-release1", 
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
     "System.ComponentModel.Annotations": "4.1.0-rc2-24027",
     "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
     "Microsoft.Extensions.Configuration": "1.0.0-rc2-final",
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc2-final"/*,
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc2-final" /*,
     "Microsoft.EntityFrameworkCore.Tools": {
       "type": "build",
       "version": "1.0.0-preview1-final"
