@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace CV.Api.Migrations
+namespace CV.Api.NpgsqlMigrations
 {
-    public partial class Initial : Migration
+    public partial class Initial_Npgsql : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Cards",
+                name: "Card",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     Caption = table.Column<string>(nullable: true),
                     CaptionIconClass = table.Column<string>(nullable: true),
                     ImageBackUrl = table.Column<string>(nullable: true),
@@ -25,15 +24,15 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cards", x => x.Id);
+                    table.PrimaryKey("PK_Card", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Experiences",
+                name: "Experience",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     City = table.Column<string>(nullable: true),
                     CompanyName = table.Column<string>(nullable: true),
                     Country = table.Column<string>(nullable: true),
@@ -46,15 +45,15 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Experiences", x => x.Id);
+                    table.PrimaryKey("PK_Experience", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Persons",
+                name: "Person",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     AboutCaption = table.Column<string>(nullable: true),
                     AboutImage = table.Column<string>(nullable: true),
                     AboutMotto = table.Column<string>(nullable: true),
@@ -70,15 +69,15 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Persons", x => x.Id);
+                    table.PrimaryKey("PK_Person", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Projects",
+                name: "Project",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     Description = table.Column<string>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     PrimaryImage = table.Column<string>(nullable: true),
@@ -86,15 +85,15 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Projects", x => x.Id);
+                    table.PrimaryKey("PK_Project", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Qualifications",
+                name: "Qualification",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     City = table.Column<string>(nullable: true),
                     Country = table.Column<string>(nullable: true),
                     DegreeFile = table.Column<string>(nullable: true),
@@ -108,15 +107,15 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Qualifications", x => x.Id);
+                    table.PrimaryKey("PK_Qualification", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Skills",
+                name: "Skill",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     Description = table.Column<string>(nullable: true),
                     ExperienceRating = table.Column<int>(nullable: false),
                     IconClass = table.Column<string>(nullable: true),
@@ -127,15 +126,15 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Skills", x => x.Id);
+                    table.PrimaryKey("PK_Skill", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Trainings",
+                name: "Training",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     CertificateFile = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     ImageUrl = table.Column<string>(nullable: true),
@@ -145,15 +144,15 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Trainings", x => x.Id);
+                    table.PrimaryKey("PK_Training", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectImages",
+                name: "ProjectImage",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     Description = table.Column<string>(nullable: true),
                     ImageUrl = table.Column<string>(nullable: true),
                     ProjectId = table.Column<int>(nullable: false),
@@ -161,17 +160,17 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectImages", x => x.Id);
+                    table.PrimaryKey("PK_ProjectImage", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProjectImages_Projects_ProjectId",
+                        name: "FK_ProjectImage_Project_ProjectId",
                         column: x => x.ProjectId,
-                        principalTable: "Projects",
+                        principalTable: "Project",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ExperienceSkills",
+                name: "ExperienceSkill",
                 columns: table => new
                 {
                     ExperienceId = table.Column<int>(nullable: false),
@@ -180,23 +179,23 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ExperienceSkills", x => new { x.ExperienceId, x.SkillId });
+                    table.PrimaryKey("PK_ExperienceSkill", x => new { x.ExperienceId, x.SkillId });
                     table.ForeignKey(
-                        name: "FK_ExperienceSkills_Experiences_ExperienceId",
+                        name: "FK_ExperienceSkill_Experience_ExperienceId",
                         column: x => x.ExperienceId,
-                        principalTable: "Experiences",
+                        principalTable: "Experience",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ExperienceSkills_Skills_SkillId",
+                        name: "FK_ExperienceSkill_Skill_SkillId",
                         column: x => x.SkillId,
-                        principalTable: "Skills",
+                        principalTable: "Skill",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectSkills",
+                name: "ProjectSkill",
                 columns: table => new
                 {
                     ProjectId = table.Column<int>(nullable: false),
@@ -205,43 +204,43 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectSkills", x => new { x.ProjectId, x.SkillId });
+                    table.PrimaryKey("PK_ProjectSkill", x => new { x.ProjectId, x.SkillId });
                     table.ForeignKey(
-                        name: "FK_ProjectSkills_Projects_ProjectId",
+                        name: "FK_ProjectSkill_Project_ProjectId",
                         column: x => x.ProjectId,
-                        principalTable: "Projects",
+                        principalTable: "Project",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProjectSkills_Skills_SkillId",
+                        name: "FK_ProjectSkill_Skill_SkillId",
                         column: x => x.SkillId,
-                        principalTable: "Skills",
+                        principalTable: "Skill",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "SkillVersions",
+                name: "SkillVersion",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("Npgsql:Serial", true),
                     Name = table.Column<string>(nullable: true),
                     SkillId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SkillVersions", x => x.Id);
+                    table.PrimaryKey("PK_SkillVersion", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SkillVersions_Skills_SkillId",
+                        name: "FK_SkillVersion_Skill_SkillId",
                         column: x => x.SkillId,
-                        principalTable: "Skills",
+                        principalTable: "Skill",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ExperienceSkillVersions",
+                name: "ExperienceSkillVersion",
                 columns: table => new
                 {
                     ExperienceId = table.Column<int>(nullable: false),
@@ -250,23 +249,23 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ExperienceSkillVersions", x => new { x.ExperienceId, x.SkillId, x.SkillVersionId });
+                    table.PrimaryKey("PK_ExperienceSkillVersion", x => new { x.ExperienceId, x.SkillId, x.SkillVersionId });
                     table.ForeignKey(
-                        name: "FK_ExperienceSkillVersions_SkillVersions_SkillVersionId",
+                        name: "FK_ExperienceSkillVersion_SkillVersion_SkillVersionId",
                         column: x => x.SkillVersionId,
-                        principalTable: "SkillVersions",
+                        principalTable: "SkillVersion",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ExperienceSkillVersions_ExperienceSkills_ExperienceId_SkillId",
+                        name: "FK_ExperienceSkillVersion_ExperienceSkill_ExperienceId_SkillId",
                         columns: x => new { x.ExperienceId, x.SkillId },
-                        principalTable: "ExperienceSkills",
+                        principalTable: "ExperienceSkill",
                         principalColumns: new[] { "ExperienceId", "SkillId" },
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectSkillVersions",
+                name: "ProjectSkillVersion",
                 columns: table => new
                 {
                     ProjectId = table.Column<int>(nullable: false),
@@ -275,112 +274,112 @@ namespace CV.Api.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectSkillVersions", x => new { x.ProjectId, x.SkillId, x.SkillVersionId });
+                    table.PrimaryKey("PK_ProjectSkillVersion", x => new { x.ProjectId, x.SkillId, x.SkillVersionId });
                     table.ForeignKey(
-                        name: "FK_ProjectSkillVersions_SkillVersions_SkillVersionId",
+                        name: "FK_ProjectSkillVersion_SkillVersion_SkillVersionId",
                         column: x => x.SkillVersionId,
-                        principalTable: "SkillVersions",
+                        principalTable: "SkillVersion",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProjectSkillVersions_ProjectSkills_ProjectId_SkillId",
+                        name: "FK_ProjectSkillVersion_ProjectSkill_ProjectId_SkillId",
                         columns: x => new { x.ProjectId, x.SkillId },
-                        principalTable: "ProjectSkills",
+                        principalTable: "ProjectSkill",
                         principalColumns: new[] { "ProjectId", "SkillId" },
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExperienceSkills_ExperienceId",
-                table: "ExperienceSkills",
+                name: "IX_ExperienceSkill_ExperienceId",
+                table: "ExperienceSkill",
                 column: "ExperienceId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExperienceSkills_SkillId",
-                table: "ExperienceSkills",
+                name: "IX_ExperienceSkill_SkillId",
+                table: "ExperienceSkill",
                 column: "SkillId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExperienceSkillVersions_SkillVersionId",
-                table: "ExperienceSkillVersions",
+                name: "IX_ExperienceSkillVersion_SkillVersionId",
+                table: "ExperienceSkillVersion",
                 column: "SkillVersionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ExperienceSkillVersions_ExperienceId_SkillId",
-                table: "ExperienceSkillVersions",
+                name: "IX_ExperienceSkillVersion_ExperienceId_SkillId",
+                table: "ExperienceSkillVersion",
                 columns: new[] { "ExperienceId", "SkillId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectImages_ProjectId",
-                table: "ProjectImages",
+                name: "IX_ProjectImage_ProjectId",
+                table: "ProjectImage",
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSkills_ProjectId",
-                table: "ProjectSkills",
+                name: "IX_ProjectSkill_ProjectId",
+                table: "ProjectSkill",
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSkills_SkillId",
-                table: "ProjectSkills",
+                name: "IX_ProjectSkill_SkillId",
+                table: "ProjectSkill",
                 column: "SkillId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSkillVersions_SkillVersionId",
-                table: "ProjectSkillVersions",
+                name: "IX_ProjectSkillVersion_SkillVersionId",
+                table: "ProjectSkillVersion",
                 column: "SkillVersionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectSkillVersions_ProjectId_SkillId",
-                table: "ProjectSkillVersions",
+                name: "IX_ProjectSkillVersion_ProjectId_SkillId",
+                table: "ProjectSkillVersion",
                 columns: new[] { "ProjectId", "SkillId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_SkillVersions_SkillId",
-                table: "SkillVersions",
+                name: "IX_SkillVersion_SkillId",
+                table: "SkillVersion",
                 column: "SkillId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Cards");
+                name: "Card");
 
             migrationBuilder.DropTable(
-                name: "ExperienceSkillVersions");
+                name: "ExperienceSkillVersion");
 
             migrationBuilder.DropTable(
-                name: "Persons");
+                name: "Person");
 
             migrationBuilder.DropTable(
-                name: "ProjectImages");
+                name: "ProjectImage");
 
             migrationBuilder.DropTable(
-                name: "ProjectSkillVersions");
+                name: "ProjectSkillVersion");
 
             migrationBuilder.DropTable(
-                name: "Qualifications");
+                name: "Qualification");
 
             migrationBuilder.DropTable(
-                name: "Trainings");
+                name: "Training");
 
             migrationBuilder.DropTable(
-                name: "ExperienceSkills");
+                name: "ExperienceSkill");
 
             migrationBuilder.DropTable(
-                name: "SkillVersions");
+                name: "SkillVersion");
 
             migrationBuilder.DropTable(
-                name: "ProjectSkills");
+                name: "ProjectSkill");
 
             migrationBuilder.DropTable(
-                name: "Experiences");
+                name: "Experience");
 
             migrationBuilder.DropTable(
-                name: "Projects");
+                name: "Project");
 
             migrationBuilder.DropTable(
-                name: "Skills");
+                name: "Skill");
         }
     }
 }

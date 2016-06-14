@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using CV.DataAccessLayer.Contexts;
 
-namespace CV.Api.Migrations
+namespace CV.Api.NpgsqlMigrations
 {
     [DbContext(typeof(CvDbContext))]
     partial class CvDbContextModelSnapshot : ModelSnapshot
@@ -13,8 +13,7 @@ namespace CV.Api.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.0.0-rc2-20901")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "1.0.0-rc2-20901");
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Card", b =>
                 {
@@ -44,7 +43,7 @@ namespace CV.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cards");
+                    b.ToTable("Card");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Experience", b =>
@@ -79,7 +78,7 @@ namespace CV.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Experiences");
+                    b.ToTable("Experience");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ExperienceSkill", b =>
@@ -96,7 +95,7 @@ namespace CV.Api.Migrations
 
                     b.HasIndex("SkillId");
 
-                    b.ToTable("ExperienceSkills");
+                    b.ToTable("ExperienceSkill");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ExperienceSkillVersion", b =>
@@ -113,7 +112,7 @@ namespace CV.Api.Migrations
 
                     b.HasIndex("ExperienceId", "SkillId");
 
-                    b.ToTable("ExperienceSkillVersions");
+                    b.ToTable("ExperienceSkillVersion");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Person", b =>
@@ -159,7 +158,7 @@ namespace CV.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Persons");
+                    b.ToTable("Person");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Project", b =>
@@ -180,7 +179,7 @@ namespace CV.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Projects");
+                    b.ToTable("Project");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectImage", b =>
@@ -203,7 +202,7 @@ namespace CV.Api.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("ProjectImages");
+                    b.ToTable("ProjectImage");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectSkill", b =>
@@ -220,7 +219,7 @@ namespace CV.Api.Migrations
 
                     b.HasIndex("SkillId");
 
-                    b.ToTable("ProjectSkills");
+                    b.ToTable("ProjectSkill");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectSkillVersion", b =>
@@ -237,7 +236,7 @@ namespace CV.Api.Migrations
 
                     b.HasIndex("ProjectId", "SkillId");
 
-                    b.ToTable("ProjectSkillVersions");
+                    b.ToTable("ProjectSkillVersion");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Qualification", b =>
@@ -275,7 +274,7 @@ namespace CV.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Qualifications");
+                    b.ToTable("Qualification");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Skill", b =>
@@ -302,7 +301,7 @@ namespace CV.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Skills");
+                    b.ToTable("Skill");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.SkillVersion", b =>
@@ -319,7 +318,7 @@ namespace CV.Api.Migrations
 
                     b.HasIndex("SkillId");
 
-                    b.ToTable("SkillVersions");
+                    b.ToTable("SkillVersion");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Training", b =>
@@ -347,7 +346,7 @@ namespace CV.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Trainings");
+                    b.ToTable("Training");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ExperienceSkill", b =>

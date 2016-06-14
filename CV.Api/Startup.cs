@@ -44,9 +44,9 @@ namespace CV.Api
         {
             services.AddLogging();
 
-            services.AddCors(options => 
+            services.AddCors(options =>
             {
-                options.AddPolicy("AllowCvWeb", 
+                options.AddPolicy("AllowCvWeb",
                     x => x.WithOrigins(Configuration["Data:CorsAllowedOrigins:CvWeb"])
                         .AllowAnyMethod()
                         .AllowAnyHeader()
@@ -63,10 +63,20 @@ namespace CV.Api
                 options.Filters.Add(new CorsAuthorizationFilterFactory("AllowCvWeb"));
             });
 
-            services.AddDbContext<CvDbContext>(options =>
-                    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"], 
-                    b => b.MigrationsAssembly("CV.Api")));
-
+            switch (Configuration["Data:DatabaseType"])
+            {
+                case "Npgsql":
+                    services.AddDbContext<CvDbContext>(options =>
+                        options.UseNpgsql(Configuration["Data:NpgsqlConnection:ConnectionString"],
+                        b => b.MigrationsAssembly("CV.Api")));
+                    break;
+                case "SqlServer":
+                default:
+                    services.AddDbContext<CvDbContext>(options =>
+                        options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"],
+                        b => b.MigrationsAssembly("CV.Api")));
+                    break;
+            }
             services.AddTransient<ITrainingService, TrainingService>();
             services.AddTransient<IQualificationService, QualificationService>();
             services.AddTransient<IPersonService, PersonService>();
