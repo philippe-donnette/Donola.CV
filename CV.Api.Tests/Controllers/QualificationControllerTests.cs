@@ -31,7 +31,7 @@ namespace CV.Api.Tests.Controllers
         public void GetQualificationsAsync_ReturnNotFoundStatusCode()
         {
             _qualificationServiceMock.Setup(m => m.GetQualificationsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<QualificationModel>)null);
             var result = _controller.GetQualificationsAsync();
             var notFoundResult = result.Result as NotFoundResult;
             notFoundResult.Should().BeOfType<NotFoundResult>();

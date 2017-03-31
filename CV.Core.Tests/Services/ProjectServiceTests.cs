@@ -49,7 +49,7 @@ namespace CV.Core.Tests.Services
         {
             int projectId = 1;
             _projectRepositoryMock.Setup(x => x.GetProjectAsync(projectId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((Project)null);
             var result = _service.GetProjectAsync(projectId);
             var model = result.Result as ProjectModel;
             Assert.Equal(model, null);
@@ -103,7 +103,7 @@ namespace CV.Core.Tests.Services
         public void GetProjectsAsync_ReturnNull()
         {
             _projectRepositoryMock.Setup(m => m.GetProjectsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<Project>)null);
             var result = _service.GetProjectsAsync();
             var projects = result.Result as IEnumerable<ProjectModel>;
             Assert.Equal(projects, null);
@@ -126,7 +126,7 @@ namespace CV.Core.Tests.Services
         {
             int projectId = 1;
             _projectRepositoryMock.Setup(x => x.GetSkillsAsync(projectId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<ProjectSkill>)null);
             var result = _service.GetSkillsAsync(projectId);
             var skills = result.Result as IEnumerable<ProjectModel>;
             Assert.Equal(skills, null);
@@ -215,7 +215,7 @@ namespace CV.Core.Tests.Services
         {
             int projectId = 1;
             _projectRepositoryMock.Setup(x => x.GetImagesAsync(projectId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<ProjectImage>)null);
             var result = _service.GetImagesAsync(projectId);
             var images = result.Result as IEnumerable<ImageModel>;
             Assert.Equal(images, null);

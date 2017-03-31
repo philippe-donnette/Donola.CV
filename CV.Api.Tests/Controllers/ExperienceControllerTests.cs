@@ -32,7 +32,7 @@ namespace CV.Api.Tests.Controllers
         {
             int experienceId = 1;
             _experienceServiceMock.Setup(x => x.GetExperienceAsync(experienceId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((ExperienceModel)null);
             var result = _controller.GetExperienceAsync(experienceId);
             var httpResult = result.Result as NotFoundResult;
             httpResult.Should().BeOfType<NotFoundResult>();
@@ -76,7 +76,7 @@ namespace CV.Api.Tests.Controllers
         public void GetExperiencesAsync_ReturnNotFoundStatusCode()
         {
             _experienceServiceMock.Setup(m => m.GetExperiencesAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<ExperienceModel>)null);
             var result = _controller.GetExperiencesAsync();
             var NotFoundResult = result.Result as NotFoundResult;
             NotFoundResult.Should().BeOfType<NotFoundResult>();
@@ -119,7 +119,7 @@ namespace CV.Api.Tests.Controllers
         {
             int experienceId = 1;
             _experienceServiceMock.Setup(m => m.GetSkillsAsync(experienceId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<SkillModel>)null);
             var result = _controller.GetSkillsAsync(experienceId);
             var NotFoundResult = result.Result as NotFoundResult;
             NotFoundResult.Should().BeOfType<NotFoundResult>();

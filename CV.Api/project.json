@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-*",
+  "version": "2.0.0-*",
   "userSecretsId": "cvapp-7202223-81012-12157883",
   "buildOptions": {
     "emitEntryPoint": true,
@@ -10,31 +10,34 @@
   },
 
   "dependencies": {
-    "CV.Core": "1.0.0-*",
-    "CV.DataAccessLayer": "1.0.0-*",
-    "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Logging": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc2-final",
+    "CV.Core": "2.0.0-*",
+    "CV.DataAccessLayer": "2.0.0-*",
+    "Microsoft.Extensions.SecretManager.Tools": "1.0.0",
+    "Microsoft.EntityFrameworkCore": "1.1.1",
+    "Microsoft.EntityFrameworkCore.Relational": "1.1.1",
+    "Microsoft.EntityFrameworkCore.Design": "1.1.1",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.Extensions.Logging": "1.1.1",
+    "Microsoft.Extensions.Logging.Console": "1.1.0",
+    "Microsoft.Extensions.Logging.Debug": "1.1.0",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.1.0",
     "Microsoft.NETCore.App": {
       "type": "platform",
-      "version": "1.0.0-rc2-3002702"
+      "version": "1.1.0"
     },
-    "Microsoft.AspNetCore.Routing": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Mvc.Core": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Cors": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Hosting": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
-    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Routing": "1.1.0",
+    "Microsoft.AspNetCore.Mvc.Core": "1.1.0",
+    "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.0",
+    "Microsoft.AspNetCore.Cors": "1.1.0",
+    "Microsoft.AspNetCore.Mvc": "1.1.0",
+    "Microsoft.AspNetCore.StaticFiles": "1.1.0",
+    "Microsoft.AspNetCore.Hosting": "1.1.0",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+    "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
     "Microsoft.EntityFrameworkCore.Tools": {
       "type": "build",
-      "version": "1.0.0-preview1-final"
+      "version": "1.1.0"
     }
   },
   
@@ -43,17 +46,14 @@
   },
 
   "tools": {
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
-      "version": "1.0.0-preview1-final",
-      "imports": "portable-net45+wp80+win8+wpa81+dnxcore50"
-    },
-    "Microsoft.EntityFrameworkCore.Tools": {
-      "imports": [ "portable-net451+win8" ],
-      "version": "1.0.0-preview1-final"
+    "Microsoft.EntityFrameworkCore.Tools.DotNet": "1.1.0-preview4-final",
+    "Microsoft.Extensions.SecretManager.Tools": {
+      "version": "1.0.0-preview2-final",
+      "imports": "portable-net45+win8+dnxcore50"
     }
   },
   "frameworks": {
-    "netcoreapp1.0": {
+    "netcoreapp1.1": {
       "imports": "portable-net452+win81"
     }
   },

@@ -5,16 +5,16 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using CV.DataAccessLayer.Contexts;
 
-namespace CV.Api.NpgsqlMigrations
+namespace CV.Api.Migrations
 {
     [DbContext(typeof(CvDbContext))]
-    [Migration("20160614213053_Initial_Npgsql")]
-    partial class Initial_Npgsql
+    partial class CvDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.0.0-rc2-20901");
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
+                .HasAnnotation("ProductVersion", "1.1.1");
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Card", b =>
                 {
@@ -22,29 +22,29 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Caption")
-                        .HasAnnotation("MaxLength", 100);
+                        .HasMaxLength(100);
 
                     b.Property<string>("CaptionIconClass")
-                        .HasAnnotation("MaxLength", 100);
+                        .HasMaxLength(100);
 
                     b.Property<string>("ImageBackUrl")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("ImageFrontUrl")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("Rotate")
-                        .HasAnnotation("MaxLength", 1);
+                        .HasMaxLength(1);
 
                     b.Property<string>("TextBack")
-                        .HasAnnotation("MaxLength", 500);
+                        .HasMaxLength(500);
 
                     b.Property<string>("TextFront")
-                        .HasAnnotation("MaxLength", 500);
+                        .HasMaxLength(500);
 
                     b.HasKey("Id");
 
-                    b.ToTable("Card");
+                    b.ToTable("Cards");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Experience", b =>
@@ -53,33 +53,33 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("City")
-                        .HasAnnotation("MaxLength", 100);
+                        .HasMaxLength(100);
 
                     b.Property<string>("CompanyName")
-                        .HasAnnotation("MaxLength", 300);
+                        .HasMaxLength(300);
 
                     b.Property<string>("Country")
-                        .HasAnnotation("MaxLength", 100);
+                        .HasMaxLength(100);
 
                     b.Property<string>("Description")
-                        .HasAnnotation("MaxLength", 3000);
+                        .HasMaxLength(3000);
 
                     b.Property<DateTime?>("EndDate");
 
                     b.Property<string>("ImageUrl")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("RoleTitle")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<DateTime>("StartDate");
 
                     b.Property<string>("WebsiteUrl")
-                        .HasAnnotation("MaxLength", 300);
+                        .HasMaxLength(300);
 
                     b.HasKey("Id");
 
-                    b.ToTable("Experience");
+                    b.ToTable("Experiences");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ExperienceSkill", b =>
@@ -92,11 +92,9 @@ namespace CV.Api.NpgsqlMigrations
 
                     b.HasKey("ExperienceId", "SkillId");
 
-                    b.HasIndex("ExperienceId");
-
                     b.HasIndex("SkillId");
 
-                    b.ToTable("ExperienceSkill");
+                    b.ToTable("ExperienceSkills");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ExperienceSkillVersion", b =>
@@ -111,9 +109,7 @@ namespace CV.Api.NpgsqlMigrations
 
                     b.HasIndex("SkillVersionId");
 
-                    b.HasIndex("ExperienceId", "SkillId");
-
-                    b.ToTable("ExperienceSkillVersion");
+                    b.ToTable("ExperienceSkillVersions");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Person", b =>
@@ -122,44 +118,44 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("AboutCaption")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("AboutImage")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("AboutMotto")
-                        .HasAnnotation("MaxLength", 400);
+                        .HasMaxLength(400);
 
                     b.Property<string>("AboutText")
-                        .HasAnnotation("MaxLength", 1000);
+                        .HasMaxLength(1000);
 
                     b.Property<string>("Firstname")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("GitHubUrl")
-                        .HasAnnotation("MaxLength", 400);
+                        .HasMaxLength(400);
 
                     b.Property<string>("HomeImage")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("Lastname")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("LinkedinUrl")
-                        .HasAnnotation("MaxLength", 400);
+                        .HasMaxLength(400);
 
                     b.Property<string>("Occupation")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("OccupationMotto")
-                        .HasAnnotation("MaxLength", 400);
+                        .HasMaxLength(400);
 
                     b.Property<string>("PrimaryImage")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
 
-                    b.ToTable("Person");
+                    b.ToTable("Persons");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Project", b =>
@@ -168,19 +164,19 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description")
-                        .HasAnnotation("MaxLength", 1000);
+                        .HasMaxLength(1000);
 
                     b.Property<string>("Name")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("PrimaryImage")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<DateTime>("StartDate");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Project");
+                    b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectImage", b =>
@@ -189,21 +185,21 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description")
-                        .HasAnnotation("MaxLength", 500);
+                        .HasMaxLength(500);
 
                     b.Property<string>("ImageUrl")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<int>("ProjectId");
 
                     b.Property<string>("Title")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("ProjectImage");
+                    b.ToTable("ProjectImages");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectSkill", b =>
@@ -216,11 +212,9 @@ namespace CV.Api.NpgsqlMigrations
 
                     b.HasKey("ProjectId", "SkillId");
 
-                    b.HasIndex("ProjectId");
-
                     b.HasIndex("SkillId");
 
-                    b.ToTable("ProjectSkill");
+                    b.ToTable("ProjectSkills");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectSkillVersion", b =>
@@ -235,9 +229,7 @@ namespace CV.Api.NpgsqlMigrations
 
                     b.HasIndex("SkillVersionId");
 
-                    b.HasIndex("ProjectId", "SkillId");
-
-                    b.ToTable("ProjectSkillVersion");
+                    b.ToTable("ProjectSkillVersions");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Qualification", b =>
@@ -246,36 +238,36 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("City")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("Country")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("DegreeFile")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("Description")
-                        .HasAnnotation("MaxLength", 1000);
+                        .HasMaxLength(1000);
 
                     b.Property<DateTime>("EndDate");
 
                     b.Property<string>("ImageUrl")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("SchoolName")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<DateTime>("StartDate");
 
                     b.Property<string>("Subject")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("WebsiteUrl")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
 
-                    b.ToTable("Qualification");
+                    b.ToTable("Qualifications");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Skill", b =>
@@ -284,25 +276,25 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description")
-                        .HasAnnotation("MaxLength", 500);
+                        .HasMaxLength(500);
 
                     b.Property<int>("ExperienceRating");
 
                     b.Property<string>("IconClass")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<int>("InterestRating");
 
                     b.Property<bool>("IsVisible");
 
                     b.Property<string>("Name")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<int>("UsageRating");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Skill");
+                    b.ToTable("Skills");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.SkillVersion", b =>
@@ -311,7 +303,7 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name")
-                        .HasAnnotation("MaxLength", 50);
+                        .HasMaxLength(50);
 
                     b.Property<int>("SkillId");
 
@@ -319,7 +311,7 @@ namespace CV.Api.NpgsqlMigrations
 
                     b.HasIndex("SkillId");
 
-                    b.ToTable("SkillVersion");
+                    b.ToTable("SkillVersions");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.Training", b =>
@@ -328,36 +320,36 @@ namespace CV.Api.NpgsqlMigrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("CertificateFile")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("Description")
-                        .HasAnnotation("MaxLength", 1000);
+                        .HasMaxLength(1000);
 
                     b.Property<string>("ImageUrl")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("Provider")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("Subject")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.Property<string>("WebsiteUrl")
-                        .HasAnnotation("MaxLength", 200);
+                        .HasMaxLength(200);
 
                     b.HasKey("Id");
 
-                    b.ToTable("Training");
+                    b.ToTable("Trainings");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ExperienceSkill", b =>
                 {
-                    b.HasOne("CV.DataAccessLayer.Entities.Experience")
-                        .WithMany()
+                    b.HasOne("CV.DataAccessLayer.Entities.Experience", "Experience")
+                        .WithMany("Skills")
                         .HasForeignKey("ExperienceId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("CV.DataAccessLayer.Entities.Skill")
+                    b.HasOne("CV.DataAccessLayer.Entities.Skill", "Skill")
                         .WithMany()
                         .HasForeignKey("SkillId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -365,19 +357,19 @@ namespace CV.Api.NpgsqlMigrations
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ExperienceSkillVersion", b =>
                 {
-                    b.HasOne("CV.DataAccessLayer.Entities.SkillVersion")
+                    b.HasOne("CV.DataAccessLayer.Entities.SkillVersion", "Version")
                         .WithMany()
                         .HasForeignKey("SkillVersionId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("CV.DataAccessLayer.Entities.ExperienceSkill")
-                        .WithMany()
+                    b.HasOne("CV.DataAccessLayer.Entities.ExperienceSkill", "ExperienceSkill")
+                        .WithMany("Versions")
                         .HasForeignKey("ExperienceId", "SkillId");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectImage", b =>
                 {
-                    b.HasOne("CV.DataAccessLayer.Entities.Project")
+                    b.HasOne("CV.DataAccessLayer.Entities.Project", "Project")
                         .WithMany()
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -385,12 +377,12 @@ namespace CV.Api.NpgsqlMigrations
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectSkill", b =>
                 {
-                    b.HasOne("CV.DataAccessLayer.Entities.Project")
-                        .WithMany()
+                    b.HasOne("CV.DataAccessLayer.Entities.Project", "Project")
+                        .WithMany("Skills")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("CV.DataAccessLayer.Entities.Skill")
+                    b.HasOne("CV.DataAccessLayer.Entities.Skill", "Skill")
                         .WithMany()
                         .HasForeignKey("SkillId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -398,20 +390,20 @@ namespace CV.Api.NpgsqlMigrations
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.ProjectSkillVersion", b =>
                 {
-                    b.HasOne("CV.DataAccessLayer.Entities.SkillVersion")
+                    b.HasOne("CV.DataAccessLayer.Entities.SkillVersion", "Version")
                         .WithMany()
                         .HasForeignKey("SkillVersionId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("CV.DataAccessLayer.Entities.ProjectSkill")
-                        .WithMany()
+                    b.HasOne("CV.DataAccessLayer.Entities.ProjectSkill", "ProjectSkill")
+                        .WithMany("Versions")
                         .HasForeignKey("ProjectId", "SkillId");
                 });
 
             modelBuilder.Entity("CV.DataAccessLayer.Entities.SkillVersion", b =>
                 {
-                    b.HasOne("CV.DataAccessLayer.Entities.Skill")
-                        .WithMany()
+                    b.HasOne("CV.DataAccessLayer.Entities.Skill", "Skill")
+                        .WithMany("Versions")
                         .HasForeignKey("SkillId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

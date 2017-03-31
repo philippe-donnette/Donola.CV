@@ -31,7 +31,7 @@ namespace CV.Api.Tests.Controllers
         public void GetSkillsAsync_ReturnNotFoundStatusCode()
         {
             _skillServiceMock.Setup(m => m.GetSkillsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<SkillModel>)null);
             var result = _controller.GetSkillsAsync();
             var notFoundResult = result.Result as NotFoundResult;
             notFoundResult.Should().BeOfType<NotFoundResult>();

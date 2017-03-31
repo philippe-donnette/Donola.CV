@@ -52,7 +52,7 @@ namespace CV.Core.Tests.Services
         public void GetTrainingsAsync_ReturnNull()
         {
             _trainingRepositoryMock.Setup(m => m.GetTrainingsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<Training>)null);
             var result = _service.GetTrainingsAsync();
             var trainings = result.Result as IEnumerable<TrainingModel>;
             Assert.Equal(trainings, null);

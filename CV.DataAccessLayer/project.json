@@ -2,14 +2,17 @@
   "userSecretsId": "cvapp-7202223-81012-12157883",
   "authors": [ "Philippe.Donnette" ],
   "dependencies": {
-    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0-rc2-release1", 
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
-    "System.ComponentModel.Annotations": "4.1.0-rc2-24027",
-    "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc2-final" /*,
+    "Microsoft.Extensions.Logging": "1.1.1",
+    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.1.0",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
+    "System.ComponentModel.Annotations": "4.3.0",
+    "Microsoft.EntityFrameworkCore": "1.1.1",
+    "Microsoft.EntityFrameworkCore.Relational": "1.1.1",
+    "Microsoft.EntityFrameworkCore.Design": "1.1.1",
+    "Microsoft.Extensions.Configuration": "1.1.0",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.1.0" /*,
     "Microsoft.EntityFrameworkCore.Tools": {
       "type": "build",
       "version": "1.0.0-preview1-final"
@@ -22,11 +25,11 @@
         "portable-net452+win81"
       ],
       "dependencies": {
-        "Microsoft.CSharp": "4.0.1-rc2-24027",
-        "System.Collections": "4.0.11-rc2-24027",
-        "System.Linq": "4.1.0-rc2-24027",
-        "System.Runtime": "4.1.0-rc2-24027",
-        "System.Threading": "4.0.11-rc2-24027"
+        "Microsoft.CSharp": "4.3.0",
+        "System.Collections": "4.3.0",
+        "System.Linq": "4.3.0",
+        "System.Runtime": "4.3.0",
+        "System.Threading": "4.3.0"
       }
     }
   },
@@ -38,5 +41,5 @@
     }
   },
   */
-  "version": "1.0.0-*"
+  "version": "2.0.0-*"
 }

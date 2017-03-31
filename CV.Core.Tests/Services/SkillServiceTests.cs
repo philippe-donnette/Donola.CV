@@ -65,7 +65,7 @@ namespace CV.Core.Tests.Services
         public void GetSkillsAsync_ReturnNull()
         {
             _skillRepositoryMock.Setup(m => m.GetSkillsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<Skill>)null);
             var result = _service.GetSkillsAsync();
             var skills = result.Result as List<SkillModel>;
             Assert.Equal(skills, null);

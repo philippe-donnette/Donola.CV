@@ -49,7 +49,7 @@ namespace CV.Core.Tests.Services
         {
             int experienceId = 1;
             _experienceRepositoryMock.Setup(x => x.GetExperienceAsync(experienceId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((Experience)null);
             var result = _service.GetExperienceAsync(experienceId);
             var model = result.Result as ExperienceModel;
             Assert.Equal(model, null);
@@ -103,7 +103,7 @@ namespace CV.Core.Tests.Services
         public void GetExperiencesAsync_ReturnNull()
         {
             _experienceRepositoryMock.Setup(m => m.GetExperiencesAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<Experience>)null);
             var result = _service.GetExperiencesAsync();
             var experiences = result.Result as IEnumerable<ExperienceModel>;
             Assert.Equal(experiences, null);
@@ -126,7 +126,7 @@ namespace CV.Core.Tests.Services
         {
             int experienceId = 1;
             _experienceRepositoryMock.Setup(x => x.GetSkillsAsync(experienceId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<ExperienceSkill>)null);
             var result = _service.GetSkillsAsync(experienceId);
             var skills = result.Result as IEnumerable<ExperienceModel>;
             Assert.Equal(skills, null);

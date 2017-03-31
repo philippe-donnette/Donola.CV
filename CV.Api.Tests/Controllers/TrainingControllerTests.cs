@@ -31,7 +31,7 @@ namespace CV.Api.Tests.Controllers
         public void GetTrainingsAsync_ReturnNotFoundStatusCode()
         {
             _trainingServiceMock.Setup(m => m.GetTrainingsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<TrainingModel>)null);
             var result = _controller.GetTrainingsAsync();
             var NotFoundResult = result.Result as NotFoundResult;
             NotFoundResult.Should().BeOfType<NotFoundResult>();

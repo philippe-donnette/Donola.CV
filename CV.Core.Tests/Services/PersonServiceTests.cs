@@ -52,7 +52,7 @@ namespace CV.Core.Tests.Services
         public void GetPersonAsync_ReturnNull()
         {
             _personRepositoryMock.Setup(x => x.GetPersonAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((Person)null);
             var result = _service.GetPersonAsync();
             var model = result.Result as PersonModel;
             Assert.Equal(model, null);
@@ -109,7 +109,7 @@ namespace CV.Core.Tests.Services
         public void GetCardsAsync_ReturnNull()
         {
             _personRepositoryMock.Setup(m => m.GetCardsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<Card>)null);
             var result = _service.GetCardsAsync();
             var cards = result.Result as IEnumerable<CardModel>;
             Assert.Equal(cards, null);

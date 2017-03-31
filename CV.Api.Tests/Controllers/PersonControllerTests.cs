@@ -31,7 +31,7 @@ namespace CV.Api.Tests.Controllers
         public void GetPersonAsync_ReturnNotFoundStatusCode()
         {
             _personServiceMock.Setup(x => x.GetPersonAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((PersonModel)null);
             var result = _controller.GetPersonAsync();
             var httpResult = result.Result as NotFoundResult;
             httpResult.Should().BeOfType<NotFoundResult>();
@@ -77,7 +77,7 @@ namespace CV.Api.Tests.Controllers
         public void GetProjectsAsync_ReturnNotFoundStatusCode()
         {
             _personServiceMock.Setup(m => m.GetCardsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<CardModel>)null);
             var result = _controller.GetCardsAsync();
             var NotFoundResult = result.Result as NotFoundResult;
             NotFoundResult.Should().BeOfType<NotFoundResult>();

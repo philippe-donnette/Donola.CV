@@ -32,7 +32,7 @@ namespace CV.Api.Tests.Controllers
         {
             int projectId = 1;
             _projectServiceMock.Setup(m => m.GetImagesAsync(projectId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<ImageModel>)null);
             var result = _controller.GetImagesAsync(projectId);
             var NotFoundResult = result.Result as NotFoundResult;
             NotFoundResult.Should().BeOfType<NotFoundResult>();
@@ -79,7 +79,7 @@ namespace CV.Api.Tests.Controllers
         {
             int projectId = 1;
             _projectServiceMock.Setup(x => x.GetProjectAsync(projectId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((ProjectModel)null);
             var result = _controller.GetProjectAsync(projectId);
             var httpResult = result.Result as NotFoundResult;
             httpResult.Should().BeOfType<NotFoundResult>();
@@ -123,7 +123,7 @@ namespace CV.Api.Tests.Controllers
         public void GetProjectsAsync_ReturnNotFoundStatusCode()
         {
             _projectServiceMock.Setup(m => m.GetProjectsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<ProjectModel>)null);
             var result = _controller.GetProjectsAsync();
             var NotFoundResult = result.Result as NotFoundResult;
             NotFoundResult.Should().BeOfType<NotFoundResult>();
@@ -166,7 +166,7 @@ namespace CV.Api.Tests.Controllers
         {
             int projectId = 1;
             _projectServiceMock.Setup(m => m.GetSkillsAsync(projectId))
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<SkillModel>)null);
             var result = _controller.GetSkillsAsync(projectId);
             var NotFoundResult = result.Result as NotFoundResult;
             NotFoundResult.Should().BeOfType<NotFoundResult>();

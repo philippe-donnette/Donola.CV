@@ -52,7 +52,7 @@ namespace CV.Core.Tests.Services
         public void GetQualificationsAsync_ReturnNull()
         {
             _qualificationRepositoryMock.Setup(m => m.GetQualificationsAsync())
-                .ReturnsAsync(null);
+                .ReturnsAsync((IEnumerable<Qualification>)null);
             var result = _service.GetQualificationsAsync();
             var qualifications = result.Result as IEnumerable<QualificationModel>;
             Assert.Equal(qualifications, null);
