@@ -23,6 +23,28 @@ namespace CV.DataAccessLayer.Initializers
         }
 
         #region Skills
+        private static Skill autofac { get; set; }
+        private static Skill nest { get; set; }
+        private static Skill couchbasenetclient { get; set; }
+        private static Skill angular { get; set; }
+        private static Skill typescript { get; set; }
+        private static Skill microservices { get; set; }
+        private static Skill webpack { get; set; }
+        private static Skill react { get; set; }
+        private static Skill aurelia { get; set; }
+        private static Skill mesos { get; set; }
+        private static Skill marathon { get; set; }
+        private static Skill gocd { get; set; }
+        private static Skill zookeeper { get; set; }
+        private static Skill proget { get; set; }
+        private static Skill bamboo { get; set; }
+        private static Skill haproxy { get; set; }
+        private static Skill postgresql { get; set; }
+        private static Skill ubuntu { get; set; }
+        private static Skill gogs { get; set; }
+        private static Skill nexus { get; set; }
+        private static Skill centos { get; set; }
+        private static Skill couchbase { get; set; }
         private static Skill azure { get; set; }
         private static Skill bower { get; set; }
         private static Skill npm { get; set; }
@@ -41,6 +63,8 @@ namespace CV.DataAccessLayer.Initializers
         private static Skill oracle { get; set; }
         private static Skill windows { get; set; }
         private static Skill easyphp { get; set; }
+        private static Skill elasticsearch { get; set; }
+        private static Skill docker { get; set; }
         private static Skill phpmyadmin { get; set; }
         private static Skill apache { get; set; }
         private static Skill html { get; set; }
@@ -131,6 +155,36 @@ namespace CV.DataAccessLayer.Initializers
         #endregion
 
         #region SkillVersions
+        private static SkillVersion autofac_4_0 { get; set; }
+        private static SkillVersion nest_2_5_1 { get; set; }
+        private static SkillVersion nest_1_8_3 { get; set; }
+        private static SkillVersion couchbasenetclient_2_4_0 { get; set; }
+        private static SkillVersion angular_2_4_0 { get; set; }
+        private static SkillVersion angular_2_4_6 { get; set; }
+        private static SkillVersion typescript_1_8 { get; set; }
+        private static SkillVersion typescript_2_0 { get; set; }
+        private static SkillVersion webpack_2_0 { get; set; }
+        private static SkillVersion react_15_4_2 { get; set; }
+        private static SkillVersion aurelia_1_0 { get; set; }
+        private static SkillVersion mesos_1_0_1 { get; set; }
+        private static SkillVersion marathon_1_1_2 { get; set; }
+        private static SkillVersion gocd_16_7_0 { get; set; }
+        private static SkillVersion zookeeper_3_4_6 { get; set; }
+        private static SkillVersion proget_4_6_4 { get; set; }
+        private static SkillVersion proget_3_4_6 { get; set; }
+        private static SkillVersion bamboo_0_2_2_1 { get; set; }
+        private static SkillVersion haproxy_1_5_8 { get; set; }
+        private static SkillVersion postgresql_9_2_15 { get; set; }
+        private static SkillVersion ubuntu_14_04 { get; set; }
+        private static SkillVersion nexus_3_0_1 { get; set; }
+        private static SkillVersion centos_7_2 { get; set; }
+        private static SkillVersion couchbase_enterprise_4_5_0 { get; set; }
+        private static SkillVersion couchbase_enterprise_4_0_0 { get; set; }
+        private static SkillVersion couchbase_community_4_1_0 { get; set; }
+        private static SkillVersion elasticsearch_1_7_0 { get; set; }
+        private static SkillVersion elasticsearch_2_3_5 { get; set; }
+        private static SkillVersion elasticsearch_2_4_3 { get; set; }
+        private static SkillVersion docker_1_12_1 { get; set; }
         private static SkillVersion oauth_2_0 { get; set; }
         private static SkillVersion php_4_3 { get; set; }
         private static SkillVersion php_4_4 { get; set; }
@@ -141,6 +195,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion mysql_5_1_73 { get; set; }
         private static SkillVersion asp_3_0 { get; set; }
         private static SkillVersion asp_net_core_1_0 { get; set; }
+        private static SkillVersion asp_net_core_1_1 { get; set; }
         private static SkillVersion asp_net_2_0 { get; set; }
         private static SkillVersion asp_net_3_0 { get; set; }
         private static SkillVersion asp_net_3_5 { get; set; }
@@ -154,6 +209,8 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion sqlserver_2008 { get; set; }
         private static SkillVersion sqlserver_2008_R2 { get; set; }
         private static SkillVersion sqlserver_2012 { get; set; }
+        private static SkillVersion sqlserver_2014 { get; set; }
+        private static SkillVersion sqlserver_2016 { get; set; }
         private static SkillVersion sqlserver_2008_express { get; set; }
         private static SkillVersion sqlserver_2012_express { get; set; }
         private static SkillVersion visual_studio_2003_pro { get; set; }
@@ -173,7 +230,9 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion csharp_4_0 { get; set; }
         private static SkillVersion csharp_5_0 { get; set; }
         private static SkillVersion csharp_6_0 { get; set; }
+        private static SkillVersion csharp_7_0 { get; set; }
         private static SkillVersion dotnet_core_1_0 { get; set; }
+        private static SkillVersion dotnet_core_1_1 { get; set; }
         private static SkillVersion dotnet_1_1 { get; set; }
         private static SkillVersion dotnet_2_0 { get; set; }
         private static SkillVersion dotnet_3_0 { get; set; }
@@ -229,6 +288,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion tfs_2005 { get; set; }
         private static SkillVersion tfs_2008 { get; set; }
         private static SkillVersion tfs_2013_express { get; set; }
+        private static SkillVersion tfs_2015 { get; set; }
         private static SkillVersion commerce_server_2009 { get; set; }
         private static SkillVersion jquery_1_3 { get; set; }
         private static SkillVersion jquery_1_4 { get; set; }
@@ -250,6 +310,8 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion mvc_3 { get; set; }
         private static SkillVersion mvc_4 { get; set; }
         private static SkillVersion mvc_5 { get; set; }
+        private static SkillVersion mvc_core_1_0 { get; set; }
+        private static SkillVersion mvc_core_1_1 { get; set; }
         private static SkillVersion structuremap_2_6_4_1 { get; set; }
         private static SkillVersion structuremap_3_0_2_0 { get; set; }
         private static SkillVersion structuremap_2_6_3 { get; set; }
@@ -266,6 +328,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion rhel_7 { get; set; }
         private static SkillVersion fedora_core_23 { get; set; }
         private static SkillVersion entity_framework_core_1_0 { get; set; }
+        private static SkillVersion entity_framework_core_1_1 { get; set; }
         private static SkillVersion entity_framework_4_1 { get; set; }
         private static SkillVersion entity_framework_5_0 { get; set; }
         private static SkillVersion entity_framework_6_0 { get; set; }
@@ -282,6 +345,7 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion aspnet_webapi_1 { get; set; }
         private static SkillVersion aspnet_webapi_2 { get; set; }
         private static SkillVersion aspnet_webapi_core_1_0 { get; set; }
+        private static SkillVersion aspnet_webapi_core_1_1 { get; set; }
         private static SkillVersion python_2_0 { get; set; }
         private static SkillVersion git_2_8_1 { get; set; }
         private static SkillVersion git_2_5_0 { get; set; }
@@ -327,6 +391,294 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.Skills.Any())
             {
+                #region autofac
+                autofac = new Skill
+                {
+                    Description = "Autofac is an Inversion of Control container for .NET Core, ASP.NET Core, .NET 4.5.1+, Universal Windows apps, and more.",
+                    ExperienceRating = 4,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "Autofac",
+                    UsageRating = 4
+                };
+                #endregion
+                #region nest
+                nest = new Skill
+                {
+                    Description = "NEST is the official high-level .NET client of Elasticsearch. It aims to be a solid, strongly typed client with a very concise API.",
+                    ExperienceRating = 5,
+                    InterestRating = 9,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "NEST",
+                    UsageRating = 6
+                };
+                #endregion
+                #region couchbasenetclient
+                couchbasenetclient = new Skill
+                {
+                    Description = "The Couchbase authored new and improved client for .NET based languages.",
+                    ExperienceRating = 4,
+                    InterestRating = 8,
+                    IconClass = "devicons devicons-dotnet",
+                    IsVisible = true,
+                    Name = "CouchbaseNetClient",
+                    UsageRating = 5
+                };
+                #endregion
+                #region angular
+                angular = new Skill
+                {
+                    Description = "Angular is a development platform for building mobile and desktop web applications.",
+                    ExperienceRating = 1,
+                    InterestRating = 10,
+                    IconClass = "devicons devicons-angular",
+                    IsVisible = true,
+                    Name = "Angular",
+                    UsageRating = 3
+                };
+                #endregion
+                #region typescript
+                typescript = new Skill
+                {
+                    Description = "TypeScript is a strict superset of JavaScript, and adds optional static typing and class-based object-oriented programming to the language.",
+                    ExperienceRating = 2,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "TypeScript",
+                    UsageRating = 3
+                };
+                #endregion
+                #region typescript
+                microservices = new Skill
+                {
+                    Description = "Microservices is a specialisation of an implementation approach for service-oriented architectures (SOA) used to build flexible, independently deployable software systems.",
+                    ExperienceRating = 5,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Microservices",
+                    UsageRating = 5
+                };
+                #endregion
+                #region webpack
+                webpack = new Skill
+                {
+                    Description = "webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging...",
+                    ExperienceRating = 1,
+                    InterestRating = 8,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "webpack",
+                    UsageRating = 2
+                };
+                #endregion
+                #region react
+                react = new Skill
+                {
+                    Description = "React is an open-source JavaScript framework for building user interfaces.",
+                    ExperienceRating = 1,
+                    InterestRating = 7,
+                    IconClass = "devicons devicons-react",
+                    IsVisible = true,
+                    Name = "React",
+                    UsageRating = 1
+                };
+                #endregion
+                #region Aurelia
+                aurelia = new Skill
+                {
+                    Description = "Aurelia is a JavaScript client framework for mobile, desktop and web leveraging simple conventions and empowering creativity.",
+                    ExperienceRating = 5,
+                    InterestRating = 6,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "aurelia",
+                    UsageRating = 5
+                };
+                #endregion
+                #region Mesos
+                mesos = new Skill
+                {
+                    Description = "Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), enabling fault-tolerant and elastic distributed systems to easily be built and run effectively.",
+                    ExperienceRating = 4,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Mesos",
+                    UsageRating = 6
+                };
+                #endregion
+                #region Marathon
+                marathon = new Skill
+                {
+                    Description = "Marathon is a production-grade container orchestration platform for Mesosphere’s Datacenter Operating System (DC/OS) and Apache Mesos.",
+                    ExperienceRating = 4,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Marathon",
+                    UsageRating = 6
+                };
+                #endregion
+                #region GoCD
+                gocd = new Skill
+                {
+                    Description = "Open source continuous delivery server to model and visualize complex workflows with ease.",
+                    ExperienceRating = 6,
+                    InterestRating = 8,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "GoCD",
+                    UsageRating = 6
+                };
+                #endregion
+                #region Zookeeper
+                zookeeper = new Skill
+                {
+                    Description = "ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services.",
+                    ExperienceRating = 2,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Zookeeper",
+                    UsageRating = 3
+                };
+                #endregion
+                #region proget
+                proget = new Skill
+                {
+                    Description = "ProGet is a software repository manager, designed to allow users to host and manage personal or enterprise-wide package management feeds.",
+                    ExperienceRating = 5,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Proget",
+                    UsageRating = 7
+                };
+                #endregion
+                #region bamboo
+                bamboo = new Skill
+                {
+                    Description = "Bamboo is a web daemon that automatically configures HAProxy for web services deployed on Apache Mesos and Marathon.",
+                    ExperienceRating = 3,
+                    InterestRating = 6,
+                    IconClass = "devicons devicons-go",
+                    IsVisible = true,
+                    Name = "Bamboo",
+                    UsageRating = 5
+                };
+                #endregion
+                #region haproxy
+                haproxy = new Skill
+                {
+                    Description = "HAProxy is a free, very fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications.",
+                    ExperienceRating = 1,
+                    InterestRating = 6,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "HAProxy",
+                    UsageRating = 3
+                };
+                #endregion
+                #region postgresql
+                postgresql = new Skill
+                {
+                    Description = "PostgreSQL is a powerful, open source object-relational database system.",
+                    ExperienceRating = 1,
+                    InterestRating = 6,
+                    IconClass = "mfizz mfizz-postgres",
+                    IsVisible = true,
+                    Name = "PostgreSQL",
+                    UsageRating = 4
+                };
+                #endregion
+                #region Ubuntu
+                ubuntu = new Skill
+                {
+                    Description = "Ubuntu is a Debian-based Linux operating system.",
+                    ExperienceRating = 3,
+                    InterestRating = 7,
+                    IconClass = "mfizz mfizz-ubuntu",
+                    IsVisible = true,
+                    Name = "Ubuntu",
+                    UsageRating = 3
+                };
+                #endregion
+                #region Gogs
+                gogs = new Skill
+                {
+                    Description = "Gogs is a painless self-hosted Git service.",
+                    ExperienceRating = 1,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Gogs",
+                    UsageRating = 5
+                };
+                #endregion
+                #region Nexus Repository OSS
+                nexus = new Skill
+                {
+                    Description = "Repository manager with FREE support for popular formats.",
+                    ExperienceRating = 1,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Nexus Repository OSS",
+                    UsageRating = 3
+                };
+                #endregion
+                #region CentOS
+                centos = new Skill
+                {
+                    Description = "CentOS (from Community Enterprise Operating System) is a Linux distribution that attempts to provide a free, enterprise-class, community-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux (RHEL).",
+                    ExperienceRating = 2,
+                    InterestRating = 7,
+                    IconClass = "mfizz mfizz-centos",
+                    IsVisible = true,
+                    Name = "CentOS",
+                    UsageRating = 5
+                };
+                #endregion
+                #region Couchbase
+                couchbase = new Skill
+                {
+                    Description = "Couchbase is an open-source, distributed (shared-nothing architecture) multi-model NoSQL document-oriented database software package that is optimized for interactive applications.",
+                    ExperienceRating = 4,
+                    InterestRating = 8,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Couchbase",
+                    UsageRating = 5
+                };
+                #endregion
+                #region Elasticsearch
+                elasticsearch = new Skill
+                {
+                    Description = "Elasticsearch is a distributed, RESTful search and analytics engine.",
+                    ExperienceRating = 4,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Elasticsearch",
+                    UsageRating = 5
+                };
+                #endregion
+                #region Docker
+                docker = new Skill
+                {
+                    Description = "Docker is the world’s leading software container platform.",
+                    ExperienceRating = 4,
+                    InterestRating = 10,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Elasticsearch",
+                    UsageRating = 4
+                };
+                #endregion
                 #region Microsoft Azure
                 azure = new Skill
                 {
@@ -367,36 +719,36 @@ namespace CV.DataAccessLayer.Initializers
                 xunit = new Skill
                 {
                     Description = "xUnit.net is an open source unit testing tool for the .NET framework, written by the original author of NUnit.",
-                    ExperienceRating = 2,
+                    ExperienceRating = 3,
                     InterestRating = 9,
                     IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "xUnit.net",
-                    UsageRating = 2
+                    UsageRating = 4
                 };
                 #endregion
                 #region bower
                 bower = new Skill
                 {
                     Description = "Bower is a package management system for client-side programming on the World Wide Web.",
-                    ExperienceRating = 2,
-                    InterestRating = 7,
+                    ExperienceRating = 4,
+                    InterestRating = 5,
                     IconClass = "devicons devicons-bower",
                     IsVisible = true,
                     Name = "Bower",
-                    UsageRating = 4
+                    UsageRating = 5
                 };
                 #endregion
                 #region npm
                 npm = new Skill
                 {
                     Description = "npm runs through the command line and manages dependencies for an application. It also allows users to install Node.js applications that are available on the npm registry.",
-                    ExperienceRating = 2,
-                    InterestRating = 7,
+                    ExperienceRating = 5,
+                    InterestRating = 8,
                     IconClass = "devicons devicons-npm",
                     IsVisible = true,
                     Name = "npm",
-                    UsageRating = 4
+                    UsageRating = 7
                 };
                 #endregion
                 #region sass
@@ -432,7 +784,7 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = null,
                     IsVisible = true,
                     Name = "Karma",
-                    UsageRating = 3
+                    UsageRating = 4
                 };
                 #endregion
                 #region jasmine
@@ -444,7 +796,7 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = null,
                     IsVisible = true,
                     Name = "Jasmine",
-                    UsageRating = 3
+                    UsageRating = 4
                 };
                 #endregion
                 #region RavenDB
@@ -548,11 +900,11 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "Microsoft SQL Server is a relational database management system developed by Microsoft.",
                     ExperienceRating = 9,
-                    InterestRating = 10,
+                    InterestRating = 7,
                     IconClass = "devicons devicons-msql_server",
                     IsVisible = true,
                     Name = "Microsoft SQL Server",
-                    UsageRating = 9
+                    UsageRating = 7
                 };
                 #endregion
                 #region visual studio
@@ -573,7 +925,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "C# is a multi-paradigm programming language encompassing strong typing, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.",
                     ExperienceRating = 9,
                     InterestRating = 10,
-                    IconClass = "mfizz mfizz-csharp",
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "C#",
                     UsageRating = 9
@@ -656,7 +1008,7 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages.",
                     ExperienceRating = 9,
-                    InterestRating = 10,
+                    InterestRating = 7,
                     IconClass = "mfizz mfizz-html",
                     IsVisible = true,
                     Name = "HTML",
@@ -668,7 +1020,7 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.",
                     ExperienceRating = 7,
-                    InterestRating = 6,
+                    InterestRating = 5,
                     IconClass = "mfizz mfizz-css",
                     IsVisible = true,
                     Name = "CSS",
@@ -768,7 +1120,7 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "JavaScript",
-                    UsageRating = 7
+                    UsageRating = 8
                 };
                 #endregion
                 #region xml
@@ -776,11 +1128,11 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format which is both human-readable and machine-readable.",
                     ExperienceRating = 5,
-                    InterestRating = 5,
-                    IconClass = "devicons devicons-javascript",
+                    InterestRating = 4,
+                    IconClass = null,
                     IsVisible = true,
                     Name = "XML",
-                    UsageRating = 5
+                    UsageRating = 4
                 };
                 #endregion
                 #region xslt
@@ -804,7 +1156,7 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = null,
                     IsVisible = true,
                     Name = "Apache Subversion",
-                    UsageRating = 7
+                    UsageRating = 5
                 };
                 #endregion
                 #region windows forms
@@ -824,11 +1176,11 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "SQL (Structured Query Language) is a special-purpose programming language designed for managing data held in a relational database management system (RDBMS), or for stream processing in a relational data stream management system (RDSMS).",
                     ExperienceRating = 8,
-                    InterestRating = 8,
+                    InterestRating = 7,
                     IconClass = null,
                     IsVisible = true,
                     Name = "SQL",
-                    UsageRating = 8
+                    UsageRating = 7
                 };
                 #endregion
                 #region ADO.NET
@@ -840,7 +1192,7 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = null,
                     IsVisible = true,
                     Name = "ADO.NET",
-                    UsageRating = 7
+                    UsageRating = 5
                 };
                 #endregion
                 #region AJAX
@@ -864,7 +1216,7 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = null,
                     IsVisible = true,
                     Name = "ASP.NET AJAX",
-                    UsageRating = 5
+                    UsageRating = 4
                 };
                 #endregion
                 #region web service
@@ -872,7 +1224,7 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "A Web service is a service offered by an electronic device to another electronic device, communicating with each other via the World wide web.",
                     ExperienceRating = 6,
-                    InterestRating = 5,
+                    InterestRating = 4,
                     IconClass = "fa fa-globe",
                     IsVisible = true,
                     Name = "Web Service",
@@ -896,11 +1248,11 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "A console application is a computer program designed to be used via a text-only computer interface, such as a text terminal, the command line interface of some operating systems (Unix, DOS, etc.) or the text-based interface included with most Graphical User Interface (GUI) operating systems, such as the Win32 console in Microsoft Windows, the Terminal in Mac OS X, and xterm in Unix.",
                     ExperienceRating = 7,
-                    InterestRating = 7,
+                    InterestRating = 6,
                     IconClass = null,
                     IsVisible = true,
                     Name = "Console application",
-                    UsageRating = 7
+                    UsageRating = 6
                 };
                 #endregion
                 #region soap
@@ -919,12 +1271,12 @@ namespace CV.DataAccessLayer.Initializers
                 tfs = new Skill
                 {
                     Description = "Team Foundation Server (commonly abbreviated to TFS) is a Microsoft product that provides source code management (either via Team Foundation Version Control or Git), reporting, requirements management, project management (for both agile software development and waterfall teams), automated builds, lab management, testing and release management capabilities.",
-                    ExperienceRating = 2,
+                    ExperienceRating = 4,
                     InterestRating = 7,
                     IconClass = "devicons devicons-visualstudio",
                     IsVisible = true,
                     Name = "TFS",
-                    UsageRating = 3
+                    UsageRating = 5
                 };
                 #endregion
                 #region XSD
@@ -955,24 +1307,24 @@ namespace CV.DataAccessLayer.Initializers
                 scrum = new Skill
                 {
                     Description = "Scrum is an iterative and incremental agile software development framework for managing product development.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 4,
                     InterestRating = 9,
                     IconClass = "devicons devicons-scrum",
                     IsVisible = true,
                     Name = "Scrum",
-                    UsageRating = 2
+                    UsageRating = 3
                 };
                 #endregion
                 #region Agile
                 agile = new Skill
                 {
                     Description = "Agile software development is a set of principles for software development in which requirements and solutions evolve through collaboration between self-organizing, cross-functional teams.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 4,
                     InterestRating = 9,
                     IconClass = null,
                     IsVisible = true,
                     Name = "Agile",
-                    UsageRating = 2
+                    UsageRating = 3
                 };
                 #endregion
                 #region jQuery
@@ -1015,7 +1367,7 @@ namespace CV.DataAccessLayer.Initializers
                 di = new Skill
                 {
                     Description = "In software engineering, dependency injection is a software design pattern that implements inversion of control for resolving dependencies.",
-                    ExperienceRating = 5,
+                    ExperienceRating = 7,
                     InterestRating = 10,
                     IconClass = null,
                     IsVisible = true,
@@ -1080,7 +1432,7 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "ASP.NET MVC",
-                    UsageRating = 7
+                    UsageRating = 8
                 };
                 #endregion
                 #region MySQL Workbench
@@ -1136,7 +1488,7 @@ namespace CV.DataAccessLayer.Initializers
                 {
                     Description = "Knockout is a standalone JavaScript implementation of the Model-View-ViewModel pattern with templates.",
                     ExperienceRating = 1,
-                    InterestRating = 7,
+                    InterestRating = 5,
                     IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Knockout",
@@ -1147,12 +1499,12 @@ namespace CV.DataAccessLayer.Initializers
                 angularjs = new Skill
                 {
                     Description = "AngularJS (commonly referred to as \"Angular\" or \"Angular.js\") is an open-source web application framework mainly maintained by Google and by a community of individuals and corporations to address many of the challenges encountered in developing single-page applications.",
-                    ExperienceRating = 2,
+                    ExperienceRating = 5,
                     InterestRating = 10,
                     IconClass = "devicons devicons-angular",
                     IsVisible = true,
                     Name = "AngularJS",
-                    UsageRating = 7
+                    UsageRating = 8
                 };
                 #endregion
                 #region Lync SDK
@@ -1231,7 +1583,7 @@ namespace CV.DataAccessLayer.Initializers
                 entity_framework = new Skill
                 {
                     Description = "Entity Framework (EF) is an open source[1] object-relational mapping (ORM) framework for ADO.NET, was a part of .NET Framework, but from Entity framework version 6 it is separated from .NET framework.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 5,
                     InterestRating = 10,
                     IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
@@ -1243,7 +1595,7 @@ namespace CV.DataAccessLayer.Initializers
                 unity = new Skill
                 {
                     Description = "Unity is a lightweight, extensible dependency injection container with support for instance and type interception.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 4,
                     InterestRating = 8,
                     IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
@@ -1255,12 +1607,12 @@ namespace CV.DataAccessLayer.Initializers
                 moq = new Skill
                 {
                     Description = "Moq (pronounced \"Mock-you\" or just \"Mock\") is a mocking library for .NET developed from scratch to take full advantage of .NET 3.5 (i.e. Linq expression trees) and C# 3.0 features (i.e. lambda expressions) that make it the most productive, type-safe and refactoring-friendly mocking library available.",
-                    ExperienceRating = 2,
+                    ExperienceRating = 4,
                     InterestRating = 9,
                     IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "Moq",
-                    UsageRating = 6
+                    UsageRating = 7
                 };
                 #endregion
                 #region Rhino Mock
@@ -1279,24 +1631,24 @@ namespace CV.DataAccessLayer.Initializers
                 automapper = new Skill
                 {
                     Description = "A convention-based object-object mapper.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 5,
                     InterestRating = 8,
                     IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "AutoMapper",
-                    UsageRating = 6
+                    UsageRating = 7
                 };
                 #endregion
                 #region Unit Testing
                 unit_testing = new Skill
                 {
                     Description = "Unit testing is a software testing method by which individual units of source code, sets of one or more computer program modules together with associated control data, usage procedures, and operating procedures, are tested to determine whether they are fit for use.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 4,
                     InterestRating = 10,
                     IconClass = null,
                     IsVisible = true,
                     Name = "Unit Testing",
-                    UsageRating = 5
+                    UsageRating = 6
                 };
                 #endregion
                 #region linq
@@ -1363,7 +1715,7 @@ namespace CV.DataAccessLayer.Initializers
                 bootstrap = new Skill
                 {
                     Description = "Bootstrap is a free and open-source front-end library for creating websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 5,
                     InterestRating = 7,
                     IconClass = "devicons devicons-bootstrap",
                     IsVisible = true,
@@ -1423,24 +1775,24 @@ namespace CV.DataAccessLayer.Initializers
                 linux = new Skill
                 {
                     Description = "Linux is a Unix-like and mostly POSIX-compliant computer operating system (OS) assembled under the model of free and open-source software development and distribution.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 4,
                     InterestRating = 7,
                     IconClass = "devicons devicons-linux",
                     IsVisible = true,
                     Name = "Linux",
-                    UsageRating = 1
+                    UsageRating = 5
                 };
                 #endregion
                 #region ASP.NET Web API
                 aspnet_webapi = new Skill
                 {
                     Description = "ASP.NET Web API is a framework that makes it easy to build HTTP services that reach a broad range of clients, including browsers and mobile devices. ASP.NET Web API is an ideal platform for building RESTful applications on the .NET Framework.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 5,
                     InterestRating = 10,
                     IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "ASP.NET Web API",
-                    UsageRating = 6
+                    UsageRating = 8
                 };
                 #endregion
                 #region Python 
@@ -1512,19 +1864,19 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = "devicons devicons-github",
                     IsVisible = true,
                     Name = "GitHub",
-                    UsageRating = 4
+                    UsageRating = 5
                 };
                 #endregion
                 #region git
                 git = new Skill
                 {
                     Description = "Git is a widely used source code management system for software development.",
-                    ExperienceRating = 3,
+                    ExperienceRating = 5,
                     InterestRating = 8,
                     IconClass = "devicons devicons-git",
                     IsVisible = true,
                     Name = "Git",
-                    UsageRating = 4
+                    UsageRating = 6
                 };
                 #endregion
                 #region Bitbucket
@@ -1536,58 +1888,83 @@ namespace CV.DataAccessLayer.Initializers
                     IconClass = "devicons devicons-bitbucket",
                     IsVisible = true,
                     Name = "Bitbucket",
-                    UsageRating = 3
+                    UsageRating = 4
                 };
                 #endregion
                 #region NuGet
                 nuget = new Skill
                 {
                     Description = "NuGet is a free and open-source package manager designed for the Microsoft development platform (formerly known as NuPack).",
-                    ExperienceRating = 5,
+                    ExperienceRating = 8,
                     InterestRating = 7,
                     IconClass = null,
                     IsVisible = true,
                     Name = "NuGet",
-                    UsageRating = 8
+                    UsageRating = 9
                 };
                 #endregion
                 #region rest
                 rest = new Skill
                 {
                     Description = "In computing, representational state transfer (REST) is the software architectural style of the World Wide Web.",
-                    ExperienceRating = 2,
+                    ExperienceRating = 5,
                     InterestRating = 8,
                     IconClass = null,
                     IsVisible = true,
                     Name = "Representational state transfer",
-                    UsageRating = 6
+                    UsageRating = 8
                 };
                 #endregion
                 #region JSON
                 json = new Skill
                 {
                     Description = "JSON (JavaScript Object Notation) is an open-standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs.",
-                    ExperienceRating = 4,
+                    ExperienceRating = 8,
                     InterestRating = 8,
                     IconClass = null,
                     IsVisible = true,
                     Name = "JSON",
-                    UsageRating = 8
+                    UsageRating = 9
                 };
                 #endregion
                 #region Continuous Integration
                 ci = new Skill
                 {
                     Description = "Continuous integration (CI) is the practice, in software engineering, of merging all developer working copies to a shared mainline several times a day.",
-                    ExperienceRating = 2,
+                    ExperienceRating = 5,
                     InterestRating = 10,
                     IconClass = null,
                     IsVisible = true,
                     Name = "Continuous integration",
-                    UsageRating = 3
+                    UsageRating = 7
                 };
                 #endregion
 
+                context.Skills.Add(autofac);
+                context.Skills.Add(nest);
+                context.Skills.Add(couchbasenetclient);
+                context.Skills.Add(angular);
+                context.Skills.Add(typescript);
+                context.Skills.Add(microservices);
+                context.Skills.Add(webpack);
+                context.Skills.Add(react);
+                context.Skills.Add(typescript);
+                context.Skills.Add(aurelia);
+                context.Skills.Add(mesos);
+                context.Skills.Add(marathon);
+                context.Skills.Add(gocd);
+                context.Skills.Add(zookeeper);
+                context.Skills.Add(proget);
+                context.Skills.Add(bamboo);
+                context.Skills.Add(haproxy);
+                context.Skills.Add(postgresql);
+                context.Skills.Add(ubuntu);
+                context.Skills.Add(gogs);
+                context.Skills.Add(nexus);
+                context.Skills.Add(centos);
+                context.Skills.Add(couchbase);
+                context.Skills.Add(elasticsearch);
+                context.Skills.Add(docker);
                 context.Skills.Add(sass);
                 context.Skills.Add(less);
                 context.Skills.Add(bower);
@@ -1701,6 +2078,216 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.SkillVersions.Any())
             {
+                #region autofac 4.0
+                autofac_4_0 = new SkillVersion
+                {
+                    Name = "4.0",
+                    SkillId = autofac.Id
+                };
+                #endregion
+                #region nest 2.5.1
+                nest_2_5_1 = new SkillVersion
+                {
+                    Name = "2.5.1",
+                    SkillId = nest.Id
+                };
+                #endregion
+                #region nest 1.8.3
+                nest_1_8_3 = new SkillVersion
+                {
+                    Name = "1.8.3",
+                    SkillId = nest.Id
+                };
+                #endregion
+                #region couchbasenetclient 2.4.0
+                couchbasenetclient_2_4_0 = new SkillVersion
+                {
+                    Name = "2.4.0",
+                    SkillId = couchbasenetclient.Id
+                };
+                #endregion
+                #region angular 2.4.0
+                angular_2_4_0 = new SkillVersion
+                {
+                    Name = "2.4.0",
+                    SkillId = angular.Id
+                };
+                #endregion
+                #region angular 2.4.6
+                angular_2_4_6 = new SkillVersion
+                {
+                    Name = "2.4.6",
+                    SkillId = angular.Id
+                };
+                #endregion
+                #region typescript 1.8
+                typescript_1_8 = new SkillVersion
+                {
+                    Name = "1.8",
+                    SkillId = typescript.Id
+                };
+                #endregion
+                #region typescript 2.0
+                typescript_2_0 = new SkillVersion
+                {
+                    Name = "2.0",
+                    SkillId = typescript.Id
+                };
+                #endregion
+                #region webpack 2.0
+                webpack_2_0 = new SkillVersion
+                {
+                    Name = "2.0",
+                    SkillId = webpack.Id
+                };
+                #endregion
+                #region react 15.4.2
+                react_15_4_2 = new SkillVersion
+                {
+                    Name = "15.4.2",
+                    SkillId = react.Id
+                };
+                #endregion
+                #region aurelia 1.0
+                aurelia_1_0 = new SkillVersion
+                {
+                    Name = "1.0",
+                    SkillId = aurelia.Id
+                };
+                #endregion
+                #region mesos 1.0.1
+                mesos_1_0_1 = new SkillVersion
+                {
+                    Name = "1.0.1",
+                    SkillId = mesos.Id
+                };
+                #endregion
+                #region marathon 1.1.2
+                marathon_1_1_2 = new SkillVersion
+                {
+                    Name = "1.1.2",
+                    SkillId = marathon.Id
+                };
+                #endregion
+                #region gocd 16.7.0
+                gocd_16_7_0 = new SkillVersion
+                {
+                    Name = "16.7.0",
+                    SkillId = gocd.Id
+                };
+                #endregion
+                #region zookeeper 3.4.6
+                zookeeper_3_4_6 = new SkillVersion
+                {
+                    Name = "3.4.6",
+                    SkillId = zookeeper.Id
+                };
+                #endregion
+                #region proget 3.4.6
+                proget_3_4_6 = new SkillVersion
+                {
+                    Name = "3.4.6",
+                    SkillId = proget.Id
+                };
+                #endregion
+                #region proget 4.6.4
+                proget_4_6_4 = new SkillVersion
+                {
+                    Name = "4.6.4",
+                    SkillId = proget.Id
+                };
+                #endregion
+                #region bamboo 0.0.21
+                bamboo_0_2_2_1 = new SkillVersion
+                {
+                    Name = "0.2.21",
+                    SkillId = bamboo.Id
+                };
+                #endregion
+                #region haproxy 1.5.8
+                haproxy_1_5_8 = new SkillVersion
+                {
+                    Name = "1.5.8",
+                    SkillId = haproxy.Id
+                };
+                #endregion
+                #region postgresql 9.2.15
+                postgresql_9_2_15 = new SkillVersion
+                {
+                    Name = "9.2.15",
+                    SkillId = postgresql.Id
+                };
+                #endregion
+                #region ubuntu 14..04
+                ubuntu_14_04 = new SkillVersion
+                {
+                    Name = "14.04",
+                    SkillId = ubuntu.Id
+                };
+                #endregion
+                #region nexus repository oss 3.0.1
+                nexus_3_0_1 = new SkillVersion
+                {
+                    Name = "3.0.1",
+                    SkillId = nexus.Id
+                };
+                #endregion
+                #region centos 7.2
+                centos_7_2 = new SkillVersion
+                {
+                    Name = "7.2",
+                    SkillId = centos.Id
+                };
+                #endregion
+                #region couchbase enterprise 4.5.0
+                couchbase_enterprise_4_5_0 = new SkillVersion
+                {
+                    Name = "Enterprise 4.5.0",
+                    SkillId = couchbase.Id
+                };
+                #endregion
+                #region couchbase enterprise 4.0.0
+                couchbase_enterprise_4_0_0 = new SkillVersion
+                {
+                    Name = "Enterprise 4.0.0",
+                    SkillId = couchbase.Id
+                };
+                #endregion
+                #region couchbase community 4.1.0
+                couchbase_community_4_1_0 = new SkillVersion
+                {
+                    Name = "Community 4.1.0",
+                    SkillId = couchbase.Id
+                };
+                #endregion
+                #region elasticsearch 1.7.0
+                elasticsearch_1_7_0 = new SkillVersion
+                {
+                    Name = "1.7.0",
+                    SkillId = elasticsearch.Id
+                };
+                #endregion
+                #region elasticsearch 2.3.5
+                elasticsearch_2_3_5 = new SkillVersion
+                {
+                    Name = "2.3.5",
+                    SkillId = elasticsearch.Id
+                };
+                #endregion
+                #region elasticsearch 2.4.3
+                elasticsearch_2_4_3 = new SkillVersion
+                {
+                    Name = "2.4.3",
+                    SkillId = elasticsearch.Id
+                };
+                #endregion
+                #region docker 1.12.1
+                docker_1_12_1 = new SkillVersion
+                {
+                    Name = "1.12.1",
+                    SkillId = docker.Id
+                };
+                #endregion
                 #region Azure WebJobs
                 azure_webjobs = new SkillVersion
                 {
@@ -1806,6 +2393,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = asp_net.Id
                 };
                 #endregion
+                #region asp.net core 1.1
+                asp_net_core_1_1 = new SkillVersion
+                {
+                    Name = "ASP.NET Core 1.1",
+                    SkillId = asp_net.Id
+                };
+                #endregion
                 #region asp.net 2.0
                 asp_net_2_0 = new SkillVersion
                 {
@@ -1894,6 +2488,20 @@ namespace CV.DataAccessLayer.Initializers
                 sqlserver_2012 = new SkillVersion
                 {
                     Name = "SQL Server 2012",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
+                #region sql server 2014
+                sqlserver_2014 = new SkillVersion
+                {
+                    Name = "SQL Server 2014",
+                    SkillId = sqlserver.Id
+                };
+                #endregion
+                #region sql server 2016
+                sqlserver_2016 = new SkillVersion
+                {
+                    Name = "SQL Server 2016",
                     SkillId = sqlserver.Id
                 };
                 #endregion
@@ -2023,10 +2631,24 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = csharp.Id
                 };
                 #endregion
+                #region csharp 7.0
+                csharp_7_0 = new SkillVersion
+                {
+                    Name = "C# 7.0",
+                    SkillId = csharp.Id
+                };
+                #endregion
                 #region .net framework core 1.0
                 dotnet_core_1_0 = new SkillVersion
                 {
                     Name = ".NET Core 1.0",
+                    SkillId = dotnet.Id
+                };
+                #endregion
+                #region .net framework core 1.1
+                dotnet_core_1_1 = new SkillVersion
+                {
+                    Name = ".NET Core 1.1",
                     SkillId = dotnet.Id
                 };
                 #endregion
@@ -2401,6 +3023,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = tfs.Id
                 };
                 #endregion
+                #region tfs 2015
+                tfs_2015 = new SkillVersion
+                {
+                    Name = "TFS 2015",
+                    SkillId = tfs.Id
+                };
+                #endregion
                 #region Commerce Server 2009
                 commerce_server_2009 = new SkillVersion
                 {
@@ -2548,6 +3177,20 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = mvc.Id
                 };
                 #endregion
+                #region ASP.NET MVC Core 1.0
+                mvc_core_1_0 = new SkillVersion
+                {
+                    Name = "MVC Core 1.0",
+                    SkillId = mvc.Id
+                };
+                #endregion
+                #region ASP.NET MVC Core 1.1
+                mvc_core_1_1 = new SkillVersion
+                {
+                    Name = "MVC Core 1.1",
+                    SkillId = mvc.Id
+                };
+                #endregion
                 #region StructureMap 2.6.3
                 structuremap_2_6_3 = new SkillVersion
                 {
@@ -2664,6 +3307,13 @@ namespace CV.DataAccessLayer.Initializers
                 entity_framework_core_1_0 = new SkillVersion
                 {
                     Name = "EF Core 1.0",
+                    SkillId = entity_framework.Id
+                };
+                #endregion
+                #region Entity Framework Core 1.1
+                entity_framework_core_1_1 = new SkillVersion
+                {
+                    Name = "EF Core 1.1",
                     SkillId = entity_framework.Id
                 };
                 #endregion
@@ -2793,6 +3443,13 @@ namespace CV.DataAccessLayer.Initializers
                     SkillId = aspnet_webapi.Id
                 };
                 #endregion
+                #region ASP.NET Web API Core 1.1
+                aspnet_webapi_core_1_1 = new SkillVersion
+                {
+                    Name = "ASP.NET Web API Core 1.1",
+                    SkillId = aspnet_webapi.Id
+                };
+                #endregion
                 #region Python 2.0
                 python_2_0 = new SkillVersion
                 {
@@ -2822,12 +3479,43 @@ namespace CV.DataAccessLayer.Initializers
                 };
                 #endregion
 
+                context.SkillVersions.Add(autofac_4_0);
+                context.SkillVersions.Add(nest_1_8_3);
+                context.SkillVersions.Add(nest_2_5_1);
+                context.SkillVersions.Add(couchbasenetclient_2_4_0);
+                context.SkillVersions.Add(angular_2_4_0);
+                context.SkillVersions.Add(angular_2_4_6);
+                context.SkillVersions.Add(typescript_1_8);
+                context.SkillVersions.Add(typescript_2_0);
+                context.SkillVersions.Add(webpack_2_0);
+                context.SkillVersions.Add(react_15_4_2);
+                context.SkillVersions.Add(aurelia_1_0);
+                context.SkillVersions.Add(mesos_1_0_1);
+                context.SkillVersions.Add(marathon_1_1_2);
+                context.SkillVersions.Add(gocd_16_7_0);
+                context.SkillVersions.Add(zookeeper_3_4_6);
+                context.SkillVersions.Add(proget_3_4_6);
+                context.SkillVersions.Add(proget_4_6_4);
+                context.SkillVersions.Add(bamboo_0_2_2_1);
+                context.SkillVersions.Add(haproxy_1_5_8);
+                context.SkillVersions.Add(postgresql_9_2_15);
+                context.SkillVersions.Add(ubuntu_14_04);
+                context.SkillVersions.Add(nexus_3_0_1);
+                context.SkillVersions.Add(centos_7_2);
+                context.SkillVersions.Add(couchbase_enterprise_4_5_0);
+                context.SkillVersions.Add(couchbase_enterprise_4_0_0);
+                context.SkillVersions.Add(couchbase_community_4_1_0);
+                context.SkillVersions.Add(elasticsearch_1_7_0);
+                context.SkillVersions.Add(elasticsearch_2_3_5);
+                context.SkillVersions.Add(elasticsearch_2_4_3);
+                context.SkillVersions.Add(docker_1_12_1);
                 context.SkillVersions.Add(azure_webjobs);
                 context.SkillVersions.Add(azure_web_sites);
                 context.SkillVersions.Add(mongodb_3_0);
                 context.SkillVersions.Add(mongodb_csharp_2_1_1);
                 context.SkillVersions.Add(ravendb_3_0);
                 context.SkillVersions.Add(aspnet_webapi_core_1_0);
+                context.SkillVersions.Add(aspnet_webapi_core_1_1);
                 context.SkillVersions.Add(aspnet_webapi_2);
                 context.SkillVersions.Add(aspnet_webapi_1);
                 context.SkillVersions.Add(python_2_0);
@@ -2846,6 +3534,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(unity_3_0);
                 context.SkillVersions.Add(unity_3_5);
                 context.SkillVersions.Add(entity_framework_core_1_0);
+                context.SkillVersions.Add(entity_framework_core_1_1);
                 context.SkillVersions.Add(entity_framework_4_1);
                 context.SkillVersions.Add(entity_framework_5_0);
                 context.SkillVersions.Add(entity_framework_6_0);
@@ -2859,6 +3548,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(asp_3_0);
                 context.SkillVersions.Add(asp_net_2_0);
                 context.SkillVersions.Add(asp_net_core_1_0);
+                context.SkillVersions.Add(asp_net_core_1_1);
                 context.SkillVersions.Add(sqlserver_2000);
                 context.SkillVersions.Add(visual_studio_2003_pro);
                 context.SkillVersions.Add(visual_studio_2005_pro);
@@ -2876,7 +3566,9 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(csharp_4_0);
                 context.SkillVersions.Add(csharp_5_0);
                 context.SkillVersions.Add(csharp_6_0);
+                context.SkillVersions.Add(csharp_7_0);
                 context.SkillVersions.Add(dotnet_core_1_0);
+                context.SkillVersions.Add(dotnet_core_1_1);
                 context.SkillVersions.Add(dotnet_1_1);
                 context.SkillVersions.Add(dotnet_2_0);
                 context.SkillVersions.Add(dotnet_3_0);
@@ -2925,6 +3617,8 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(sqlserver_2012_express);
                 context.SkillVersions.Add(sqlserver_2008_R2);
                 context.SkillVersions.Add(sqlserver_2012);
+                context.SkillVersions.Add(sqlserver_2014);
+                context.SkillVersions.Add(sqlserver_2016);
                 context.SkillVersions.Add(svn_1_3);
                 context.SkillVersions.Add(photoshop_elements_7_0);
                 context.SkillVersions.Add(photoshop_elements_9_0);
@@ -2941,6 +3635,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(tfs_2005);
                 context.SkillVersions.Add(tfs_2008);
                 context.SkillVersions.Add(tfs_2013_express);
+                context.SkillVersions.Add(tfs_2015);
                 context.SkillVersions.Add(commerce_server_2009);
                 context.SkillVersions.Add(jquery_1_3);
                 context.SkillVersions.Add(jquery_1_4);
@@ -2962,6 +3657,8 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(mvc_3);
                 context.SkillVersions.Add(mvc_4);
                 context.SkillVersions.Add(mvc_5);
+                context.SkillVersions.Add(mvc_core_1_0);
+                context.SkillVersions.Add(mvc_core_1_1);
                 context.SkillVersions.Add(structuremap_2_6_3);
                 context.SkillVersions.Add(structuremap_2_6_4_1);
                 context.SkillVersions.Add(structuremap_3_0_2_0);
