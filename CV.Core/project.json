@@ -1,7 +1,7 @@
 ﻿{
   "version": "2.0.0-*",
   "dependencies": {
-    "AutoMapper": "5.0.2",
+    "AutoMapper": "5.2.0",
     "CV.DataAccessLayer": "2.0.0-*"
   },
   "description": "CV.Core Class Library",
