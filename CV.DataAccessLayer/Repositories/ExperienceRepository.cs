@@ -46,6 +46,7 @@ namespace CV.DataAccessLayer.Repositories
                     .Experiences
                     .Include(x => x.Skills).ThenInclude(x => x.Versions).ThenInclude(x => x.Version)
                     .Include(x => x.Skills).ThenInclude(x => x.Skill)
+                    .OrderByDescending(x => x.StartDate)
                     .ToListAsync();
             }
             catch (Exception ex)

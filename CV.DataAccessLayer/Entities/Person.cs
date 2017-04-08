@@ -20,7 +20,7 @@ namespace CV.DataAccessLayer.Entities
         public string AboutImage { get; set; }
         [StringLength(200)]
         public string HomeImage { get; set; }
-        [StringLength(1000)]
+        [StringLength(2000)]
         public string AboutText { get; set; }
         [StringLength(200)]
         public string AboutCaption { get; set; }

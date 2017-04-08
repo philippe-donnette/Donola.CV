@@ -8371,25 +8371,29 @@ namespace CV.DataAccessLayer.Initializers
             {
                 context.Persons.Add(new Person
                 {
-                    AboutCaption = "Software & Web Developer",
+                    AboutCaption = "Full Stack Developer",
                     AboutImage = "user.png",
-                    AboutMotto = "10 Years Experience in Software Development",
-                    AboutText = "<p>My name is Philippe Donnette and I have been developing software for about ten yers now.</p>"
+                    AboutMotto = "10 Years of Experience in Software Development",
+                    AboutText = "<p>Passionate about coding with over 10 years of experience, I am a full-stack developer specialised in Microsoft technologies and front-end technologies such as ASP.NET MVC, .NET Core, C#, SQL SERVER, Angular, JavaScript...</p>"
                         + "<p>"
-                        + "I am passionate about software development and I am specialized in working with "
-                        + "Web Technologies using dotnet framework. I am finding myself with a growing interest towards "
-                        + "javascript front-end librairies and framework."
+                        + "I have a great understanding of the full development lifecycle from planning to deployment of a solution and I am also experienced with a broad range of technologies and developement practices (NoSQL, Source Control, Continous Integration/Delivery, Agile, Scrum, Microservices, TDD...) and have a great understanding of the full development lifecycle from planning to deployment of a solution."
                         + "</p>"
                         + "<p>"
-                        + "Lucky father of two, I have another great passion in life which is playing football."
+                        + "After nine years living in London, I am looking to relocate to Jyvaskyla, Finland with my family. We anticipate that the move can be completed between September 2017 and January 2018."
+                        + "</p>"
+                        + "<p>"
+                        + "In terms of professional development, I am looking for a role where I can further enhance my skills whilst building quality software with robust architecture. I have a strong interest in working with the latest technologies and wish to be part of an agile team with high standard software development practices."
+                        + "</p>"
+                        + "<p>"
+                        + "Please do get in touch if you would like to discuss in further detail. I look forward to hearing from you."
                         + "</p>",
                     Firstname = "Philippe",
                     GitHubUrl = "https://github.com/philippe-donnette",
                     HomeImage = "wordcloud-1.png",
                     Lastname = "Donnette",
                     LinkedinUrl = "https://www.linkedin.com/in/philippe-donnette-2bb80b4",
-                    Occupation = "Software & Web Developer",
-                    OccupationMotto = "10 Years Experience in Software Development",
+                    Occupation = "Full Stack Developer",
+                    OccupationMotto = "10 Years of Experience in Software Development",
                     PrimaryImage = "user.png"
                 });
             }

@@ -58,7 +58,7 @@ namespace CV.Api.Migrations
                     AboutCaption = table.Column<string>(maxLength: 200, nullable: true),
                     AboutImage = table.Column<string>(maxLength: 200, nullable: true),
                     AboutMotto = table.Column<string>(maxLength: 400, nullable: true),
-                    AboutText = table.Column<string>(maxLength: 1000, nullable: true),
+                    AboutText = table.Column<string>(maxLength: 2000, nullable: true),
                     Firstname = table.Column<string>(maxLength: 200, nullable: true),
                     GitHubUrl = table.Column<string>(maxLength: 400, nullable: true),
                     HomeImage = table.Column<string>(maxLength: 200, nullable: true),
