@@ -118,6 +118,7 @@ namespace CV.Api
                 {
                     try
                     {
+                        serviceScope.ServiceProvider.GetService<CvDbContext>().Database.EnsureDeleted();
                         serviceScope.ServiceProvider.GetService<CvDbContext>().Database.Migrate();
                         //serviceScope.ServiceProvider.GetService<CvDbContext>().EnsureSeedData();
                         serviceScope.ServiceProvider.GetService<CvDbContext>().EnsureSeedRealData();

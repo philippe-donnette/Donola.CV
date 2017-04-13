@@ -1,0 +1,22 @@
+FROM microsoft/dotnet:1.1-sdk
+
+RUN mkdir /app
+WORKDIR /app
+RUN mkdir /CV.Api
+RUN mkdir /CV.Core
+RUN mkdir /CV.DataAccessLayer
+#RUN mkdir /config
+
+#COPY ./nuget.xml /app/config/nuget.xml
+COPY ./CV.Api /app/CV.Api
+COPY ./CV.Core /app/CV.Core
+COPY ./CV.DataAccessLayer /app/CV.DataAccessLayer
+
+#RUN dotnet restore --no-cache --configfile /app/config/nuget.xml --verbosity Verbose
+RUN dotnet restore --no-cache --verbosity Verbose
+RUN dotnet build */project.json
+
+RUN cd CV.Api
+
+EXPOSE 5050
+CMD ["dotnet", "run"]
