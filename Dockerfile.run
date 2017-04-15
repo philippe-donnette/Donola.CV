@@ -8,6 +8,8 @@ COPY ./Donola.CV /app
 RUN dotnet restore --no-cache /app/CV.DataAccessLayer/project.json
 RUN dotnet restore --no-cache /app/CV.Core/project.json
 RUN dotnet restore --no-cache /app/CV.Api/project.json
+RUN dotnet restore --no-cache /app/CV.Core.Tests/project.json
+RUN dotnet restore --no-cache /app/CV.Api.Tests/project.json
 
 RUN dotnet build /app/**/project.json
 
