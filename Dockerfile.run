@@ -8,9 +8,9 @@ RUN mkdir /CV.DataAccessLayer
 #RUN mkdir /config
 
 #COPY ./nuget.xml /app/config/nuget.xml
-COPY ./CV.Api /app/CV.Api
-COPY ./CV.Core /app/CV.Core
-COPY ./CV.DataAccessLayer /app/CV.DataAccessLayer
+COPY ./Donola.CV/CV.Api /app/CV.Api
+COPY ./Donola.CV/CV.Core /app/CV.Core
+COPY ./Donola.CV/CV.DataAccessLayer /app/CV.DataAccessLayer
 
 #RUN dotnet restore --no-cache --configfile /app/config/nuget.xml --verbosity Verbose
 RUN dotnet restore --no-cache --verbosity Verbose
