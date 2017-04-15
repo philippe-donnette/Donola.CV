@@ -13,13 +13,13 @@ COPY ./Donola.CV /app/CV.Api
 #COPY ./Donola.CV/CV.Core /app/CV.Core
 #COPY ./Donola.CV/CV.DataAccessLayer /app/CV.DataAccessLayer
 
-RUN cd Donola.CV
+RUN cd /app/Donola.CV
 
 #RUN dotnet restore --no-cache --configfile /app/config/nuget.xml --verbosity Verbose
 RUN dotnet restore --no-cache
 RUN dotnet build */project.json
 
-RUN cd CV.Api
+RUN cd /app/Donola.CV/CV.Api
 
 EXPOSE 5050
 CMD ["dotnet", "run"]
