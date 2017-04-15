@@ -1,25 +1,28 @@
 FROM microsoft/dotnet:1.1-sdk
 RUN mkdir /app
 WORKDIR /app
-RUN mkdir /CV.Api
-RUN mkdir /CV.Api.Tests
-RUN mkdir /CV.Core
-RUN mkdir /CV.Core.Tests
-RUN mkdir /CV.DataAccessLayer
+#RUN mkdir /CV.Api
+#RUN mkdir /CV.Api.Tests
+#RUN mkdir /CV.Core
+#RUN mkdir /CV.Core.Tests
+#RUN mkdir /CV.DataAccessLayer
 #RUN mkdir /config
 
 #COPY ./nuget.xml /app/config/nuget.xml
-COPY ./Donola.CV/CV.Api /app/CV.Api
-COPY ./Donola.CV/CV.Api.Tests /app/CV.Api.Tests
-COPY ./Donola.CV/CV.Core /app/CV.Core
-COPY ./Donola.CV/CV.Core.Tests /app/CV.Core.Tests
-COPY ./Donola.CV/CV.DataAccessLayer /app/CV.DataAccessLayer
+COPY ./Donola.CV /app/CV.Api
+#COPY ./Donola.CV/CV.Api /app/CV.Api
+#COPY ./Donola.CV/CV.Api.Tests /app/CV.Api.Tests
+#COPY ./Donola.CV/CV.Core /app/CV.Core
+#COPY ./Donola.CV/CV.Core.Tests /app/CV.Core.Tests
+#COPY ./Donola.CV/CV.DataAccessLayer /app/CV.DataAccessLayer
+
+RUN cd Donola.CV
 
 #RUN dotnet restore --no-cache --configfile /app/config/nuget.xml --verbosity Verbose
-RUN dotnet restore --no-cache --verbosity Verbose
+RUN dotnet restore --no-cache
 
 RUN dotnet build */project.json
 #RUN cd CV.Api.Tests
 
-RUN dotnet test /app/CV.Api.Tests/project.json
-RUN dotnet test /app/CV.Core.Tests/project.json
+RUN dotnet test /app/Donola.CV/CV.Api.Tests/project.json
+RUN dotnet test /app/Donola.CV/CV.Core.Tests/project.json
