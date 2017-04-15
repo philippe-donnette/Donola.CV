@@ -11,8 +11,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CV.DataAccessLayer", "CV.Da
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E62CF6F5-B584-4FC6-ACD8-B0A97CCAB69F}"
 	ProjectSection(SolutionItems) = preProject
-		Setup\Dockerfile.run = Setup\Dockerfile.run
-		Setup\Dockerfile.test = Setup\Dockerfile.test
+		Dockerfile.run = Dockerfile.run
+		Dockerfile.test = Dockerfile.test
 		CV.Api\global.json = CV.Api\global.json
 		CV.DataAccessLayer\global.json = CV.DataAccessLayer\global.json
 		CV.Core\global.json = CV.Core\global.json
