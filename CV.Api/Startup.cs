@@ -146,6 +146,7 @@ namespace CV.Api
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseUrls("http://localhost:5057")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 //.UseIISIntegration()
                 .UseStartup<Startup>()

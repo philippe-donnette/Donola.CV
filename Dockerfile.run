@@ -15,5 +15,5 @@ RUN dotnet build /app/**/project.json
 
 WORKDIR /app/CV.Api
 
-EXPOSE 5050
+EXPOSE 5057
 CMD ["dotnet", "run"]
