@@ -47,7 +47,10 @@ namespace CV.Api
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowCvWeb",
-                    x => x.WithOrigins(Configuration["Data:CorsAllowedOrigins:CvWeb"])
+                    x => x.WithOrigins(
+                            Configuration["Data:CorsAllowedOrigins:CvWeb"], 
+                            Configuration["Data:CorsAllowedOrigins:CvWebReact"]
+                        )
                         .AllowAnyMethod()
                         .AllowAnyHeader()
                     );
