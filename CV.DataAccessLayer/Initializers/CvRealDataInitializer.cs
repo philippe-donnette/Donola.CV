@@ -23,182 +23,161 @@ namespace CV.DataAccessLayer.Initializers
         }
 
         #region Skills
-        private static Skill identityserver { get; set; }
-        private static Skill autofac { get; set; }
-        private static Skill nest { get; set; }
-        private static Skill couchbasenetclient { get; set; }
+        private static Skill actionscript { get; set; }
+        private static Skill ado_net { get; set; }
+        private static Skill agile { get; set; }
+        private static Skill ajax { get; set; }
         private static Skill angular { get; set; }
-        private static Skill typescript { get; set; }
-        private static Skill microservices { get; set; }
-        private static Skill webpack { get; set; }
-        private static Skill react { get; set; }
-        private static Skill aurelia { get; set; }
-        private static Skill mesos { get; set; }
-        private static Skill marathon { get; set; }
-        private static Skill gocd { get; set; }
-        private static Skill zookeeper { get; set; }
-        private static Skill proget { get; set; }
-        private static Skill bamboo { get; set; }
-        private static Skill haproxy { get; set; }
-        private static Skill postgresql { get; set; }
-        private static Skill ubuntu { get; set; }
-        private static Skill gogs { get; set; }
-        private static Skill nexus { get; set; }
-        private static Skill centos { get; set; }
-        private static Skill couchbase { get; set; }
-        private static Skill azure { get; set; }
-        private static Skill bower { get; set; }
-        private static Skill npm { get; set; }
-        private static Skill sass { get; set; }
-        private static Skill gulp { get; set; }
-        private static Skill karma { get; set; }
-        private static Skill jasmine { get; set; }
-        private static Skill php { get; set; }
-        private static Skill mysql { get; set; }
+        private static Skill angularjs { get; set; }
+        private static Skill apache { get; set; }
         private static Skill asp { get; set; }
+        private static Skill aspnet_webapi { get; set; }
         private static Skill asp_net { get; set; }
-        private static Skill sqlserver { get; set; }
-        private static Skill visual_studio { get; set; }
+        private static Skill asp_net_ajax { get; set; }
+        private static Skill aurelia { get; set; }
+        private static Skill autofac { get; set; }
+        private static Skill automapper { get; set; }
+        private static Skill axosoft { get; set; }
+        private static Skill azure { get; set; }
+        private static Skill babel { get; set; }
+        private static Skill bamboo { get; set; }
+        private static Skill bash_shell { get; set; }
+        private static Skill bitbucket { get; set; }
+        private static Skill bootstrap { get; set; }
+        private static Skill bower { get; set; }
+        private static Skill centos { get; set; }
+        private static Skill chai { get; set; }
+        private static Skill ci { get; set; }
+        private static Skill cims { get; set; }
+        private static Skill commerce_server { get; set; }
+        private static Skill console_app { get; set; }
+        private static Skill couchbase { get; set; }
+        private static Skill couchbasenetclient { get; set; }
+        private static Skill cqrs { get; set; }
         private static Skill csharp { get; set; }
+        private static Skill css { get; set; }
+        private static Skill ddd { get; set; }
+        private static Skill di { get; set; }
+        private static Skill docker { get; set; }
         private static Skill dotnet { get; set; }
-        private static Skill oracle { get; set; }
-        private static Skill windows { get; set; }
         private static Skill easyphp { get; set; }
         private static Skill elasticsearch { get; set; }
-        private static Skill docker { get; set; }
-        private static Skill phpmyadmin { get; set; }
-        private static Skill apache { get; set; }
-        private static Skill html { get; set; }
-        private static Skill css { get; set; }
+        private static Skill entity_framework { get; set; }
+        private static Skill enzyme { get; set; }
+        private static Skill event_sourcing { get; set; }
+        private static Skill fedora_core { get; set; }
         private static Skill flash { get; set; }
-        private static Skill actionscript { get; set; }
-        private static Skill photoshop { get; set; }
-        private static Skill iis { get; set; }
-        private static Skill vss { get; set; }
-        private static Skill toad { get; set; }
-        private static Skill ssms { get; set; }
-        private static Skill javascript { get; set; }
-        private static Skill xml { get; set; }
-        private static Skill xslt { get; set; }
-        private static Skill svn { get; set; }
-        private static Skill winform { get; set; }
-        private static Skill ado_net { get; set; }
-        private static Skill sql { get; set; }
-        private static Skill asp_net_ajax { get; set; }
-        private static Skill ajax { get; set; }
-        private static Skill web_service { get; set; }
+        private static Skill git { get; set; }
+        private static Skill github { get; set; }
+        private static Skill gocd { get; set; }
+        private static Skill gogs { get; set; }
         private static Skill google_api { get; set; }
-        private static Skill console_app { get; set; }
-        private static Skill soap { get; set; }
-        private static Skill tfs { get; set; }
-        private static Skill xsd { get; set; }
-        private static Skill commerce_server { get; set; }
-        private static Skill scrum { get; set; }
+        private static Skill grunt { get; set; }
+        private static Skill gulp { get; set; }
+        private static Skill haproxy { get; set; }
+        private static Skill html { get; set; }
+        private static Skill identityserver { get; set; }
+        private static Skill iis { get; set; }
+        private static Skill jasmine { get; set; }
+        private static Skill javascript { get; set; }
+        private static Skill jenkins { get; set; }
         private static Skill jquery { get; set; }
         private static Skill jquery_ui { get; set; }
-        private static Skill agile { get; set; }
-        private static Skill cims { get; set; }
-        private static Skill di { get; set; }
-        private static Skill razor { get; set; }
-        private static Skill telerik_mvc { get; set; }
-        private static Skill mvc { get; set; }
-        private static Skill sitefinity { get; set; }
-        private static Skill structuremap { get; set; }
-        private static Skill mysql_workbench { get; set; }
-        private static Skill shibboleth { get; set; }
-        private static Skill saml { get; set; }
-        private static Skill jenkins { get; set; }
-        private static Skill knockout { get; set; }
-        private static Skill angularjs { get; set; }
-        private static Skill lync_sdk { get; set; }
-        private static Skill rhel { get; set; }
-        private static Skill fedora_core { get; set; }
-        private static Skill pivotal_tracker { get; set; }
-        private static Skill axosoft { get; set; }
-        private static Skill ssl { get; set; }
-        private static Skill entity_framework { get; set; }
-        private static Skill unity { get; set; }
-        private static Skill moq { get; set; }
-        private static Skill rhino_mock { get; set; }
-        private static Skill automapper { get; set; }
-        private static Skill unit_testing { get; set; }
-        private static Skill linq { get; set; }
-        private static Skill umbraco { get; set; }
-        private static Skill mediawiki { get; set; }
-        private static Skill silverlight_sdk { get; set; }
-        private static Skill silverlight_toolkit { get; set; }
-        private static Skill bootstrap { get; set; }
-        private static Skill wcf { get; set; }
-        private static Skill wpf { get; set; }
-        private static Skill nunit { get; set; }
-        private static Skill mstest { get; set; }
-        private static Skill linux { get; set; }
-        private static Skill aspnet_webapi { get; set; }
-        private static Skill bash_shell { get; set; }
-        private static Skill python { get; set; }
-        private static Skill winservice { get; set; }
-        private static Skill mantis { get; set; }
-        private static Skill mariadb { get; set; }
-        private static Skill github { get; set; }
-        private static Skill git { get; set; }
-        private static Skill bitbucket { get; set; }
-        private static Skill nuget { get; set; }
-        private static Skill rest { get; set; }
         private static Skill json { get; set; }
-        private static Skill ci { get; set; }
-        private static Skill oauth { get; set; }
-        private static Skill ravendb { get; set; }
+        private static Skill jsx { get; set; }
+        private static Skill karma { get; set; }
+        private static Skill knockout { get; set; }
+        private static Skill less { get; set; }
+        private static Skill linq { get; set; }
+        private static Skill linux { get; set; }
+        private static Skill lync_sdk { get; set; }
+        private static Skill mantis { get; set; }
+        private static Skill marathon { get; set; }
+        private static Skill mariadb { get; set; }
+        private static Skill mediawiki { get; set; }
+        private static Skill mesos { get; set; }
+        private static Skill microservices { get; set; }
+        private static Skill mocha { get; set; }
         private static Skill mongodb { get; set; }
         private static Skill mongodb_csharp { get; set; }
-        private static Skill less { get; set; }
+        private static Skill moq { get; set; }
+        private static Skill mstest { get; set; }
+        private static Skill mvc { get; set; }
+        private static Skill mysql { get; set; }
+        private static Skill mysql_workbench { get; set; }
+        private static Skill nest { get; set; }
+        private static Skill nexus { get; set; }
+        private static Skill nginx { get; set; }
+        private static Skill npm { get; set; }
+        private static Skill nuget { get; set; }
+        private static Skill nunit { get; set; }
+        private static Skill oauth { get; set; }
+        private static Skill oracle { get; set; }
+        private static Skill photoshop { get; set; }
+        private static Skill php { get; set; }
+        private static Skill phpmyadmin { get; set; }
+        private static Skill pivotal_tracker { get; set; }
+        private static Skill postgresql { get; set; }
+        private static Skill proget { get; set; }
+        private static Skill python { get; set; }
+        private static Skill ravendb { get; set; }
+        private static Skill razor { get; set; }
+        private static Skill react { get; set; }
+        private static Skill redux { get; set; }
+        private static Skill rest { get; set; }
+        private static Skill rhel { get; set; }
+        private static Skill rhino_mock { get; set; }
+        private static Skill saml { get; set; }
+        private static Skill sass { get; set; }
+        private static Skill scrum { get; set; }
+        private static Skill shibboleth { get; set; }
+        private static Skill silverlight_sdk { get; set; }
+        private static Skill silverlight_toolkit { get; set; }
+        private static Skill sinon { get; set; }
+        private static Skill sitefinity { get; set; }
+        private static Skill soap { get; set; }
+        private static Skill sql { get; set; }
+        private static Skill sqlserver { get; set; }
+        private static Skill ssl { get; set; }
+        private static Skill ssms { get; set; }
+        private static Skill structuremap { get; set; }
+        private static Skill svn { get; set; }
+        private static Skill telerik_mvc { get; set; }
+        private static Skill tfs { get; set; }
+        private static Skill toad { get; set; }
+        private static Skill typescript { get; set; }
+        private static Skill ubuntu { get; set; }
+        private static Skill umbraco { get; set; }
+        private static Skill unity { get; set; }
+        private static Skill unit_testing { get; set; }
+        private static Skill visual_studio { get; set; }
+        private static Skill vss { get; set; }
         private static Skill wamp { get; set; }
+        private static Skill wcf { get; set; }
+        private static Skill webpack { get; set; }
+        private static Skill web_service { get; set; }
+        private static Skill windows { get; set; }
+        private static Skill winform { get; set; }
+        private static Skill winservice { get; set; }
+        private static Skill wpf { get; set; }
+        private static Skill xml { get; set; }
+        private static Skill xsd { get; set; }
+        private static Skill xslt { get; set; }
         private static Skill xunit { get; set; }
+        private static Skill zookeeper { get; set; }
         #endregion
 
         #region SkillVersions
-        private static SkillVersion identityserver_3 { get; set; }
-        private static SkillVersion identityserver_4 { get; set; }
-        private static SkillVersion autofac_4_0 { get; set; }
-        private static SkillVersion nest_2_5_1 { get; set; }
-        private static SkillVersion nest_1_8_3 { get; set; }
-        private static SkillVersion couchbasenetclient_2_4_0 { get; set; }
+        private static SkillVersion actionscript_2_0 { get; set; }
+        private static SkillVersion angularjs_1_3 { get; set; }
+        private static SkillVersion angularjs_1_4 { get; set; }
         private static SkillVersion angular_2_4_0 { get; set; }
         private static SkillVersion angular_2_4_6 { get; set; }
-        private static SkillVersion typescript_1_8 { get; set; }
-        private static SkillVersion typescript_2_0 { get; set; }
-        private static SkillVersion webpack_2_0 { get; set; }
-        private static SkillVersion react_15_4_2 { get; set; }
-        private static SkillVersion aurelia_1_0 { get; set; }
-        private static SkillVersion mesos_1_0_1 { get; set; }
-        private static SkillVersion marathon_1_1_2 { get; set; }
-        private static SkillVersion gocd_16_7_0 { get; set; }
-        private static SkillVersion zookeeper_3_4_6 { get; set; }
-        private static SkillVersion proget_4_6_4 { get; set; }
-        private static SkillVersion proget_3_4_6 { get; set; }
-        private static SkillVersion bamboo_0_2_2_1 { get; set; }
-        private static SkillVersion haproxy_1_5_8 { get; set; }
-        private static SkillVersion postgresql_9_2_15 { get; set; }
-        private static SkillVersion ubuntu_14_04 { get; set; }
-        private static SkillVersion nexus_3_0_1 { get; set; }
-        private static SkillVersion centos_7_2 { get; set; }
-        private static SkillVersion couchbase_enterprise_4_5_0 { get; set; }
-        private static SkillVersion couchbase_enterprise_4_0_0 { get; set; }
-        private static SkillVersion couchbase_community_4_1_0 { get; set; }
-        private static SkillVersion elasticsearch_1_7_0 { get; set; }
-        private static SkillVersion elasticsearch_2_3_5 { get; set; }
-        private static SkillVersion elasticsearch_2_4_3 { get; set; }
-        private static SkillVersion docker_1_12_1 { get; set; }
-        private static SkillVersion oauth_2_0 { get; set; }
-        private static SkillVersion php_4_3 { get; set; }
-        private static SkillVersion php_4_4 { get; set; }
-        private static SkillVersion mysql_4_0_6 { get; set; }
-        private static SkillVersion mysql_4_1_4 { get; set; }
-        private static SkillVersion mysql_5_0_96 { get; set; }
-        private static SkillVersion mysql_5_1_22 { get; set; }
-        private static SkillVersion mysql_5_1_73 { get; set; }
+        private static SkillVersion aspnet_webapi_1 { get; set; }
+        private static SkillVersion aspnet_webapi_2 { get; set; }
+        private static SkillVersion aspnet_webapi_core_1_0 { get; set; }
+        private static SkillVersion aspnet_webapi_core_1_1 { get; set; }
         private static SkillVersion asp_3_0 { get; set; }
-        private static SkillVersion asp_net_core_1_0 { get; set; }
-        private static SkillVersion asp_net_core_1_1 { get; set; }
         private static SkillVersion asp_net_2_0 { get; set; }
         private static SkillVersion asp_net_3_0 { get; set; }
         private static SkillVersion asp_net_3_5 { get; set; }
@@ -207,26 +186,24 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion asp_net_4_5_1 { get; set; }
         private static SkillVersion asp_net_4_5_2 { get; set; }
         private static SkillVersion asp_net_4_6 { get; set; }
-        private static SkillVersion sqlserver_2000 { get; set; }
-        private static SkillVersion sqlserver_2005 { get; set; }
-        private static SkillVersion sqlserver_2008 { get; set; }
-        private static SkillVersion sqlserver_2008_R2 { get; set; }
-        private static SkillVersion sqlserver_2012 { get; set; }
-        private static SkillVersion sqlserver_2014 { get; set; }
-        private static SkillVersion sqlserver_2016 { get; set; }
-        private static SkillVersion sqlserver_2008_express { get; set; }
-        private static SkillVersion sqlserver_2012_express { get; set; }
-        private static SkillVersion visual_studio_2003_pro { get; set; }
-        private static SkillVersion visual_studio_2005_pro { get; set; }
-        private static SkillVersion visual_studio_2008_pro { get; set; }
-        private static SkillVersion visual_studio_2010_pro { get; set; }
-        private static SkillVersion visual_studio_2012_pro { get; set; }
-        private static SkillVersion visual_studio_2013_pro { get; set; }
-        private static SkillVersion visual_studio_2015_pro { get; set; }
-        private static SkillVersion visual_studio_2010_express { get; set; }
-        private static SkillVersion visual_studio_2013_web_developer_express { get; set; }
-        private static SkillVersion visual_studio_2015_community { get; set; }
-        private static SkillVersion visual_studio_code { get; set; }
+        private static SkillVersion asp_net_core_1_0 { get; set; }
+        private static SkillVersion asp_net_core_1_1 { get; set; }
+        private static SkillVersion aurelia_1_0 { get; set; }
+        private static SkillVersion autofac_4_0 { get; set; }
+        private static SkillVersion automapper_2_2_0 { get; set; }
+        private static SkillVersion automapper_5_2_0 { get; set; }
+        private static SkillVersion azure_webjobs { get; set; }
+        private static SkillVersion azure_web_sites { get; set; }
+        private static SkillVersion babel_6_24_1 { get; set; }
+        private static SkillVersion bamboo_0_2_2_1 { get; set; }
+        private static SkillVersion bootstrap_3 { get; set; }
+        private static SkillVersion centos_7_2 { get; set; }
+        private static SkillVersion chai_3_5_0 { get; set; }
+        private static SkillVersion commerce_server_2009 { get; set; }
+        private static SkillVersion couchbasenetclient_2_4_0 { get; set; }
+        private static SkillVersion couchbase_community_4_1_0 { get; set; }
+        private static SkillVersion couchbase_enterprise_4_0_0 { get; set; }
+        private static SkillVersion couchbase_enterprise_4_5_0 { get; set; }
         private static SkillVersion csharp_1_2 { get; set; }
         private static SkillVersion csharp_2_0 { get; set; }
         private static SkillVersion csharp_3_0 { get; set; }
@@ -234,8 +211,10 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion csharp_5_0 { get; set; }
         private static SkillVersion csharp_6_0 { get; set; }
         private static SkillVersion csharp_7_0 { get; set; }
-        private static SkillVersion dotnet_core_1_0 { get; set; }
-        private static SkillVersion dotnet_core_1_1 { get; set; }
+        private static SkillVersion css_2_0 { get; set; }
+        private static SkillVersion css_2_1 { get; set; }
+        private static SkillVersion css_3_0 { get; set; }
+        private static SkillVersion docker_1_12_1 { get; set; }
         private static SkillVersion dotnet_1_1 { get; set; }
         private static SkillVersion dotnet_2_0 { get; set; }
         private static SkillVersion dotnet_3_0 { get; set; }
@@ -246,123 +225,163 @@ namespace CV.DataAccessLayer.Initializers
         private static SkillVersion dotnet_4_5_2 { get; set; }
         private static SkillVersion dotnet_4_6 { get; set; }
         private static SkillVersion dotnet_4_6_1 { get; set; }
-        private static SkillVersion oracle_8 { get; set; }
-        private static SkillVersion windows_xp { get; set; }
-        private static SkillVersion windows_vista { get; set; }
-        private static SkillVersion windows_7 { get; set; }
-        private static SkillVersion windows_10 { get; set; }
-        private static SkillVersion windows_server_2003 { get; set; }
-        private static SkillVersion windows_server_2008 { get; set; }
-        private static SkillVersion windows_server_2008_R2 { get; set; }
-        private static SkillVersion windows_server_2012_R2 { get; set; }
-        private static SkillVersion windows_server_2016 { get; set; }
+        private static SkillVersion dotnet_core_1_0 { get; set; }
+        private static SkillVersion dotnet_core_1_1 { get; set; }
+        private static SkillVersion elasticsearch_1_7_0 { get; set; }
+        private static SkillVersion elasticsearch_2_3_5 { get; set; }
+        private static SkillVersion elasticsearch_2_4_3 { get; set; }
+        private static SkillVersion entity_framework_4_1 { get; set; }
+        private static SkillVersion entity_framework_5_0 { get; set; }
+        private static SkillVersion entity_framework_6_0 { get; set; }
+        private static SkillVersion entity_framework_core_1_0 { get; set; }
+        private static SkillVersion entity_framework_core_1_1 { get; set; }
+        private static SkillVersion enzyme_2_8_2 { get; set; }
+        private static SkillVersion fedora_core_23 { get; set; }
+        private static SkillVersion flash_2004 { get; set; }
+        private static SkillVersion git_1_9_5 { get; set; }
+        private static SkillVersion git_2_5_0 { get; set; }
+        private static SkillVersion git_2_8_1 { get; set; }
+        private static SkillVersion gocd_16_7_0 { get; set; }
+        private static SkillVersion haproxy_1_5_8 { get; set; }
         private static SkillVersion html_4_0 { get; set; }
         private static SkillVersion html_5_0 { get; set; }
-        private static SkillVersion css_2_0 { get; set; }
-        private static SkillVersion css_2_1 { get; set; }
-        private static SkillVersion css_3_0 { get; set; }
-        private static SkillVersion flash_2004 { get; set; }
-        private static SkillVersion actionscript_2_0 { get; set; }
-        private static SkillVersion photoshop_elements_7_0 { get; set; }
-        private static SkillVersion photoshop_elements_9_0 { get; set; }
-        private static SkillVersion photoshop_elements_14_0 { get; set; }
-        private static SkillVersion photoshop_cs_2 { get; set; }
-        private static SkillVersion photoshop_cs_3 { get; set; }
-        private static SkillVersion photoshop_cs_6 { get; set; }
+        private static SkillVersion identityserver_3 { get; set; }
+        private static SkillVersion identityserver_4 { get; set; }
         private static SkillVersion iis_6_0 { get; set; }
         private static SkillVersion iis_7_0 { get; set; }
-        private static SkillVersion iis_8_0 { get; set; }
         private static SkillVersion iis_7_0_express { get; set; }
+        private static SkillVersion iis_8_0 { get; set; }
         private static SkillVersion iis_8_0_express { get; set; }
-        private static SkillVersion vss_6_0 { get; set; }
-        private static SkillVersion toad_9_0 { get; set; }
-        private static SkillVersion ssms_enterprise_manager { get; set; }
-        private static SkillVersion ssms_2005 { get; set; }
-        private static SkillVersion ssms_2008 { get; set; }
-        private static SkillVersion ssms_2012 { get; set; }
-        private static SkillVersion ssms_2014 { get; set; }
-        private static SkillVersion ssms_2016 { get; set; }
         private static SkillVersion javascript_ecmascript_3 { get; set; }
         private static SkillVersion javascript_ecmascript_5 { get; set; }
         private static SkillVersion javascript_ecmascript_6 { get; set; }
-        private static SkillVersion xslt_1_0 { get; set; }
-        private static SkillVersion xml_1_1 { get; set; }
-        private static SkillVersion svn_1_3 { get; set; }
-        private static SkillVersion svn_1_6 { get; set; }
-        private static SkillVersion svn_1_8 { get; set; }
-        private static SkillVersion bootstrap_3 { get; set; }
-        private static SkillVersion nunit_2_6_2 { get; set; }
-        private static SkillVersion tfs_2005 { get; set; }
-        private static SkillVersion tfs_2008 { get; set; }
-        private static SkillVersion tfs_2013_express { get; set; }
-        private static SkillVersion tfs_2015 { get; set; }
-        private static SkillVersion commerce_server_2009 { get; set; }
+        private static SkillVersion jenkins_1_6 { get; set; }
+        private static SkillVersion jquery_1_10 { get; set; }
+        private static SkillVersion jquery_1_11 { get; set; }
         private static SkillVersion jquery_1_3 { get; set; }
         private static SkillVersion jquery_1_4 { get; set; }
         private static SkillVersion jquery_1_5 { get; set; }
         private static SkillVersion jquery_1_7 { get; set; }
         private static SkillVersion jquery_1_8 { get; set; }
         private static SkillVersion jquery_1_9 { get; set; }
-        private static SkillVersion jquery_1_10 { get; set; }
-        private static SkillVersion jquery_1_11 { get; set; }
         private static SkillVersion jquery_2_0 { get; set; }
         private static SkillVersion jquery_2_1 { get; set; }
+        private static SkillVersion jquery_ui_1_10 { get; set; }
+        private static SkillVersion jquery_ui_1_11 { get; set; }
         private static SkillVersion jquery_ui_1_6 { get; set; }
         private static SkillVersion jquery_ui_1_7 { get; set; }
         private static SkillVersion jquery_ui_1_8 { get; set; }
         private static SkillVersion jquery_ui_1_9 { get; set; }
-        private static SkillVersion jquery_ui_1_10 { get; set; }
-        private static SkillVersion jquery_ui_1_11 { get; set; }
+        private static SkillVersion knockout_2_2_1 { get; set; }
+        private static SkillVersion lync_sdk_2013 { get; set; }
+        private static SkillVersion marathon_1_1_2 { get; set; }
+        private static SkillVersion mediawiki_1_22 { get; set; }
+        private static SkillVersion mediawiki_1_26 { get; set; }
+        private static SkillVersion mesos_1_0_1 { get; set; }
+        private static SkillVersion mocha_3_3_0 { get; set; }
+        private static SkillVersion mongodb_3_0 { get; set; }
+        private static SkillVersion mongodb_csharp_2_1_1 { get; set; }
         private static SkillVersion mvc_2 { get; set; }
         private static SkillVersion mvc_3 { get; set; }
         private static SkillVersion mvc_4 { get; set; }
         private static SkillVersion mvc_5 { get; set; }
         private static SkillVersion mvc_core_1_0 { get; set; }
         private static SkillVersion mvc_core_1_1 { get; set; }
-        private static SkillVersion structuremap_2_6_4_1 { get; set; }
-        private static SkillVersion structuremap_3_0_2_0 { get; set; }
-        private static SkillVersion structuremap_2_6_3 { get; set; }
-        private static SkillVersion sitefinity_4_0 { get; set; }
+        private static SkillVersion mysql_4_0_6 { get; set; }
+        private static SkillVersion mysql_4_1_4 { get; set; }
+        private static SkillVersion mysql_5_0_96 { get; set; }
+        private static SkillVersion mysql_5_1_22 { get; set; }
+        private static SkillVersion mysql_5_1_73 { get; set; }
         private static SkillVersion mysql_workbench_5_2 { get; set; }
         private static SkillVersion mysql_workbench_6_3 { get; set; }
-        private static SkillVersion shibboleth_2_0 { get; set; }
-        private static SkillVersion saml_2_0 { get; set; }
-        private static SkillVersion jenkins_1_6 { get; set; }
-        private static SkillVersion knockout_2_2_1 { get; set; }
-        private static SkillVersion angularjs_1_3 { get; set; }
-        private static SkillVersion angularjs_1_4 { get; set; }
-        private static SkillVersion lync_sdk_2013 { get; set; }
+        private static SkillVersion nest_1_8_3 { get; set; }
+        private static SkillVersion nest_2_5_1 { get; set; }
+        private static SkillVersion nexus_3_0_1 { get; set; }
+        private static SkillVersion nginx_1_13_1 { get; set; }
+        private static SkillVersion nunit_2_6_2 { get; set; }
+        private static SkillVersion oauth_2_0 { get; set; }
+        private static SkillVersion oracle_8 { get; set; }
+        private static SkillVersion photoshop_cs_2 { get; set; }
+        private static SkillVersion photoshop_cs_3 { get; set; }
+        private static SkillVersion photoshop_cs_6 { get; set; }
+        private static SkillVersion photoshop_elements_14_0 { get; set; }
+        private static SkillVersion photoshop_elements_7_0 { get; set; }
+        private static SkillVersion photoshop_elements_9_0 { get; set; }
+        private static SkillVersion php_4_3 { get; set; }
+        private static SkillVersion php_4_4 { get; set; }
+        private static SkillVersion postgresql_9_2_15 { get; set; }
+        private static SkillVersion proget_3_4_6 { get; set; }
+        private static SkillVersion proget_4_6_4 { get; set; }
+        private static SkillVersion python_2_0 { get; set; }
+        private static SkillVersion ravendb_3_0 { get; set; }
+        private static SkillVersion react_15_4_2 { get; set; }
+        private static SkillVersion redux_3_6_0 { get; set; }
         private static SkillVersion rhel_7 { get; set; }
-        private static SkillVersion fedora_core_23 { get; set; }
-        private static SkillVersion entity_framework_core_1_0 { get; set; }
-        private static SkillVersion entity_framework_core_1_1 { get; set; }
-        private static SkillVersion entity_framework_4_1 { get; set; }
-        private static SkillVersion entity_framework_5_0 { get; set; }
-        private static SkillVersion entity_framework_6_0 { get; set; }
-        private static SkillVersion unity_3_0 { get; set; }
-        private static SkillVersion unity_3_5 { get; set; }
-        private static SkillVersion automapper_2_2_0 { get; set; }
-        private static SkillVersion automapper_5_2_0 { get; set; }
+        private static SkillVersion saml_2_0 { get; set; }
+        private static SkillVersion shibboleth_2_0 { get; set; }
+        private static SkillVersion silverlight_sdk_5 { get; set; }
+        private static SkillVersion silverlight_toolkit_5 { get; set; }
+        private static SkillVersion sitefinity_4_0 { get; set; }
+        private static SkillVersion sqlserver_2000 { get; set; }
+        private static SkillVersion sqlserver_2005 { get; set; }
+        private static SkillVersion sqlserver_2008 { get; set; }
+        private static SkillVersion sqlserver_2008_express { get; set; }
+        private static SkillVersion sqlserver_2008_R2 { get; set; }
+        private static SkillVersion sqlserver_2012 { get; set; }
+        private static SkillVersion sqlserver_2012_express { get; set; }
+        private static SkillVersion sqlserver_2014 { get; set; }
+        private static SkillVersion sqlserver_2016 { get; set; }
+        private static SkillVersion ssms_2005 { get; set; }
+        private static SkillVersion ssms_2008 { get; set; }
+        private static SkillVersion ssms_2012 { get; set; }
+        private static SkillVersion ssms_2014 { get; set; }
+        private static SkillVersion ssms_2016 { get; set; }
+        private static SkillVersion ssms_enterprise_manager { get; set; }
+        private static SkillVersion structuremap_2_6_3 { get; set; }
+        private static SkillVersion structuremap_2_6_4_1 { get; set; }
+        private static SkillVersion structuremap_3_0_2_0 { get; set; }
+        private static SkillVersion svn_1_3 { get; set; }
+        private static SkillVersion svn_1_6 { get; set; }
+        private static SkillVersion svn_1_8 { get; set; }
+        private static SkillVersion tfs_2005 { get; set; }
+        private static SkillVersion tfs_2008 { get; set; }
+        private static SkillVersion tfs_2013_express { get; set; }
+        private static SkillVersion tfs_2015 { get; set; }
+        private static SkillVersion toad_9_0 { get; set; }
+        private static SkillVersion typescript_1_8 { get; set; }
+        private static SkillVersion typescript_2_0 { get; set; }
+        private static SkillVersion ubuntu_14_04 { get; set; }
         private static SkillVersion umbraco_4 { get; set; }
         private static SkillVersion umbraco_6 { get; set; }
         private static SkillVersion umbraco_7 { get; set; }
-        private static SkillVersion mediawiki_1_26 { get; set; }
-        private static SkillVersion mediawiki_1_22 { get; set; }
-        private static SkillVersion silverlight_sdk_5 { get; set; }
-        private static SkillVersion silverlight_toolkit_5 { get; set; }
-        private static SkillVersion aspnet_webapi_1 { get; set; }
-        private static SkillVersion aspnet_webapi_2 { get; set; }
-        private static SkillVersion aspnet_webapi_core_1_0 { get; set; }
-        private static SkillVersion aspnet_webapi_core_1_1 { get; set; }
-        private static SkillVersion python_2_0 { get; set; }
-        private static SkillVersion git_2_8_1 { get; set; }
-        private static SkillVersion git_2_5_0 { get; set; }
-        private static SkillVersion git_1_9_5 { get; set; }
-        private static SkillVersion ravendb_3_0 { get; set; }
-        private static SkillVersion mongodb_3_0{ get; set; }
-        private static SkillVersion mongodb_csharp_2_1_1{ get; set; }
-        private static SkillVersion azure_web_sites { get; set; }
-        private static SkillVersion azure_webjobs { get; set; }
+        private static SkillVersion unity_3_0 { get; set; }
+        private static SkillVersion unity_3_5 { get; set; }
+        private static SkillVersion visual_studio_2003_pro { get; set; }
+        private static SkillVersion visual_studio_2005_pro { get; set; }
+        private static SkillVersion visual_studio_2008_pro { get; set; }
+        private static SkillVersion visual_studio_2010_express { get; set; }
+        private static SkillVersion visual_studio_2010_pro { get; set; }
+        private static SkillVersion visual_studio_2012_pro { get; set; }
+        private static SkillVersion visual_studio_2013_pro { get; set; }
+        private static SkillVersion visual_studio_2013_web_developer_express { get; set; }
+        private static SkillVersion visual_studio_2015_community { get; set; }
+        private static SkillVersion visual_studio_2015_pro { get; set; }
+        private static SkillVersion visual_studio_code { get; set; }
+        private static SkillVersion vss_6_0 { get; set; }
+        private static SkillVersion webpack_2_0 { get; set; }
+        private static SkillVersion webpack_2_4_1 { get; set; }
+        private static SkillVersion windows_10 { get; set; }
+        private static SkillVersion windows_7 { get; set; }
+        private static SkillVersion windows_server_2003 { get; set; }
+        private static SkillVersion windows_server_2008 { get; set; }
+        private static SkillVersion windows_server_2008_R2 { get; set; }
+        private static SkillVersion windows_server_2012_R2 { get; set; }
+        private static SkillVersion windows_server_2016 { get; set; }
+        private static SkillVersion windows_vista { get; set; }
+        private static SkillVersion windows_xp { get; set; }
+        private static SkillVersion xml_1_1 { get; set; }
+        private static SkillVersion xslt_1_0 { get; set; }
+        private static SkillVersion zookeeper_3_4_6 { get; set; }
         #endregion
 
         #region Experiences
@@ -400,6 +419,150 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.Skills.Any())
             {
+                #region chai
+                chai = new Skill
+                {
+                    Description = "Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.",
+                    ExperienceRating = 3,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Chai",
+                    UsageRating = 6
+                };
+                #endregion
+                #region babel
+                babel = new Skill
+                {
+                    Description = "Babel is a JavaScript compiler.",
+                    ExperienceRating = 3,
+                    InterestRating = 4,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Babel",
+                    UsageRating = 4
+                };
+                #endregion
+                #region mocha
+                mocha = new Skill
+                {
+                    Description = "Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser.",
+                    ExperienceRating = 3,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Mocha",
+                    UsageRating = 6
+                };
+                #endregion
+                #region sinon
+                sinon = new Skill
+                {
+                    Description = "Standalone test spies, stubs and mocks for JavaScript.",
+                    ExperienceRating = 3,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Sinon.JS",
+                    UsageRating = 5
+                };
+                #endregion
+                #region enzyme
+                enzyme = new Skill
+                {
+                    Description = "Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.",
+                    ExperienceRating = 3,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Enzyme",
+                    UsageRating = 5
+                };
+                #endregion
+                #region redux
+                redux = new Skill
+                {
+                    Description = "Redux is a predictable state container for JavaScript apps.",
+                    ExperienceRating = 3,
+                    InterestRating = 7,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Redux",
+                    UsageRating = 7
+                };
+                #endregion
+                #region nginx
+                nginx = new Skill
+                {
+                    Description = "NGINX is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server.",
+                    ExperienceRating = 1,
+                    InterestRating = 3,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "NGINX",
+                    UsageRating = 1
+                };
+                #endregion
+                #region grunt
+                grunt = new Skill
+                {
+                    Description = "Grunt is a JavaScript task runner, a tool used to automatically perform frequently used tasks such as minification, compilation, unit testing, linting...",
+                    ExperienceRating = 2,
+                    InterestRating = 2,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Grunt",
+                    UsageRating = 2
+                };
+                #endregion
+                #region domain-driven design
+                ddd = new Skill
+                {
+                    Description = "Domain-driven design (DDD) is an approach to software development for complex needs by connecting the implementation to an evolving model.",
+                    ExperienceRating = 3,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Domain-driven design",
+                    UsageRating = 5
+                };
+                #endregion
+                #region event sourcing
+                event_sourcing = new Skill
+                {
+                    Description = "Event Sourcing ensures that all changes to application state are stored as a sequence of events.",
+                    ExperienceRating = 2,
+                    InterestRating = 5,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "Event Sourcing",
+                    UsageRating = 3
+                };
+                #endregion
+                #region cqrs
+                cqrs = new Skill
+                {
+                    Description = "Command and Query Responsibility Segregation (CQRS) is a pattern that segregates the operations that read data (queries) from the operations that update data (commands) by using separate interfaces.",
+                    ExperienceRating = 2,
+                    InterestRating = 6,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "CQRS",
+                    UsageRating = 3
+                };
+                #endregion
+                #region jsx
+                jsx = new Skill
+                {
+                    Description = "JSX is a statically-typed, object-oriented programming language designed to run on modern web browsers.",
+                    ExperienceRating = 3,
+                    InterestRating = 4,
+                    IconClass = null,
+                    IsVisible = true,
+                    Name = "JSX",
+                    UsageRating = 5
+                };
+                #endregion
                 #region identityserver
                 identityserver = new Skill
                 {
@@ -472,7 +635,7 @@ namespace CV.DataAccessLayer.Initializers
                     UsageRating = 3
                 };
                 #endregion
-                #region typescript
+                #region microservices
                 microservices = new Skill
                 {
                     Description = "Microservices is a specialisation of an implementation approach for service-oriented architectures (SOA) used to build flexible, independently deployable software systems.",
@@ -500,12 +663,12 @@ namespace CV.DataAccessLayer.Initializers
                 react = new Skill
                 {
                     Description = "React is an open-source JavaScript framework for building user interfaces.",
-                    ExperienceRating = 1,
+                    ExperienceRating = 3,
                     InterestRating = 7,
                     IconClass = "devicons devicons-react",
                     IsVisible = true,
                     Name = "React",
-                    UsageRating = 1
+                    UsageRating = 7
                 };
                 #endregion
                 #region Aurelia
@@ -1961,6 +2124,18 @@ namespace CV.DataAccessLayer.Initializers
                 };
                 #endregion
 
+                context.Skills.Add(chai);
+                context.Skills.Add(babel);
+                context.Skills.Add(mocha);
+                context.Skills.Add(sinon);
+                context.Skills.Add(enzyme);
+                context.Skills.Add(redux);
+                context.Skills.Add(nginx);
+                context.Skills.Add(jsx);
+                context.Skills.Add(grunt);
+                context.Skills.Add(ddd);
+                context.Skills.Add(event_sourcing);
+                context.Skills.Add(cqrs);
                 context.Skills.Add(identityserver);
                 context.Skills.Add(autofac);
                 context.Skills.Add(nest);
@@ -2100,6 +2275,48 @@ namespace CV.DataAccessLayer.Initializers
         {
             if (!context.SkillVersions.Any())
             {
+                #region chai 3.5.0
+                chai_3_5_0 = new SkillVersion
+                {
+                    Name = "3.5.0",
+                    SkillId = chai.Id
+                };
+                #endregion
+                #region mocha 3.3.0
+                mocha_3_3_0 = new SkillVersion
+                {
+                    Name = "3.3.0",
+                    SkillId = mocha.Id
+                };
+                #endregion
+                #region babel 6.24.1
+                babel_6_24_1 = new SkillVersion
+                {
+                    Name = "6.24.1",
+                    SkillId = babel.Id
+                };
+                #endregion
+                #region enzyme 2.8.2
+                enzyme_2_8_2 = new SkillVersion
+                {
+                    Name = "2.8.2",
+                    SkillId = enzyme.Id
+                };
+                #endregion
+                #region redux 3.6.0
+                redux_3_6_0 = new SkillVersion
+                {
+                    Name = "3.6.0",
+                    SkillId = redux.Id
+                };
+                #endregion
+                #region nginx 1.13.1
+                nginx_1_13_1 = new SkillVersion
+                {
+                    Name = "1.13.1",
+                    SkillId = nginx.Id
+                };
+                #endregion
                 #region IdentityServer4
                 identityserver_4 = new SkillVersion
                 {
@@ -2174,6 +2391,13 @@ namespace CV.DataAccessLayer.Initializers
                 webpack_2_0 = new SkillVersion
                 {
                     Name = "2.0",
+                    SkillId = webpack.Id
+                };
+                #endregion
+                #region webpack 2.4.1
+                webpack_2_4_1 = new SkillVersion
+                {
+                    Name = "2.4.1",
                     SkillId = webpack.Id
                 };
                 #endregion
@@ -3550,6 +3774,12 @@ namespace CV.DataAccessLayer.Initializers
                 };
                 #endregion
 
+                context.SkillVersions.Add(chai_3_5_0);
+                context.SkillVersions.Add(mocha_3_3_0);
+                context.SkillVersions.Add(babel_6_24_1);
+                context.SkillVersions.Add(enzyme_2_8_2);
+                context.SkillVersions.Add(redux_3_6_0);
+                context.SkillVersions.Add(nginx_1_13_1);
                 context.SkillVersions.Add(identityserver_3);
                 context.SkillVersions.Add(identityserver_4);
                 context.SkillVersions.Add(autofac_4_0);
@@ -3561,6 +3791,7 @@ namespace CV.DataAccessLayer.Initializers
                 context.SkillVersions.Add(typescript_1_8);
                 context.SkillVersions.Add(typescript_2_0);
                 context.SkillVersions.Add(webpack_2_0);
+                context.SkillVersions.Add(webpack_2_4_1);
                 context.SkillVersions.Add(react_15_4_2);
                 context.SkillVersions.Add(aurelia_1_0);
                 context.SkillVersions.Add(mesos_1_0_1);
@@ -5744,7 +5975,7 @@ namespace CV.DataAccessLayer.Initializers
                         new ExperienceSkill
                         {
                             SkillId = javascript.Id,
-                            UsageRating = 7,
+                            UsageRating = 9,
                             Versions = new List<ExperienceSkillVersion>
                             {
                                 new ExperienceSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id },
@@ -5884,7 +6115,6 @@ namespace CV.DataAccessLayer.Initializers
                                 new ExperienceSkillVersion { SkillId = entity_framework.Id, SkillVersionId = entity_framework_core_1_1.Id }
                             }
                         },
-                        //I AM HERE + IdentityServer to be added
                         new ExperienceSkill
                         {
                             SkillId = identityserver.Id,
@@ -5921,7 +6151,7 @@ namespace CV.DataAccessLayer.Initializers
                         new ExperienceSkill
                         {
                             SkillId = unit_testing.Id,
-                            UsageRating = 5
+                            UsageRating = 7
                         },
                         new ExperienceSkill
                         {
@@ -5948,13 +6178,14 @@ namespace CV.DataAccessLayer.Initializers
                             UsageRating = 1,
                             Versions = new List<ExperienceSkillVersion>
                             {
-                                new ExperienceSkillVersion { SkillId = webpack.Id, SkillVersionId = webpack_2_0.Id }
+                                new ExperienceSkillVersion { SkillId = webpack.Id, SkillVersionId = webpack_2_0.Id },
+                                new ExperienceSkillVersion { SkillId = webpack.Id, SkillVersionId = webpack_2_4_1.Id }
                             }
                         },
                         new ExperienceSkill
                         {
                             SkillId = react.Id,
-                            UsageRating = 1,
+                            UsageRating = 7,
                             Versions = new List<ExperienceSkillVersion>
                             {
                                 new ExperienceSkillVersion { SkillId = react.Id, SkillVersionId = react_15_4_2.Id }
@@ -6109,6 +6340,76 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ExperienceSkillVersion { SkillId = haproxy.Id, SkillVersionId = haproxy_1_5_8.Id }
                             }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = babel.Id,
+                            UsageRating = 2,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = babel.Id, SkillVersionId = babel_6_24_1.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = mocha.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = mocha.Id, SkillVersionId = mocha_3_3_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = chai.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = chai.Id, SkillVersionId = chai_3_5_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = enzyme.Id,
+                            UsageRating = 6,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = enzyme.Id, SkillVersionId = enzyme_2_8_2.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = sinon.Id,
+                            UsageRating = 6
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = redux.Id,
+                            UsageRating = 7,
+                            Versions = new List<ExperienceSkillVersion>
+                            {
+                                new ExperienceSkillVersion { SkillId = redux.Id, SkillVersionId = redux_3_6_0.Id }
+                            }
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = grunt.Id,
+                            UsageRating = 3
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = ddd.Id,
+                            UsageRating = 5
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = event_sourcing.Id,
+                            UsageRating = 4
+                        },
+                        new ExperienceSkill
+                        {
+                            SkillId = cqrs.Id,
+                            UsageRating = 5
                         }
                     }
                 };
