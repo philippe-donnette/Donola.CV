@@ -7938,6 +7938,12 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "<p>Website CV with details of my skills, qualifications, experience and personal projects.</p>"
                         + "<ul>"
                         + "<li>Responsive design</li>"
+                        + "<li>dotnet core REST api</li>"
+                        + "<li>One front-end version written in AngularJS</li>"
+                        + "<li>One front-end version written in React</li>"
+                        + "<li>Running on docker</li>"
+                        + "<li>Continuous integration/delivery using GoCD, mesos and marathon</li>"
+                        + "<li>Running xUnit, Karma and Mocha unit tests</li>"
                         + "</ul>",
                     Name = "CV",
                     PrimaryImage = "cv-main.png",
@@ -8059,11 +8065,12 @@ namespace CV.DataAccessLayer.Initializers
                         new ProjectSkill
                         {
                             SkillId = javascript.Id,
-                            UsageRating = 3,
+                            UsageRating = 9,
                             Versions = new List<ProjectSkillVersion>
                             {
                                 new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_3.Id },
-                                new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_5.Id }
+                                new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_5.Id },
+                                new ProjectSkillVersion { SkillId = javascript.Id, SkillVersionId = javascript_ecmascript_6.Id }
                             }
                         },
                         new ProjectSkill
@@ -8221,6 +8228,124 @@ namespace CV.DataAccessLayer.Initializers
                             {
                                 new ProjectSkillVersion { SkillId = jquery.Id, SkillVersionId = jquery_2_1.Id }
                             }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = react.Id,
+                            UsageRating = 8,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = react.Id, SkillVersionId = react_15_4_2.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = chai.Id,
+                            UsageRating = 5,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = chai.Id, SkillVersionId = chai_3_5_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = mocha.Id,
+                            UsageRating = 6,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = mocha.Id, SkillVersionId = mocha_3_3_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = enzyme.Id,
+                            UsageRating = 6,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = enzyme.Id, SkillVersionId = enzyme_2_8_2.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = babel.Id,
+                            UsageRating = 2,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = babel.Id, SkillVersionId = babel_6_24_1.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = sinon.Id,
+                            UsageRating = 5
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = webpack.Id,
+                            UsageRating = 3,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = webpack.Id, SkillVersionId = webpack_2_4_1.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = redux.Id,
+                            UsageRating = 7,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = redux.Id, SkillVersionId = redux_3_6_0.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = marathon.Id,
+                            UsageRating = 3,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = marathon.Id, SkillVersionId = marathon_1_1_2.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = mesos.Id,
+                            UsageRating = 2,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = mesos.Id, SkillVersionId = mesos_1_0_1.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = zookeeper.Id,
+                            UsageRating = 1,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = zookeeper.Id, SkillVersionId = zookeeper_3_4_6.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = bamboo.Id,
+                            UsageRating = 2,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = bamboo.Id, SkillVersionId = bamboo_0_2_2_1.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = nginx.Id,
+                            UsageRating = 2,
+                            Versions = new List<ProjectSkillVersion>
+                            {
+                                new ProjectSkillVersion { SkillId = nginx.Id, SkillVersionId = nginx_1_13_1.Id }
+                            }
+                        },
+                        new ProjectSkill
+                        {
+                            SkillId = jsx.Id,
+                            UsageRating = 6
                         }
                     }
                 };
