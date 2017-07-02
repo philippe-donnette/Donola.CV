@@ -425,7 +425,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.",
                     ExperienceRating = 3,
                     InterestRating = 5,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Chai",
                     UsageRating = 6
@@ -437,7 +437,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Babel is a JavaScript compiler.",
                     ExperienceRating = 3,
                     InterestRating = 4,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Babel",
                     UsageRating = 4
@@ -449,7 +449,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Mocha is a feature-rich JavaScript test framework running on Node.js and in the browser.",
                     ExperienceRating = 3,
                     InterestRating = 5,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Mocha",
                     UsageRating = 6
@@ -461,7 +461,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Standalone test spies, stubs and mocks for JavaScript.",
                     ExperienceRating = 3,
                     InterestRating = 5,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Sinon.JS",
                     UsageRating = 5
@@ -473,7 +473,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.",
                     ExperienceRating = 3,
                     InterestRating = 5,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Enzyme",
                     UsageRating = 5
@@ -485,7 +485,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Redux is a predictable state container for JavaScript apps.",
                     ExperienceRating = 3,
                     InterestRating = 7,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Redux",
                     UsageRating = 7
@@ -497,7 +497,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "NGINX is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server.",
                     ExperienceRating = 1,
                     InterestRating = 3,
-                    IconClass = null,
+                    IconClass = "devicon-nginx-plain",
                     IsVisible = true,
                     Name = "NGINX",
                     UsageRating = 1
@@ -509,7 +509,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Grunt is a JavaScript task runner, a tool used to automatically perform frequently used tasks such as minification, compilation, unit testing, linting...",
                     ExperienceRating = 2,
                     InterestRating = 2,
-                    IconClass = null,
+                    IconClass = "devicon-grunt-line",
                     IsVisible = true,
                     Name = "Grunt",
                     UsageRating = 2
@@ -653,7 +653,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging...",
                     ExperienceRating = 1,
                     InterestRating = 8,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "webpack",
                     UsageRating = 2
@@ -665,7 +665,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "React is an open-source JavaScript framework for building user interfaces.",
                     ExperienceRating = 3,
                     InterestRating = 7,
-                    IconClass = "devicons devicons-react",
+                    IconClass = "devicon-react-original",
                     IsVisible = true,
                     Name = "React",
                     UsageRating = 7
@@ -677,7 +677,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Aurelia is a JavaScript client framework for mobile, desktop and web leveraging simple conventions and empowering creativity.",
                     ExperienceRating = 5,
                     InterestRating = 6,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "aurelia",
                     UsageRating = 5
@@ -725,7 +725,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services.",
                     ExperienceRating = 2,
                     InterestRating = 5,
-                    IconClass = null,
+                    IconClass = "devicon-apache-line",
                     IsVisible = true,
                     Name = "Zookeeper",
                     UsageRating = 3
@@ -785,7 +785,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Ubuntu is a Debian-based Linux operating system.",
                     ExperienceRating = 3,
                     InterestRating = 7,
-                    IconClass = "mfizz mfizz-ubuntu",
+                    IconClass = "devicon-ubuntu-plain",
                     IsVisible = true,
                     Name = "Ubuntu",
                     UsageRating = 3
@@ -821,7 +821,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "CentOS (from Community Enterprise Operating System) is a Linux distribution that attempts to provide a free, enterprise-class, community-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux (RHEL).",
                     ExperienceRating = 2,
                     InterestRating = 7,
-                    IconClass = "mfizz mfizz-centos",
+                    IconClass = "icon-centos",
                     IsVisible = true,
                     Name = "CentOS",
                     UsageRating = 5
@@ -833,7 +833,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Couchbase is an open-source, distributed (shared-nothing architecture) multi-model NoSQL document-oriented database software package that is optimized for interactive applications.",
                     ExperienceRating = 4,
                     InterestRating = 8,
-                    IconClass = null,
+                    IconClass = "icon-database",
                     IsVisible = true,
                     Name = "Couchbase",
                     UsageRating = 5
@@ -857,7 +857,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Docker is the world’s leading software container platform.",
                     ExperienceRating = 4,
                     InterestRating = 10,
-                    IconClass = null,
+                    IconClass = "devicon-docker-plain",
                     IsVisible = true,
                     Name = "Docker",
                     UsageRating = 4
@@ -965,7 +965,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Test Runner for JavaScript",
                     ExperienceRating = 1,
                     InterestRating = 7,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Karma",
                     UsageRating = 4
@@ -977,7 +977,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Jasmine is an open source testing framework for JavaScript. It aims to run on any JavaScript-enabled platform, to not intrude on the application nor the IDE, and to have easy-to-read syntax.",
                     ExperienceRating = 1,
                     InterestRating = 7,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Jasmine",
                     UsageRating = 4
@@ -1013,7 +1013,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "The official MongoDB .NET Driver provides asynchronous interaction with MongoDB. Powering the drivers is a Core library and a BSON library.",
                     ExperienceRating = 1,
                     InterestRating = 6,
-                    IconClass = "devicons devicons-mongodb",
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "MongoDB .NET Driver",
                     UsageRating = 2
@@ -1133,7 +1133,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Oracle Database (commonly referred to as Oracle RDBMS or simply as Oracle) is an object-relational database management system produced and marketed by Oracle Corporation.",
                     ExperienceRating = 2,
                     InterestRating = 5,
-                    IconClass = "mfizz mfizz-oracle",
+                    IconClass = "devicon-oracle-original",
                     IsVisible = true,
                     Name = "Oracle",
                     UsageRating = 1
@@ -1181,7 +1181,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "The Apache HTTP Server, colloquially called Apache, is the world's most used web server software.",
                     ExperienceRating = 4,
                     InterestRating = 5,
-                    IconClass = "mfizz mfizz-apache",
+                    IconClass = "devicon-apache-plain",
                     IsVisible = true,
                     Name = "Apache",
                     UsageRating = 3
@@ -1193,7 +1193,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "HyperText Markup Language, commonly referred to as HTML, is the standard markup language used to create web pages.",
                     ExperienceRating = 9,
                     InterestRating = 7,
-                    IconClass = "mfizz mfizz-html",
+                    IconClass = "icon-html",
                     IsVisible = true,
                     Name = "HTML",
                     UsageRating = 10
@@ -1205,7 +1205,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.",
                     ExperienceRating = 7,
                     InterestRating = 5,
-                    IconClass = "mfizz mfizz-css",
+                    IconClass = "icon-css",
                     IsVisible = true,
                     Name = "CSS",
                     UsageRating = 10
@@ -1241,7 +1241,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Adobe Photoshop is a raster graphics editor developed and published by Adobe Systems for Windows and OS X.",
                     ExperienceRating = 4,
                     InterestRating = 2,
-                    IconClass = null,
+                    IconClass = "devicon-photoshop-line",
                     IsVisible = true,
                     Name = "Adobe Photoshop",
                     UsageRating = 3
@@ -1253,7 +1253,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Internet Information Services (IIS, formerly Internet Information Server) is an extensible web server created by Microsoft for use with Windows NT family.",
                     ExperienceRating = 7,
                     InterestRating = 7,
-                    IconClass = null,
+                    IconClass = "devicons devicons-windows",
                     IsVisible = true,
                     Name = "IIS",
                     UsageRating = 6
@@ -1265,7 +1265,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Microsoft Visual SourceSafe (VSS) is a discontinued source control program, oriented towards small software development projects.",
                     ExperienceRating = 3,
                     InterestRating = 1,
-                    IconClass = null,
+                    IconClass = "devicons devicons-windows",
                     IsVisible = true,
                     Name = "Microsoft Visual SourceSafe",
                     UsageRating = 2
@@ -1289,7 +1289,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "SQL Server Management Studio (SSMS) is a software application first launched with the Microsoft SQL Server 2005 that is used for configuring, managing, and administering all components within Microsoft SQL Server.",
                     ExperienceRating = 7,
                     InterestRating = 7,
-                    IconClass = null,
+                    IconClass = "icon-mssql",
                     IsVisible = true,
                     Name = "SQL Server Management Studio",
                     UsageRating = 7
@@ -1337,9 +1337,9 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Apache Subversion (often abbreviated SVN, after the command name svn) is a software versioning and revision control system distributed as free software under the Apache License.",
                     ExperienceRating = 7,
                     InterestRating = 2,
-                    IconClass = null,
+                    IconClass = "devicon-apache-line",
                     IsVisible = true,
-                    Name = "Apache Subversion",
+                    Name = "SVN",
                     UsageRating = 5
                 };
                 #endregion
@@ -1349,7 +1349,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Windows Forms (WinForms) is a graphical (GUI) class library included as a part of Microsoft .NET Framework, providing a platform to write rich client applications for desktop, laptop, and tablet PCs.",
                     ExperienceRating = 4,
                     InterestRating = 6,
-                    IconClass = null,
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "Windows Forms",
                     UsageRating = 3
@@ -1373,7 +1373,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "ADO.NET is a set of computer software components that programmers can use to access data and data services from the database. It is a part of the base class library that is included with the Microsoft .NET Framework.",
                     ExperienceRating = 7,
                     InterestRating = 5,
-                    IconClass = null,
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "ADO.NET",
                     UsageRating = 5
@@ -1385,7 +1385,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Ajax short for asynchronous JavaScript and XML, is a set of web development techniques using many web technologies on the client-side to create asynchronous Web applications.",
                     ExperienceRating = 8,
                     InterestRating = 10,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "Ajax",
                     UsageRating = 8
@@ -1397,7 +1397,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "ASP.NET AJAX is a set of extensions to ASP.NET developed by Microsoft for implementing Ajax functionality.",
                     ExperienceRating = 5,
                     InterestRating = 4,
-                    IconClass = null,
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "ASP.NET AJAX",
                     UsageRating = 4
@@ -1433,7 +1433,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "A console application is a computer program designed to be used via a text-only computer interface, such as a text terminal, the command line interface of some operating systems (Unix, DOS, etc.) or the text-based interface included with most Graphical User Interface (GUI) operating systems, such as the Win32 console in Microsoft Windows, the Terminal in Mac OS X, and xterm in Unix.",
                     ExperienceRating = 7,
                     InterestRating = 6,
-                    IconClass = null,
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "Console application",
                     UsageRating = 6
@@ -1481,7 +1481,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Microsoft Commerce Server is a Microsoft product for building e-commerce systems using Microsoft .NET technology.",
                     ExperienceRating = 3,
                     InterestRating = 2,
-                    IconClass = null,
+                    IconClass = "devicons devicons-windows",
                     IsVisible = true,
                     Name = "Microsoft Commerce Server",
                     UsageRating = 1
@@ -1565,7 +1565,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "ASP.NET MVC controls for navigation and layout, data management and visualization, editing, interactivity and more.",
                     ExperienceRating = 2,
                     InterestRating = 6,
-                    IconClass = null,
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "Telerik MVC Controls",
                     UsageRating = 1
@@ -1589,7 +1589,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "StructureMap is the oldest, continuously used IoC/DI container for .Net dating back to its first public release and production usage all the way back in June 2004 on .Net 1.1.",
                     ExperienceRating = 3,
                     InterestRating = 8,
-                    IconClass = null,
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "StructureMap",
                     UsageRating = 6
@@ -1709,7 +1709,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Transport Layer Security (TLS) and its predecessor, Secure Sockets Layer (SSL), both of which are frequently referred to as 'SSL', are cryptographic protocols that provide communications security over a computer network.",
                     ExperienceRating = 4,
                     InterestRating = 5,
-                    IconClass = "fa fa-skype",
+                    IconClass = null,
                     IsVisible = true,
                     Name = "SSL",
                     UsageRating = 4
@@ -1721,7 +1721,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Red Hat Enterprise Linux (RHEL) is a Linux distribution developed by Red Hat and targeted toward the commercial market.",
                     ExperienceRating = 2,
                     InterestRating = 6,
-                    IconClass = "mfizz mfizz-redhat",
+                    IconClass = "devicon-redhat-plain",
                     IsVisible = true,
                     Name = "RHEL",
                     UsageRating = 2
@@ -1733,7 +1733,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Fedora (formerly Fedora Core) is an operating system based on the Linux kernel, developed by the community-supported Fedora Project and sponsored by Red Hat.",
                     ExperienceRating = 2,
                     InterestRating = 6,
-                    IconClass = "mfizz mfizz-fedora",
+                    IconClass = "icon-fedora",
                     IsVisible = true,
                     Name = "Fedora Core",
                     UsageRating = 5
@@ -1853,7 +1853,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Umbraco is an open source content management system (CMS) platform for publishing content on the World Wide Web and intranets.",
                     ExperienceRating = 2,
                     InterestRating = 3,
-                    IconClass = null,
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "Umbraco",
                     UsageRating = 1
@@ -1997,7 +1997,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "Python is a widely used high-level, general-purpose, interpreted, dynamic programming language.",
                     ExperienceRating = 3,
                     InterestRating = 5,
-                    IconClass = "mfizz mfizz-shell",
+                    IconClass = "icon-shell",
                     IsVisible = true,
                     Name = "Bash",
                     UsageRating = 5
@@ -2033,7 +2033,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL.",
                     ExperienceRating = 1,
                     InterestRating = 5,
-                    IconClass = "mfizz mfizz-mariadb",
+                    IconClass = "icon-mariadb",
                     IsVisible = true,
                     Name = "MariaDB",
                     UsageRating = 1
@@ -2081,7 +2081,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "NuGet is a free and open-source package manager designed for the Microsoft development platform (formerly known as NuPack).",
                     ExperienceRating = 8,
                     InterestRating = 7,
-                    IconClass = null,
+                    IconClass = "devicons devicons-dotnet",
                     IsVisible = true,
                     Name = "NuGet",
                     UsageRating = 9
@@ -2095,7 +2095,7 @@ namespace CV.DataAccessLayer.Initializers
                     InterestRating = 8,
                     IconClass = null,
                     IsVisible = true,
-                    Name = "Representational state transfer",
+                    Name = "REST",
                     UsageRating = 8
                 };
                 #endregion
@@ -2105,7 +2105,7 @@ namespace CV.DataAccessLayer.Initializers
                     Description = "JSON (JavaScript Object Notation) is an open-standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs.",
                     ExperienceRating = 8,
                     InterestRating = 8,
-                    IconClass = null,
+                    IconClass = "devicons devicons-javascript_shield",
                     IsVisible = true,
                     Name = "JSON",
                     UsageRating = 9
